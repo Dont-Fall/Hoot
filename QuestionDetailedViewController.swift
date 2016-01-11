@@ -14,6 +14,7 @@ class QuestionDetailedViewController: UIViewController {
     
     var testID = ""
     
+    
     //MARK: Labels
     @IBOutlet var questionDetailedUsernameLabel: UILabel!
     @IBOutlet var questionDetailedCountAnswers: UILabel!
@@ -24,10 +25,12 @@ class QuestionDetailedViewController: UIViewController {
     
     //MARK: Buttons
     @IBAction func questionDetailedAnswerBtn(sender: AnyObject) {
-        self.performSegueWithIdentifier("questionDetailSegue", sender: self)
     }
     
     @IBAction func questionDetailedHelpBtn(sender: AnyObject) {
+        //self.actInd.startAnimating()
+        self.performSegueWithIdentifier("questionDetailHelpSegue", sender: self)
+        //self.actInd.stopAnimating()
     }
     
     
@@ -45,7 +48,6 @@ class QuestionDetailedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Unwrap the current object object
         if let object = currentObject {
             
@@ -133,7 +135,11 @@ class QuestionDetailedViewController: UIViewController {
             var detailScene = segue.destinationViewController as! QuestionPicViewController
             // Pass the selected object to the destination view controller.
             detailScene.largePic = questionDetailedPicturePreview.image
+        }else if segue.identifier == "questionDetailHelpSegue"{
+            var detailScene = segue.destinationViewController as! QuestionAnswerViewController
+            detailScene.questionID = testID
         }
+
     }
     
     //Pic View
