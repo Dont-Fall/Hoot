@@ -1,11 +1,6 @@
 //
 //  AppDelegate.swift
 //  Hoot
-
-//ONE TIME I TOOK A POOP
-//This other time I pooped and ate it
-//No you didnt
-
 //
 //  Created by Jake Ulasevich on 12/30/15.
 //  Copyright © 2015 Nitrox Development. All rights reserved.
