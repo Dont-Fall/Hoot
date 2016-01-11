@@ -24,6 +24,7 @@ class QuestionDetailedViewController: UIViewController {
     
     //MARK: Buttons
     @IBAction func questionDetailedAnswerBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("questionDetailSegue", sender: self)
     }
     
     @IBAction func questionDetailedHelpBtn(sender: AnyObject) {

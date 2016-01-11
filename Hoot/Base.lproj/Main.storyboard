@@ -570,6 +570,7 @@
                         <outlet property="questionDetailedUsernameLabel" destination="DDr-xU-UlR" id="UgB-gT-kpb"/>
                         <segue destination="Vgg-oD-lIa" kind="show" identifier="detailedViewBackIdentifier" id="iJK-sj-Yo1"/>
                         <segue destination="GRh-im-vf3" kind="show" identifier="questionShowPic" id="yi2-L8-eX8"/>
+                        <segue destination="i1e-Oz-ig2" kind="show" identifier="questionDetailSegue" id="fGm-bi-bOZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9t-sl-3EK" userLabel="First Responder" sceneMemberID="firstResponder"/>

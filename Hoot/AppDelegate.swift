@@ -1,6 +1,9 @@
 //
 //  AppDelegate.swift
 //  Hoot
+
+//ONE TIME I TOOK A POOP
+
 //
 //  Created by Jake Ulasevich on 12/30/15.
 //  Copyright © 2015 Nitrox Development. All rights reserved.
