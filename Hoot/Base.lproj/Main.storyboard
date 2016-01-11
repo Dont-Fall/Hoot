@@ -955,7 +955,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Course" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="zKh-0e-Rxk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Topic" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="zKh-0e-Rxk">
                                 <rect key="frame" x="24" y="72" width="553" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1342,9 +1342,9 @@
         <image name="TextFieldBar.png" width="200" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R1D-Hy-0Za"/>
-        <segue reference="PBz-3c-BDV"/>
-        <segue reference="iJK-sj-Yo1"/>
+        <segue reference="GEX-N6-J3L"/>
+        <segue reference="85I-zB-BNX"/>
         <segue reference="gf2-jP-qG1"/>
+        <segue reference="hPf-Vd-Qjy"/>
     </inferredMetricsTieBreakers>
 </document>
