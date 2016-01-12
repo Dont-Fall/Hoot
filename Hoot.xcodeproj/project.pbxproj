@@ -49,7 +49,6 @@
 		96A06B9C1C40A7C60077084A /* Q_A.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A06B9B1C40A7C60077084A /* Q_A.png */; };
 		96A06BA01C4153DE0077084A /* QuestionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */; };
 		96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */; };
-		96A06BEA1C4426F50077084A /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BE91C4426F40077084A /* QuestionAnswerViewController.swift */; };
 		96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */; };
 		96B29BC01C398EF300240AD7 /* ClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BBF1C398EF300240AD7 /* ClassesTableViewController.swift */; };
 		96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BC11C398F2A00240AD7 /* ClassesTableViewCell.swift */; };
@@ -129,6 +128,7 @@
 		9634F9461C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionDetailedViewController.swift; sourceTree = "<group>"; };
 		9634F9481C3EE2390086D799 /* ClassQuestionPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionPicViewController.swift; sourceTree = "<group>"; };
 		9634F9561C3F5B9C0086D799 /* CellSep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellSep.png; sourceTree = "<group>"; };
+		964830661C44635500CE29F3 /* Hoot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoot-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A06B8D1C40A3410077084A /* User Groups-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Groups-30.png"; sourceTree = "<group>"; };
 		96A06B8F1C40A3990077084A /* Conference Call-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call-50.png"; sourceTree = "<group>"; };
 		96A06B911C40A3F40077084A /* Conference Call-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call-40.png"; sourceTree = "<group>"; };
@@ -139,7 +139,6 @@
 		96A06B9B1C40A7C60077084A /* Q_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Q_A.png; sourceTree = "<group>"; };
 		96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailTableViewCell.swift; path = ../QuestionDetailTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewCell.swift; sourceTree = "<group>"; };
-		96A06BE91C4426F40077084A /* QuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewController.swift; sourceTree = "<group>"; };
 		96B29BBF1C398EF300240AD7 /* ClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassesTableViewController.swift; path = ../ClassesTableViewController.swift; sourceTree = "<group>"; };
 		96B29BC11C398F2A00240AD7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,8 +154,8 @@
 		96FAF0F71C36EA890092D096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		96FAF0FE1C36FB510092D096 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		96FAF1001C3715120092D096 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HootLogo.png; path = ../HootLogo.png; sourceTree = "<group>"; };
-		96FAF1071C381ADE0092D096 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextFieldBar.png; path = ../TextFieldBar.png; sourceTree = "<group>"; };
+		96FAF1001C3715120092D096 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HootLogo.png; sourceTree = "<group>"; };
+		96FAF1071C381ADE0092D096 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextFieldBar.png; sourceTree = "<group>"; };
 		96FAF1471C3862C60092D096 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		96FAF14C1C387AAA0092D096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -244,6 +243,7 @@
 				960945E21C348C670000282A /* Assets.xcassets */,
 				960945E41C348C670000282A /* LaunchScreen.storyboard */,
 				960945E71C348C670000282A /* Info.plist */,
+				964830661C44635500CE29F3 /* Hoot-Bridging-Header.h */,
 			);
 			path = Hoot;
 			sourceTree = "<group>";
@@ -279,7 +279,6 @@
 				96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */,
 				96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */,
 				9634F9381C3D8A010086D799 /* QuestionPicViewController.swift */,
-				96A06BE91C4426F40077084A /* QuestionAnswerViewController.swift */,
 			);
 			name = Questions;
 			sourceTree = "<group>";
@@ -532,7 +531,6 @@
 				96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */,
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
 				9634F93F1C3EBDAC0086D799 /* ClassQuestionTableViewCell.swift in Sources */,
-				96A06BEA1C4426F50077084A /* QuestionAnswerViewController.swift in Sources */,
 				96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */,
 				960946301C34DB590000282A /* SignUpViewController.swift in Sources */,
 				9634F9451C3EC4B40086D799 /* ClassAskQuestionViewController.swift in Sources */,
@@ -676,6 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -684,6 +683,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NDev.Hoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -691,6 +692,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -699,6 +701,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NDev.Hoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";
 			};
 			name = Release;
 		};
