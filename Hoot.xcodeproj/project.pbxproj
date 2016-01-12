@@ -66,8 +66,6 @@
 		96FAF0F81C36EA890092D096 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F71C36EA890092D096 /* Social.framework */; };
 		96FAF0FB1C36F1140092D096 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */; };
 		96FAF0FF1C36FB510092D096 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF0FE1C36FB510092D096 /* MoreViewController.swift */; };
-		96FAF1011C3715120092D096 /* HootLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FAF1001C3715120092D096 /* HootLogo.png */; };
-		96FAF1081C381ADE0092D096 /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FAF1071C381ADE0092D096 /* TextFieldBar.png */; };
 		96FAF1481C3862C60092D096 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF1471C3862C60092D096 /* QuestionTableViewController.swift */; };
 		96FAF14A1C386EA40092D096 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */; };
 		96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FAF14B1C387AAA0092D096 /* Main.storyboard */; };
@@ -161,8 +159,6 @@
 		96FAF0F71C36EA890092D096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		96FAF0FE1C36FB510092D096 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		96FAF1001C3715120092D096 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HootLogo.png; sourceTree = "<group>"; };
-		96FAF1071C381ADE0092D096 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextFieldBar.png; sourceTree = "<group>"; };
 		96FAF1471C3862C60092D096 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		96FAF14C1C387AAA0092D096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -368,8 +364,6 @@
 				96A06B8F1C40A3990077084A /* Conference Call-50.png */,
 				96A06B8D1C40A3410077084A /* User Groups-30.png */,
 				9634F9561C3F5B9C0086D799 /* CellSep.png */,
-				96FAF1001C3715120092D096 /* HootLogo.png */,
-				96FAF1071C381ADE0092D096 /* TextFieldBar.png */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -517,7 +511,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A06B8E1C40A3410077084A /* User Groups-30.png in Resources */,
-				96FAF1081C381ADE0092D096 /* TextFieldBar.png in Resources */,
 				96A06B941C40A4A10077084A /* FAQ-40.png in Resources */,
 				96A06B9A1C40A70C0077084A /* User-Groups-40.png in Resources */,
 				96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */,
@@ -527,7 +520,6 @@
 				960945E61C348C670000282A /* LaunchScreen.storyboard in Resources */,
 				960945E31C348C670000282A /* Assets.xcassets in Resources */,
 				96A06B921C40A3F40077084A /* Conference Call-40.png in Resources */,
-				96FAF1011C3715120092D096 /* HootLogo.png in Resources */,
 				96A06B961C40A4CE0077084A /* FAQ-35.png in Resources */,
 				96A06B901C40A3990077084A /* Conference Call-50.png in Resources */,
 			);
