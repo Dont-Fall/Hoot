@@ -792,6 +792,7 @@
                         <outlet property="questionAnswerSelectedPicPreview" destination="qCT-cO-k4n" id="iZm-zE-CoO"/>
                         <outlet property="questionAnswerSelectedUserLabel" destination="run-8g-xko" id="OpT-fG-RUb"/>
                         <outlet property="questionDetailSelectedCorrectBtn" destination="HvG-T5-ILs" id="vYg-98-T75"/>
+                        <segue destination="GRh-im-vf3" kind="show" identifier="anwerShowPic" id="LpV-FB-yTG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5HT-V8-LcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1642,10 +1643,11 @@
         <image name="TextFieldBar.png" width="200" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iJK-sj-Yo1"/>
-        <segue reference="k6p-AY-O9o"/>
-        <segue reference="gf2-jP-qG1"/>
         <segue reference="R1D-Hy-0Za"/>
         <segue reference="85I-zB-BNX"/>
+        <segue reference="k6p-AY-O9o"/>
+        <segue reference="iJK-sj-Yo1"/>
+        <segue reference="gf2-jP-qG1"/>
+        <segue reference="LpV-FB-yTG"/>
     </inferredMetricsTieBreakers>
 </document>

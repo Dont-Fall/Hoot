@@ -90,6 +90,10 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
         if let answer = object?["answer"] as? String {
             cell?.questionAnswerAnswerTV.text = answer
         }
+        if object?["correct"] as! Bool == true {
+            cell.tintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
+            cell.accessoryType = .Checkmark
+        }
         return cell
     }
     

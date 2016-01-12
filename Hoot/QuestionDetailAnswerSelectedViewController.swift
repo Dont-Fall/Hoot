@@ -26,6 +26,40 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
     
     //MARK: Button
     @IBAction func questionDetailSelectedCorrectBtn(sender: AnyObject) {
+        currentObject!["correct"] = true
+        currentObject!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if error == nil {
+                print("Answer Updated")
+            } else {
+                print("Error")
+            }
+        }
+        var query = PFQuery(className:"Question")
+        query.whereKey("objectId", equalTo: currentObject!["idNumber"])
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                if let objects = objects {
+                    for object in objects {
+                        object["solved"] = true
+                        object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                            if error == nil {
+                                print("Question Updated")
+                            } else {
+                                print("Error")
+                            }
+                        }
+                        
+                    }
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
     }
     @IBOutlet var questionDetailSelectedCorrectBtn: UIButton!
     
@@ -122,10 +156,21 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
         self.tabBarController?.tabBar.hidden = false
     }
     
+    //Prepare For Segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "anwerShowPic" {
+            // Get the new view controller using [segue destinationViewController].
+            var detailScene = segue.destinationViewController as! QuestionPicViewController
+            // Pass the selected object to the destination view controller.
+            detailScene.largePic = questionAnswerSelectedPicPreview.image
+        }
+        
+    }
+    
     //Pic View
     func tapView() {
         self.actInd.startAnimating()
-        self.performSegueWithIdentifier("questionShowPic", sender: self)
+        self.performSegueWithIdentifier("anwerShowPic", sender: self)
         self.actInd.stopAnimating()
     }
     
