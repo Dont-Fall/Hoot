@@ -13,9 +13,8 @@ import ParseUI
 class QuestionDetailAnswerTableViewCell: PFTableViewCell {
 
     //MARK: Connections
-    @IBOutlet var questionDetailAnswerPicPreview: UIImageView!
-    @IBOutlet var questionDetailAnswerAnswerTV: UITextView!
-    @IBOutlet var questionDetailAnswerUsernameLabel: UILabel!
+    @IBOutlet var questionAnswerUserLabel: UILabel!
+    @IBOutlet var questionAnswerAnswerTV: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

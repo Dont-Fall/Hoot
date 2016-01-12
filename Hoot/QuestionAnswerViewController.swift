@@ -41,6 +41,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
 
     // Container to store the view table selected object
     var questionID : String?
+    var asker : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,12 +95,11 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
     func answerQuestionAnswerQuestion() {
         var currentUser = PFUser.currentUser()
         var answer = PFObject(className: "Answer")
-        answer["question"] = questionAnswerAnswerTV.text
+        answer["answer"] = questionAnswerAnswerTV.text
         answer["user"] = currentUser!.username
         answer["correct"] = false
         answer["idNumber"] = questionID
-        answer["school"] = currentUser!.objectForKey("school")
-        answer["subject"] = currentUser!.objectForKey("subject")
+        answer["askedBy"] = asker
         answer["reportNumber"] = 0
         answer["reported"] = false
         //PIC

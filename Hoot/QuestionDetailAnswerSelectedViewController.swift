@@ -1,8 +1,8 @@
 //
-//  QuestionDetailedViewController.swift
+//  QuestionDetailAnswerSelectedViewController.swift
 //  Hoot
 //
-//  Created by Jake Ulasevich on 1/4/16.
+//  Created by Jake Ulasevich on 1/12/16.
 //  Copyright © 2016 Nitrox Development. All rights reserved.
 //
 
@@ -10,43 +10,33 @@ import UIKit
 import Parse
 import ParseUI
 
-class QuestionDetailedViewController: UIViewController {
-    
-    var testID = ""
-    
-    
-    //MARK: Labels
-    @IBOutlet var questionDetailedUsernameLabel: UILabel!
-    @IBOutlet var questionDetailedCountAnswers: UILabel!
-    @IBOutlet var questionDetailedHelpLabel: UILabel!
-    
-    //MARK: Text Views
-    @IBOutlet var questionDetailQuestionTV: UITextView!
-    
-    //MARK: Buttons
-    @IBAction func questionDetailedAnswerBtn(sender: AnyObject) {
-        self.performSegueWithIdentifier("questionAnswerTableSegue", sender: self)
-    }
-    
-    @IBAction func questionDetailedHelpBtn(sender: AnyObject) {
-        //self.actInd.startAnimating()
-        self.performSegueWithIdentifier("questionDetailHelpSegue", sender: self)
-        //self.actInd.stopAnimating()
-    }
-    
-    
-    //MARK: Picture Preview
-    @IBOutlet var questionDetailedPicturePreview: UIImageView!
-    let tapRec = UITapGestureRecognizer()
+class QuestionDetailAnswerSelectedViewController: UIViewController {
     
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     var didReport = false
-
+    
+    //MARK: Label
+    @IBOutlet var questionAnswerSelectedUserLabel: UILabel!
+    //MARK: TV
+    @IBOutlet var questionAnswerSelectedAnswerTV: UITextView!
+    //MARK: Pic
+    @IBOutlet var questionAnswerSelectedPicPreview: UIImageView!
+    let tapRec = UITapGestureRecognizer()
+    
+    //MARK: Button
+    @IBAction func questionDetailSelectedCorrectBtn(sender: AnyObject) {
+    }
+    @IBOutlet var questionDetailSelectedCorrectBtn: UIButton!
+    
+    //MARK: User Correct
+    var askedBy : String?
+    var currentUser = PFUser.currentUser()
+    
     
     // Container to store the view table selected object
     var currentObject : PFObject?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Unwrap the current object object
@@ -58,38 +48,41 @@ class QuestionDetailedViewController: UIViewController {
                 if error == nil {
                     if let imageData = imageData {
                         let image = UIImage(data:imageData)
-                        self.questionDetailedPicturePreview.image = image
+                        self.questionAnswerSelectedPicPreview.image = image
                     }
                 }
             }
             
-            questionDetailedUsernameLabel.text = object["user"] as! String
-            questionDetailQuestionTV.text = object["question"] as! String
-            testID = object.objectId!
+            questionAnswerSelectedUserLabel.text = object["user"] as! String
+            questionAnswerSelectedAnswerTV.text = object["answer"] as! String
+            askedBy = object["askedBy"] as! String
         }
-        
-        print (testID)
         
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
-        let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
-        let detailedQuestionBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "detailedQuestionBack")
+        let detailedAnsweReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedAnswerReport")
+        let detailedAnswerBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "detailedAnswerBack")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
-        self.navigationItem.setRightBarButtonItem(detailedQuestionReportBtn, animated: true)
-        self.navigationItem.setLeftBarButtonItem(detailedQuestionBackBtn, animated: true)
+        self.navigationItem.setRightBarButtonItem(detailedAnsweReportBtn, animated: true)
+        self.navigationItem.setLeftBarButtonItem(detailedAnswerBackBtn, animated: true)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.title = "Details"
         
         //Hide
         self.tabBarController?.tabBar.hidden = true
-
+        
         //MARK: Tap Image
-        questionDetailedPicturePreview.userInteractionEnabled = true
+        questionAnswerSelectedPicPreview.userInteractionEnabled = true
         tapRec.addTarget(self, action: "tapView")
-        questionDetailedPicturePreview.addGestureRecognizer(tapRec)
+        questionAnswerSelectedPicPreview.addGestureRecognizer(tapRec)
+        
+        //Hide Correct Button
+        if currentUser?.username != askedBy {
+            questionDetailSelectedCorrectBtn.hidden = true
+        }
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -99,7 +92,7 @@ class QuestionDetailedViewController: UIViewController {
     }
     
     //Report Question Function
-    func detailedQuestionReport() {
+    func detailedAnswerReport() {
         currentObject?.incrementKey("reportNumber")
         if didReport == false {
             if (currentObject?["reportNumber"])! as! Int == 5 {
@@ -123,28 +116,10 @@ class QuestionDetailedViewController: UIViewController {
     }
     
     //Go Back Function
-    func detailedQuestionBack(){
+    func detailedAnswerBack(){
         navigationController?.popViewControllerAnimated(true)
         //Set Back
         self.tabBarController?.tabBar.hidden = false
-    }
-    
-    //Prepare For Segue
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "questionShowPic" {
-            // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! QuestionPicViewController
-            // Pass the selected object to the destination view controller.
-            detailScene.largePic = questionDetailedPicturePreview.image
-        }else if segue.identifier == "questionDetailHelpSegue"{
-            var detailScene = segue.destinationViewController as! QuestionAnswerViewController
-            detailScene.questionID = testID
-            detailScene.asker = questionDetailedUsernameLabel.text
-        }else if segue.identifier == "questionAnswerTableSegue" {
-            var detailScene = segue.destinationViewController as! QuestionDetailAnswerTableViewController
-            detailScene.queryID = testID
-        }
-
     }
     
     //Pic View
@@ -153,15 +128,16 @@ class QuestionDetailedViewController: UIViewController {
         self.performSegueWithIdentifier("questionShowPic", sender: self)
         self.actInd.stopAnimating()
     }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
+
