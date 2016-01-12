@@ -70,7 +70,7 @@ class QuestionTableViewController: PFQueryTableViewController {
                     questionsQuery.whereKey("subject", equalTo: (currentSubject)!)
                     questionsQuery.whereKey("school", equalTo: (currentSchool)!)
                     questionsQuery.whereKey("solved", equalTo: true)
-                    questionsQuery.orderByDescending("createdAt")
+                    questionsQuery.orderByDescending("updatedAt")
                     return questionsQuery
                 }
             }else{
