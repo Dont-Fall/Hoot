@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Parse
-import ParseUI
 
 class QuestionDetailAnswerTableViewCell: PFTableViewCell {
 

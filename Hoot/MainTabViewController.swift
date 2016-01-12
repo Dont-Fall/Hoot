@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import ParseUI
-import Parse
 
 class MainTabViewController: UITabBarController {
 

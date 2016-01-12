@@ -8,8 +8,6 @@
 //Comite Time 1/12 2:48
 
 import UIKit
-import Parse
-import ParseUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
