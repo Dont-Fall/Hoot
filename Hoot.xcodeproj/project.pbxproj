@@ -155,8 +155,8 @@
 		96FAF0F71C36EA890092D096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		96FAF0FE1C36FB510092D096 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		96FAF1001C3715120092D096 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HootLogo.png; sourceTree = "<group>"; };
-		96FAF1071C381ADE0092D096 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextFieldBar.png; sourceTree = "<group>"; };
+		96FAF1001C3715120092D096 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HootLogo.png; path = ../HootLogo.png; sourceTree = "<group>"; };
+		96FAF1071C381ADE0092D096 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextFieldBar.png; path = ../TextFieldBar.png; sourceTree = "<group>"; };
 		96FAF1471C3862C60092D096 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		96FAF14C1C387AAA0092D096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
