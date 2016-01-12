@@ -234,7 +234,7 @@
 				960945DB1C348C670000282A /* AppDelegate.swift */,
 				96FAF14B1C387AAA0092D096 /* Main.storyboard */,
 				E41209631C44ABED006827E7 /* Models */,
-				E41209621C44AB92006827E7 /* View Controllers */,
+				E41209621C44AB92006827E7 /* Controllers */,
 				E4F708C61C449D1D0008B4F8 /* Supporting Files */,
 			);
 			path = Hoot;
@@ -359,7 +359,7 @@
 			name = Pictures;
 			sourceTree = "<group>";
 		};
-		E41209621C44AB92006827E7 /* View Controllers */ = {
+		E41209621C44AB92006827E7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				960945DD1C348C670000282A /* ViewController.swift */,
@@ -370,7 +370,7 @@
 				96B29BCC1C39A04100240AD7 /* Groups */,
 				96B29BCD1C39A05200240AD7 /* Events */,
 			);
-			name = "View Controllers";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		E41209631C44ABED006827E7 /* Models */ = {

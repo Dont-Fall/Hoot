@@ -50,10 +50,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         signUpSchoolPicker.hidden = true
         self.signUpSchoolPicker.delegate = self
         self.signUpSchoolPicker.dataSource = self
-        signUpEmailTF.delegate = self
-        signUpPasswordTF.delegate = self
         signUpSchoolTF.delegate = self
-        signUpUsernameTF.delegate = self
         
         //School Data
         schoolListUnsorted = ["Rutgers University-New Brunswick", "Stevens Institute of Technolgoy", "Rutgers University-Newark", "Montclair State University", "Rowan University", "The College of New Jersey", "New Jersey Institute of Technology"]
