@@ -133,6 +133,7 @@
 		9634F9481C3EE2390086D799 /* ClassQuestionPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionPicViewController.swift; sourceTree = "<group>"; };
 		9634F9561C3F5B9C0086D799 /* CellSep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellSep.png; sourceTree = "<group>"; };
 		964830691C4573CF00CE29F3 /* QuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewController.swift; sourceTree = "<group>"; };
+		9648306B1C45751500CE29F3 /* Hoot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoot-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A06B8D1C40A3410077084A /* User Groups-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Groups-30.png"; sourceTree = "<group>"; };
 		96A06B8F1C40A3990077084A /* Conference Call-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call-50.png"; sourceTree = "<group>"; };
 		96A06B911C40A3F40077084A /* Conference Call-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call-40.png"; sourceTree = "<group>"; };
@@ -390,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				960945E41C348C670000282A /* LaunchScreen.storyboard */,
+				9648306B1C45751500CE29F3 /* Hoot-Bridging-Header.h */,
 				960945E21C348C670000282A /* Assets.xcassets */,
 				960945E71C348C670000282A /* Info.plist */,
 			);
