@@ -232,6 +232,7 @@
 		960945DA1C348C660000282A /* Hoot */ = {
 			isa = PBXGroup;
 			children = (
+				E4F708C61C449D1D0008B4F8 /* Supporting Files */,
 				960945DB1C348C670000282A /* AppDelegate.swift */,
 				960945DD1C348C670000282A /* ViewController.swift */,
 				96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */,
@@ -241,9 +242,6 @@
 				96B29BCD1C39A05200240AD7 /* Events */,
 				96FAF0FE1C36FB510092D096 /* MoreViewController.swift */,
 				96FAF14B1C387AAA0092D096 /* Main.storyboard */,
-				960945E21C348C670000282A /* Assets.xcassets */,
-				960945E41C348C670000282A /* LaunchScreen.storyboard */,
-				960945E71C348C670000282A /* Info.plist */,
 			);
 			path = Hoot;
 			sourceTree = "<group>";
@@ -361,6 +359,16 @@
 				96FAF1071C381ADE0092D096 /* TextFieldBar.png */,
 			);
 			name = Pictures;
+			sourceTree = "<group>";
+		};
+		E4F708C61C449D1D0008B4F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				960945E41C348C670000282A /* LaunchScreen.storyboard */,
+				960945E21C348C670000282A /* Assets.xcassets */,
+				960945E71C348C670000282A /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
