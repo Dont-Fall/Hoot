@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Parse
-import ParseUI
 
 class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

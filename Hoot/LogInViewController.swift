@@ -8,8 +8,6 @@
 
 import Foundation
 import UIKit
-import Parse
-import ParseUI
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
     

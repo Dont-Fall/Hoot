@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import ParseUI
-import Parse
 
 class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
     
