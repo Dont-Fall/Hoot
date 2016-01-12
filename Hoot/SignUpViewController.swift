@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Parse
 
-class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate {
     
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
@@ -20,6 +20,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet var signUpPasswordTF: UITextField!
     @IBOutlet var signUpSchoolTF: UITextField!
     @IBOutlet var signUpUsernameTF: UITextField!
+    @IBOutlet weak var signUpConfirmPasswordTF: UITextField!
+    
+    //MARK: Labels
+    @IBOutlet weak var errorLabel: UILabel!
     
     //MARK: Picker View
     @IBOutlet var signUpSchoolPicker: UIPickerView!
@@ -28,10 +32,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var schoolListUnsorted: [String] = [String]()
     var schoolList: [String] = [String]()
     
-    //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
         
         //Keyboard up at start
         signUpUsernameTF.becomeFirstResponder()
@@ -44,10 +48,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         view.addGestureRecognizer(tap)
         
         //Delegate Text Fields/Pickers
-        signUpSchoolTF.delegate = self
         signUpSchoolPicker.hidden = true
         self.signUpSchoolPicker.delegate = self
         self.signUpSchoolPicker.dataSource = self
+        signUpEmailTF.delegate = self
+        signUpPasswordTF.delegate = self
+        signUpSchoolTF.delegate = self
+        signUpUsernameTF.delegate = self
         
         //School Data
         schoolListUnsorted = ["Rutgers University-New Brunswick", "Stevens Institute of Technolgoy", "Rutgers University-Newark", "Montclair State University", "Rowan University", "The College of New Jersey", "New Jersey Institute of Technology"]
@@ -81,7 +88,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         signUpSchoolPicker.hidden = true;
     }
     
-    //MARK:MBring Up Editor on Text Field Tap
+    //MARK: Bring Up Editor on Text Field Tap
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         view.endEditing(true)
         signUpSchoolPicker.hidden = false
@@ -96,7 +103,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     //MARK: Create Account
     @IBAction func signUpCreateBtn(sender: AnyObject) {
-        var user = PFUser()
+
+/*        var user = PFUser()
         user.username = signUpUsernameTF.text
         user.password = signUpPasswordTF.text
         user.email = signUpEmailTF.text
@@ -115,5 +123,30 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
                 print("Error")
             }
         }
+*/
+        errorLabel.text = ""
+        
+        let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!)
+        do {
+            try signup.signUpUser()
+            let alert = signUpSuccessAlert()
+            presentViewController(alert, animated: true, completion: nil)
+            self.performSegueWithIdentifier("signUpSuccess", sender: self)
+        }catch let error as Error {
+            errorLabel.text = error.description
+        }catch {
+            errorLabel.text = "Sorry, something went wrong please try again."
+        }
+    
     }
+    
+    //OPTIONAL
+    func signUpSuccessAlert() -> UIAlertController {
+        let alertview = UIAlertController(title: "Sign up Successful", message: "Now you can log in for complete access.", preferredStyle: .Alert)
+        alertview.addAction(UIAlertAction(title: "Login", style: .Default, handler: { (alertAction) ->Void in self.dismissViewControllerAnimated(true, completion: nil) }))
+        alertview.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        
+        return alertview
+    }
+    
 }

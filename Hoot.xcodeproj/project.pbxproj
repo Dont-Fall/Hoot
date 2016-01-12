@@ -70,6 +70,9 @@
 		96FAF14A1C386EA40092D096 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */; };
 		96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FAF14B1C387AAA0092D096 /* Main.storyboard */; };
 		96FAF14F1C3880080092D096 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF14E1C3880080092D096 /* QuestionTableViewCell.swift */; };
+		E41209651C44AC0D006827E7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209641C44AC0D006827E7 /* Enums.swift */; };
+		E41209671C44AC18006827E7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209661C44AC18006827E7 /* SignUp.swift */; };
+		E412096A1C44AC30006827E7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209691C44AC30006827E7 /* SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +131,6 @@
 		9634F9461C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionDetailedViewController.swift; sourceTree = "<group>"; };
 		9634F9481C3EE2390086D799 /* ClassQuestionPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionPicViewController.swift; sourceTree = "<group>"; };
 		9634F9561C3F5B9C0086D799 /* CellSep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellSep.png; sourceTree = "<group>"; };
-		964830661C44635500CE29F3 /* Hoot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoot-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A06B8D1C40A3410077084A /* User Groups-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Groups-30.png"; sourceTree = "<group>"; };
 		96A06B8F1C40A3990077084A /* Conference Call-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call-50.png"; sourceTree = "<group>"; };
 		96A06B911C40A3F40077084A /* Conference Call-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call-40.png"; sourceTree = "<group>"; };
@@ -160,6 +162,9 @@
 		96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		96FAF14C1C387AAA0092D096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96FAF14E1C3880080092D096 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		E41209641C44AC0D006827E7 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		E41209661C44AC18006827E7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		E41209691C44AC30006827E7 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,16 +236,11 @@
 		960945DA1C348C660000282A /* Hoot */ = {
 			isa = PBXGroup;
 			children = (
-				E4F708C61C449D1D0008B4F8 /* Supporting Files */,
 				960945DB1C348C670000282A /* AppDelegate.swift */,
-				960945DD1C348C670000282A /* ViewController.swift */,
-				96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */,
-				96B29BCE1C39A05D00240AD7 /* Login/SignUp */,
-				96B29BCB1C39A03600240AD7 /* Questions */,
-				96B29BCC1C39A04100240AD7 /* Groups */,
-				96B29BCD1C39A05200240AD7 /* Events */,
-				96FAF0FE1C36FB510092D096 /* MoreViewController.swift */,
 				96FAF14B1C387AAA0092D096 /* Main.storyboard */,
+				E41209631C44ABED006827E7 /* Models */,
+				E41209621C44AB92006827E7 /* View Controllers */,
+				E4F708C61C449D1D0008B4F8 /* Supporting Files */,
 			);
 			path = Hoot;
 			sourceTree = "<group>";
@@ -357,6 +357,30 @@
 				96FAF1071C381ADE0092D096 /* TextFieldBar.png */,
 			);
 			name = Pictures;
+			sourceTree = "<group>";
+		};
+		E41209621C44AB92006827E7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				960945DD1C348C670000282A /* ViewController.swift */,
+				96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */,
+				96FAF0FE1C36FB510092D096 /* MoreViewController.swift */,
+				96B29BCE1C39A05D00240AD7 /* Login/SignUp */,
+				96B29BCB1C39A03600240AD7 /* Questions */,
+				96B29BCC1C39A04100240AD7 /* Groups */,
+				96B29BCD1C39A05200240AD7 /* Events */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E41209631C44ABED006827E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E41209641C44AC0D006827E7 /* Enums.swift */,
+				E41209661C44AC18006827E7 /* SignUp.swift */,
+				E41209691C44AC30006827E7 /* SignIn.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E4F708C61C449D1D0008B4F8 /* Supporting Files */ = {
@@ -531,9 +555,12 @@
 				9609462A1C3491040000282A /* LogInViewController.swift in Sources */,
 				960945DE1C348C670000282A /* ViewController.swift in Sources */,
 				9634F9471C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift in Sources */,
+				E41209651C44AC0D006827E7 /* Enums.swift in Sources */,
 				96B29BC81C399FE700240AD7 /* EventsTableViewCell.swift in Sources */,
+				E41209671C44AC18006827E7 /* SignUp.swift in Sources */,
 				960945DC1C348C670000282A /* AppDelegate.swift in Sources */,
 				96FAF14F1C3880080092D096 /* QuestionTableViewCell.swift in Sources */,
+				E412096A1C44AC30006827E7 /* SignIn.swift in Sources */,
 				96B29BD61C3AE60900240AD7 /* QuestionDetailedViewController.swift in Sources */,
 				96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */,
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
