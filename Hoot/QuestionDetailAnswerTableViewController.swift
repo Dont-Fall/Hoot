@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionDetailAnswerTableViewController: UITableViewController {
+class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
