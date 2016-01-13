@@ -45,28 +45,25 @@ class AskQuestion: NSObject {
     }
 
     
-    func askQuestionAlert() -> UIAlertController {
+    func askQuestionAlert() throws -> UIAlertController {
         let alertview = UIAlertController(title: "Uh-oh!", message: "", preferredStyle: .Alert)
         alertview.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         guard hasNoEmptyFields() else{
-            alertview.message = "Please fill in all fields."
+            
             return alertview
         }
         guard courseSufficientLength() else{
-            alertview.message = "Please enter a valid course."
+            
             return alertview
         }
         guard questionSufficientLenght() else{
-            alertview.message = "Question too long!\nPlease reuce to 200 characters."
+
             return alertview
         }
         alertview.title = "Success!"
         alertview.message = "Question now posted!"
         return alertview
     }
-    
-    func askQuestion() {
-        
-    }
+
     
 }

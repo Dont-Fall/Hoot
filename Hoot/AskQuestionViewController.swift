@@ -74,7 +74,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         //MARK: Nav Bar Customize
         askQuestionCancelBtn = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "askQuestionCancel")
-        askQuestionAskBtn = UIBarButtonItem(title: "Ask", style: .Plain, target: self, action: "askQuestionAskTapped")
+        askQuestionAskBtn = UIBarButtonItem(title: "Ask", style: .Plain, target: self, action: "askQuestionAskQuestion")
 
         self.navigationItem.setRightBarButtonItem(askQuestionAskBtn, animated: true)
         self.navigationItem.setLeftBarButtonItem(askQuestionCancelBtn, animated: true)
@@ -112,7 +112,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     //Ask Function Question
-    func askQuestionAskQuestion() {
+    func askQuestionAskQuestion() throws {
         var currentUser = PFUser.currentUser()
         var question = PFObject(className: "Question")
         question["course"] = askQuestionCourseTF.text
@@ -127,6 +127,16 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         let imageData = UIImageJPEGRepresentation(self.askQuestionPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
         question.setObject(imageFile!, forKey: "picture")
+        
+        var image: PFFile = imageFile!
+        var askQuestion = AskQuestion(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!, img: image)
+        
+        do {
+            try askQuestion.askQuestionAlert()
+        }catch let error as Error{
+            
+        }
+        
         //MARK: Save Question
         question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
@@ -147,10 +157,6 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                 print("Error")
             }
         }
-    }
-    
-    func askQuestionAskTapped() {
-        
     }
     
     //Live Count Text Field

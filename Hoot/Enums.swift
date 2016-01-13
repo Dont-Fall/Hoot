@@ -15,7 +15,7 @@ enum Error: ErrorType {
     case UserNameTaken
     case IncorrectSignIn
     case InvalidPassword
-    case ClassTooShort
+    case CourseTooShort
     case QuestionTooLong
 }
 
@@ -28,8 +28,23 @@ extension Error: CustomStringConvertible {
         case .UserNameTaken: return "This username is taken.\nPlease choose another username."
         case .IncorrectSignIn: return "The username or password entered is incorrect."
         case .InvalidPassword: return "Passwords must be 8 or more characters,\n and include a numeric and capital letter."
-        case .ClassTooShort: return "Please enter a valid class."
-        case .QuestionTooLong: return "Oops, question too long!\nPlease make 200 characters or less!"
+//        case .CourseTooShort: return "test"
+//        case .QuestionTooLong: return "test"
+        default: return "Sorry, something else went wrong."
+        }
+    }
+    
+    var alert: UIAlertController {
+        switch self {
+        case .EmptyField:
+            self.alert.message = "Please fill in all empty fields."
+            break
+        case .CourseTooShort:
+            self.alert.message = "Please enter a valid course."
+            break
+        case .QuestionTooLong:
+            self.alert.message = "Question too long!\nPlease reduce to fewer than 200 characters."
+            break
         }
     }
 }
