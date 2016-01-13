@@ -15,6 +15,8 @@ enum Error: ErrorType {
     case UserNameTaken
     case IncorrectSignIn
     case InvalidPassword
+    case ClassTooShort
+    case QuestionTooLong
 }
 
 extension Error: CustomStringConvertible {
@@ -26,6 +28,8 @@ extension Error: CustomStringConvertible {
         case .UserNameTaken: return "This username is taken.\nPlease choose another username."
         case .IncorrectSignIn: return "The username or password entered is incorrect."
         case .InvalidPassword: return "Passwords must be 8 or more characters,\n and include a numeric and capital letter."
+        case .ClassTooShort: return "Please enter a valid class."
+        case .QuestionTooLong: return "Oops, question too long!\nPlease make 200 characters or less!"
         }
     }
 }

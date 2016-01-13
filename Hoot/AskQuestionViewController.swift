@@ -74,7 +74,8 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         //MARK: Nav Bar Customize
         askQuestionCancelBtn = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "askQuestionCancel")
-        askQuestionAskBtn = UIBarButtonItem(title: "Ask", style: .Plain, target: self, action: "askQuestionAskQuestion")
+        askQuestionAskBtn = UIBarButtonItem(title: "Ask", style: .Plain, target: self, action: "askQuestionAskTapped")
+
         self.navigationItem.setRightBarButtonItem(askQuestionAskBtn, animated: true)
         self.navigationItem.setLeftBarButtonItem(askQuestionCancelBtn, animated: true)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -146,6 +147,10 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                 print("Error")
             }
         }
+    }
+    
+    func askQuestionAskTapped() {
+        
     }
     
     //Live Count Text Field
