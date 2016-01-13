@@ -154,9 +154,12 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                     print("Error")
                 }
             }
-        } catch let err as ErrorType {
+           // Error Caught Alert Settings
+        } catch let message as ErrorType {
             
-            print("caught some kind of error \(err))")
+           let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
         }
         
     }

@@ -4,17 +4,11 @@
 //
 //  Created by Christopher Frost on 1/13/16.
 //  Copyright © 2016 Nitrox Development. All rights reserved.
-//
+//  Assistance from Zack Cuomo
 
 import Foundation
 
 class AskQuestion: NSObject {
-    
-    enum AskQuestionError: ErrorType {
-        case InsuffcientCourseLength
-        case InsuffcientQuestionLength
-        case EmptyFields
-    }
     
     var userCourse: String?
     var userText: String?
@@ -55,15 +49,15 @@ class AskQuestion: NSObject {
     func askQuestionAlert() throws {
         guard hasNoEmptyFields() else{
             
-            throw AskQuestionError.EmptyFields
+            throw Error.EmptyField
         }
         guard courseSufficientLength() else{
             
-            throw AskQuestionError.InsuffcientCourseLength
+            throw Error.InsufficientCourseLength
         }
         guard questionSufficientLenght() else{
 
-            throw AskQuestionError.InsuffcientQuestionLength
+            throw Error.InsufficientQuestionLength
         }
     }
 
