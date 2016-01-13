@@ -20,6 +20,7 @@ enum Error: ErrorType {
 }
 
 extension Error: CustomStringConvertible {
+   
     var description: String {
         switch self {
         case .EmptyField: return "Please fill in all empty fields."
@@ -45,6 +46,10 @@ extension Error: CustomStringConvertible {
         case .QuestionTooLong:
             self.alert.message = "Question too long!\nPlease reduce to fewer than 200 characters."
             break
+        default:
+            self.alert.message = "Error"
+            break
         }
+        return self.alert
     }
 }

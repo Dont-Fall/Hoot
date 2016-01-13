@@ -112,7 +112,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     //Ask Function Question
-    func askQuestionAskQuestion() throws {
+    func askQuestionAskQuestion() {
         var currentUser = PFUser.currentUser()
         var question = PFObject(className: "Question")
         question["course"] = askQuestionCourseTF.text
@@ -133,30 +133,32 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         do {
             try askQuestion.askQuestionAlert()
-        }catch let error as Error{
             
+            //MARK: Save Question
+            question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    print("Yp")
+                    // Success, no creating error
+                    currentUser!.incrementKey("points", byAmount: 5)
+                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            print("Points Updated")
+                        } else {
+                            print("Error")
+                        }
+                    }
+                    self.actInd.startAnimating()
+                    self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
+                    self.actInd.startAnimating()
+                } else {
+                    print("Error")
+                }
+            }
+        } catch let err as ErrorType {
+            
+            print("caught some kind of error \(err))")
         }
         
-        //MARK: Save Question
-        question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                print("Yp")
-                // Success, no creating error
-                currentUser!.incrementKey("points", byAmount: 5)
-                currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                    if error == nil {
-                        print("Points Updated")
-                    } else {
-                        print("Error")
-                    }
-                }
-                self.actInd.startAnimating()
-                self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
-                self.actInd.startAnimating()
-            } else {
-                print("Error")
-            }
-        }
     }
     
     //Live Count Text Field

@@ -9,10 +9,17 @@
 import Foundation
 
 class AskQuestion: NSObject {
+    
+    enum AskQuestionError: ErrorType {
+        case InsuffcientCourseLength
+        case InsuffcientQuestionLength
+        case EmptyFields
+    }
+    
     var userCourse: String?
     var userText: String?
     var image: PFFile?
-    let alert = UIAlertController()
+//    let alert = UIAlertController()
     
     init(course: String, text: String, img: PFFile){
         self.userCourse = course
@@ -45,24 +52,19 @@ class AskQuestion: NSObject {
     }
 
     
-    func askQuestionAlert() throws -> UIAlertController {
-        let alertview = UIAlertController(title: "Uh-oh!", message: "", preferredStyle: .Alert)
-        alertview.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    func askQuestionAlert() throws {
         guard hasNoEmptyFields() else{
             
-            return alertview
+            throw AskQuestionError.EmptyFields
         }
         guard courseSufficientLength() else{
             
-            return alertview
+            throw AskQuestionError.InsuffcientCourseLength
         }
         guard questionSufficientLenght() else{
 
-            return alertview
+            throw AskQuestionError.InsuffcientQuestionLength
         }
-        alertview.title = "Success!"
-        alertview.message = "Question now posted!"
-        return alertview
     }
 
     
