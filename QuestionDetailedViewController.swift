@@ -27,9 +27,7 @@ class QuestionDetailedViewController: UIViewController {
     }
     
     @IBAction func questionDetailedHelpBtn(sender: AnyObject) {
-        //self.actInd.startAnimating()
         self.performSegueWithIdentifier("questionDetailHelpSegue", sender: self)
-        //self.actInd.stopAnimating()
     }
     
     
@@ -66,8 +64,6 @@ class QuestionDetailedViewController: UIViewController {
             testID = object.objectId!
         }
         
-        print (testID)
-        
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
         let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
@@ -88,12 +84,22 @@ class QuestionDetailedViewController: UIViewController {
         questionDetailedPicturePreview.userInteractionEnabled = true
         tapRec.addTarget(self, action: "tapView")
         questionDetailedPicturePreview.addGestureRecognizer(tapRec)
+        
+        //Start TV at Top Left
+        questionDetailQuestionTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
     }
     
     //DID RECIEVE MEMORY WARNING
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        //let textView = object as! UITextView
+        var topCorrect = (questionDetailQuestionTV.bounds.size.height - questionDetailQuestionTV.contentSize.height * questionDetailQuestionTV.zoomScale) / 2
+        topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
+        questionDetailQuestionTV.contentInset.top = topCorrect
     }
     
     //Report Question Function

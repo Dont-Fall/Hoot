@@ -21,6 +21,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     //Segment Controller
     let scItems = ["Asked", "Solved"]
     var customSC = UISegmentedControl()
+
     
     // Initialise the PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
@@ -41,18 +42,15 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
         var index: Int = customSC.selectedSegmentIndex
+        var currentUser = PFUser.currentUser()
+        let currentUserCode = currentUser!["currentGroupCode"]
+        var questionsQuery = PFQuery(className: "ClassQuestion")
         if index == 0 {
-            var currentUser = PFUser.currentUser()
-            let currentUserCode = currentUser!["currentGroupCode"]
-            var questionsQuery = PFQuery(className: "ClassQuestion")
             questionsQuery.whereKey("code", equalTo: (currentUserCode)!)
             questionsQuery.whereKey("solved", equalTo: false)
             questionsQuery.orderByDescending("createdAt")
             return questionsQuery
         }else{
-            var currentUser = PFUser.currentUser()
-            let currentUserCode = currentUser!["currentGroupCode"]
-            var questionsQuery = PFQuery(className: "ClassQuestion")
             questionsQuery.whereKey("code", equalTo: (currentUserCode)!)
             questionsQuery.whereKey("solved", equalTo: true)
             questionsQuery.orderByDescending("createdAt")
@@ -65,7 +63,10 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         //Segment Controller
         customSC = UISegmentedControl(items: scItems)
         customSC.selectedSegmentIndex = 0
-        print(nothingToLoad)
+        loadObjects()
+        tableView.reloadData()
+        customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.ValueChanged)
+        customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.TouchUpInside)
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "classQuestionBack")
@@ -94,6 +95,19 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         self.performSegueWithIdentifier("classComposeSegue", sender: self)
         self.actInd.stopAnimating()
         
+    }
+    
+    //Segment Controller Function
+    func segmentedControlValueChanged(segment: UISegmentedControl){
+        if customSC.selectedSegmentIndex == 1{
+            self.loadObjects()
+            self.tableView.reloadData()
+            print("first segement clicked")
+        }else if customSC.selectedSegmentIndex == 0{
+            self.loadObjects()
+            self.tableView.reloadData()
+            print("second segment clicked")
+        }
     }
     
     //Go Back
