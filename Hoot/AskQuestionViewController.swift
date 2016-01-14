@@ -39,7 +39,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     //MARK: Extras
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
+//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Felds
     @IBOutlet var askQuestionCourseTF: UITextField!
@@ -147,9 +147,9 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                             print("Error")
                         }
                     }
-                    self.actInd.startAnimating()
+//                    self.actInd.startAnimating()
                     self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
-                    self.actInd.startAnimating()
+//                    self.actInd.startAnimating()
                 } else {
                     print("Error")
                 }

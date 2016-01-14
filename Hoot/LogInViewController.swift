@@ -12,7 +12,7 @@ import UIKit
 class LogInViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Extras
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
+//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Fields
     @IBOutlet var logInUserTF: UITextField!

@@ -48,18 +48,13 @@ class AskQuestion: NSObject {
     
     func askQuestionAlert() throws {
         guard hasNoEmptyFields() else{
-            
             throw Error.EmptyField
         }
         guard courseSufficientLength() else{
-            
             throw Error.InsufficientCourseLength
         }
         guard questionSufficientLenght() else{
-
             throw Error.InsufficientQuestionLength
         }
     }
-
-    
 }
