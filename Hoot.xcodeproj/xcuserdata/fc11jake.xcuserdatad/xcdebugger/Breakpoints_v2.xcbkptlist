@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuestionDetailTableViewController.swift"
-            timestampString = "474232849.035949"
+            filePath = "Hoot/ClassQuestionsTableViewController.swift"
+            timestampString = "474402273.951542"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "QuestionDetailTableViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuestionDetailTableViewController.swift"
-            timestampString = "474233167.686042"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "queryForTable()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

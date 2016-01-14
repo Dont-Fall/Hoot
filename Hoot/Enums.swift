@@ -39,22 +39,4 @@ extension Error: CustomStringConvertible {
         default: return "Sorry, something else went wrong."
         }
     }
-    
-    var alert: UIAlertController {
-        switch self {
-        case .EmptyField:
-            self.alert.message = "Please fill in all empty fields."
-            break
-        case .CourseTooShort:
-            self.alert.message = "Please enter a valid course."
-            break
-        case .QuestionTooLong:
-            self.alert.message = "Question too long!\nPlease reduce to fewer than 200 characters."
-            break
-        default:
-            self.alert.message = "Error"
-            break
-        }
-        return self.alert
-    }
 }

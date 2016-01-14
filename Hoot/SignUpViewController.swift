@@ -12,7 +12,7 @@ import UIKit
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate {
     
     //MARK: Extras
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
+//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Fields
     @IBOutlet var signUpEmailTF: UITextField!

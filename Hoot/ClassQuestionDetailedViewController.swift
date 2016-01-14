@@ -10,15 +10,29 @@ import UIKit
 
 class ClassQuestionDetailedViewController: UIViewController {
     
+    var testID = ""
+    
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //Labels
     @IBOutlet var classQuestionDetailedUsernameLabel: UILabel!
-    @IBOutlet var classQuestionDetailedQuestionLabel: UILabel!
+    
+    //Text Views
+    @IBOutlet var classQuestionDetailedQuestionTV: UITextView!
+    
     //Pictures
     @IBOutlet var classQuestionDetailedPicturePreview: UIImageView!
     let tapRec = UITapGestureRecognizer()
+    
+    //Buttons
+    @IBAction func classQuestionAnswersBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("classQuestionAnswersSegue", sender: self)
+    }
+    @IBAction func classQuestionHelpBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("classQuestionHelpSegue", sender: self)
+    }
+    
     
     // Container to store the view table selected object
     var currentObject : PFObject?
@@ -54,7 +68,8 @@ class ClassQuestionDetailedViewController: UIViewController {
             }
             
             classQuestionDetailedUsernameLabel.text = object["user"] as! String
-            classQuestionDetailedQuestionLabel.text = object["question"] as! String
+            classQuestionDetailedQuestionTV.text = object["question"] as! String
+            testID = object.objectId!
         }
         
         //MARK: Tap Image
@@ -98,9 +113,16 @@ class ClassQuestionDetailedViewController: UIViewController {
             var detailScene = segue.destinationViewController as! ClassQuestionPicViewController
             // Pass the selected object to the destination view controller.
             detailScene.largePic = classQuestionDetailedPicturePreview.image
-        }
+        }else if segue.identifier == "classQuestionHelpSegue"{
+            var detailScene = segue.destinationViewController as! ClassQuestionAnswerViewController
+            detailScene.questionID = testID
+            detailScene.asker = classQuestionDetailedUsernameLabel.text
+        }else if segue.identifier == "classQuestionAnswersSegue" {
+            var detailScene = segue.destinationViewController as! ClassQuestionAnswersTableViewController
+            detailScene.queryID = testID
     }
-    
+    }
+
     //Pic View
     func tapView() {
         self.actInd.startAnimating()

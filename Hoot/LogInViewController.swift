@@ -12,7 +12,7 @@ import UIKit
 class LogInViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Extras
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
+//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Fields
     @IBOutlet var logInUserTF: UITextField!
@@ -33,6 +33,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         //Taps to close
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        //Hide Nav Bar
+        navigationController?.navigationBarHidden = true
+        tabBarController?.tabBar.hidden = true
     }
     
     //DID RECIEVE MEMORY WARNING
