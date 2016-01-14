@@ -78,6 +78,7 @@
 		E41209651C44AC0D006827E7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209641C44AC0D006827E7 /* Enums.swift */; };
 		E41209671C44AC18006827E7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209661C44AC18006827E7 /* SignUp.swift */; };
 		E412096A1C44AC30006827E7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209691C44AC30006827E7 /* SignIn.swift */; };
+		E45DFB3A1C46B4C100B83CE3 /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45DFB391C46B4C100B83CE3 /* AskQuestion.swift */; };
 		F183B68A1C45AB1E0009FBE6 /* HootLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F183B6891C45AB1E0009FBE6 /* HootLogo.png */; };
 		F183B68C1C45AB260009FBE6 /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F183B68B1C45AB260009FBE6 /* TextFieldBar.png */; };
 /* End PBXBuildFile section */
@@ -425,6 +426,7 @@
 				E41209641C44AC0D006827E7 /* Enums.swift */,
 				E41209661C44AC18006827E7 /* SignUp.swift */,
 				E41209691C44AC30006827E7 /* SignIn.swift */,
+				E45DFB391C46B4C100B83CE3 /* AskQuestion.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -612,6 +614,7 @@
 				9648306A1C4573CF00CE29F3 /* QuestionAnswerViewController.swift in Sources */,
 				960945DC1C348C670000282A /* AppDelegate.swift in Sources */,
 				96FAF14F1C3880080092D096 /* QuestionTableViewCell.swift in Sources */,
+				E45DFB3A1C46B4C100B83CE3 /* AskQuestion.swift in Sources */,
 				E412096A1C44AC30006827E7 /* SignIn.swift in Sources */,
 				96B29BD61C3AE60900240AD7 /* QuestionDetailedViewController.swift in Sources */,
 				96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */,

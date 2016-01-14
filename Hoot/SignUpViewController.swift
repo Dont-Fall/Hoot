@@ -12,7 +12,7 @@ import UIKit
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate {
     
     //MARK: Extras
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
+//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Fields
     @IBOutlet var signUpEmailTF: UITextField!
@@ -125,8 +125,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!)
         do {
             try signup.signUpUser()
-            let alert = signUpSuccessAlert()
-            presentViewController(alert, animated: true, completion: nil)
+//            let alert = signUpSuccessAlert()
+//            presentViewController(alert, animated: true, completion: nil)
             self.performSegueWithIdentifier("signUpSuccess", sender: self)
         }catch let error as Error {
             errorLabel.text = error.description

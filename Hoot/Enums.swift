@@ -15,9 +15,15 @@ enum Error: ErrorType {
     case UserNameTaken
     case IncorrectSignIn
     case InvalidPassword
+    case CourseTooShort
+    case QuestionTooLong
+    //Question Cases
+    case InsufficientCourseLength
+    case InsufficientQuestionLength
 }
 
 extension Error: CustomStringConvertible {
+   
     var description: String {
         switch self {
         case .EmptyField: return "Please fill in all empty fields."
@@ -26,6 +32,11 @@ extension Error: CustomStringConvertible {
         case .UserNameTaken: return "This username is taken.\nPlease choose another username."
         case .IncorrectSignIn: return "The username or password entered is incorrect."
         case .InvalidPassword: return "Passwords must be 8 or more characters,\n and include a numeric and capital letter."
+        //Question Errors
+        case .InsufficientCourseLength: return "Please enter a valid course."
+        case .InsufficientQuestionLength: return "Question length is too long."
+            
+        default: return "Sorry, something else went wrong."
         }
     }
 }

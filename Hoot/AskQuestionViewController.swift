@@ -39,7 +39,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     //MARK: Extras
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
+//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Felds
     @IBOutlet var askQuestionCourseTF: UITextField!
@@ -75,6 +75,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         //MARK: Nav Bar Customize
         askQuestionCancelBtn = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "askQuestionCancel")
         askQuestionAskBtn = UIBarButtonItem(title: "Ask", style: .Plain, target: self, action: "askQuestionAskQuestion")
+
         self.navigationItem.setRightBarButtonItem(askQuestionAskBtn, animated: true)
         self.navigationItem.setLeftBarButtonItem(askQuestionCancelBtn, animated: true)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -126,26 +127,41 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         let imageData = UIImageJPEGRepresentation(self.askQuestionPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
         question.setObject(imageFile!, forKey: "picture")
-        //MARK: Save Question
-        question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                print("Yp")
-                // Success, no creating error
-                currentUser!.incrementKey("points", byAmount: 5)
-                currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                    if error == nil {
-                        print("Points Updated")
-                    } else {
-                        print("Error")
+        
+        var image: PFFile = imageFile!
+        var askQuestion = AskQuestion(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!, img: image)
+        
+        do {
+            try askQuestion.askQuestionAlert()
+            
+            //MARK: Save Question
+            question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    print("Yp")
+                    // Success, no creating error
+                    currentUser!.incrementKey("points", byAmount: 5)
+                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            print("Points Updated")
+                        } else {
+                            print("Error")
+                        }
                     }
+//                    self.actInd.startAnimating()
+                    self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
+//                    self.actInd.startAnimating()
+                } else {
+                    print("Error")
                 }
-                self.actInd.startAnimating()
-                self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
-                self.actInd.startAnimating()
-            } else {
-                print("Error")
             }
+           // Error Caught Alert Settings
+        } catch let message as ErrorType {
+            
+           let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
         }
+        
     }
     
     //Live Count Text Field
