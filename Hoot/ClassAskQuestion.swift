@@ -2,9 +2,8 @@
 //  AskQuestion.swift
 //  Hoot
 //
-//  Created by Christopher Frost on 1/13/16.
+//  Created by Zack Cuomo on 1/15/16.
 //  Copyright © 2016 Nitrox Development. All rights reserved.
-//  Assistance from Zack Cuomo
 
 import Foundation
 
