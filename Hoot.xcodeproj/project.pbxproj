@@ -622,7 +622,7 @@
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
 				9634F93F1C3EBDAC0086D799 /* ClassQuestionTableViewCell.swift in Sources */,
 				96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */,
-				96D651B01C481F8E00B731F6 /* AskQuestion.swift in Sources */,
+				F141B08B1C481FA300041DF4 /* AskQuestion.swift in Sources */,
 				960946301C34DB590000282A /* SignUpViewController.swift in Sources */,
 				9634F9451C3EC4B40086D799 /* ClassAskQuestionViewController.swift in Sources */,
 				964F22BF1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift in Sources */,
