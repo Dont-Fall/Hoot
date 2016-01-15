@@ -19,7 +19,11 @@ enum Error: ErrorType {
     case QuestionTooLong
     //Question Cases
     case InsufficientCourseLength
+    case InsufficientTopicLength
     case InsufficientQuestionLength
+    case InsufficientEventLength
+    case InsufficientLocationLength
+    
 }
 
 extension Error: CustomStringConvertible {
@@ -34,7 +38,10 @@ extension Error: CustomStringConvertible {
         case .InvalidPassword: return "Passwords must be 8 or more characters,\n and include a numeric and capital letter."
         //Question Errors
         case .InsufficientCourseLength: return "Please enter a valid course."
+        case .InsufficientTopicLength: return "Please enter a valid topic."
         case .InsufficientQuestionLength: return "Question length is too long."
+        case .InsufficientEventLength: return "Please enter a valid event name."
+        case .InsufficientLocationLength: return "Please enter a valid location."
             
         default: return "Sorry, something else went wrong."
         }

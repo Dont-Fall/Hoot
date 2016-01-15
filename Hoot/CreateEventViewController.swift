@@ -111,28 +111,41 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         event["reportNumber"] = 0
         event["reported"] = false
         
-        //MARK: Save Event
-        event.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                print("Yp")
-                // Success, no creating error.
-                self.navigationController?.popViewControllerAnimated(true)
-                currentUser!.incrementKey("points", byAmount: 5)
-                print(currentUser!.objectForKey("points"))
-                self.tabBarController?.tabBar.hidden = false
-                PFUser.currentUser()!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                    if error == nil {
-                        print("Points Updated")
-                    } else {
-                        print("Error")
-                    }
-                }
-            } else {
-                print("Error")
-            }
-        }
         
-    }
+        var createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDateTF.text!)
+        
+        do {
+            try createEvent.eventAlert()
+            
+            //MARK: Save Event
+            event.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    print("Yp")
+                    // Success, no creating error.
+                    self.navigationController?.popViewControllerAnimated(true)
+                    currentUser!.incrementKey("points", byAmount: 5)
+                    print(currentUser!.objectForKey("points"))
+                    self.tabBarController?.tabBar.hidden = false
+                    PFUser.currentUser()!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            print("Points Updated")
+                        } else {
+                            print("Error")
+                        }
+                    }
+                } else {
+                    print("Error")
+                }
+            } // Error Caught Alert Settings
+        } catch let message as ErrorType {
+            
+            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        }
+
+        
+        }
     
     //MARK: Tap Function
     func dismissKeyboard() {
