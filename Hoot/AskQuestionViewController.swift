@@ -188,6 +188,11 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         }
     }
     
+    func textViewDidBeginEditing(textView: UITextView) {
+        askQuestionAskQuestionTV.text = ""
+        askQuestionAskQuestionTV.textColor = UIColor.blackColor()
+    }
+    
     /*
     // MARK: - Navigation
 

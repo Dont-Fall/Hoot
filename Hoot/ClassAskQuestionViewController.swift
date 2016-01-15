@@ -80,6 +80,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UII
         classQuestion["question"] = classAskQuestionQuestionTF.text
         classQuestion["user"] = currentUser!.username
         classQuestion["solved"] = false
+        classQuestion["topic"] = classAskQuestionCourseTF.text
         classQuestion["school"] = currentUser!.objectForKey("school")
         classQuestion["code"] = currentUser!.objectForKey("currentGroupCode")
         classQuestion["reportNumber"] = 0

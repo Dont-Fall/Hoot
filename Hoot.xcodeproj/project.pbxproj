@@ -40,6 +40,7 @@
 		9634F9451C3EC4B40086D799 /* ClassAskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9441C3EC4B40086D799 /* ClassAskQuestionViewController.swift */; };
 		9634F9471C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9461C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift */; };
 		9634F9491C3EE2390086D799 /* ClassQuestionPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9481C3EE2390086D799 /* ClassQuestionPicViewController.swift */; };
+		9643E2BF1C4991AA00E17D54 /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9643E2BE1C4991AA00E17D54 /* TextFieldBar.png */; };
 		9648306A1C4573CF00CE29F3 /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964830691C4573CF00CE29F3 /* QuestionAnswerViewController.swift */; };
 		964F22B51C46DAA80042A335 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964F22B31C46DAA80042A335 /* Bolts.framework */; };
 		964F22B61C46DAA80042A335 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964F22B41C46DAA80042A335 /* Parse.framework */; };
@@ -63,7 +64,7 @@
 		96CFB5E31C46AAEE00A7793D /* ClassQuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E21C46AAEE00A7793D /* ClassQuestionAnswerViewController.swift */; };
 		96CFB5E51C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E41C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift */; };
 		96CFB5E71C46B01B00A7793D /* ClassQuestionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */; };
-		96D651B01C481F8E00B731F6 /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D651AF1C481F8E00B731F6 /* AskQuestion.swift */; };
+		96D651B21C498DA400B731F6 /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D651B11C498DA400B731F6 /* AskQuestion.swift */; };
 		96D80DDA1C3D5BE000C64794 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */; };
 		96FAF0F61C36EA830092D096 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F51C36EA830092D096 /* Accounts.framework */; };
 		96FAF0F81C36EA890092D096 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F71C36EA890092D096 /* Social.framework */; };
@@ -76,8 +77,6 @@
 		E41209671C44AC18006827E7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209661C44AC18006827E7 /* SignUp.swift */; };
 		E412096A1C44AC30006827E7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209691C44AC30006827E7 /* SignIn.swift */; };
 		E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		F183B68A1C45AB1E0009FBE6 /* HootLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F183B6891C45AB1E0009FBE6 /* HootLogo.png */; };
-		F183B68C1C45AB260009FBE6 /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F183B68B1C45AB260009FBE6 /* TextFieldBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +136,7 @@
 		9634F9441C3EC4B40086D799 /* ClassAskQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAskQuestionViewController.swift; sourceTree = "<group>"; };
 		9634F9461C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionDetailedViewController.swift; sourceTree = "<group>"; };
 		9634F9481C3EE2390086D799 /* ClassQuestionPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionPicViewController.swift; sourceTree = "<group>"; };
+		9643E2BE1C4991AA00E17D54 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextFieldBar.png; sourceTree = "<group>"; };
 		964830691C4573CF00CE29F3 /* QuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		9648306B1C45751500CE29F3 /* Hoot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoot-Bridging-Header.h"; sourceTree = "<group>"; };
 		964F22B31C46DAA80042A335 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -162,6 +162,7 @@
 		96CFB5E41C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswersTableViewController.swift; sourceTree = "<group>"; };
 		96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassQuestionAnswerCell.swift; path = ../ClassQuestionAnswerCell.swift; sourceTree = "<group>"; };
 		96D651AF1C481F8E00B731F6 /* AskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
+		96D651B11C498DA400B731F6 /* AskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
 		96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		96FAF0F51C36EA830092D096 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		96FAF0F71C36EA890092D096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -173,12 +174,11 @@
 		E41209641C44AC0D006827E7 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E41209661C44AC18006827E7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		E41209691C44AC30006827E7 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
-		F136D6241C48332C00BD5954 /* CellSep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CellSep.png; path = ../../Downloads/CellSep.png; sourceTree = "<group>"; };
-		F136D6251C48332C00BD5954 /* Conference Call-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Conference Call-40.png"; path = "../../Downloads/Conference Call-40.png"; sourceTree = "<group>"; };
-		F136D6261C48332C00BD5954 /* FAQ-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FAQ-30.png"; path = "../../Downloads/FAQ-30.png"; sourceTree = "<group>"; };
-		F136D6271C48332C00BD5954 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HootLogo.png; path = ../../Downloads/HootLogo.png; sourceTree = "<group>"; };
-		F136D6281C48332C00BD5954 /* Q_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Q_A.png; path = ../../Downloads/Q_A.png; sourceTree = "<group>"; };
-		F136D6291C48332C00BD5954 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextFieldBar.png; path = ../../Downloads/TextFieldBar.png; sourceTree = "<group>"; };
+		F136D6241C48332C00BD5954 /* CellSep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellSep.png; sourceTree = "<group>"; };
+		F136D6251C48332C00BD5954 /* Conference Call-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call-40.png"; sourceTree = "<group>"; };
+		F136D6261C48332C00BD5954 /* FAQ-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FAQ-30.png"; sourceTree = "<group>"; };
+		F136D6271C48332C00BD5954 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HootLogo.png; sourceTree = "<group>"; };
+		F136D6281C48332C00BD5954 /* Q_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Q_A.png; sourceTree = "<group>"; };
 		F141B08A1C481FA300041DF4 /* AskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -400,7 +400,7 @@
 				F136D6261C48332C00BD5954 /* FAQ-30.png */,
 				F136D6271C48332C00BD5954 /* HootLogo.png */,
 				F136D6281C48332C00BD5954 /* Q_A.png */,
-				F136D6291C48332C00BD5954 /* TextFieldBar.png */,
+				9643E2BE1C4991AA00E17D54 /* TextFieldBar.png */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -422,6 +422,7 @@
 		E41209631C44ABED006827E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				96D651B11C498DA400B731F6 /* AskQuestion.swift */,
 				E41209641C44AC0D006827E7 /* Enums.swift */,
 				F141B08A1C481FA300041DF4 /* AskQuestion.swift */,
 				E41209661C44AC18006827E7 /* SignUp.swift */,
@@ -549,16 +550,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F136D62F1C48332C00BD5954 /* TextFieldBar.png in Resources */,
 				96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */,
-				F136D62D1C48332C00BD5954 /* HootLogo.png in Resources */,
-				F136D62A1C48332C00BD5954 /* CellSep.png in Resources */,
-				F136D62B1C48332C00BD5954 /* Conference Call-40.png in Resources */,
+				9643E2BF1C4991AA00E17D54 /* TextFieldBar.png in Resources */,
 				960945E61C348C670000282A /* LaunchScreen.storyboard in Resources */,
 				961294961C46C0DC00301E3D /* Conference Call-25.png in Resources */,
 				961294941C46C03400301E3D /* Conference Call-50 (1).png in Resources */,
-				F136D62C1C48332C00BD5954 /* FAQ-30.png in Resources */,
-				F136D62E1C48332C00BD5954 /* Q_A.png in Resources */,
 				960945E31C348C670000282A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,7 +618,7 @@
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
 				9634F93F1C3EBDAC0086D799 /* ClassQuestionTableViewCell.swift in Sources */,
 				96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */,
-				F141B08B1C481FA300041DF4 /* AskQuestion.swift in Sources */,
+				96D651B21C498DA400B731F6 /* AskQuestion.swift in Sources */,
 				960946301C34DB590000282A /* SignUpViewController.swift in Sources */,
 				9634F9451C3EC4B40086D799 /* ClassAskQuestionViewController.swift in Sources */,
 				964F22BF1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift in Sources */,
