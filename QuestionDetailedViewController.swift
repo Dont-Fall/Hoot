@@ -130,6 +130,7 @@ class QuestionDetailedViewController: UIViewController {
     func detailedQuestionBack(){
         navigationController?.popViewControllerAnimated(true)
         //Set Back
+        questionDetailQuestionTV.removeObserver(self, forKeyPath: "contentSize")
         self.tabBarController?.tabBar.hidden = false
     }
     

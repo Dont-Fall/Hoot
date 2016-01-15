@@ -63,6 +63,7 @@
 		96CFB5E31C46AAEE00A7793D /* ClassQuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E21C46AAEE00A7793D /* ClassQuestionAnswerViewController.swift */; };
 		96CFB5E51C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E41C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift */; };
 		96CFB5E71C46B01B00A7793D /* ClassQuestionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */; };
+		96D651B01C481F8E00B731F6 /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D651AF1C481F8E00B731F6 /* AskQuestion.swift */; };
 		96D80DDA1C3D5BE000C64794 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */; };
 		96FAF0F61C36EA830092D096 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F51C36EA830092D096 /* Accounts.framework */; };
 		96FAF0F81C36EA890092D096 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F71C36EA890092D096 /* Social.framework */; };
@@ -167,6 +168,7 @@
 		96CFB5E21C46AAEE00A7793D /* ClassQuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		96CFB5E41C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswersTableViewController.swift; sourceTree = "<group>"; };
 		96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassQuestionAnswerCell.swift; path = ../ClassQuestionAnswerCell.swift; sourceTree = "<group>"; };
+		96D651AF1C481F8E00B731F6 /* AskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
 		96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		96FAF0F51C36EA830092D096 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		96FAF0F71C36EA890092D096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -435,6 +437,7 @@
 				F1F1472E1C498E9600938235 /* ClassAskQuestion.swift */,
 				E41209661C44AC18006827E7 /* SignUp.swift */,
 				E41209691C44AC30006827E7 /* SignIn.swift */,
+				96D651AF1C481F8E00B731F6 /* AskQuestion.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

@@ -86,7 +86,15 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
     
     //Go Back Function
     func answerQuestionCancel() {
+        questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        //let textView = object as! UITextView
+        var topCorrect = (questionAnswerAnswerTV.bounds.size.height - questionAnswerAnswerTV.contentSize.height * questionAnswerAnswerTV.zoomScale) / 2
+        topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
+        questionAnswerAnswerTV.contentInset.top = topCorrect
     }
     
     //Answer Question FUnction
@@ -117,6 +125,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
                         print("Error")
                     }
                 }
+                self.questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
                 self.navigationController?.popViewControllerAnimated(true)
             } else {
                 print("Error")

@@ -97,7 +97,7 @@ class MoreTableViewController: UITableViewController {
             if row == 0{
                 //Rules
             }else{
-                //Contact Us
+                self.performSegueWithIdentifier("contactUsSegue", sender: self)
             }
         }else {
             if row == 0{
