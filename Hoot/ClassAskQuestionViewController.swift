@@ -88,25 +88,38 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UII
         let imageData = UIImageJPEGRepresentation(self.classAskQuestionPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
         classQuestion.setObject(imageFile!, forKey: "picture")
-        //MARK: Save Question
-        classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                print("Yp")
-                // Success, no creating error.
-                self.navigationController?.popViewControllerAnimated(true)
-                currentUser!.incrementKey("points", byAmount: 5)
-                currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                    if error == nil {
-                        print("Points Updated")
-                    } else {
-                        print("Error")
+        
+        var image: PFFile = imageFile!
+        var classAskQuestion = ClassAskQuestion(topic: classAskQuestionCourseTF.text!, text: classAskQuestionQuestionTF.text!, img: image)
+        do {
+            try classAskQuestion.classAskQuestionAlert()
+            
+            //MARK: Save Question
+            classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    print("Yp")
+                    // Success, no creating error.
+                    self.navigationController?.popViewControllerAnimated(true)
+                    currentUser!.incrementKey("points", byAmount: 5)
+                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            print("Points Updated")
+                        } else {
+                            print("Error")
+                        }
                     }
+                } else {
                 }
-            } else {
-                print("Error")
             }
+        // Error Caught Alert Settings
+        }catch let message as ErrorType {
+            
+            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
         }
     }
+    
     
     //Go Back Function
     func classAskQuestionCancel() {

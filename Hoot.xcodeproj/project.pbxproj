@@ -82,6 +82,8 @@
 		F136D62E1C48332C00BD5954 /* Q_A.png in Resources */ = {isa = PBXBuildFile; fileRef = F136D6281C48332C00BD5954 /* Q_A.png */; };
 		F136D62F1C48332C00BD5954 /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F136D6291C48332C00BD5954 /* TextFieldBar.png */; };
 		F141B08B1C481FA300041DF4 /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141B08A1C481FA300041DF4 /* AskQuestion.swift */; };
+		F1F1472F1C498E9600938235 /* ClassAskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1472E1C498E9600938235 /* ClassAskQuestion.swift */; };
+		F1F147311C49907100938235 /* EventCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F147301C49907100938235 /* EventCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +185,8 @@
 		F136D6281C48332C00BD5954 /* Q_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Q_A.png; path = ../../Downloads/Q_A.png; sourceTree = "<group>"; };
 		F136D6291C48332C00BD5954 /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextFieldBar.png; path = ../../Downloads/TextFieldBar.png; sourceTree = "<group>"; };
 		F141B08A1C481FA300041DF4 /* AskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
+		F1F1472E1C498E9600938235 /* ClassAskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAskQuestion.swift; sourceTree = "<group>"; };
+		F1F147301C49907100938235 /* EventCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +431,8 @@
 			children = (
 				E41209641C44AC0D006827E7 /* Enums.swift */,
 				F141B08A1C481FA300041DF4 /* AskQuestion.swift */,
+				F1F147301C49907100938235 /* EventCreate.swift */,
+				F1F1472E1C498E9600938235 /* ClassAskQuestion.swift */,
 				E41209661C44AC18006827E7 /* SignUp.swift */,
 				E41209691C44AC30006827E7 /* SignIn.swift */,
 			);
@@ -597,9 +603,11 @@
 				96B29BD21C39B14200240AD7 /* SubjectTableViewCell.swift in Sources */,
 				96B29BC41C3993DE00240AD7 /* AddClassViewController.swift in Sources */,
 				96B29BD01C39B11E00240AD7 /* SubjectTableViewController.swift in Sources */,
+				F1F147311C49907100938235 /* EventCreate.swift in Sources */,
 				96FAF14A1C386EA40092D096 /* AskQuestionViewController.swift in Sources */,
 				96A06BA01C4153DE0077084A /* QuestionDetailTableViewCell.swift in Sources */,
 				964F22BB1C46EE180042A335 /* MyClassQuestionsTableViewController.swift in Sources */,
+				F1F1472F1C498E9600938235 /* ClassAskQuestion.swift in Sources */,
 				96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */,
 				9634F9391C3D8A010086D799 /* QuestionPicViewController.swift in Sources */,
 				96FAF1481C3862C60092D096 /* QuestionTableViewController.swift in Sources */,
