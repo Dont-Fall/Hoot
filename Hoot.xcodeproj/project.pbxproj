@@ -13,6 +13,7 @@
 		1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B8B1C4C1B370047526E /* TextFieldBar.png */; };
 		1A568B911C4C1C1E0047526E /* FAQ-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B8F1C4C1C1E0047526E /* FAQ-30.png */; };
 		1A568B921C4C1C1E0047526E /* QA.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B901C4C1C1E0047526E /* QA.png */; };
+		1A568BA21C4C22A50047526E /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568BA11C4C22A50047526E /* Calendar.png */; };
 		960945DC1C348C670000282A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960945DB1C348C670000282A /* AppDelegate.swift */; };
 		960945DE1C348C670000282A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960945DD1C348C670000282A /* ViewController.swift */; };
 		960945E31C348C670000282A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960945E21C348C670000282A /* Assets.xcassets */; };
@@ -108,6 +109,7 @@
 		1A568B8B1C4C1B370047526E /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextFieldBar.png; sourceTree = "<group>"; };
 		1A568B8F1C4C1C1E0047526E /* FAQ-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FAQ-30.png"; sourceTree = "<group>"; };
 		1A568B901C4C1C1E0047526E /* QA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QA.png; sourceTree = "<group>"; };
+		1A568BA11C4C22A50047526E /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
 		960945D81C348C660000282A /* Hoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960945DB1C348C670000282A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		960945DD1C348C670000282A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 		96FAF1021C37151E0092D096 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				1A568BA11C4C22A50047526E /* Calendar.png */,
 				1A568B8F1C4C1C1E0047526E /* FAQ-30.png */,
 				1A568B901C4C1C1E0047526E /* QA.png */,
 				1A568B891C4C1B370047526E /* CellSep.png */,
@@ -552,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */,
+				1A568BA21C4C22A50047526E /* Calendar.png in Resources */,
 				1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */,
 				1A568B881C4C0D000047526E /* ConferenceCall40.png in Resources */,
 				1A568B8D1C4C1B370047526E /* HootLogo.png in Resources */,
