@@ -4,6 +4,7 @@
 //
 //  Created by Christopher Frost on 1/11/16.
 //  Copyright © 2016 Nitrox Development. All rights reserved.
+//  Assistance by Zack Cuomo.
 //
 
 import Foundation
