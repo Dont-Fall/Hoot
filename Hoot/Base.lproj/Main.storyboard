@@ -352,6 +352,10 @@
                             <constraint firstItem="1UW-xr-rXZ" firstAttribute="leading" secondItem="Un2-iV-fyC" secondAttribute="leading" id="y4R-CO-ADK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactUsTextTV" destination="Un2-iV-fyC" id="aBX-zA-008"/>
+                        <outlet property="contactUsTopicTF" destination="1UW-xr-rXZ" id="nxj-nj-UwD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBR-jq-Rgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
