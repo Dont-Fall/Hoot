@@ -5,7 +5,6 @@
 //  Created by Jake Ulasevich on 12/30/15.
 //  Copyright © 2015 Nitrox Development. All rights reserved.
 //
-//  Slim thick with yo...
 
 import UIKit
 
