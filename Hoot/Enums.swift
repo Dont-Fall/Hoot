@@ -4,6 +4,7 @@
 //
 //  Created by Christopher Frost on 1/11/16.
 //  Copyright © 2016 Nitrox Development. All rights reserved.
+//  Assistance by Zack Cuomo.
 //
 
 import Foundation
@@ -23,6 +24,8 @@ enum Error: ErrorType {
     case InsufficientQuestionLength
     case InsufficientEventLength
     case InsufficientLocationLength
+    //Contact Us Cases
+    case InsufficientContactLength
     
 }
 
@@ -42,6 +45,8 @@ extension Error: CustomStringConvertible {
         case .InsufficientQuestionLength: return "Question length is too long."
         case .InsufficientEventLength: return "Please enter a valid event name."
         case .InsufficientLocationLength: return "Please enter a valid location."
+        //Contact Us Errors
+        case .InsufficientContactLength: return "Please enter a more detailed reason for contacting."
             
         default: return "Sorry, something else went wrong."
         }
