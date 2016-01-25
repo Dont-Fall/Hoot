@@ -172,7 +172,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="taL-is-7PK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-xo-2Ic">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-xo-2Ic">
                                 <rect key="frame" x="200" y="90" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -194,7 +194,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="H9C-P6-uU6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="H9C-P6-uU6">
                                 <rect key="frame" x="200" y="204" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -205,7 +205,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-3T-r6e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-3T-r6e">
                                 <rect key="frame" x="200" y="128" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -238,7 +238,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-lJ-XKj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-lJ-XKj">
                                 <rect key="frame" x="200" y="166" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="1349" y="-368"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Us View Controller-->
         <scene sceneID="HdS-k6-vB1">
             <objects>
-                <viewController id="F99-qU-XUD" sceneMemberID="viewController">
+                <viewController id="F99-qU-XUD" customClass="ContactUsViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Vk-8U-UAI"/>
                         <viewControllerLayoutGuide type="bottom" id="34D-eF-o3G"/>
@@ -390,11 +390,61 @@
                         <segue destination="Wtk-11-lnm" kind="show" identifier="myQuestionsSegue" id="saL-pJ-ScE"/>
                         <segue destination="ja1-Sr-6xs" kind="show" identifier="myClassQuestionsSegue" id="qZ3-2d-rcs"/>
                         <segue destination="F99-qU-XUD" kind="show" identifier="contactUsSegue" id="fDH-Rr-a8g"/>
+                        <segue destination="jYP-qi-P5k" kind="show" identifier="rulesSegue" id="EKY-k3-8XL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udP-zM-n5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3063" y="-87"/>
+        </scene>
+        <!--Rules Table View Controller-->
+        <scene sceneID="arA-98-8ln">
+            <objects>
+                <tableViewController id="jYP-qi-P5k" customClass="RulesTableViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" id="hKV-jl-K23">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rulesCell" rowHeight="150" id="foj-SS-3lp" customClass="RulesTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="foj-SS-3lp" id="QN2-cH-IBL">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBr-4M-j1f">
+                                            <rect key="frame" x="8" y="8" width="584" height="128"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bBr-4M-j1f" secondAttribute="bottom" constant="5" id="CHT-6y-Tlr"/>
+                                        <constraint firstItem="bBr-4M-j1f" firstAttribute="trailing" secondItem="QN2-cH-IBL" secondAttribute="trailingMargin" id="L9c-bu-Byv"/>
+                                        <constraint firstItem="bBr-4M-j1f" firstAttribute="leading" secondItem="QN2-cH-IBL" secondAttribute="leadingMargin" id="hTv-qz-kUW"/>
+                                        <constraint firstItem="bBr-4M-j1f" firstAttribute="top" secondItem="QN2-cH-IBL" secondAttribute="topMargin" id="jVS-Dw-8Ks"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="rulesTV" destination="bBr-4M-j1f" id="s9n-do-4B5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jYP-qi-P5k" id="Yka-s9-L9t"/>
+                            <outlet property="delegate" destination="jYP-qi-P5k" id="9UX-Xi-eYa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q3b-1f-oCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3063" y="625"/>
         </scene>
         <!--My Questions Table View Controller-->
         <scene sceneID="OG4-GJ-6bG">
@@ -1971,25 +2021,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Sv-ge-TPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2499" y="1245"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="DTf-OQ-PHG">
-            <objects>
-                <viewController id="wOm-lo-jvc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="B2a-Aq-kic"/>
-                        <viewControllerLayoutGuide type="bottom" id="ohL-HA-fTJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3dA-m9-TGc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aRA-1v-K8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3063" y="564"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="YQR-hX-iad">

@@ -38,6 +38,9 @@
 		9609462C1C3491620000282A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9609462B1C3491620000282A /* Foundation.framework */; };
 		960946301C34DB590000282A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609462F1C34DB590000282A /* SignUpViewController.swift */; };
 		960EF92F1C55B1A400A867B5 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EF92E1C55B1A400A867B5 /* MoreTableViewController.swift */; };
+		960EF9311C55B59300A867B5 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EF9301C55B59200A867B5 /* ContactUsViewController.swift */; };
+		960EF9331C55B69C00A867B5 /* RulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EF9321C55B69C00A867B5 /* RulesTableViewController.swift */; };
+		960EF9351C55B6C800A867B5 /* RulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EF9341C55B6C800A867B5 /* RulesTableViewCell.swift */; };
 		961294921C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961294911C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift */; };
 		961D71BE1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961D71BD1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift */; };
 		9634F9391C3D8A010086D799 /* QuestionPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9381C3D8A010086D799 /* QuestionPicViewController.swift */; };
@@ -140,6 +143,9 @@
 		9609462B1C3491620000282A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9609462F1C34DB590000282A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		960EF92E1C55B1A400A867B5 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		960EF9301C55B59200A867B5 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		960EF9321C55B69C00A867B5 /* RulesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesTableViewController.swift; sourceTree = "<group>"; };
+		960EF9341C55B6C800A867B5 /* RulesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell.swift; sourceTree = "<group>"; };
 		961294911C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswerSelectedViewController.swift; sourceTree = "<group>"; };
 		961D71BD1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerSelectedViewController.swift; sourceTree = "<group>"; };
 		9634F9381C3D8A010086D799 /* QuestionPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPicViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +308,9 @@
 				964F22BC1C46F1050042A335 /* MyQuestionsTableViewCell.swift */,
 				964F22BA1C46EE180042A335 /* MyClassQuestionsTableViewController.swift */,
 				964F22BE1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift */,
+				960EF9301C55B59200A867B5 /* ContactUsViewController.swift */,
+				960EF9341C55B6C800A867B5 /* RulesTableViewCell.swift */,
+				960EF9321C55B69C00A867B5 /* RulesTableViewController.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -590,6 +599,7 @@
 			files = (
 				96B29BC01C398EF300240AD7 /* ClassesTableViewController.swift in Sources */,
 				9634F9491C3EE2390086D799 /* ClassQuestionPicViewController.swift in Sources */,
+				960EF9331C55B69C00A867B5 /* RulesTableViewController.swift in Sources */,
 				96D80DDA1C3D5BE000C64794 /* EventDetailViewController.swift in Sources */,
 				964F22B91C46ECFE0042A335 /* MyQuestionsTableViewController.swift in Sources */,
 				96B29BC61C399FD900240AD7 /* EventsTableViewController.swift in Sources */,
@@ -604,6 +614,7 @@
 				96A06BA01C4153DE0077084A /* QuestionDetailTableViewCell.swift in Sources */,
 				964F22BB1C46EE180042A335 /* MyClassQuestionsTableViewController.swift in Sources */,
 				F1F147351C49998800938235 /* ClassAskQuestion.swift in Sources */,
+				960EF9351C55B6C800A867B5 /* RulesTableViewCell.swift in Sources */,
 				96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */,
 				9634F9391C3D8A010086D799 /* QuestionPicViewController.swift in Sources */,
 				96FAF1481C3862C60092D096 /* QuestionTableViewController.swift in Sources */,
@@ -623,6 +634,7 @@
 				E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */,
 				E412096A1C44AC30006827E7 /* SignIn.swift in Sources */,
 				96B29BD61C3AE60900240AD7 /* QuestionDetailedViewController.swift in Sources */,
+				960EF9311C55B59300A867B5 /* ContactUsViewController.swift in Sources */,
 				96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */,
 				961D71BE1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift in Sources */,
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
