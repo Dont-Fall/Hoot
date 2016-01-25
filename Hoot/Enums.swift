@@ -23,6 +23,9 @@ enum Error: ErrorType {
     case InsufficientQuestionLength
     case InsufficientEventLength
     case InsufficientLocationLength
+    //Contact Us Cases
+    case InsufficientContactLength
+    case InsufficientTopicLength
     
 }
 
@@ -42,6 +45,9 @@ extension Error: CustomStringConvertible {
         case .InsufficientQuestionLength: return "Question length is too long."
         case .InsufficientEventLength: return "Please enter a valid event name."
         case .InsufficientLocationLength: return "Please enter a valid location."
+        //Contact Us Errors
+        case .InsufficientContactLength: return "Please enter a more detailed reason for contacting."
+        case .InsufficientTopicLength: return "Please enter a topic of sufficient length."
             
         default: return "Sorry, something else went wrong."
         }
