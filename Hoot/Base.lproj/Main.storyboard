@@ -2182,13 +2182,13 @@
         <image name="TextFieldBar.png" width="200" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="now-pH-dQ7"/>
-        <segue reference="vY0-tw-E0p"/>
         <segue reference="GEX-N6-J3L"/>
-        <segue reference="2xt-xg-mm9"/>
-        <segue reference="6bh-sc-lru"/>
-        <segue reference="Rzp-QO-B34"/>
+        <segue reference="bgO-zX-Rb6"/>
         <segue reference="jiz-BS-bLZ"/>
         <segue reference="yi2-L8-eX8"/>
+        <segue reference="vY0-tw-E0p"/>
+        <segue reference="now-pH-dQ7"/>
+        <segue reference="6bh-sc-lru"/>
+        <segue reference="Rzp-QO-B34"/>
     </inferredMetricsTieBreakers>
 </document>

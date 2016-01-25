@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class MoreTableViewController: UITableViewController {
     
@@ -87,15 +88,19 @@ class MoreTableViewController: UITableViewController {
         let row = indexPath.row
         if indexPath.section == 0 {
             if row == 0{
-                //Twitter
+                let twitterPost = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                twitterPost.setInitialText("Check out this cool new app that will help you get better grades in college!")
+                self.presentViewController(twitterPost, animated: true, completion: nil)
             }else if row == 1{
-                //Facebook
+                let facebookPost = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                facebookPost.setInitialText("Check out this cool new app that will help you get better grades in college!")
+                self.presentViewController(facebookPost, animated: true, completion: nil)
             }else{
                 //App Store
             }
         }else if indexPath.section == 1 {
             if row == 0{
-                //Rules
+                self.performSegueWithIdentifier("rulesSegue", sender: self)
             }else{
                 self.performSegueWithIdentifier("contactUsSegue", sender: self)
             }

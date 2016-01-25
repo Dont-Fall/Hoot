@@ -37,6 +37,7 @@
 		9609462A1C3491040000282A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960946291C3491040000282A /* LogInViewController.swift */; };
 		9609462C1C3491620000282A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9609462B1C3491620000282A /* Foundation.framework */; };
 		960946301C34DB590000282A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609462F1C34DB590000282A /* SignUpViewController.swift */; };
+		960EF92F1C55B1A400A867B5 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EF92E1C55B1A400A867B5 /* MoreTableViewController.swift */; };
 		961294921C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961294911C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift */; };
 		961D71BE1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961D71BD1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift */; };
 		9634F9391C3D8A010086D799 /* QuestionPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9381C3D8A010086D799 /* QuestionPicViewController.swift */; };
@@ -52,7 +53,6 @@
 		964F22BB1C46EE180042A335 /* MyClassQuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F22BA1C46EE180042A335 /* MyClassQuestionsTableViewController.swift */; };
 		964F22BD1C46F1050042A335 /* MyQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F22BC1C46F1050042A335 /* MyQuestionsTableViewCell.swift */; };
 		964F22BF1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F22BE1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift */; };
-		964F83151C46D552006D9798 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F83141C46D552006D9798 /* MoreTableViewController.swift */; };
 		96A06BA01C4153DE0077084A /* QuestionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */; };
 		96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */; };
 		96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */; };
@@ -139,6 +139,7 @@
 		960946291C3491040000282A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9609462B1C3491620000282A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9609462F1C34DB590000282A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		960EF92E1C55B1A400A867B5 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		961294911C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswerSelectedViewController.swift; sourceTree = "<group>"; };
 		961D71BD1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerSelectedViewController.swift; sourceTree = "<group>"; };
 		9634F9381C3D8A010086D799 /* QuestionPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPicViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +156,6 @@
 		964F22BA1C46EE180042A335 /* MyClassQuestionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassQuestionsTableViewController.swift; sourceTree = "<group>"; };
 		964F22BC1C46F1050042A335 /* MyQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		964F22BE1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassQuestionsTableViewCell.swift; sourceTree = "<group>"; };
-		964F83141C46D552006D9798 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreTableViewController.swift; path = ../MoreTableViewController.swift; sourceTree = "<group>"; };
 		96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailTableViewCell.swift; path = ../QuestionDetailTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewController.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		964F22B71C46EC940042A335 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				964F83141C46D552006D9798 /* MoreTableViewController.swift */,
+				960EF92E1C55B1A400A867B5 /* MoreTableViewController.swift */,
 				964F22B81C46ECFE0042A335 /* MyQuestionsTableViewController.swift */,
 				964F22BC1C46F1050042A335 /* MyQuestionsTableViewCell.swift */,
 				964F22BA1C46EE180042A335 /* MyClassQuestionsTableViewController.swift */,
@@ -515,7 +515,7 @@
 				TargetAttributes = {
 					960945D71C348C660000282A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = NRV4YY6LAR;
+						DevelopmentTeam = C83L888FQQ;
 					};
 					960945EB1C348C670000282A = {
 						CreatedOnToolsVersion = 7.1;
@@ -607,8 +607,8 @@
 				96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */,
 				9634F9391C3D8A010086D799 /* QuestionPicViewController.swift in Sources */,
 				96FAF1481C3862C60092D096 /* QuestionTableViewController.swift in Sources */,
+				960EF92F1C55B1A400A867B5 /* MoreTableViewController.swift in Sources */,
 				9609462A1C3491040000282A /* LogInViewController.swift in Sources */,
-				964F83151C46D552006D9798 /* MoreTableViewController.swift in Sources */,
 				960945DE1C348C670000282A /* ViewController.swift in Sources */,
 				961294921C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift in Sources */,
 				9634F9471C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift in Sources */,
