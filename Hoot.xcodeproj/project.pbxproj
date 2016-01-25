@@ -82,6 +82,7 @@
 		E41209651C44AC0D006827E7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209641C44AC0D006827E7 /* Enums.swift */; };
 		E41209671C44AC18006827E7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209661C44AC18006827E7 /* SignUp.swift */; };
 		E412096A1C44AC30006827E7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209691C44AC30006827E7 /* SignIn.swift */; };
+		E44A2E741C55C03A005080B2 /* ContactForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A2E731C55C03A005080B2 /* ContactForm.swift */; };
 		E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F1F147331C49983200938235 /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F147321C49983200938235 /* AskQuestion.swift */; };
 		F1F147351C49998800938235 /* ClassAskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F147341C49998800938235 /* ClassAskQuestion.swift */; };
@@ -188,6 +189,7 @@
 		E41209641C44AC0D006827E7 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E41209661C44AC18006827E7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		E41209691C44AC30006827E7 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		E44A2E731C55C03A005080B2 /* ContactForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactForm.swift; sourceTree = "<group>"; };
 		F1F147321C49983200938235 /* AskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
 		F1F147341C49998800938235 /* ClassAskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAskQuestion.swift; sourceTree = "<group>"; };
 		F1F147361C49999200938235 /* EventCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreate.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				F1F147361C49999200938235 /* EventCreate.swift */,
 				E41209661C44AC18006827E7 /* SignUp.swift */,
 				E41209691C44AC30006827E7 /* SignIn.swift */,
+				E44A2E731C55C03A005080B2 /* ContactForm.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				9609462A1C3491040000282A /* LogInViewController.swift in Sources */,
 				960945DE1C348C670000282A /* ViewController.swift in Sources */,
 				961294921C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift in Sources */,
+				E44A2E741C55C03A005080B2 /* ContactForm.swift in Sources */,
 				9634F9471C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift in Sources */,
 				96CFB5E51C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift in Sources */,
 				E41209651C44AC0D006827E7 /* Enums.swift in Sources */,
