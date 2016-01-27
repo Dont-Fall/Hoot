@@ -50,6 +50,61 @@ class ContactUsViewController: UIViewController {
         contactForm["user"] = currentUser?.username
         contactForm["email"] = currentUser?.email
         contactForm["resolved"] = false
+        
+        var form = ContactForm(topic: contactUsTopicTF.text!, text: contactUsTextTV.text!)
+        
+        do {
+            try form.contactFormAlert()
+    
+            //MARK: Save Question
+            contactForm.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    print("Yp")
+                    // Success, no creating error
+                    //                    self.actInd.startAnimating()
+                    self.performSegueWithIdentifier("contactSubmitSegue", sender: self)
+                    //                    self.actInd.startAnimating()
+                } else {
+                    print("Error")
+                }
+            }
+                // Error Caught Alert Settings
+            } catch let message as ErrorType {
+                
+                let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                presentViewController(alert, animated: true, completion: nil)
+            }
+            /*  DELETE THIS AFTER CONRIMATION THAT CONTACT FORMS SAVE  
+                
+                question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    print("Yp")
+                    // Success, no creating error
+                    currentUser!.incrementKey("points", byAmount: 5)
+                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            print("Points Updated")
+                        } else {
+                            print("Error")
+                        }
+                    }
+                    //                    self.actInd.startAnimating()
+                    self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
+                    //                    self.actInd.startAnimating()
+                } else {
+                    print("Error")
+                }
+            }
+            // Error Caught Alert Settings
+        } catch let message as ErrorType {
+            
+            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        }
+       */
+        
         contactForm.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
