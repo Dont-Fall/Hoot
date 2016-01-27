@@ -10,12 +10,9 @@ import UIKit
 
 class QuestionTableViewCell: PFTableViewCell {
 
-    @IBOutlet var questionQuestionText: UILabel!
-    @IBOutlet var questionQuestionLabel: UILabel!
     @IBOutlet var questionCourseLabel: UILabel!
-    
-    
-    
+    @IBOutlet var questionQuestionTV: UITextView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

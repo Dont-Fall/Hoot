@@ -76,9 +76,6 @@ class QuestionDetailedViewController: UIViewController {
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.title = "Details"
-        
-        //Hide
-        self.tabBarController?.tabBar.hidden = true
 
         //MARK: Tap Image
         questionDetailedPicturePreview.userInteractionEnabled = true

@@ -156,11 +156,11 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["question"] as? String {
-            cell?.classQuestionQuestionLabel?.text = nameEnglish
+            cell?.classQuestionQuestionTV?.text = nameEnglish
         }
-        if let capital = object?["code"] as? String {
-            cell?.detailTextLabel?.text = capital
-        }
+        /*if let capital = object?["topic"] as? String {
+            cell?.classQuestionTopicLabel?.text = capital
+        }ADD WHEN ZACK/CHRIS ADDS TOPIC TO CLASS ASK QUESTION */
         
         return cell
     }

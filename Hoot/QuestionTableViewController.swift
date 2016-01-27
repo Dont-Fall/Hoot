@@ -148,9 +148,7 @@ class QuestionTableViewController: PFQueryTableViewController {
         }
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["question"] as? String {
-            cell?.questionQuestionLabel.text = nameEnglish
-            cell?.questionQuestionLabel?.numberOfLines = 0
-            cell?.questionQuestionLabel?.sizeToFit()
+            cell?.questionQuestionTV.text = nameEnglish
         }
         if let capital = object?["course"] as? String {
             cell?.questionCourseLabel?.text = capital
