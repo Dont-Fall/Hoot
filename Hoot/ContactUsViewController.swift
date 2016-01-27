@@ -62,8 +62,10 @@ class ContactUsViewController: UIViewController {
                     print("Yp")
                     // Success, no creating error
                     //                    self.actInd.startAnimating()
-                    self.performSegueWithIdentifier("contactSubmitSegue", sender: self)
+                    //self.performSegueWithIdentifier("contactSubmitSegue", sender: self)
                     //                    self.actInd.startAnimating()
+                    
+                    self.navigationController?.popViewControllerAnimated(true)
                 } else {
                     print("Error")
                 }
@@ -75,46 +77,7 @@ class ContactUsViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                 presentViewController(alert, animated: true, completion: nil)
             }
-            /*  DELETE THIS AFTER CONRIMATION THAT CONTACT FORMS SAVE  
-                
-                question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                if error == nil {
-                    print("Yp")
-                    // Success, no creating error
-                    currentUser!.incrementKey("points", byAmount: 5)
-                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                        if error == nil {
-                            print("Points Updated")
-                        } else {
-                            print("Error")
-                        }
-                    }
-                    //                    self.actInd.startAnimating()
-                    self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
-                    //                    self.actInd.startAnimating()
-                } else {
-                    print("Error")
-                }
-            }
-            // Error Caught Alert Settings
-        } catch let message as ErrorType {
-            
-            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            presentViewController(alert, animated: true, completion: nil)
-        }
-       */
-        
-        contactForm.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                // The object has been saved.
-                self.navigationController?.popViewControllerAnimated(true)
-            } else {
-                // There was a problem, check error.description
-            }
-        }
-    }
+}
 
     /*
     // MARK: - Navigation
