@@ -122,7 +122,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 */
         errorLabel.text = ""
         
-        let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!)
+        let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "")
         do {
             try signup.signUpUser()
 //            let alert = signUpSuccessAlert()

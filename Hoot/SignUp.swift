@@ -4,7 +4,7 @@
 //
 //  Created by Christopher Frost on 1/11/16.
 //  Copyright © 2016 Nitrox Development. All rights reserved.
-//
+//  Assistance from Zack Cuomo 1/26/16.
 
 import Foundation
 
@@ -14,13 +14,19 @@ class SignUp: NSObject {
     var password: String?
     var confirmPassword: String?
     var userSchool: String?
+    var userSubject: String?
+    var userPoints: Int?
+    var userCurrentGroupCode: String?
     
-    init(uName: String, email: String, pass: String, confirmPass: String, school: String){
+    init(uName: String, email: String, pass: String, confirmPass: String, school: String, subject: String, points: Int, groupCode: String){
         self.userName = uName
         self.userEmail = email
         self.password = pass
         self.confirmPassword = confirmPass
         self.userSchool = school
+        self.userSubject = "Math"
+        self.userPoints = 0
+        self.userCurrentGroupCode = ""
     }
     
     func signUpUser() throws -> Bool {
@@ -91,6 +97,10 @@ class SignUp: NSObject {
         user.email = userEmail!
         user.password = password!
         user["school"] = userSchool!
+        user["points"] = userPoints!
+        user["subject"] = userSubject!
+        user["currentGroupCode"] = userCurrentGroupCode!
+        
         
         do {
             try user.signUp()
