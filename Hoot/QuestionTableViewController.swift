@@ -95,7 +95,7 @@ class QuestionTableViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //MARK: Nav Bar Customize
-        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
         let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()

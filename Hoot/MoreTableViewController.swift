@@ -20,7 +20,7 @@ class MoreTableViewController: UITableViewController {
         super.viewDidLoad()
         var points = String(PFUser.currentUser()!.objectForKey("points")!)
         //MARK: Nav Bar Customize
-        navigationController!.navigationBar.barTintColor = UIColor(red: 0.0 / 255.0, green: 204.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         let myPoints:UIBarButtonItem = UIBarButtonItem(title: points, style: .Plain, target: self, action: nil)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
