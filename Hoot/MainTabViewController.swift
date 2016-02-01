@@ -26,7 +26,7 @@ class MainTabViewController: UITabBarController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().tintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         // Do any additional setup after loading the view.
     }
 

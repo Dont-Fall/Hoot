@@ -50,7 +50,7 @@ class ClassesTableViewController: PFQueryTableViewController {
         
         //MARK: Customize Nav Bar
         let classesAddClassBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addClassSegue")
-        navigationController!.navigationBar.barTintColor = UIColor(red: 225.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
