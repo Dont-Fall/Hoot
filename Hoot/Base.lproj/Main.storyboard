@@ -1325,17 +1325,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-hj-OrC">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-hj-OrC">
                                             <rect key="frame" x="0.0" y="94" width="600" height="8"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="wZz-jE-IIU"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qyjg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZF-9d-g61">
                                             <rect key="frame" x="8" y="16" width="584" height="33"/>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="33" id="tjN-uJ-dab"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                             <color key="textColor" red="0.34509803921568627" green="0.77647058823529413" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1344,7 +1344,7 @@
                                             <rect key="frame" x="8" y="57" width="584" height="21"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="rRo-sI-z3Y"/>
+                                                <constraint firstAttribute="height" constant="21" id="HKp-Wp-yp6"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                             <nil key="highlightedColor"/>
@@ -1352,14 +1352,15 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="top" secondItem="tZF-9d-g61" secondAttribute="bottom" constant="8" symbolic="YES" id="0YB-gc-dQ8"/>
-                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="trailing" secondItem="cwt-tU-1RY" secondAttribute="trailingMargin" id="1bp-wR-gFR"/>
-                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="leading" secondItem="tZF-9d-g61" secondAttribute="leading" id="5xA-2G-Wy0"/>
-                                        <constraint firstItem="tZF-9d-g61" firstAttribute="leading" secondItem="cwt-tU-1RY" secondAttribute="leadingMargin" id="78w-sA-ylz"/>
-                                        <constraint firstItem="tZF-9d-g61" firstAttribute="top" secondItem="cwt-tU-1RY" secondAttribute="topMargin" constant="8" id="INN-Vi-ow1"/>
-                                        <constraint firstItem="fUq-hj-OrC" firstAttribute="top" secondItem="XKe-xo-CVo" secondAttribute="bottom" constant="16" id="gJ6-uf-7ni"/>
-                                        <constraint firstItem="tZF-9d-g61" firstAttribute="trailing" secondItem="XKe-xo-CVo" secondAttribute="trailing" id="oK2-nM-pbZ"/>
-                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="centerX" secondItem="fUq-hj-OrC" secondAttribute="centerX" id="tR2-la-bAi"/>
+                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="trailing" secondItem="tZF-9d-g61" secondAttribute="trailing" id="Bvf-AW-9tS"/>
+                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="leading" secondItem="tZF-9d-g61" secondAttribute="leading" id="Hxn-xe-bTo"/>
+                                        <constraint firstAttribute="trailing" secondItem="fUq-hj-OrC" secondAttribute="trailing" id="Ki2-jv-nfT"/>
+                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="top" secondItem="tZF-9d-g61" secondAttribute="bottom" constant="8" symbolic="YES" id="Qlu-yr-5Rq"/>
+                                        <constraint firstItem="XKe-xo-CVo" firstAttribute="leading" secondItem="cwt-tU-1RY" secondAttribute="leadingMargin" id="aqj-Ib-Sho"/>
+                                        <constraint firstItem="tZF-9d-g61" firstAttribute="top" secondItem="cwt-tU-1RY" secondAttribute="topMargin" constant="8" id="h2B-L7-DLq"/>
+                                        <constraint firstItem="fUq-hj-OrC" firstAttribute="centerX" secondItem="XKe-xo-CVo" secondAttribute="centerX" id="iWT-nl-kaO"/>
+                                        <constraint firstItem="fUq-hj-OrC" firstAttribute="top" secondItem="XKe-xo-CVo" secondAttribute="bottom" constant="16" id="sXf-cb-xtn"/>
+                                        <constraint firstItem="fUq-hj-OrC" firstAttribute="leading" secondItem="cwt-tU-1RY" secondAttribute="leading" id="tJl-sj-A83"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -1760,7 +1761,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classAnswerCell" rowHeight="150" id="wB3-dr-tY5" customClass="ClassQuestionAnswerCell" customModule="Hoot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wB3-dr-tY5" id="tQj-aX-b7U">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
@@ -2293,8 +2294,8 @@
         <segue reference="jiz-BS-bLZ"/>
         <segue reference="iJK-sj-Yo1"/>
         <segue reference="LpV-FB-yTG"/>
-        <segue reference="vY0-tw-E0p"/>
-        <segue reference="kG6-ei-V4G"/>
         <segue reference="6bh-sc-lru"/>
+        <segue reference="gWS-jR-3bg"/>
+        <segue reference="kG6-ei-V4G"/>
     </inferredMetricsTieBreakers>
 </document>
