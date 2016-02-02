@@ -142,21 +142,32 @@ class QuestionTableViewController: PFQueryTableViewController {
             cell?.questionCourseLabel?.text = capital
         }
         //Time Stamp
-        //let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Hour, .Minute, .Second], fromDate: (object?.createdAt)!)
-        let hour = String(components.hour)
-        let minutes = String(components.minute)
-        let seconds = String(components.second)
-        if Int(hour) > 1 {
-            cell?.questionTimeStamp.text = hour + "h"
-        }else if Int(minutes) > 1 {
-            cell?.questionTimeStamp.text = minutes + "m"
+        let date = NSDate()
+        let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
+        let years = Int(seconds/31540000)
+        let months = Int(seconds/26280000)
+        let weeks = Int(seconds/604800)
+        let days = Int(seconds/86400)
+        let hours = Int(seconds/3600)
+        let minutes = Int(seconds/60)
+        if years >= 1{
+            cell?.questionTimeStamp.text = String(years) + "y"
+        }else if months >= 1{
+            cell?.questionTimeStamp.text = String(months) + "m"
+        }else if weeks >= 1{
+            cell?.questionTimeStamp.text = String(weeks) + "w"
+        }else if days >= 1 {
+            cell?.questionTimeStamp.text = String(days) + "d"
+        }else if Int(hours) >= 1 {
+            cell?.questionTimeStamp.text = String(hours) + "h"
+        }else if Int(minutes) >= 1 {
+            cell?.questionTimeStamp.text = String(minutes) + "m"
         }else{
-            cell?.questionTimeStamp.text = seconds + "s"
+            cell?.questionTimeStamp.text = String(seconds) + "s"
         }
+        //cell?.questionTimeStamp.text = comp
         //Answer Count
-        cell.questionAnswerCount.text = String(object?["answerCount"]) + " Answers"
+        cell.questionAnswerCount.text = String(object!["answerCount"]) + " Answers"
         return cell
     }
     
