@@ -125,6 +125,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         question["subject"] = currentUser!.objectForKey("subject")
         question["reportNumber"] = 0
         question["reported"] = false
+        question["answerCount"] = 0
         //PIC
         let imageData = UIImageJPEGRepresentation(self.askQuestionPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
