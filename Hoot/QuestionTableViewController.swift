@@ -165,26 +165,13 @@ class QuestionTableViewController: PFQueryTableViewController {
         }else{
             cell?.questionTimeStamp.text = String(seconds) + "s"
         }
-        //cell?.questionTimeStamp.text = comp
         //Answer Count
-        cell.questionAnswerCount.text = String(object!["answerCount"]) + " Answers"
+        cell?.questionAnswerCount.text = String(object!["answerCount"]) + " Answers"
+        //Pic Indicator
+        cell?.questionPicIndicator.image = UIImage(named: "CameraIconHoot")
         return cell
     }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        // Get the new view controller using [segue destinationViewController].
-        var detailScene = segue.destinationViewController as! QuestionDetailedViewController
-        
-        // Pass the selected object to the destination view controller.
-        if let indexPath = self.tableView.indexPathForSelectedRow {
-            let row = Int(indexPath.row)
-            detailScene.currentObject = objects![row] as? PFObject
-            }
-    }
-    */
-
     //Prepare To Send Object To Detailed View
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "questionDetailedViewIdentifier" {
