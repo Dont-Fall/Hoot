@@ -168,7 +168,9 @@ class QuestionTableViewController: PFQueryTableViewController {
         //Answer Count
         cell?.questionAnswerCount.text = String(object!["answerCount"]) + " Answers"
         //Pic Indicator
-        cell?.questionPicIndicator.image = UIImage(named: "CameraIconHoot")
+        if object!["picture"] != nil{
+            cell?.questionPicIndicator.image = UIImage(named: "CameraIconHoot")
+        }
         return cell
     }
     
