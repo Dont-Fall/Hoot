@@ -56,9 +56,10 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Circle Edges on Pic
         askQuestionPicPreview.layer.cornerRadius = 8.0
         askQuestionPicPreview.clipsToBounds = true
-        // Do any additional setup after loading the view.
         
         //Keyboard up at start
         askQuestionCourseTF.becomeFirstResponder()
@@ -101,6 +102,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     //Go Back Function
     func askQuestionCancel() {
+        askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
         navigationController?.popViewControllerAnimated(true)
     }
     
@@ -192,15 +194,5 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         askQuestionAskQuestionTV.text = ""
         askQuestionAskQuestionTV.textColor = UIColor.blackColor()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

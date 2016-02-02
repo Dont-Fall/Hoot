@@ -95,7 +95,7 @@ class QuestionTableViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //MARK: Nav Bar Customize
-        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 2.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
         let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -126,18 +126,6 @@ class QuestionTableViewController: PFQueryTableViewController {
         self.performSegueWithIdentifier("subjectSegue", sender: self)
         self.actInd.stopAnimating()
     }
-
-    //NOT NEEDED FOR QUERY
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 10
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 10
-    }
-    */
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
@@ -153,6 +141,22 @@ class QuestionTableViewController: PFQueryTableViewController {
         if let capital = object?["course"] as? String {
             cell?.questionCourseLabel?.text = capital
         }
+        //Time Stamp
+        //let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Hour, .Minute, .Second], fromDate: (object?.createdAt)!)
+        let hour = String(components.hour)
+        let minutes = String(components.minute)
+        let seconds = String(components.second)
+        if Int(hour) > 1 {
+            cell?.questionTimeStamp.text = hour + "h"
+        }else if Int(minutes) > 1 {
+            cell?.questionTimeStamp.text = minutes + "m"
+        }else{
+            cell?.questionTimeStamp.text = seconds + "s"
+        }
+        //Answer Count
+        cell.questionAnswerCount.text = String(object?["answerCount"]) + " Answers"
         return cell
     }
     

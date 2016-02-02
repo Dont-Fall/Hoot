@@ -12,6 +12,9 @@ class QuestionTableViewCell: PFTableViewCell {
 
     @IBOutlet var questionCourseLabel: UILabel!
     @IBOutlet var questionQuestionTV: UITextView!
+    @IBOutlet var questionPicIndicator: UIImageView!
+    @IBOutlet var questionTimeStamp: UILabel!
+    @IBOutlet var questionAnswerCount: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

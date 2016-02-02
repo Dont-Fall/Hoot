@@ -68,7 +68,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.ValueChanged)
         customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.TouchUpInside)
         //MARK: Nav Bar Customize
-        navigationController!.navigationBar.barTintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "classQuestionBack")
         let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "classQuestionCompose")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()

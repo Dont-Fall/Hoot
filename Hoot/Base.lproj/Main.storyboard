@@ -481,7 +481,7 @@
                                             <rect key="frame" x="8" y="4" width="584" height="26"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-Nd-HQw">
@@ -566,7 +566,7 @@
                                                 <constraint firstAttribute="height" constant="26" id="hML-HS-AmU"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -626,7 +626,7 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <state key="normal" title="Add Picture">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="askQuestionAddPicBtn:" destination="JI6-fh-f44" eventType="touchUpInside" id="qiv-07-Kf9"/>
@@ -640,7 +640,7 @@
                                 <rect key="frame" x="555" y="76" width="17" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RqM-Yl-Acx">
@@ -656,7 +656,7 @@
                                                     <constraint firstAttribute="width" constant="57" id="QTB-Oh-fa8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -804,7 +804,7 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <state key="normal" title="Add Picture">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="askQuestionAddPicBtn:" destination="JI6-fh-f44" eventType="touchUpInside" id="wWa-OF-RrD"/>
@@ -831,7 +831,7 @@
                                                     <constraint firstAttribute="width" constant="57" id="kjy-PC-UMH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -895,7 +895,7 @@
                                     <constraint firstAttribute="width" constant="75" id="SCH-LC-PI3"/>
                                 </constraints>
                                 <state key="normal" title="Answers">
-                                    <color key="titleColor" red="0.34509803919999998" green="0.77647058820000003" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="questionDetailedAnswerBtn:" destination="ibq-Ec-Xl7" eventType="touchUpInside" id="5tP-0Q-i2x"/>
@@ -905,7 +905,7 @@
                                 <rect key="frame" x="505" y="512" width="75" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Help">
-                                    <color key="titleColor" red="0.34509803919999998" green="0.77647058820000003" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="questionDetailedHelpBtn:" destination="ibq-Ec-Xl7" eventType="touchUpInside" id="qwB-sU-lGP"/>
@@ -994,7 +994,7 @@
                                             <rect key="frame" x="8" y="8" width="584" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                            <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-we-t6U">
@@ -1105,7 +1105,7 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Mark Correct">
-                                    <color key="titleColor" red="0.34509803919999998" green="0.77647058820000003" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="questionDetailSelectedCorrectBtn:" destination="qMC-5L-MGF" eventType="touchUpInside" id="AGT-ut-XCI"/>
@@ -1163,11 +1163,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K1-mL-gEM">
-                                            <rect key="frame" x="8" y="4" width="584" height="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K1-mL-gEM">
+                                            <rect key="frame" x="8" y="4" width="558" height="27"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="26" id="fKX-UJ-suI"/>
+                                                <constraint firstAttribute="height" constant="27" id="fKX-UJ-suI"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
                                             <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1189,6 +1189,37 @@
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="CameraIconHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="DTP-sl-dgo">
+                                            <rect key="frame" x="565" y="4" width="27" height="27"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="27" id="NOD-Ut-UnZ"/>
+                                                <constraint firstAttribute="width" secondItem="DTP-sl-dgo" secondAttribute="height" multiplier="1:1" id="ipA-gC-Lzy"/>
+                                                <constraint firstAttribute="height" constant="27" id="vl2-Pb-BkC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-Da-uB9">
+                                            <rect key="frame" x="8" y="132" width="42" height="10"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="Nha-Rm-PiH"/>
+                                                <constraint firstAttribute="height" constant="10" id="pBi-Nv-Vei"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaU-hu-UqV">
+                                            <rect key="frame" x="527" y="131" width="65" height="10"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="Pl2-tj-grn"/>
+                                                <constraint firstAttribute="height" constant="10" id="ssa-h2-aXB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="FG0-G4-Ccl">
                                             <rect key="frame" x="0.0" y="46" width="600" height="8"/>
                                             <animations/>
@@ -1200,15 +1231,20 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="EMq-hf-BIb" firstAttribute="top" secondItem="6K1-mL-gEM" secondAttribute="bottom" id="9j3-cJ-a27"/>
+                                        <constraint firstItem="PaU-hu-UqV" firstAttribute="trailing" secondItem="EMq-hf-BIb" secondAttribute="trailing" id="1Wj-Q9-Gml"/>
+                                        <constraint firstItem="EMq-hf-BIb" firstAttribute="top" secondItem="6K1-mL-gEM" secondAttribute="bottom" constant="-1" id="9j3-cJ-a27"/>
+                                        <constraint firstItem="PaU-hu-UqV" firstAttribute="bottom" secondItem="xqd-YA-b3l" secondAttribute="bottomMargin" id="Dcu-7K-NEO"/>
                                         <constraint firstItem="6K1-mL-gEM" firstAttribute="top" secondItem="xqd-YA-b3l" secondAttribute="topMargin" constant="-4" id="I6r-xE-YS2"/>
+                                        <constraint firstItem="RsE-fN-SUg" firstAttribute="top" secondItem="fx6-Da-uB9" secondAttribute="bottom" constant="2" id="Kh9-pb-TCk"/>
                                         <constraint firstItem="RsE-fN-SUg" firstAttribute="top" secondItem="EMq-hf-BIb" secondAttribute="bottom" constant="8" symbolic="YES" id="MEQ-vH-Ef2"/>
                                         <constraint firstAttribute="trailing" secondItem="RsE-fN-SUg" secondAttribute="trailing" id="Pwu-3I-QZs"/>
                                         <constraint firstItem="RsE-fN-SUg" firstAttribute="leading" secondItem="xqd-YA-b3l" secondAttribute="leading" id="XMZ-Po-9Ct"/>
-                                        <constraint firstItem="EMq-hf-BIb" firstAttribute="trailing" secondItem="6K1-mL-gEM" secondAttribute="trailing" id="dkn-1j-qhx"/>
+                                        <constraint firstItem="EMq-hf-BIb" firstAttribute="trailing" secondItem="6K1-mL-gEM" secondAttribute="trailing" constant="26" id="dkn-1j-qhx"/>
                                         <constraint firstItem="6K1-mL-gEM" firstAttribute="leading" secondItem="EMq-hf-BIb" secondAttribute="leading" constant="5" id="gXb-Ib-qfp"/>
                                         <constraint firstItem="6K1-mL-gEM" firstAttribute="leading" secondItem="xqd-YA-b3l" secondAttribute="leadingMargin" id="h01-2h-ARY"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="RsE-fN-SUg" secondAttribute="bottom" constant="-11" id="l9z-OE-gSv"/>
+                                        <constraint firstItem="DTP-sl-dgo" firstAttribute="trailing" secondItem="EMq-hf-BIb" secondAttribute="trailing" id="qee-Xl-SkP"/>
+                                        <constraint firstItem="fx6-Da-uB9" firstAttribute="leading" secondItem="6K1-mL-gEM" secondAttribute="leading" id="vje-eV-Q58"/>
                                         <constraint firstItem="EMq-hf-BIb" firstAttribute="centerX" secondItem="RsE-fN-SUg" secondAttribute="centerX" constant="-3" id="wOa-oY-smP"/>
                                     </constraints>
                                     <variation key="default">
@@ -1219,8 +1255,11 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="questionAnswerCount" destination="PaU-hu-UqV" id="hPz-Gd-o6O"/>
                                     <outlet property="questionCourseLabel" destination="6K1-mL-gEM" id="kFX-FE-wDa"/>
+                                    <outlet property="questionPicIndicator" destination="DTP-sl-dgo" id="lAn-WZ-BrB"/>
                                     <outlet property="questionQuestionTV" destination="EMq-hf-BIb" id="3eu-rM-NaZ"/>
+                                    <outlet property="questionTimeStamp" destination="fx6-Da-uB9" id="wzu-u7-kXR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1257,7 +1296,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLn-vr-lfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1332" y="-368"/>
+            <point key="canvasLocation" x="-1332" y="-358"/>
         </scene>
         <!--Main Tab View Controller-->
         <scene sceneID="hp0-JE-yak">
@@ -1425,16 +1464,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or add code to join existing one.." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoM-W7-cLc">
-                                <rect key="frame" x="20" y="236" width="193" height="48"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="0te-QG-kAm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code" textAlignment="natural" minimumFontSize="17" background="TextFieldBar.png" disabledBackground="TextFieldBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="NVU-1Q-t5o">
                                 <rect key="frame" x="20" y="298" width="560" height="30"/>
                                 <animations/>
@@ -1453,12 +1482,22 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Join">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="addClassJoinClassBtn:" destination="UWp-4E-oat" eventType="touchUpInside" id="a3f-mj-dwh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or add code to join existing one.." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoM-W7-cLc">
+                                <rect key="frame" x="20" y="236" width="193" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="0te-QG-kAm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
+                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1520,7 +1559,7 @@
                                             <rect key="frame" x="8" y="8" width="584" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                            <color key="textColor" red="0.34509803919999998" green="0.77647058820000003" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="89c-R5-Tgg">
@@ -1583,7 +1622,9 @@
                                 <rect key="frame" x="24" y="297" width="80" height="30"/>
                                 <animations/>
                                 <color key="tintColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Add Picture"/>
+                                <state key="normal" title="Add Picture">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="askQuestionAddPicBtn:" destination="JI6-fh-f44" eventType="touchUpInside" id="Li4-Uf-0UD"/>
                                     <action selector="classAskQuestionAddPicBtn:" destination="dgW-dj-9jl" eventType="touchUpInside" id="yVS-JV-a0o"/>
@@ -1612,7 +1653,7 @@
                                     <constraint firstAttribute="width" constant="57" id="0j1-aw-qfs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1695,7 +1736,7 @@
                                     <constraint firstAttribute="width" constant="75" id="I4r-yU-UZS"/>
                                 </constraints>
                                 <state key="normal" title="Answers">
-                                    <color key="titleColor" red="0.34509803919999998" green="0.77647058820000003" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="classQuestionAnswersBtn:" destination="PRn-XP-qOa" eventType="touchUpInside" id="h7i-Dl-KHu"/>
@@ -1706,7 +1747,7 @@
                                 <rect key="frame" x="20" y="513" width="75" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Help">
-                                    <color key="titleColor" red="0.34509803919999998" green="0.77647058820000003" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="classQuestionHelpBtn:" destination="PRn-XP-qOa" eventType="touchUpInside" id="V68-hs-UXS"/>
@@ -1773,7 +1814,7 @@
                                             <rect key="frame" x="8" y="4" width="584" height="26"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                            <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-Gj-jw8">
@@ -1856,7 +1897,7 @@
                                 <rect key="frame" x="255" y="512" width="91" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Mark Correct">
-                                    <color key="titleColor" red="0.34509803919999998" green="0.77647058820000003" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="classQuestionDetailSelectedCorrectBtn:" destination="saG-Ro-VqW" eventType="touchUpInside" id="xpd-6g-RAF"/>
@@ -1923,7 +1964,7 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <state key="normal" title="Add Picture">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="askQuestionAddPicBtn:" destination="JI6-fh-f44" eventType="touchUpInside" id="Cpo-TP-jAl"/>
@@ -1948,7 +1989,7 @@
                                                     <constraint firstAttribute="width" constant="57" id="YEb-Z7-aRb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2283,6 +2324,7 @@
     </scenes>
     <resources>
         <image name="Calendar.png" width="31" height="31"/>
+        <image name="CameraIconHoot.png" width="100" height="100"/>
         <image name="CellSep.png" width="1000" height="50"/>
         <image name="ConferenceCall40.png" width="40" height="40"/>
         <image name="HootLogo.png" width="1080" height="1080"/>
@@ -2290,14 +2332,14 @@
         <image name="TextFieldBar.png" width="200" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="on5-k1-6ao"/>
-        <segue reference="Rzp-QO-B34"/>
-        <segue reference="6bh-sc-lru"/>
         <segue reference="GEX-N6-J3L"/>
         <segue reference="PBz-3c-BDV"/>
-        <segue reference="gWS-jR-3bg"/>
-        <segue reference="now-pH-dQ7"/>
+        <segue reference="iJK-sj-Yo1"/>
+        <segue reference="on5-k1-6ao"/>
         <segue reference="LpV-FB-yTG"/>
+        <segue reference="gf2-jP-qG1"/>
+        <segue reference="vY0-tw-E0p"/>
         <segue reference="9EJ-RU-csy"/>
+        <segue reference="kG6-ei-V4G"/>
     </inferredMetricsTieBreakers>
 </document>

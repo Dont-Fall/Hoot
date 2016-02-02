@@ -21,7 +21,7 @@ class SubjectTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //MARK: Nav Bar Customize
-        navigationController!.navigationBar.barTintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         let subjectBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "subjectBack")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
@@ -72,7 +72,7 @@ class SubjectTableViewController: UITableViewController {
         let subject = subjectList[indexPath.row]
         cell.textLabel?.text = subject
         if currentSubject as! String == String(subjectList[indexPath.row]){
-            cell.tintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
+            cell.tintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
             cell.accessoryType = .Checkmark
         }
         return cell
@@ -99,6 +99,13 @@ class SubjectTableViewController: UITableViewController {
                 print("Error")
             }
         }
+    }
+    
+    //Edit Section Header
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
+        header.textLabel!.textColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
+        header.alpha = 1.0 //make the header transparent
     }
 
     /*
