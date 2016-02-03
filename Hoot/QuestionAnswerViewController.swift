@@ -40,7 +40,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
     // Container to store the view table selected object
     var questionID : String?
     var asker : String?
-    var currentObject : PFObject?
+    //var currentObject: PFObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,7 +119,6 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
                 print("Yp")
                 // Success, no creating error
                 currentUser!.incrementKey("points", byAmount: 5)
-                self.currentObject?.incrementKey("answerCount")
                 currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
                         print("Points Updated")

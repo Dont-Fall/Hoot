@@ -1699,7 +1699,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-94-rPi">
                                 <rect key="frame" x="24" y="297" width="80" height="30"/>
                                 <animations/>
-                                <color key="tintColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Picture">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1885,7 +1885,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classAnswerCell" rowHeight="150" id="wB3-dr-tY5" customClass="ClassQuestionAnswerCell" customModule="Hoot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wB3-dr-tY5" id="tQj-aX-b7U">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
@@ -2412,14 +2412,14 @@
         <image name="TextFieldBar.png" width="200" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vY0-tw-E0p"/>
-        <segue reference="9EJ-RU-csy"/>
-        <segue reference="jiz-BS-bLZ"/>
-        <segue reference="LpV-FB-yTG"/>
-        <segue reference="kG6-ei-V4G"/>
+        <segue reference="gWS-jR-3bg"/>
         <segue reference="GEX-N6-J3L"/>
         <segue reference="PBz-3c-BDV"/>
         <segue reference="hPf-Vd-Qjy"/>
         <segue reference="gf2-jP-qG1"/>
+        <segue reference="kG6-ei-V4G"/>
+        <segue reference="Whu-r7-dBd"/>
+        <segue reference="LpV-FB-yTG"/>
+        <segue reference="9EJ-RU-csy"/>
     </inferredMetricsTieBreakers>
 </document>
