@@ -9,6 +9,83 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Password Reset View Controller-->
+        <scene sceneID="D5c-CM-GMJ">
+            <objects>
+                <viewController id="QCt-MF-2h3" customClass="PasswordResetViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="biE-ud-1ri"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vnh-zi-Vrx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mgY-b3-vyP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="We've all been there.  Just enter your email below to start the password reset process." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-tL-g6N">
+                                <rect key="frame" x="20" y="50" width="560" height="130"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-iQ-y3i">
+                                <rect key="frame" x="200" y="278" width="90" height="40"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSchoolBackBtn:" destination="XTU-Kh-jw7" eventType="touchUpInside" id="dze-ar-BXP"/>
+                                    <action selector="passwordResetBackBtn:" destination="QCt-MF-2h3" eventType="touchUpInside" id="wFU-Jz-NOd"/>
+                                    <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="2kl-jz-thw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tH4-G3-RlH">
+                                <rect key="frame" x="310" y="278" width="90" height="40"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSchoolAddBtn:" destination="XTU-Kh-jw7" eventType="touchUpInside" id="7fk-k3-K9e"/>
+                                    <action selector="passwordResetResetBtn:" destination="QCt-MF-2h3" eventType="touchUpInside" id="pIh-Y8-vdZ"/>
+                                    <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="CvJ-99-eve"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-lJ-GSa">
+                                <rect key="frame" x="20" y="214" width="560" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MMY-VB-NLU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ibW-tL-g6N" firstAttribute="top" secondItem="biE-ud-1ri" secondAttribute="bottom" constant="30" id="Ga5-ZU-Fam"/>
+                            <constraint firstItem="eiQ-lJ-GSa" firstAttribute="leading" secondItem="mgY-b3-vyP" secondAttribute="leadingMargin" id="Mnh-03-S6M"/>
+                            <constraint firstItem="eiQ-lJ-GSa" firstAttribute="top" secondItem="ibW-tL-g6N" secondAttribute="bottom" constant="34" id="aIa-67-hCY"/>
+                            <constraint firstItem="ibW-tL-g6N" firstAttribute="leading" secondItem="eiQ-lJ-GSa" secondAttribute="leading" id="bDv-eG-tuI"/>
+                            <constraint firstItem="tH4-G3-RlH" firstAttribute="centerX" secondItem="mgY-b3-vyP" secondAttribute="centerX" constant="55" id="e7o-Wh-me8"/>
+                            <constraint firstItem="eiQ-lJ-GSa" firstAttribute="trailing" secondItem="mgY-b3-vyP" secondAttribute="trailingMargin" id="ev2-pe-mO2"/>
+                            <constraint firstItem="eiQ-lJ-GSa" firstAttribute="trailing" secondItem="ibW-tL-g6N" secondAttribute="trailing" id="g30-cX-26c"/>
+                            <constraint firstItem="Sbd-iQ-y3i" firstAttribute="centerX" secondItem="mgY-b3-vyP" secondAttribute="centerX" constant="-55" id="inx-cm-pPs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordResetEmailTF" destination="eiQ-lJ-GSa" id="4Cx-1s-6n8"/>
+                        <segue destination="Ooo-eL-nsz" kind="show" identifier="resetCancelSegue" id="dIH-3E-5VZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ar7-gl-sBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="-1056"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="67m-gB-Wc1">
             <objects>
@@ -28,7 +105,7 @@
                                     <constraint firstAttribute="height" constant="30" id="XzE-cH-3QE"/>
                                     <constraint firstAttribute="width" constant="200" id="m3X-jh-WTM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-tJ-Pme">
@@ -38,7 +115,7 @@
                                     <constraint firstAttribute="width" constant="200" id="RLH-YH-gVE"/>
                                     <constraint firstAttribute="height" constant="30" id="t9D-6X-oOc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-xk-aXm">
@@ -49,6 +126,7 @@
                                     <constraint firstAttribute="width" constant="90" id="FX0-t4-LBp"/>
                                     <constraint firstAttribute="height" constant="40" id="eRp-mz-u7z"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -64,6 +142,7 @@
                                     <constraint firstAttribute="width" constant="90" id="U5M-Fi-sRr"/>
                                     <constraint firstAttribute="height" constant="40" id="u9W-me-JQI"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <color key="tintColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,7 +151,7 @@
                                     <action selector="logInSignUpBtn:" destination="Ooo-eL-nsz" eventType="touchUpInside" id="uwz-mu-2Pp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-iO-j3U">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-iO-j3U">
                                 <rect key="frame" x="200" y="422" width="200" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,25 +159,18 @@
                                     <constraint firstAttribute="height" constant="40" id="cYB-jY-pYb"/>
                                     <constraint firstAttribute="width" constant="200" id="ltK-1n-XOC"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInPasswordResetBtn:" destination="Ooo-eL-nsz" eventType="touchUpInside" id="pET-j3-2Qx"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nitrox Development LLC 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IJ-VX-WFe">
-                                <rect key="frame" x="200" y="493" width="200" height="21"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="UBw-53-Jd9"/>
-                                    <constraint firstAttribute="width" constant="200" id="lHk-me-cnn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sH-5p-Ls9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sH-5p-Ls9">
                                 <rect key="frame" x="20" y="368" width="560" height="46"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -119,18 +191,15 @@
                             <constraint firstItem="TdL-tJ-Pme" firstAttribute="centerX" secondItem="4NN-0D-2Yd" secondAttribute="centerX" id="Cf3-Uz-MmM"/>
                             <constraint firstItem="8rp-xk-aXm" firstAttribute="top" secondItem="Q4L-Tq-gTq" secondAttribute="bottom" constant="30" id="G15-OW-eYv"/>
                             <constraint firstItem="8sH-5p-Ls9" firstAttribute="leading" secondItem="4NN-0D-2Yd" secondAttribute="leadingMargin" id="LLC-91-aAU"/>
-                            <constraint firstItem="6IJ-VX-WFe" firstAttribute="top" secondItem="fdg-iO-j3U" secondAttribute="bottom" constant="31" id="M1f-yE-5P4"/>
                             <constraint firstItem="SKY-BE-5XG" firstAttribute="top" secondItem="2az-y1-MNe" secondAttribute="bottom" id="NYs-bB-UyV"/>
                             <constraint firstItem="fdg-iO-j3U" firstAttribute="top" secondItem="8sH-5p-Ls9" secondAttribute="bottom" constant="8" symbolic="YES" id="T00-Fr-j7G"/>
                             <constraint firstItem="Q4L-Tq-gTq" firstAttribute="centerX" secondItem="4NN-0D-2Yd" secondAttribute="centerX" id="Xnm-Dq-Hza"/>
                             <constraint firstItem="TdL-tJ-Pme" firstAttribute="top" secondItem="SKY-BE-5XG" secondAttribute="bottom" constant="2" id="ZTH-7J-OO8"/>
                             <constraint firstItem="fdg-iO-j3U" firstAttribute="centerX" secondItem="4NN-0D-2Yd" secondAttribute="centerX" id="e5o-Qg-hL6"/>
                             <constraint firstItem="PrO-8a-SVb" firstAttribute="centerX" secondItem="4NN-0D-2Yd" secondAttribute="centerX" constant="55" id="lqd-01-cF4"/>
-                            <constraint firstItem="8q3-bI-RA8" firstAttribute="top" secondItem="6IJ-VX-WFe" secondAttribute="bottom" constant="86" id="lsK-e1-KsH"/>
                             <constraint firstItem="8sH-5p-Ls9" firstAttribute="centerX" secondItem="fdg-iO-j3U" secondAttribute="centerX" id="slx-BJ-3uo"/>
                             <constraint firstItem="Q4L-Tq-gTq" firstAttribute="top" secondItem="TdL-tJ-Pme" secondAttribute="bottom" constant="8" symbolic="YES" id="umr-RV-Dbe"/>
                             <constraint firstItem="PrO-8a-SVb" firstAttribute="baseline" secondItem="8rp-xk-aXm" secondAttribute="baseline" id="vuZ-yn-QD9"/>
-                            <constraint firstItem="6IJ-VX-WFe" firstAttribute="centerX" secondItem="4NN-0D-2Yd" secondAttribute="centerX" id="wFM-l4-xai"/>
                             <constraint firstItem="SKY-BE-5XG" firstAttribute="centerX" secondItem="4NN-0D-2Yd" secondAttribute="centerX" id="zNs-t0-de3"/>
                         </constraints>
                     </view>
@@ -140,6 +209,7 @@
                         <outlet property="logInUserTF" destination="TdL-tJ-Pme" id="ziP-Az-Ybx"/>
                         <segue destination="Twi-Vs-zzb" kind="show" identifier="signUp" id="9la-kl-ppR"/>
                         <segue destination="TCL-HC-mBZ" kind="show" identifier="logIn" id="GEX-N6-J3L"/>
+                        <segue destination="QCt-MF-2h3" kind="show" identifier="forgotPasswordSegue" id="MMe-QR-REA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQR-df-O5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,38 +228,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-Pw-nnN">
-                                <rect key="frame" x="20" y="179" width="560" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gG7-Dd-Idq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Please provide the name and state of your college below and it will be added to the list as soon as we verify its authenticity." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-fv-QPZ">
-                                <rect key="frame" x="20" y="20" width="560" height="128"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-Gv-KG2">
                                 <rect key="frame" x="20" y="223" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0TT-kU-LMd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmp-o2-qdC">
                                 <rect key="frame" x="200" y="274" width="90" height="40"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="dZT-wU-aSZ"/>
-                                    <constraint firstAttribute="width" constant="90" id="xyd-jU-Kjh"/>
-                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -205,6 +256,7 @@
                                     <constraint firstAttribute="width" constant="90" id="SUe-Gh-t2Q"/>
                                     <constraint firstAttribute="height" constant="40" id="fdp-UP-qB3"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -213,26 +265,42 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="nL1-xJ-7al"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Please provide the name and state of your college below and it will be added to the list as soon as we verify its authenticity." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-fv-QPZ">
+                                <rect key="frame" x="20" y="50" width="560" height="130"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-Pw-nnN">
+                                <rect key="frame" x="20" y="185" width="560" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gG7-Dd-Idq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lmp-o2-qdC" firstAttribute="centerX" secondItem="LCK-NQ-GZ4" secondAttribute="centerX" constant="-55" id="37A-cX-n54"/>
+                            <constraint firstItem="lmp-o2-qdC" firstAttribute="baseline" secondItem="uQ3-ol-MV4" secondAttribute="firstBaseline" id="0rs-Aw-PTc"/>
+                            <constraint firstItem="mWR-Qf-du1" firstAttribute="top" secondItem="lmp-o2-qdC" secondAttribute="bottom" constant="286" id="7ob-Zz-oo5"/>
                             <constraint firstItem="uQ3-ol-MV4" firstAttribute="centerX" secondItem="LCK-NQ-GZ4" secondAttribute="centerX" constant="55" id="Ibt-MK-X6A"/>
-                            <constraint firstItem="lmp-o2-qdC" firstAttribute="baseline" secondItem="uQ3-ol-MV4" secondAttribute="firstBaseline" id="Ltw-Df-2LD"/>
-                            <constraint firstItem="x2Y-Pw-nnN" firstAttribute="top" secondItem="Apl-fv-QPZ" secondAttribute="bottom" constant="31" id="ReZ-vD-Vv8"/>
-                            <constraint firstItem="Apl-fv-QPZ" firstAttribute="top" secondItem="lW6-Z4-dwx" secondAttribute="bottom" id="TbS-gn-mmy"/>
-                            <constraint firstItem="lmp-o2-qdC" firstAttribute="leading" secondItem="LCK-NQ-GZ4" secondAttribute="leading" constant="200" id="Xek-tb-dW2"/>
-                            <constraint firstItem="lmp-o2-qdC" firstAttribute="top" secondItem="GIx-Gv-KG2" secondAttribute="bottom" constant="21" id="Znm-4i-283"/>
-                            <constraint firstItem="uQ3-ol-MV4" firstAttribute="leading" secondItem="lmp-o2-qdC" secondAttribute="trailing" constant="20" id="jOE-Ea-Yb8"/>
+                            <constraint firstItem="uQ3-ol-MV4" firstAttribute="leading" secondItem="lmp-o2-qdC" secondAttribute="trailing" constant="20" id="MPj-DK-Oij"/>
+                            <constraint firstItem="x2Y-Pw-nnN" firstAttribute="top" secondItem="Apl-fv-QPZ" secondAttribute="bottom" constant="5" id="ReZ-vD-Vv8"/>
+                            <constraint firstItem="Apl-fv-QPZ" firstAttribute="top" secondItem="lW6-Z4-dwx" secondAttribute="bottom" constant="30" id="TbS-gn-mmy"/>
+                            <constraint firstItem="uQ3-ol-MV4" firstAttribute="baseline" secondItem="lmp-o2-qdC" secondAttribute="firstBaseline" id="a0Z-3Y-BEM"/>
+                            <constraint firstItem="lmp-o2-qdC" firstAttribute="top" secondItem="GIx-Gv-KG2" secondAttribute="bottom" constant="21" id="buL-P4-NaE"/>
+                            <constraint firstItem="lmp-o2-qdC" firstAttribute="centerX" secondItem="LCK-NQ-GZ4" secondAttribute="centerX" constant="-55" id="gBE-YS-jax"/>
                             <constraint firstItem="x2Y-Pw-nnN" firstAttribute="leading" secondItem="LCK-NQ-GZ4" secondAttribute="leadingMargin" id="mOU-73-dRf"/>
                             <constraint firstItem="x2Y-Pw-nnN" firstAttribute="leading" secondItem="GIx-Gv-KG2" secondAttribute="leading" id="oEO-6c-GgA"/>
                             <constraint firstItem="x2Y-Pw-nnN" firstAttribute="trailing" secondItem="Apl-fv-QPZ" secondAttribute="trailing" id="p7X-Vi-aU4"/>
-                            <constraint firstItem="mWR-Qf-du1" firstAttribute="top" secondItem="lmp-o2-qdC" secondAttribute="bottom" constant="286" id="qAI-xr-bvh"/>
-                            <constraint firstItem="GIx-Gv-KG2" firstAttribute="top" secondItem="x2Y-Pw-nnN" secondAttribute="bottom" constant="14" id="rFa-vN-vqH"/>
+                            <constraint firstItem="uQ3-ol-MV4" firstAttribute="top" secondItem="lmp-o2-qdC" secondAttribute="top" id="pEV-Il-Cxj"/>
+                            <constraint firstItem="GIx-Gv-KG2" firstAttribute="top" secondItem="x2Y-Pw-nnN" secondAttribute="bottom" constant="8" id="rFa-vN-vqH"/>
                             <constraint firstItem="x2Y-Pw-nnN" firstAttribute="trailing" secondItem="LCK-NQ-GZ4" secondAttribute="trailingMargin" id="sFo-dU-ESz"/>
                             <constraint firstItem="Apl-fv-QPZ" firstAttribute="leading" secondItem="x2Y-Pw-nnN" secondAttribute="leading" id="sIK-WK-jI0"/>
-                            <constraint firstItem="uQ3-ol-MV4" firstAttribute="baseline" secondItem="lmp-o2-qdC" secondAttribute="firstBaseline" id="uU2-Zd-50Z"/>
                             <constraint firstItem="GIx-Gv-KG2" firstAttribute="trailing" secondItem="x2Y-Pw-nnN" secondAttribute="trailing" id="zTJ-Zj-j7s"/>
                         </constraints>
                     </view>
@@ -265,6 +333,7 @@
                                     <constraint firstAttribute="width" constant="90" id="5Zi-jF-EOg"/>
                                     <constraint firstAttribute="height" constant="40" id="BtT-Zh-wtw"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <state key="normal" title="Create">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -279,8 +348,7 @@
                                     <constraint firstAttribute="width" constant="200" id="4HU-yf-UeU"/>
                                     <constraint firstAttribute="height" constant="30" id="ifd-NQ-e3g"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="rii-0F-az3">
@@ -290,8 +358,7 @@
                                     <constraint firstAttribute="height" constant="30" id="E7q-Rd-KvS"/>
                                     <constraint firstAttribute="width" constant="200" id="nAW-oL-jMg"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-3T-r6e">
@@ -301,8 +368,7 @@
                                     <constraint firstAttribute="height" constant="30" id="7xC-Ct-2oN"/>
                                     <constraint firstAttribute="width" constant="200" id="8Fb-1n-GSj"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSr-tm-NGH">
@@ -312,6 +378,7 @@
                                     <constraint firstAttribute="width" constant="90" id="8ms-uF-huU"/>
                                     <constraint firstAttribute="height" constant="40" id="D9k-jF-5zu"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -334,29 +401,18 @@
                                     <constraint firstAttribute="height" constant="30" id="Cs1-0K-5SX"/>
                                     <constraint firstAttribute="width" constant="200" id="UV9-TO-B7h"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <pickerView opaque="NO" contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWC-EW-cj9">
-                                <rect key="frame" x="0.0" y="383" width="600" height="197"/>
+                                <rect key="frame" x="20" y="383" width="560" height="179"/>
                                 <animations/>
                                 <color key="tintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="197" id="dOz-wu-VsV"/>
-                                    <constraint firstAttribute="width" constant="600" id="qem-Kf-NcS"/>
+                                    <constraint firstAttribute="height" constant="179" id="dOz-wu-VsV"/>
+                                    <constraint firstAttribute="width" constant="560" id="qem-Kf-NcS"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bND-xx-qX4">
-                                <rect key="frame" x="200" y="345" width="200" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Add Your School">
-                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signUpAddSchoolBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="lTl-7R-pzk"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="H9C-P6-uU6">
                                 <rect key="frame" x="200" y="195" width="200" height="30"/>
                                 <animations/>
@@ -364,10 +420,20 @@
                                     <constraint firstAttribute="width" constant="200" id="EgA-oz-9ng"/>
                                     <constraint firstAttribute="height" constant="30" id="TPx-72-u4P"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bND-xx-qX4">
+                                <rect key="frame" x="200" y="562" width="200" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <state key="normal" title="Add Your School">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpAddSchoolBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="lTl-7R-pzk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -375,6 +441,7 @@
                             <constraint firstItem="H9C-P6-uU6" firstAttribute="centerX" secondItem="Ztj-wU-YlA" secondAttribute="centerX" id="04d-SW-2Xn"/>
                             <constraint firstItem="6QO-lJ-XKj" firstAttribute="leading" secondItem="tPc-3T-r6e" secondAttribute="leading" id="1Yk-fV-mcZ"/>
                             <constraint firstItem="QPi-Dj-Bv3" firstAttribute="baseline" secondItem="eSr-tm-NGH" secondAttribute="firstBaseline" id="6KV-jN-9EB"/>
+                            <constraint firstItem="bND-xx-qX4" firstAttribute="leading" secondItem="QPi-Dj-Bv3" secondAttribute="leading" id="8fQ-SY-43H"/>
                             <constraint firstItem="eSr-tm-NGH" firstAttribute="centerY" secondItem="Ztj-wU-YlA" secondAttribute="centerY" constant="16" id="8rB-G9-8Gl"/>
                             <constraint firstItem="qm7-xo-2Ic" firstAttribute="top" secondItem="1c2-dR-cd5" secondAttribute="bottom" constant="30" id="HUn-4z-4es"/>
                             <constraint firstItem="QPi-Dj-Bv3" firstAttribute="top" secondItem="rii-0F-az3" secondAttribute="bottom" constant="13" id="RKB-85-ard"/>
@@ -388,8 +455,10 @@
                             <constraint firstItem="qWC-EW-cj9" firstAttribute="top" secondItem="Rhe-rm-M0h" secondAttribute="bottom" id="fAq-dP-ibH"/>
                             <constraint firstItem="Rhe-rm-M0h" firstAttribute="top" secondItem="QPi-Dj-Bv3" secondAttribute="bottom" id="fzF-dN-own"/>
                             <constraint firstItem="eSr-tm-NGH" firstAttribute="centerX" secondItem="Ztj-wU-YlA" secondAttribute="centerX" constant="55" id="hEK-Sa-k5b"/>
+                            <constraint firstItem="bND-xx-qX4" firstAttribute="trailing" secondItem="eSr-tm-NGH" secondAttribute="trailing" id="hHh-b2-87H"/>
+                            <constraint firstItem="lcv-O6-mKF" firstAttribute="top" secondItem="bND-xx-qX4" secondAttribute="bottom" constant="8" symbolic="YES" id="l4K-d1-HjS"/>
                             <constraint firstItem="H9C-P6-uU6" firstAttribute="top" secondItem="tPc-3T-r6e" secondAttribute="bottom" constant="63" id="m1p-EN-W65"/>
-                            <constraint firstAttribute="bottom" secondItem="qWC-EW-cj9" secondAttribute="bottom" constant="20" symbolic="YES" id="nnW-hU-RLI"/>
+                            <constraint firstAttribute="bottom" secondItem="qWC-EW-cj9" secondAttribute="bottom" constant="38" id="nnW-hU-RLI"/>
                             <constraint firstItem="6QO-lJ-XKj" firstAttribute="top" secondItem="tPc-3T-r6e" secondAttribute="bottom" constant="18" id="tFM-ZT-m1j"/>
                             <constraint firstItem="Rhe-rm-M0h" firstAttribute="centerX" secondItem="rii-0F-az3" secondAttribute="centerX" id="tyZ-cl-kxr"/>
                             <constraint firstItem="qm7-xo-2Ic" firstAttribute="centerX" secondItem="Ztj-wU-YlA" secondAttribute="centerX" id="vUR-4C-ZiS"/>
@@ -2525,14 +2594,14 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9EJ-RU-csy"/>
-        <segue reference="85I-zB-BNX"/>
-        <segue reference="Uk9-OG-j9Q"/>
-        <segue reference="R1D-Hy-0Za"/>
+        <segue reference="dIH-3E-5VZ"/>
+        <segue reference="GEX-N6-J3L"/>
+        <segue reference="9la-kl-ppR"/>
         <segue reference="gWS-jR-3bg"/>
         <segue reference="kG6-ei-V4G"/>
-        <segue reference="Whu-r7-dBd"/>
-        <segue reference="LpV-FB-yTG"/>
+        <segue reference="on5-k1-6ao"/>
         <segue reference="hPf-Vd-Qjy"/>
         <segue reference="gf2-jP-qG1"/>
+        <segue reference="LpV-FB-yTG"/>
     </inferredMetricsTieBreakers>
 </document>

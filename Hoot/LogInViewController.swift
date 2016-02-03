@@ -118,6 +118,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func logInPasswordResetBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("forgotPasswordSegue", sender: self)
+    }
     //Mark: Move to Sign Up
     @IBAction func logInSignUpBtn(sender: AnyObject) {
 //        self.actInd.startAnimating()
