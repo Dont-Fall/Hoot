@@ -26,7 +26,7 @@ class QuestionTableViewController: PFQueryTableViewController {
         self.textKey = "subject"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
-        self.objectsPerPage = 100
+        self.objectsPerPage = 25
     }
     
     //MARK: Segment Controller

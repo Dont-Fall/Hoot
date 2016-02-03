@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //Text Fields
     @IBOutlet var classAskQuestionCourseTF: UITextField!
-    @IBOutlet var classAskQuestionQuestionTF: UITextField!
+    @IBOutlet var classAskQuestionTV: UITextView!
+    
     //Labels
     @IBOutlet var classAskQuestionCourseCount: UILabel!
     @IBOutlet var askQuestionQuestionCount: UILabel!
@@ -28,9 +29,9 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UII
         imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             imagePicker.sourceType = .Camera
-            if (UIImagePickerController.isCameraDeviceAvailable(.Front)) { imagePicker.cameraDevice = .Front
+            if (UIImagePickerController.isCameraDeviceAvailable(.Rear)) { imagePicker.cameraDevice = .Rear
             }else{
-                imagePicker.cameraDevice = .Rear
+                imagePicker.cameraDevice = .Front
             }
         }else{
             imagePicker.sourceType = .PhotoLibrary
@@ -55,7 +56,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UII
         
         //Live Count Delegate
         self.askQuestionQuestionCount.text = "200"
-        self.classAskQuestionQuestionTF.delegate = self
+        self.classAskQuestionTV.delegate = self
         self.classAskQuestionCourseCount.text = "20"
         self.classAskQuestionCourseTF.delegate = self
         
@@ -77,7 +78,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UII
     func classAskQuestionAskQuestion() {
         var currentUser = PFUser.currentUser()
         var classQuestion = PFObject(className: "ClassQuestion")
-        classQuestion["question"] = classAskQuestionQuestionTF.text
+        classQuestion["question"] = classAskQuestionTV.text
         classQuestion["user"] = currentUser!.username
         classQuestion["solved"] = false
         classQuestion["topic"] = classAskQuestionCourseTF.text
@@ -91,7 +92,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UII
         classQuestion.setObject(imageFile!, forKey: "picture")
         
         var image: PFFile = imageFile!
-        var classAskQuestion = ClassAskQuestion(topic: classAskQuestionCourseTF.text!, text: classAskQuestionQuestionTF.text!, img: image)
+        var classAskQuestion = ClassAskQuestion(topic: classAskQuestionCourseTF.text!, text: classAskQuestionTV.text!, img: image)
         do {
             try classAskQuestion.classAskQuestionAlert()
             
@@ -127,29 +128,31 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UII
             navigationController?.popViewControllerAnimated(true)
     }
     
-    //Live Count Function
+    //Live Count Text Field
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-            switch textField {
-        case self.classAskQuestionQuestionTF:
-            let newLength = (classAskQuestionQuestionTF.text?.characters.count)! + string.characters.count - range.length
-            if(newLength <= 200){
-                self.askQuestionQuestionCount.text = "\(200 - newLength)"
-                return true
-            }else{
-                return false
-            }
-        case self.classAskQuestionCourseTF:
-            let newLength = (classAskQuestionCourseTF.text?.characters.count)! + string.characters.count - range.length
-            if(newLength <= 20){
-                self.classAskQuestionCourseCount.text = "\(20 - newLength)"
-                return true
-            }else{
-                return false
-            }
-        default:
+        //Ask Enabled
+        //Count Function
+        let newLength = (classAskQuestionCourseTF.text?.characters.count)! + string.characters.count - range.length
+        if(newLength <= 20){
+            self.classAskQuestionCourseCount.text = "\(20 - newLength)"
+            return true
+        }else{
             return false
-            }
+        }
     }
+    
+    //Live Count Text View
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText string: String) -> Bool {
+        let newLength = (classAskQuestionTV.text?.characters.count)! + string.characters.count - range.length
+        if(newLength <= 200){
+            askQuestionQuestionCount.text = "\(200 - newLength)"
+            return true
+        }else{
+            return false
+        }
+    }
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

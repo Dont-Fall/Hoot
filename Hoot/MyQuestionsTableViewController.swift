@@ -80,7 +80,7 @@ class MyQuestionsTableViewController: PFQueryTableViewController {
         self.navigationItem.setLeftBarButtonItem(myQuestionBackBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.title = "My Questions"
-        tableView.rowHeight = 100
+        tableView.rowHeight = 150
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -126,6 +126,38 @@ class MyQuestionsTableViewController: PFQueryTableViewController {
         if let question = object?["question"] as? String {
             cell?.myQuestionQuestionTV.text = question
         }
+        if let subject = object?["subject"] as? String {
+            cell?.myQuestionSubjectLabel.text = subject
+        }
+        if object?["solved"] as! Bool == true {
+            cell?.myQuestionAnsweredPic.image = UIImage(named: "CheckMarkHoot")
+        }
+        //Time Stamp
+        let date = NSDate()
+        let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
+        let years = Int(seconds/31540000)
+        let months = Int(seconds/26280000)
+        let weeks = Int(seconds/604800)
+        let days = Int(seconds/86400)
+        let hours = Int(seconds/3600)
+        let minutes = Int(seconds/60)
+        if years >= 1{
+            cell?.myQuestionTimeStamp.text = String(years) + "y"
+        }else if months >= 1{
+            cell?.myQuestionTimeStamp.text = String(months) + "m"
+        }else if weeks >= 1{
+            cell?.myQuestionTimeStamp.text = String(weeks) + "w"
+        }else if days >= 1 {
+            cell?.myQuestionTimeStamp.text = String(days) + "d"
+        }else if Int(hours) >= 1 {
+            cell?.myQuestionTimeStamp.text = String(hours) + "h"
+        }else if Int(minutes) >= 1 {
+            cell?.myQuestionTimeStamp.text = String(minutes) + "m"
+        }else{
+            cell?.myQuestionTimeStamp.text = String(seconds) + "s"
+        }
+        //Answer Count
+        cell?.myQuestionAnswerCount.text = String(object!["answerCount"]) + " Answers"
         return cell
     }
     

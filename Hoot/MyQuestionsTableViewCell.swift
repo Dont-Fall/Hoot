@@ -11,6 +11,10 @@ import UIKit
 class MyQuestionsTableViewCell: PFTableViewCell {
 
     @IBOutlet var myQuestionQuestionTV: UITextView!
+    @IBOutlet var myQuestionSubjectLabel: UILabel!
+    @IBOutlet var myQuestionAnsweredPic: UIImageView!
+    @IBOutlet var myQuestionTimeStamp: UILabel!
+    @IBOutlet var myQuestionAnswerCount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

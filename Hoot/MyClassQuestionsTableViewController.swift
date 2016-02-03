@@ -80,7 +80,7 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         self.navigationItem.setLeftBarButtonItem(myClassQuestionBackBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.title = "My Class Questions"
-        tableView.rowHeight = 100
+        tableView.rowHeight = 150
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -126,9 +126,41 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         if let question = object?["question"] as? String {
             cell?.myClassQuestionTV.text = question
         }
+        if let subject = object?["class"] as? String {
+            cell?.myClassQuestionClass.text = subject
+        }
+        if object?["solved"] as! Bool == true {
+            cell?.myClassQuestionAnsweredPic.image = UIImage(named: "CheckMarkHoot")
+        }
+        //Time Stamp
+        let date = NSDate()
+        let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
+        let years = Int(seconds/31540000)
+        let months = Int(seconds/26280000)
+        let weeks = Int(seconds/604800)
+        let days = Int(seconds/86400)
+        let hours = Int(seconds/3600)
+        let minutes = Int(seconds/60)
+        if years >= 1{
+            cell?.myClassQuestionTimeStamp.text = String(years) + "y"
+        }else if months >= 1{
+            cell?.myClassQuestionTimeStamp.text = String(months) + "m"
+        }else if weeks >= 1{
+            cell?.myClassQuestionTimeStamp.text = String(weeks) + "w"
+        }else if days >= 1 {
+            cell?.myClassQuestionTimeStamp.text = String(days) + "d"
+        }else if Int(hours) >= 1 {
+            cell?.myClassQuestionTimeStamp.text = String(hours) + "h"
+        }else if Int(minutes) >= 1 {
+            cell?.myClassQuestionTimeStamp.text = String(minutes) + "m"
+        }else{
+            cell?.myClassQuestionTimeStamp.text = String(seconds) + "s"
+        }
+        //Answer Count
+        cell?.myClassQuestionAnswerCount.text = String(object!["answerCount"]) + " Answers"
         return cell
     }
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     

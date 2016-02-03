@@ -23,9 +23,9 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             
             imagePicker.sourceType = .Camera
-            if (UIImagePickerController.isCameraDeviceAvailable(.Front)) { imagePicker.cameraDevice = .Front
+            if (UIImagePickerController.isCameraDeviceAvailable(.Rear)) { imagePicker.cameraDevice = .Rear
             }else{
-                imagePicker.cameraDevice = .Rear
+                imagePicker.cameraDevice = .Front
             }
             
         }else{
@@ -192,8 +192,11 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
-        askQuestionAskQuestionTV.text = ""
-        askQuestionAskQuestionTV.textColor = UIColor.blackColor()
+        if askQuestionAskQuestionTV.text == "What are you having trouble with?"
+        {
+            askQuestionAskQuestionTV.text = ""
+            askQuestionAskQuestionTV.textColor = UIColor.blackColor()
+        }
     }
 
 }
