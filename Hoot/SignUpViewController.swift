@@ -11,8 +11,6 @@ import UIKit
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate {
     
-    //MARK: Extras
-//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Fields
     @IBOutlet var signUpEmailTF: UITextField!
@@ -30,7 +28,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     //MARK: School Data
     var schoolListUnsorted: [String] = [String]()
     var schoolList: [String] = [String]()
-    
+    var testList = Array<String>()
+    var school = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,7 +40,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         signUpUsernameTF.becomeFirstResponder()
         
         //Change Color For School Picker
-        self.signUpSchoolPicker.setValue(UIColor.greenColor(), forKey: "textColor")
+        //signUpSchoolPicker.setValue(UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0), forKey: "textColor")
         
         //Taps to close
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -53,8 +53,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         signUpSchoolTF.delegate = self
         
         //School Data
-        schoolListUnsorted = ["Rutgers University-New Brunswick", "Stevens Institute of Technolgoy", "Rutgers University-Newark", "Montclair State University", "Rowan University", "The College of New Jersey", "New Jersey Institute of Technology"]
-        schoolList = schoolListUnsorted.sort()
+        for item in schoolListUnsorted{
+            print("THIS IS THE TEST LIST")
+            print(item)
+        }
+        schoolList = self.schoolListUnsorted.sort()
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -134,6 +137,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             errorLabel.text = "Sorry, something went wrong please try again."
         }
     
+    }
+    
+    //ADD SCHOOL BTN
+    @IBAction func signUpAddSchoolBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("addSchoolSegue", sender: self)
     }
     
     //OPTIONAL

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A568B881C4C0D000047526E /* ConferenceCall40.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B871C4C0D000047526E /* ConferenceCall40.png */; };
 		1A568B8C1C4C1B370047526E /* CellSep.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B891C4C1B370047526E /* CellSep.png */; };
-		1A568B8D1C4C1B370047526E /* HootLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B8A1C4C1B370047526E /* HootLogo.png */; };
 		1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B8B1C4C1B370047526E /* TextFieldBar.png */; };
 		1A568B911C4C1C1E0047526E /* FAQ-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B8F1C4C1C1E0047526E /* FAQ-30.png */; };
 		1A568B921C4C1C1E0047526E /* QA.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B901C4C1C1E0047526E /* QA.png */; };
@@ -56,6 +55,10 @@
 		964F22BD1C46F1050042A335 /* MyQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F22BC1C46F1050042A335 /* MyQuestionsTableViewCell.swift */; };
 		964F22BF1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F22BE1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift */; };
 		964FD53C1C613391000D6820 /* CameraIconHoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 964FD53B1C613391000D6820 /* CameraIconHoot.png */; };
+		9656F3231C61F5290038D864 /* TFBarH30.png in Resources */ = {isa = PBXBuildFile; fileRef = 9656F3221C61F5290038D864 /* TFBarH30.png */; };
+		9656F3251C61FEA30038D864 /* HootLogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9656F3241C61FEA30038D864 /* HootLogoWhite.png */; };
+		9656F3271C61FF6A0038D864 /* HootLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9656F3261C61FF6A0038D864 /* HootLogo.png */; };
+		9656F3291C6206C00038D864 /* AddSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656F3281C6206C00038D864 /* AddSchoolViewController.swift */; };
 		96825D941C618E27000DFEA5 /* CheckMarkHoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96825D931C618E27000DFEA5 /* CheckMarkHoot.png */; };
 		96A06BA01C4153DE0077084A /* QuestionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */; };
 		96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */; };
@@ -111,7 +114,6 @@
 /* Begin PBXFileReference section */
 		1A568B871C4C0D000047526E /* ConferenceCall40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ConferenceCall40.png; sourceTree = "<group>"; };
 		1A568B891C4C1B370047526E /* CellSep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellSep.png; sourceTree = "<group>"; };
-		1A568B8A1C4C1B370047526E /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HootLogo.png; sourceTree = "<group>"; };
 		1A568B8B1C4C1B370047526E /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextFieldBar.png; sourceTree = "<group>"; };
 		1A568B8F1C4C1C1E0047526E /* FAQ-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FAQ-30.png"; sourceTree = "<group>"; };
 		1A568B901C4C1C1E0047526E /* QA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QA.png; sourceTree = "<group>"; };
@@ -165,6 +167,10 @@
 		964F22BC1C46F1050042A335 /* MyQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		964F22BE1C48143A0042A335 /* MyClassQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		964FD53B1C613391000D6820 /* CameraIconHoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraIconHoot.png; sourceTree = "<group>"; };
+		9656F3221C61F5290038D864 /* TFBarH30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TFBarH30.png; sourceTree = "<group>"; };
+		9656F3241C61FEA30038D864 /* HootLogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HootLogoWhite.png; sourceTree = "<group>"; };
+		9656F3261C61FF6A0038D864 /* HootLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HootLogo.png; sourceTree = "<group>"; };
+		9656F3281C6206C00038D864 /* AddSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSchoolViewController.swift; sourceTree = "<group>"; };
 		96825D931C618E27000DFEA5 /* CheckMarkHoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckMarkHoot.png; path = Hoot/CheckMarkHoot.png; sourceTree = "<group>"; };
 		96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailTableViewCell.swift; path = ../QuestionDetailTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewCell.swift; sourceTree = "<group>"; };
@@ -246,6 +252,7 @@
 		960945CF1C348C660000282A = {
 			isa = PBXGroup;
 			children = (
+				9656F3261C61FF6A0038D864 /* HootLogo.png */,
 				96FAF1021C37151E0092D096 /* Pictures */,
 				96FAF0F91C36EA930092D096 /* Framework */,
 				960945DA1C348C660000282A /* Hoot */,
@@ -369,6 +376,7 @@
 			children = (
 				960946291C3491040000282A /* LogInViewController.swift */,
 				9609462F1C34DB590000282A /* SignUpViewController.swift */,
+				9656F3281C6206C00038D864 /* AddSchoolViewController.swift */,
 			);
 			name = Login/SignUp;
 			sourceTree = "<group>";
@@ -413,12 +421,13 @@
 		96FAF1021C37151E0092D096 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				9656F3241C61FEA30038D864 /* HootLogoWhite.png */,
+				9656F3221C61F5290038D864 /* TFBarH30.png */,
 				1A568BA11C4C22A50047526E /* Calendar.png */,
 				1A568B8F1C4C1C1E0047526E /* FAQ-30.png */,
 				964FD53B1C613391000D6820 /* CameraIconHoot.png */,
 				1A568B901C4C1C1E0047526E /* QA.png */,
 				1A568B891C4C1B370047526E /* CellSep.png */,
-				1A568B8A1C4C1B370047526E /* HootLogo.png */,
 				1A568B8B1C4C1B370047526E /* TextFieldBar.png */,
 				1A568B871C4C0D000047526E /* ConferenceCall40.png */,
 				96825D931C618E27000DFEA5 /* CheckMarkHoot.png */,
@@ -576,9 +585,11 @@
 				1A568BA21C4C22A50047526E /* Calendar.png in Resources */,
 				1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */,
 				1A568B881C4C0D000047526E /* ConferenceCall40.png in Resources */,
-				1A568B8D1C4C1B370047526E /* HootLogo.png in Resources */,
+				9656F3251C61FEA30038D864 /* HootLogoWhite.png in Resources */,
+				9656F3231C61F5290038D864 /* TFBarH30.png in Resources */,
 				964FD53C1C613391000D6820 /* CameraIconHoot.png in Resources */,
 				960945E61C348C670000282A /* LaunchScreen.storyboard in Resources */,
+				9656F3271C61FF6A0038D864 /* HootLogo.png in Resources */,
 				1A568B911C4C1C1E0047526E /* FAQ-30.png in Resources */,
 				960945E31C348C670000282A /* Assets.xcassets in Resources */,
 				1A568B8C1C4C1B370047526E /* CellSep.png in Resources */,
@@ -652,6 +663,7 @@
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
 				9634F93F1C3EBDAC0086D799 /* ClassQuestionTableViewCell.swift in Sources */,
 				96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */,
+				9656F3291C6206C00038D864 /* AddSchoolViewController.swift in Sources */,
 				F1F147331C49983200938235 /* AskQuestion.swift in Sources */,
 				960946301C34DB590000282A /* SignUpViewController.swift in Sources */,
 				9634F9451C3EC4B40086D799 /* ClassAskQuestionViewController.swift in Sources */,
