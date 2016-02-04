@@ -83,10 +83,13 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        if PFUser.currentUser() != nil{
-            //None
+        var user = PFUser.currentUser()
+        if user == nil{
+            self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
+        }else if user?["emailVerified"] as? Bool  == false {
+            self.performSegueWithIdentifier("emailVerifySegue", sender: self)
         }else{
-    self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
+            //Nothing
         }
         self.tableView.reloadData()
     }

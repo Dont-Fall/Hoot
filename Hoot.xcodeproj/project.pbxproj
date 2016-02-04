@@ -77,6 +77,7 @@
 		96CFB5E51C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E41C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift */; };
 		96CFB5E71C46B01B00A7793D /* ClassQuestionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */; };
 		96D80DDA1C3D5BE000C64794 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */; };
+		96E5FEB21C629AF9000DA329 /* VerifyEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5FEB11C629AF9000DA329 /* VerifyEmailViewController.swift */; };
 		96ED08CC1C61A1B700729DB5 /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ED08CB1C61A1B700729DB5 /* QuestionAnswerViewController.swift */; };
 		96FAF0F61C36EA830092D096 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F51C36EA830092D096 /* Accounts.framework */; };
 		96FAF0F81C36EA890092D096 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F71C36EA890092D096 /* Social.framework */; };
@@ -190,6 +191,7 @@
 		96CFB5E41C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswersTableViewController.swift; sourceTree = "<group>"; };
 		96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassQuestionAnswerCell.swift; path = ../ClassQuestionAnswerCell.swift; sourceTree = "<group>"; };
 		96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		96E5FEB11C629AF9000DA329 /* VerifyEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewController.swift; sourceTree = "<group>"; };
 		96ED08CB1C61A1B700729DB5 /* QuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		96FAF0F51C36EA830092D096 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		96FAF0F71C36EA890092D096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -376,6 +378,7 @@
 		96B29BCE1C39A05D00240AD7 /* Login/SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				96E5FEB11C629AF9000DA329 /* VerifyEmailViewController.swift */,
 				9656F32A1C627D6B0038D864 /* PasswordResetViewController.swift */,
 				960946291C3491040000282A /* LogInViewController.swift */,
 				9609462F1C34DB590000282A /* SignUpViewController.swift */,
@@ -632,6 +635,7 @@
 				96B29BCA1C39A02C00240AD7 /* CreateEventViewController.swift in Sources */,
 				96CFB5E31C46AAEE00A7793D /* ClassQuestionAnswerViewController.swift in Sources */,
 				96B29BD21C39B14200240AD7 /* SubjectTableViewCell.swift in Sources */,
+				96E5FEB21C629AF9000DA329 /* VerifyEmailViewController.swift in Sources */,
 				96B29BC41C3993DE00240AD7 /* AddClassViewController.swift in Sources */,
 				96B29BD01C39B11E00240AD7 /* SubjectTableViewController.swift in Sources */,
 				F1F147371C49999200938235 /* EventCreate.swift in Sources */,
