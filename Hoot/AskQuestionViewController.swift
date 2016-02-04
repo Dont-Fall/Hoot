@@ -49,7 +49,6 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     
     //MARK: Labels
-    @IBOutlet var askQuestionQuestionPlaceholder: UILabel!
     @IBOutlet var askQuestionCountLabel: UILabel!
     @IBOutlet var askQuestionCourseCountLabel: UILabel!
     
@@ -152,6 +151,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                     }
 //                    self.actInd.startAnimating()
                     self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
+                    self.askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
 //                    self.actInd.startAnimating()
                 } else {
                     print("Error")

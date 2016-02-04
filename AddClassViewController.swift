@@ -101,12 +101,6 @@ class AddClassViewController: UIViewController {
     
     func addClassCancel() {
         navigationController?.popViewControllerAnimated(true)
-        /*
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("askQuestionCancelSegue", sender: self)
-        self.actInd.stopAnimating()
-        print("search pressed")
-        */
     }
     
     func addClassAdd(){

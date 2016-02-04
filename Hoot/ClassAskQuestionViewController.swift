@@ -70,8 +70,6 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
         self.title = "Ask Question"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-
-        // Do any additional setup after loading the view.
     }
     
     //Ask Function Question
@@ -159,15 +157,4 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

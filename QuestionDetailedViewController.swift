@@ -12,12 +12,9 @@ class QuestionDetailedViewController: UIViewController {
     
     var testID = ""
     
-    
     //MARK: Labels
     @IBOutlet var questionDetailedUsernameLabel: UILabel!
-    @IBOutlet var questionDetailedCountAnswers: UILabel!
-    @IBOutlet var questionDetailedHelpLabel: UILabel!
-    
+
     //MARK: Text Views
     @IBOutlet var questionDetailQuestionTV: UITextView!
     
@@ -30,7 +27,6 @@ class QuestionDetailedViewController: UIViewController {
         self.performSegueWithIdentifier("questionDetailHelpSegue", sender: self)
     }
     
-    
     //MARK: Picture Preview
     @IBOutlet var questionDetailedPicturePreview: UIImageView!
     let tapRec = UITapGestureRecognizer()
@@ -38,7 +34,6 @@ class QuestionDetailedViewController: UIViewController {
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     var didReport = false
-
     
     // Container to store the view table selected object
     var currentObject : PFObject?
@@ -156,15 +151,5 @@ class QuestionDetailedViewController: UIViewController {
         self.performSegueWithIdentifier("questionShowPic", sender: self)
         self.actInd.stopAnimating()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

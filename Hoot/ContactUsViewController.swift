@@ -60,11 +60,6 @@ class ContactUsViewController: UIViewController {
             contactForm.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if error == nil {
                     print("Yp")
-                    // Success, no creating error
-                    //                    self.actInd.startAnimating()
-                    //self.performSegueWithIdentifier("contactSubmitSegue", sender: self)
-                    //                    self.actInd.startAnimating()
-                    
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
                     print("Error")
@@ -77,16 +72,6 @@ class ContactUsViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                 presentViewController(alert, animated: true, completion: nil)
             }
-}
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }

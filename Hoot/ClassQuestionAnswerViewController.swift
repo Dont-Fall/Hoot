@@ -86,6 +86,7 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
     
     //Go Back Function
     func answerQuestionCancel() {
+        classQuestionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
         navigationController?.popViewControllerAnimated(true)
     }
     
@@ -117,6 +118,7 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
                         print("Error")
                     }
                 }
+                self.classQuestionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
                 self.navigationController?.popViewControllerAnimated(true)
             } else {
                 print("Error")
@@ -124,15 +126,5 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         }
     }
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

@@ -126,7 +126,7 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         if let question = object?["question"] as? String {
             cell?.myClassQuestionTV.text = question
         }
-        if let subject = object?["class"] as? String {
+        if let subject = object?["name"] as? String {
             cell?.myClassQuestionClass.text = subject
         }
         if object?["solved"] as! Bool == true {

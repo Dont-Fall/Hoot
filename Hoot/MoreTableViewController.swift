@@ -89,11 +89,11 @@ class MoreTableViewController: UITableViewController {
         if indexPath.section == 0 {
             if row == 0{
                 let twitterPost = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                twitterPost.setInitialText("Check out this cool new app that will help you get better grades in college!")
+                twitterPost.setInitialText("Everyone go to the app store and download Hoot!")
                 self.presentViewController(twitterPost, animated: true, completion: nil)
             }else if row == 1{
                 let facebookPost = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-                facebookPost.setInitialText("Check out this cool new app that will help you get better grades in college!")
+                facebookPost.setInitialText("Everyone go to the app store and download Hoot!")
                 self.presentViewController(facebookPost, animated: true, completion: nil)
             }else{
                 //App Store

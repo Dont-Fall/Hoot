@@ -20,7 +20,6 @@ class QuestionTableViewController: PFQueryTableViewController {
     //QUERY DATA
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        
         // Configure the PFQueryTableView
         self.parseClassName = "Question"
         self.textKey = "subject"
@@ -48,7 +47,7 @@ class QuestionTableViewController: PFQueryTableViewController {
     }
     
     
-    //MAY NOT BE NEEDED Define the query that will provide the data for the table view
+    //Define the query that will provide the data for the table view
         override func queryForTable() -> PFQuery {
             if PFUser.currentUser() != nil {
                 var index: Int = questionSegmentController.selectedSegmentIndex
@@ -231,16 +230,5 @@ class QuestionTableViewController: PFQueryTableViewController {
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 
 }

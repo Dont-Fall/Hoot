@@ -256,7 +256,6 @@
 		960945CF1C348C660000282A = {
 			isa = PBXGroup;
 			children = (
-				9656F3261C61FF6A0038D864 /* HootLogo.png */,
 				96FAF1021C37151E0092D096 /* Pictures */,
 				96FAF0F91C36EA930092D096 /* Framework */,
 				960945DA1C348C660000282A /* Hoot */,
@@ -427,6 +426,7 @@
 		96FAF1021C37151E0092D096 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				9656F3261C61FF6A0038D864 /* HootLogo.png */,
 				9656F3241C61FEA30038D864 /* HootLogoWhite.png */,
 				9656F3221C61F5290038D864 /* TFBarH30.png */,
 				1A568BA11C4C22A50047526E /* Calendar.png */,
