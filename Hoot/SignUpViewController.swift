@@ -39,9 +39,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         //Keyboard up at start
         signUpUsernameTF.becomeFirstResponder()
         
-        //Change Color For School Picker
-        //signUpSchoolPicker.setValue(UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0), forKey: "textColor")
-        
         //Taps to close
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -51,12 +48,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         self.signUpSchoolPicker.delegate = self
         self.signUpSchoolPicker.dataSource = self
         signUpSchoolTF.delegate = self
-        
-        //School Data
-        for item in schoolListUnsorted{
-            print("THIS IS THE TEST LIST")
-            print(item)
-        }
+        //signUpUsernameTF.delegate = self
+        //signUpPasswordTF.delegate = self
+
         schoolList = self.schoolListUnsorted.sort()
     }
     
@@ -89,9 +83,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     //MARK: Bring Up Editor on Text Field Tap
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        view.endEditing(true)
-        signUpSchoolPicker.hidden = false
-        return false
+            view.endEditing(true)
+            signUpSchoolPicker.hidden = false
+            return false
     }
     
     //MARK: Tap Function
@@ -102,27 +96,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     //MARK: Create Account
     @IBAction func signUpCreateBtn(sender: AnyObject) {
-
-/*        var user = PFUser()
-        user.username = signUpUsernameTF.text
-        user.password = signUpPasswordTF.text
-        user.email = signUpEmailTF.text
-        user["school"] = signUpSchoolTF.text
-        user["points"] = 0
-        user["subject"] = "Math"
-        user["currentGroupCode"] = ""
-        user.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                // Success, no creating error.
-                self.actInd.startAnimating()
-                self.performSegueWithIdentifier("signUpSuccess", sender: self)
-                self.actInd.stopAnimating()
-                
-            } else {
-                print("Error")
-            }
-        }
-*/
         errorLabel.text = ""
         
         let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "")
@@ -151,6 +124,31 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         alertview.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
         return alertview
+    }
+    
+    //Live Count Function
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        return (textField.text?.utf16.count ?? 0) + string.utf16.count - range.length <= 15
+        
+        switch UITextField() {
+        case self.signUpUsernameTF:
+            let newLength = (signUpUsernameTF.text?.characters.count)! + string.characters.count - range.length
+            if(newLength <= 200){
+                return true
+            }else{
+                return false
+            }
+        case self.signUpUsernameTF:
+            let newLength = (signUpUsernameTF.text?.characters.count)! + string.characters.count - range.length
+            if(newLength <= 20){
+                return true
+            }else{
+                return false
+            }
+        default:
+            return false
+        }
     }
     
 }

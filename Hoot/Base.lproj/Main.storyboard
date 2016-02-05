@@ -341,7 +341,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="taL-is-7PK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-xo-2Ic">
+                            <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-xo-2Ic">
                                 <rect key="frame" x="200" y="50" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -350,6 +350,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="signUpUsernameTFChanged:" destination="Twi-Vs-zzb" eventType="editingDidEnd" id="rP6-1C-iQP"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="rii-0F-az3">
                                 <rect key="frame" x="200" y="253" width="200" height="30"/>
@@ -2689,15 +2692,15 @@
         <image name="TextFieldBar.png" width="200" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kG6-ei-V4G"/>
-        <segue reference="vY0-tw-E0p"/>
-        <segue reference="9EJ-RU-csy"/>
         <segue reference="jiz-BS-bLZ"/>
+        <segue reference="9EJ-RU-csy"/>
+        <segue reference="vY0-tw-E0p"/>
+        <segue reference="kG6-ei-V4G"/>
         <segue reference="iJK-sj-Yo1"/>
-        <segue reference="PBz-3c-BDV"/>
-        <segue reference="9la-kl-ppR"/>
-        <segue reference="GEX-N6-J3L"/>
         <segue reference="gf2-jP-qG1"/>
         <segue reference="LpV-FB-yTG"/>
+        <segue reference="R1D-Hy-0Za"/>
+        <segue reference="9la-kl-ppR"/>
+        <segue reference="85I-zB-BNX"/>
     </inferredMetricsTieBreakers>
 </document>
