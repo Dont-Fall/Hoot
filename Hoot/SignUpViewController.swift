@@ -120,7 +120,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     //OPTIONAL
     func signUpSuccessAlert() -> UIAlertController {
         let alertview = UIAlertController(title: "Sign up Successful", message: "Now you can log in for complete access.", preferredStyle: .Alert)
-        alertview.addAction(UIAlertAction(title: "Login", style: .Default, handler: { (alertAction) ->Void in self.dismissViewControllerAnimated(true, completion: nil) }))
+        alertview.addAction(UIAlertAction(title: "L ogin", style: .Default, handler: { (alertAction) ->Void in self.dismissViewControllerAnimated(true, completion: nil) }))
         alertview.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
         return alertview

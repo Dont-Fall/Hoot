@@ -13,6 +13,9 @@ class QuestionTableViewController: PFQueryTableViewController {
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
+    @IBOutlet var noDataView: UIView!
+
+    
     // Initialise the PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -49,34 +52,37 @@ class QuestionTableViewController: PFQueryTableViewController {
     
     //Define the query that will provide the data for the table view
         override func queryForTable() -> PFQuery {
+            var questionsQuery = PFQuery(className: "Question")
             if PFUser.currentUser() != nil {
                 var index: Int = questionSegmentController.selectedSegmentIndex
                 if index == 0 {
                     var currentUser = PFUser.currentUser()
                     let currentSubject = currentUser!["subject"]
                     let currentSchool = currentUser!["school"]
-                    var questionsQuery = PFQuery(className: "Question")
+                    //var questionsQuery = PFQuery(className: "Question")
                     questionsQuery.whereKey("subject", equalTo: (currentSubject)!)
                     questionsQuery.whereKey("school", equalTo: (currentSchool)!)
                     questionsQuery.whereKey("solved", equalTo: false)
                     questionsQuery.orderByDescending("createdAt")
-                    return questionsQuery
+                    //return questionsQuery
                 }else{
                     var currentUser = PFUser.currentUser()
                     let currentSubject = currentUser!["subject"]
                     let currentSchool = currentUser!["school"]
-                    var questionsQuery = PFQuery(className: "Question")
+                    //var questionsQuery = PFQuery(className: "Question")
                     questionsQuery.whereKey("subject", equalTo: (currentSubject)!)
                     questionsQuery.whereKey("school", equalTo: (currentSchool)!)
                     questionsQuery.whereKey("solved", equalTo: true)
                     questionsQuery.orderByDescending("updatedAt")
-                    return questionsQuery
+                    //return questionsQuery
                 }
             }else{
                 //Shouldnt Occur
-                var questionsQuery = PFQuery(className: "Question")
-                return questionsQuery
+                //var questionsQuery = PFQuery(className: "Question")
+                //return questionsQuery
             }
+            print(self.objects!.count)
+            return questionsQuery
     }
     
     //VIEW DID APPEAR
@@ -132,6 +138,8 @@ class QuestionTableViewController: PFQueryTableViewController {
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
+        noDataView.hidden=true
+        
         var cell = tableView.dequeueReusableCellWithIdentifier("questionCell") as! QuestionTableViewCell!
         if cell == nil {
             cell = QuestionTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "questionCell")
@@ -143,6 +151,7 @@ class QuestionTableViewController: PFQueryTableViewController {
         if let capital = object?["course"] as? String {
             cell?.questionCourseLabel?.text = capital
         }
+        
         //Time Stamp
         let date = NSDate()
         let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
@@ -195,40 +204,5 @@ class QuestionTableViewController: PFQueryTableViewController {
         self.performSegueWithIdentifier("questionDetailedViewIdentifier", sender: self)
         self.actInd.stopAnimating()
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
 }

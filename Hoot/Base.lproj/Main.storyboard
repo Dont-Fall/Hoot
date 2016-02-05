@@ -644,6 +644,29 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="uqb-5w-viO">
+                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woah! Looks like you haven't asked any questions yet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejj-8A-VJf">
+                                    <rect key="frame" x="210" y="48" width="180" height="76"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="180" id="Hkz-Sj-ky4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ejj-8A-VJf" firstAttribute="centerX" secondItem="uqb-5w-viO" secondAttribute="centerX" id="ADA-8l-8Fe"/>
+                                <constraint firstItem="ejj-8A-VJf" firstAttribute="top" secondItem="uqb-5w-viO" secondAttribute="top" constant="48" id="Kay-2t-thd"/>
+                                <constraint firstItem="ejj-8A-VJf" firstAttribute="centerY" secondItem="uqb-5w-viO" secondAttribute="centerY" id="zx7-tA-hkH"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="myQuestionCell" rowHeight="150" id="gCZ-ud-APe" customClass="MyQuestionsTableViewCell" customModule="Hoot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="150"/>
@@ -744,6 +767,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="noDataView" destination="uqb-5w-viO" id="u0m-a9-gQ4"/>
                         <segue destination="ibq-Ec-Xl7" kind="show" identifier="myQuestionDetailSegue" id="jiz-BS-bLZ"/>
                     </connections>
                 </tableViewController>
@@ -761,6 +785,29 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="9bs-yw-m9r">
+                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woah! Looks like you haven't asked any questions in a class yet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KR-8Y-tvT">
+                                    <rect key="frame" x="210" y="48" width="180" height="76"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="180" id="1bK-qa-TmP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="4KR-8Y-tvT" firstAttribute="centerX" secondItem="9bs-yw-m9r" secondAttribute="centerX" id="K5h-em-gPY"/>
+                                <constraint firstItem="4KR-8Y-tvT" firstAttribute="centerY" secondItem="9bs-yw-m9r" secondAttribute="centerY" id="fou-f2-BKi"/>
+                                <constraint firstItem="4KR-8Y-tvT" firstAttribute="top" secondItem="9bs-yw-m9r" secondAttribute="top" constant="48" id="gw8-Yr-Cxx"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myClassQuestionCell" rowHeight="150" id="6HU-h6-eck" customClass="MyClassQuestionsTableViewCell" customModule="Hoot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="150"/>
@@ -864,6 +911,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="noDataView" destination="9bs-yw-m9r" id="b9T-Bh-4vw"/>
                         <segue destination="PRn-XP-qOa" kind="show" identifier="myClassQuestionDetailSegue" id="vY0-tw-E0p"/>
                     </connections>
                 </tableViewController>
@@ -1425,6 +1473,53 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="4kO-eK-YaX">
+                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMW-PL-53a">
+                                    <rect key="frame" x="258" y="48" width="84" height="76"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="84" id="xME-kx-GTa"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="06F-Tc-clV">
+                                    <rect key="frame" x="557" y="8" width="25" height="25"/>
+                                    <animations/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="fCK-Zw-Q5q">
+                                    <rect key="frame" x="18" y="8" width="25" height="25"/>
+                                    <animations/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ask Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-Pl-5td">
+                                    <rect key="frame" x="545" y="32" width="48" height="27"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Subject" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxZ-rc-g91">
+                                    <rect key="frame" x="9" y="32" width="42" height="31"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="TMW-PL-53a" firstAttribute="top" secondItem="4kO-eK-YaX" secondAttribute="top" constant="48" id="Rom-Mw-grt"/>
+                                <constraint firstAttribute="trailing" secondItem="bdy-Pl-5td" secondAttribute="trailing" constant="7" id="SVH-Ra-UVX"/>
+                                <constraint firstItem="TMW-PL-53a" firstAttribute="centerY" secondItem="4kO-eK-YaX" secondAttribute="centerY" id="X1F-Dh-QIO"/>
+                                <constraint firstItem="bdy-Pl-5td" firstAttribute="centerX" secondItem="06F-Tc-clV" secondAttribute="centerX" id="a1z-nb-nTJ"/>
+                                <constraint firstItem="TMW-PL-53a" firstAttribute="centerX" secondItem="4kO-eK-YaX" secondAttribute="centerX" id="aPc-87-Hmj"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionCell" rowHeight="150" id="VWK-Ni-hLV" customClass="QuestionTableViewCell" customModule="Hoot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="150"/>
@@ -1557,6 +1652,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="noDataView" destination="4kO-eK-YaX" id="saN-xB-d4W"/>
                         <outlet property="questionSegmentController" destination="v7a-4T-nyI" id="JXo-IG-s3I"/>
                         <segue destination="JI6-fh-f44" kind="show" identifier="composeSegue" id="68P-wg-cO8"/>
                         <segue destination="Pja-JQ-orj" kind="show" identifier="subjectSegue" id="bgG-r4-bDb"/>
@@ -1716,6 +1812,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="SiG-3E-uZ4">
+                            <rect key="frame" x="0.0" y="192" width="600" height="171"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="AnM-x1-f8v">
+                                    <rect key="frame" x="557" y="8" width="25" height="25"/>
+                                    <animations/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add Class" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tms-NB-tw1">
+                                    <rect key="frame" x="545" y="32" width="48" height="27"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Aren't In Any Classes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87f-CR-tqo">
+                                    <rect key="frame" x="239" y="48" width="123" height="76"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="123" id="csa-xU-zC3"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Tms-NB-tw1" secondAttribute="trailing" constant="7" id="Q9c-mv-1on"/>
+                                <constraint firstItem="Tms-NB-tw1" firstAttribute="centerX" secondItem="AnM-x1-f8v" secondAttribute="centerX" id="TZB-p9-pF5"/>
+                                <constraint firstItem="87f-CR-tqo" firstAttribute="centerX" secondItem="SiG-3E-uZ4" secondAttribute="centerX" id="dzh-89-PtG"/>
+                                <constraint firstItem="87f-CR-tqo" firstAttribute="top" secondItem="SiG-3E-uZ4" secondAttribute="top" constant="48" id="hHm-2P-C5O"/>
+                                <constraint firstItem="87f-CR-tqo" firstAttribute="centerY" secondItem="SiG-3E-uZ4" secondAttribute="centerY" id="kNi-Vr-9Fz"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classCell" id="wMZ-Ir-ggq" customClass="ClassesTableViewCell" customModule="Hoot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
@@ -1777,6 +1909,7 @@
                     <navigationItem key="navigationItem" id="hDo-Z6-NDF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="noDataView" destination="SiG-3E-uZ4" id="vQB-CF-KXL"/>
                         <segue destination="UWp-4E-oat" kind="show" identifier="addClassSegue" id="n9K-00-I9h"/>
                         <segue destination="vME-jT-QoT" kind="show" identifier="classViewSegue" id="gz7-Bk-JTR"/>
                     </connections>
@@ -2439,6 +2572,42 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="btj-Yi-n0h">
+                            <rect key="frame" x="0.0" y="192" width="600" height="171"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-ek-dRI">
+                                    <rect key="frame" x="557" y="8" width="25" height="25"/>
+                                    <animations/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-HA-5f8">
+                                    <rect key="frame" x="545" y="32" width="48" height="27"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Events" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txi-Fj-OWM">
+                                    <rect key="frame" x="266" y="48" width="69" height="76"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="69" id="9ZQ-KC-bQ7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="txi-Fj-OWM" firstAttribute="centerY" secondItem="btj-Yi-n0h" secondAttribute="centerY" id="AW4-Dn-1jj"/>
+                                <constraint firstItem="txi-Fj-OWM" firstAttribute="top" secondItem="btj-Yi-n0h" secondAttribute="top" constant="48" id="Q5s-EV-VM2"/>
+                                <constraint firstItem="txi-Fj-OWM" firstAttribute="centerX" secondItem="btj-Yi-n0h" secondAttribute="centerX" id="ROK-CY-LH2"/>
+                                <constraint firstItem="fcd-HA-5f8" firstAttribute="centerX" secondItem="hbo-ek-dRI" secondAttribute="centerX" id="cOD-IK-Kce"/>
+                                <constraint firstAttribute="trailing" secondItem="fcd-HA-5f8" secondAttribute="trailing" constant="7" id="paN-OR-lSh"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="eventsCell" rowHeight="100" id="Cgb-gy-2Bp" customClass="EventsTableViewCell" customModule="Hoot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
@@ -2492,6 +2661,7 @@
                     <navigationItem key="navigationItem" id="kx0-EZ-9M2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="noDataView" destination="btj-Yi-n0h" id="RTI-Wm-kGN"/>
                         <segue destination="ZcM-mg-O36" kind="show" identifier="createEventSegue" id="fPq-lq-DYt"/>
                         <segue destination="HN5-lG-z7c" kind="show" identifier="eventDetailViewIdentifier" id="nog-kB-5P3"/>
                     </connections>
@@ -2683,6 +2853,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ArrowHoot.png" width="25" height="25"/>
         <image name="Calendar.png" width="31" height="31"/>
         <image name="CellSep.png" width="1000" height="50"/>
         <image name="ConferenceCall40.png" width="40" height="40"/>
@@ -2692,15 +2863,15 @@
         <image name="TextFieldBar.png" width="200" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jiz-BS-bLZ"/>
         <segue reference="9EJ-RU-csy"/>
         <segue reference="vY0-tw-E0p"/>
         <segue reference="kG6-ei-V4G"/>
-        <segue reference="iJK-sj-Yo1"/>
+        <segue reference="Rzp-QO-B34"/>
         <segue reference="gf2-jP-qG1"/>
+        <segue reference="on5-k1-6ao"/>
+        <segue reference="PBz-3c-BDV"/>
         <segue reference="LpV-FB-yTG"/>
-        <segue reference="R1D-Hy-0Za"/>
         <segue reference="9la-kl-ppR"/>
-        <segue reference="85I-zB-BNX"/>
+        <segue reference="R1D-Hy-0Za"/>
     </inferredMetricsTieBreakers>
 </document>

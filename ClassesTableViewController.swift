@@ -10,6 +10,8 @@ import UIKit
 
 class ClassesTableViewController: PFQueryTableViewController {
     
+    @IBOutlet var noDataView: UIView!
+    
     // Initialise the PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -69,6 +71,7 @@ class ClassesTableViewController: PFQueryTableViewController {
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
+        noDataView.hidden = true
         var cell = tableView.dequeueReusableCellWithIdentifier("classCell") as! ClassesTableViewCell!
         if cell == nil {
             cell = ClassesTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "classCell")

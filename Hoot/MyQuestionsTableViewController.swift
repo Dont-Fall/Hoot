@@ -12,7 +12,7 @@ class MyQuestionsTableViewController: PFQueryTableViewController {
     
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
-    
+    @IBOutlet var noDataView: UIView!
     // Initialise the PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -117,7 +117,7 @@ class MyQuestionsTableViewController: PFQueryTableViewController {
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
-        
+        noDataView.hidden = true
         var cell = tableView.dequeueReusableCellWithIdentifier("myQuestionCell") as! MyQuestionsTableViewCell!
         if cell == nil {
             cell = MyQuestionsTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myQuestionCell")

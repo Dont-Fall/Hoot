@@ -64,6 +64,9 @@
 		96A06BA01C4153DE0077084A /* QuestionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */; };
 		96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */; };
 		96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */; };
+		96A5A8271C652F54004866AE /* QueryEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5A8261C652F54004866AE /* QueryEmptyTableViewCell.swift */; };
+		96A5A8291C65492F004866AE /* ArrowHoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5A8281C65492F004866AE /* ArrowHoot.png */; };
+		96A5A82B1C6554C1004866AE /* BannerHoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5A82A1C6554C0004866AE /* BannerHoot.png */; };
 		96B29BC01C398EF300240AD7 /* ClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BBF1C398EF300240AD7 /* ClassesTableViewController.swift */; };
 		96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BC11C398F2A00240AD7 /* ClassesTableViewCell.swift */; };
 		96B29BC41C3993DE00240AD7 /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BC31C3993DE00240AD7 /* AddClassViewController.swift */; };
@@ -178,6 +181,9 @@
 		96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailTableViewCell.swift; path = ../QuestionDetailTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewController.swift; sourceTree = "<group>"; };
+		96A5A8261C652F54004866AE /* QueryEmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryEmptyTableViewCell.swift; sourceTree = "<group>"; };
+		96A5A8281C65492F004866AE /* ArrowHoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArrowHoot.png; sourceTree = "<group>"; };
+		96A5A82A1C6554C0004866AE /* BannerHoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BannerHoot.png; sourceTree = "<group>"; };
 		96B29BBF1C398EF300240AD7 /* ClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassesTableViewController.swift; path = ../ClassesTableViewController.swift; sourceTree = "<group>"; };
 		96B29BC11C398F2A00240AD7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		96B29BC31C3993DE00240AD7 /* AddClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddClassViewController.swift; path = ../AddClassViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 			children = (
 				960945DB1C348C670000282A /* AppDelegate.swift */,
 				96FAF14B1C387AAA0092D096 /* Main.storyboard */,
+				96A5A8261C652F54004866AE /* QueryEmptyTableViewCell.swift */,
 				E41209631C44ABED006827E7 /* Models */,
 				E41209621C44AB92006827E7 /* Controllers */,
 				E4F708C61C449D1D0008B4F8 /* Supporting Files */,
@@ -426,6 +433,8 @@
 		96FAF1021C37151E0092D096 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				96A5A82A1C6554C0004866AE /* BannerHoot.png */,
+				96A5A8281C65492F004866AE /* ArrowHoot.png */,
 				9656F3261C61FF6A0038D864 /* HootLogo.png */,
 				9656F3241C61FEA30038D864 /* HootLogoWhite.png */,
 				9656F3221C61F5290038D864 /* TFBarH30.png */,
@@ -588,7 +597,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */,
+				96A5A82B1C6554C1004866AE /* BannerHoot.png in Resources */,
 				1A568BA21C4C22A50047526E /* Calendar.png in Resources */,
+				96A5A8291C65492F004866AE /* ArrowHoot.png in Resources */,
 				1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */,
 				1A568B881C4C0D000047526E /* ConferenceCall40.png in Resources */,
 				9656F3251C61FEA30038D864 /* HootLogoWhite.png in Resources */,
@@ -652,6 +663,7 @@
 				960945DE1C348C670000282A /* ViewController.swift in Sources */,
 				961294921C46BA2000301E3D /* ClassQuestionAnswerSelectedViewController.swift in Sources */,
 				E44A2E741C55C03A005080B2 /* ContactForm.swift in Sources */,
+				96A5A8271C652F54004866AE /* QueryEmptyTableViewCell.swift in Sources */,
 				9634F9471C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift in Sources */,
 				96CFB5E51C46AFDF00A7793D /* ClassQuestionAnswersTableViewController.swift in Sources */,
 				E41209651C44AC0D006827E7 /* Enums.swift in Sources */,
