@@ -23,9 +23,9 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             
             imagePicker.sourceType = .Camera
-            if (UIImagePickerController.isCameraDeviceAvailable(.Rear)) { imagePicker.cameraDevice = .Rear
+            if (UIImagePickerController.isCameraDeviceAvailable(.Front)) { imagePicker.cameraDevice = .Front
             }else{
-                imagePicker.cameraDevice = .Front
+                imagePicker.cameraDevice = .Rear
             }
             
         }else{
@@ -35,11 +35,8 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!){
-                askQuestionPicPreview.image = image; self.dismissViewControllerAnimated(true, completion: nil)
+        askQuestionPicPreview.image = image; self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    //MARK: Extras
-//    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Text Felds
     @IBOutlet var askQuestionCourseTF: UITextField!

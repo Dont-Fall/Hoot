@@ -1180,31 +1180,16 @@
                                 <rect key="frame" x="24" y="19" width="553" height="117"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="117" id="5ws-bI-dcc"/>
-                                </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="twitter" returnKeyType="done"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYR-dM-HA3">
-                                <rect key="frame" x="24" y="194" width="80" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
-                                <state key="normal" title="Add Picture">
-                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="askQuestionAddPicBtn:" destination="JI6-fh-f44" eventType="touchUpInside" id="wWa-OF-RrD"/>
-                                    <action selector="questionAnswerAddPicBtn:" destination="i1e-Oz-ig2" eventType="touchUpInside" id="DXT-vs-Hqj"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pNJ-se-9xZ">
                                 <rect key="frame" x="24" y="135" width="80" height="63"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="QMn-Cy-tOd"/>
+                                    <constraint firstAttribute="width" constant="80" id="dOD-Fv-KAG"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KsX-MO-E66">
@@ -1229,22 +1214,37 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bd1-fe-ZsO">
+                                <rect key="frame" x="24" y="194" width="80" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tTJ-8N-Knw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                <state key="normal" title="Add Picture">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="askQuestionAddPicBtn:" destination="JI6-fh-f44" eventType="touchUpInside" id="AN9-Hm-UtV"/>
+                                    <action selector="questionAnswerAddPicBtn:" destination="i1e-Oz-ig2" eventType="touchUpInside" id="di7-2z-4BC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pNJ-se-9xZ" firstAttribute="top" secondItem="yUc-db-Cvm" secondAttribute="bottom" constant="135" id="4D6-br-M3N"/>
-                            <constraint firstItem="gWZ-5j-HZP" firstAttribute="centerX" secondItem="k9e-B6-3Sf" secondAttribute="centerX" id="844-AB-waG"/>
-                            <constraint firstItem="gWZ-5j-HZP" firstAttribute="top" secondItem="yUc-db-Cvm" secondAttribute="bottom" constant="19" id="9yY-Tn-Yc5"/>
-                            <constraint firstItem="ZYR-dM-HA3" firstAttribute="leading" secondItem="pNJ-se-9xZ" secondAttribute="leading" id="C1P-kQ-NuN"/>
-                            <constraint firstItem="gpx-hk-Nse" firstAttribute="top" secondItem="ZYR-dM-HA3" secondAttribute="bottom" constant="312" id="C6G-wI-Dcc"/>
-                            <constraint firstItem="KsX-MO-E66" firstAttribute="trailing" secondItem="gWZ-5j-HZP" secondAttribute="trailing" constant="-5" id="EAL-bb-zj6"/>
-                            <constraint firstItem="ZYR-dM-HA3" firstAttribute="top" secondItem="gWZ-5j-HZP" secondAttribute="bottom" constant="58" id="WZs-M3-jBM"/>
-                            <constraint firstItem="gWZ-5j-HZP" firstAttribute="leading" secondItem="k9e-B6-3Sf" secondAttribute="leadingMargin" constant="4" id="WaJ-5S-8ee"/>
-                            <constraint firstItem="ZYR-dM-HA3" firstAttribute="top" secondItem="KsX-MO-E66" secondAttribute="top" id="XUo-xf-mNM"/>
-                            <constraint firstItem="pNJ-se-9xZ" firstAttribute="leading" secondItem="gWZ-5j-HZP" secondAttribute="leading" id="cVW-vI-apb"/>
-                            <constraint firstItem="pNJ-se-9xZ" firstAttribute="trailing" secondItem="ZYR-dM-HA3" secondAttribute="trailing" id="iFO-DZ-Fvl"/>
-                            <constraint firstItem="gpx-hk-Nse" firstAttribute="top" secondItem="pNJ-se-9xZ" secondAttribute="bottom" constant="338" id="lrv-OR-qeI"/>
+                            <constraint firstItem="pNJ-se-9xZ" firstAttribute="leading" secondItem="Bd1-fe-ZsO" secondAttribute="leading" id="0XE-Oc-rOH"/>
+                            <constraint firstItem="gpx-hk-Nse" firstAttribute="top" secondItem="pNJ-se-9xZ" secondAttribute="bottom" constant="338" id="9bQ-wu-sJB"/>
+                            <constraint firstItem="pNJ-se-9xZ" firstAttribute="leading" secondItem="gWZ-5j-HZP" secondAttribute="leading" id="Dnv-99-iXp"/>
+                            <constraint firstItem="Bd1-fe-ZsO" firstAttribute="trailing" secondItem="pNJ-se-9xZ" secondAttribute="trailing" id="LDL-8u-2Jt"/>
+                            <constraint firstItem="gWZ-5j-HZP" firstAttribute="centerX" secondItem="k9e-B6-3Sf" secondAttribute="centerX" id="Myb-ah-tqf"/>
+                            <constraint firstItem="gpx-hk-Nse" firstAttribute="top" secondItem="Bd1-fe-ZsO" secondAttribute="bottom" constant="312" id="dIG-Mp-748"/>
+                            <constraint firstItem="gWZ-5j-HZP" firstAttribute="leading" secondItem="k9e-B6-3Sf" secondAttribute="leadingMargin" constant="4" id="fak-fg-t7z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KsX-MO-E66" secondAttribute="trailing" constant="8" id="fey-Pt-jgp"/>
+                            <constraint firstItem="gWZ-5j-HZP" firstAttribute="top" secondItem="yUc-db-Cvm" secondAttribute="bottom" constant="19" id="kzh-UR-WJ9"/>
+                            <constraint firstItem="Bd1-fe-ZsO" firstAttribute="top" secondItem="gWZ-5j-HZP" secondAttribute="bottom" constant="58" id="mqX-hf-fua"/>
+                            <constraint firstItem="pNJ-se-9xZ" firstAttribute="top" secondItem="yUc-db-Cvm" secondAttribute="bottom" constant="135" id="rlW-wV-NWs"/>
+                            <constraint firstItem="Bd1-fe-ZsO" firstAttribute="top" secondItem="KsX-MO-E66" secondAttribute="top" id="yeJ-9e-GCl"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
