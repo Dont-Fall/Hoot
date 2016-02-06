@@ -107,10 +107,6 @@ class QuestionTableViewController: PFQueryTableViewController {
         super.viewDidLoad()
         print("VIEW DID LOAD")
         var user = PFUser.currentUser()
-        print(user!["username"])
-        print(user?.username)
-        print(PFUser.currentUser()!["emailVerified"]?.boolValue)
-        print(user?.objectForKey("emailVerified")?.boolValue)
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 2.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
