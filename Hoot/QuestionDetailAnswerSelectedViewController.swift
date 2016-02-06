@@ -87,7 +87,7 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
                 }
             }
             
-            questionAnswerSelectedUserLabel.text = object["user"] as! String
+            questionAnswerSelectedUserLabel.text = "Answered By: \(object["user"] as! String)"
             questionAnswerSelectedAnswerTV.text = object["answer"] as! String
             askedBy = object["askedBy"] as! String
         }
@@ -173,16 +173,6 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
         self.performSegueWithIdentifier("anwerShowPic", sender: self)
         self.actInd.stopAnimating()
     }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
 

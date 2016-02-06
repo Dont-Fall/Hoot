@@ -85,7 +85,7 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
                 }
             }
             
-            classQuestionAnswerSelectedUserLabel.text = object["user"] as! String
+            classQuestionAnswerSelectedUserLabel.text = "Answered By: \(object["user"] as! String)"
             classQuestionAnswerSelectedAnswerTV.text = object["answer"] as! String
             askedBy = object["askedBy"] as! String
         }

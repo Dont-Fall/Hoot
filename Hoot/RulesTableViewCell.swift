@@ -11,6 +11,7 @@ import UIKit
 class RulesTableViewCell: UITableViewCell {
 
     @IBOutlet var rulesTV: UITextView!
+    @IBOutlet var numLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

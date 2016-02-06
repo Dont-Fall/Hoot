@@ -40,7 +40,7 @@ class EventDetailViewController: UIViewController {
         
         // Unwrap the current object object
         if let object = currentObject {
-            eventDetailCreatedBy.text = object["creator"] as! String
+            eventDetailCreatedBy.text = "Created By: \(object["creator"] as! String)"
             eventDetailEventName.text = object["name"] as! String
             eventDetailEventDate.text = object["dateAndTime"] as! String
             eventDetailEventLocation.text = object["location"] as! String
