@@ -12,6 +12,7 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
     
     // Container to store the view table selected object
     var queryID : String?
+    @IBOutlet var noDataView: UIView!
 
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
@@ -78,7 +79,7 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
-        
+        noDataView.hidden = true
         var cell = tableView.dequeueReusableCellWithIdentifier("answerCell") as! QuestionDetailAnswerTableViewCell!
         if cell == nil {
             cell = QuestionDetailAnswerTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "answerCell")

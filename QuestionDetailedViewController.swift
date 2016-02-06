@@ -79,11 +79,11 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
         tapRec.addTarget(self, action: "tapView")
         questionDetailedPicturePreview.addGestureRecognizer(tapRec)
         
-        //Start TV at Top Left
+        /*Start TV at Top Left
         self.questionDetailQuestionTV.delegate = self
         questionDetailQuestionTV.textInputView.needsUpdateConstraints()
         questionDetailQuestionTV.textInputView.sizeToFit()
-        questionDetailQuestionTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
+        questionDetailQuestionTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)*/
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -92,12 +92,12 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    /*override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         //let textView = object as! UITextView
         var topCorrect = (questionDetailQuestionTV.bounds.size.height - questionDetailQuestionTV.contentSize.height * questionDetailQuestionTV.zoomScale) / 2
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
         questionDetailQuestionTV.contentInset.top = topCorrect
-    }
+    }*/
     
     //Report Question Function
     func detailedQuestionReport() {
@@ -127,7 +127,7 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
     func detailedQuestionBack(){
         navigationController?.popViewControllerAnimated(true)
         //Set Back
-        questionDetailQuestionTV.removeObserver(self, forKeyPath: "contentSize")
+        //questionDetailQuestionTV.removeObserver(self, forKeyPath: "contentSize")
         self.tabBarController?.tabBar.hidden = false
     }
     

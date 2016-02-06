@@ -59,7 +59,7 @@ class QuestionPicViewController: UIViewController, UIScrollViewDelegate {
         //Set Back To Defaults
         self.tabBarController?.tabBar.hidden = false
         self.navigationController?.navigationBarHidden = false
-        self.navigationController!.navigationBar.barTintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         self.navigationController?.navigationBar.shadowImage = .None
         self.navigationController?.navigationBar.setBackgroundImage(.None, forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.hidesBarsOnTap = false

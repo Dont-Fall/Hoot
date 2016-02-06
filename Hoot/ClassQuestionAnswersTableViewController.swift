@@ -10,6 +10,7 @@ import UIKit
 
 class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
     
+    @IBOutlet var noDataView: UIView!
     // Container to store the view table selected object
     var queryID : String?
     
@@ -80,7 +81,7 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
-        
+        noDataView.hidden = true
         var cell = tableView.dequeueReusableCellWithIdentifier("classAnswerCell") as! ClassQuestionAnswerCell!
         if cell == nil {
             cell = ClassQuestionAnswerCell(style: UITableViewCellStyle.Default, reuseIdentifier: "classAnswerCell")

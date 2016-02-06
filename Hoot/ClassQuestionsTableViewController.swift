@@ -9,6 +9,7 @@
 import UIKit
 
 class ClassQuestionsTableViewController: PFQueryTableViewController {
+    @IBOutlet var noDataView: UIView!
     
     var nothingToLoad = false
     
@@ -115,40 +116,14 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         navigationController?.popViewControllerAnimated(true)
         
     }
-    
-    /*Prepare To Send Object To Detailed View
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "classViewIdentifier" {
-            // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! classViewViewController
-            // Pass the selected object to the destination view controller.
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let row = Int(indexPath.row)
-                detailScene.currentObject = (objects![row] as? PFObject)
-            }
-        }
-    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }*/
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
-        
-        
+        noDataView.hidden = true
         var cell = tableView.dequeueReusableCellWithIdentifier("classQuestionCell") as! ClassQuestionTableViewCell!
         if cell == nil {
             cell = ClassQuestionTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "classQuestionCell")
