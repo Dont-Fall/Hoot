@@ -8,13 +8,14 @@
 
 import UIKit
 
-class QuestionDetailedViewController: UIViewController {
+class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
     
     var testID = ""
     
     //MARK: Labels
     @IBOutlet var questionDetailedUsernameLabel: UILabel!
-
+    @IBOutlet var questionDetailCourseLabel: UILabel!
+    
     //MARK: Text Views
     @IBOutlet var questionDetailQuestionTV: UITextView!
     
@@ -54,7 +55,8 @@ class QuestionDetailedViewController: UIViewController {
                 }
             }
             
-            questionDetailedUsernameLabel.text = "Asked By: \(object["user"] as! String)"
+            questionDetailedUsernameLabel.text = "Asked By:\n     \(object["user"] as! String)"
+            questionDetailCourseLabel.text = "For Course:\n     \(object["course"] as! String)"
             questionDetailQuestionTV.text = object["question"] as! String
             testID = object.objectId!
         }
@@ -78,6 +80,9 @@ class QuestionDetailedViewController: UIViewController {
         questionDetailedPicturePreview.addGestureRecognizer(tapRec)
         
         //Start TV at Top Left
+        self.questionDetailQuestionTV.delegate = self
+        questionDetailQuestionTV.textInputView.needsUpdateConstraints()
+        questionDetailQuestionTV.textInputView.sizeToFit()
         questionDetailQuestionTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
     }
     

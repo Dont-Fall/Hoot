@@ -106,7 +106,6 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        //let textView = object as! UITextView
         var topCorrect = (askQuestionAskQuestionTV.bounds.size.height - askQuestionAskQuestionTV.contentSize.height * askQuestionAskQuestionTV.zoomScale) / 2
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
         askQuestionAskQuestionTV.contentInset.top = topCorrect
