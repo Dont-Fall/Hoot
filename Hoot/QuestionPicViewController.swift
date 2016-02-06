@@ -8,11 +8,12 @@
 
 import UIKit
 
-class QuestionPicViewController: UIViewController {
+class QuestionPicViewController: UIViewController, UIScrollViewDelegate {
     
     //MARK: Pic 
     var largePic: UIImage!
     @IBOutlet var questionPicLargeView: UIImageView!
+    @IBOutlet var zoomScrollView: UIScrollView!
     
     //MARK: Clear Pic
 
@@ -30,10 +31,12 @@ class QuestionPicViewController: UIViewController {
         questionPicLargeView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
+        //Zoom
+        self.zoomScrollView.minimumZoomScale = 1.0
+        self.zoomScrollView.maximumZoomScale = 6.0
         
         // Unwrap the current object object
         if let newPic = largePic {
-            
             questionPicLargeView.image = newPic
         }
     }
@@ -60,6 +63,12 @@ class QuestionPicViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = .None
         self.navigationController?.navigationBar.setBackgroundImage(.None, forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.hidesBarsOnTap = false
+    }
+    
+    //Zoom Function
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        
+        return self.questionPicLargeView
     }
 
 }

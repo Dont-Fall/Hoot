@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ClassQuestionPicViewController: UIViewController {
+class ClassQuestionPicViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet var zoomScrollView: UIScrollView!
     //MARK: Pic
     var largePic: UIImage!
     @IBOutlet var classQuestionLargeView: UIImageView!
@@ -34,7 +35,9 @@ class ClassQuestionPicViewController: UIViewController {
             classQuestionLargeView.image = newPic
         }
 
-        // Do any additional setup after loading the view.
+        //Zoom
+        self.zoomScrollView.minimumZoomScale = 1.0
+        self.zoomScrollView.maximumZoomScale = 6.0
     }
     
     //Go Back Function
@@ -55,16 +58,10 @@ class ClassQuestionPicViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //Zoom Function
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        
+        return self.classQuestionLargeView
     }
-    */
 
 }

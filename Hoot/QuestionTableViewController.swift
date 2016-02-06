@@ -88,12 +88,15 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        print("Test VIEW")
         var user = PFUser.currentUser()
         if user == nil{
             self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
         }else if user?["emailVerified"] as? Bool  == false {
+            print("false")
             self.performSegueWithIdentifier("emailVerifySegue", sender: self)
         }else{
+            print("nothing")
             //Nothing
         }
         self.tableView.reloadData()
@@ -102,6 +105,12 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("VIEW DID LOAD")
+        var user = PFUser.currentUser()
+        print(user!["username"])
+        print(user?.username)
+        print(PFUser.currentUser()!["emailVerified"]?.boolValue)
+        print(user?.objectForKey("emailVerified")?.boolValue)
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 2.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")

@@ -1067,22 +1067,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nmy-dN-QRS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDT-cQ-XIj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nmy-dN-QRS">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
-                            </imageView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Nmy-dN-QRS" firstAttribute="centerX" secondItem="WDT-cQ-XIj" secondAttribute="centerX" id="A7l-h0-whk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nmy-dN-QRS" secondAttribute="bottom" id="BhQ-u6-Ldp"/>
+                                    <constraint firstItem="Nmy-dN-QRS" firstAttribute="centerY" secondItem="WDT-cQ-XIj" secondAttribute="centerY" id="VGK-X4-NEC"/>
+                                    <constraint firstItem="Nmy-dN-QRS" firstAttribute="top" secondItem="WDT-cQ-XIj" secondAttribute="top" id="fYD-Q1-Jqz"/>
+                                    <constraint firstItem="Nmy-dN-QRS" firstAttribute="leading" secondItem="WDT-cQ-XIj" secondAttribute="leading" id="w0A-pl-PNr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nmy-dN-QRS" secondAttribute="trailing" id="wba-x5-6K0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="GRh-im-vf3" id="bSF-LF-IV0"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Nmy-dN-QRS" firstAttribute="leading" secondItem="53h-Uk-OMY" secondAttribute="leading" id="8Nq-9e-87j"/>
-                            <constraint firstItem="Nmy-dN-QRS" firstAttribute="bottom" secondItem="deo-6d-aky" secondAttribute="top" id="IuP-5F-DuX"/>
-                            <constraint firstAttribute="trailing" secondItem="Nmy-dN-QRS" secondAttribute="trailing" id="o7J-1E-jnz"/>
-                            <constraint firstItem="Nmy-dN-QRS" firstAttribute="top" secondItem="53h-Uk-OMY" secondAttribute="top" id="uPp-To-Avz"/>
+                            <constraint firstItem="WDT-cQ-XIj" firstAttribute="top" secondItem="53h-Uk-OMY" secondAttribute="top" id="41Z-Pv-2bT"/>
+                            <constraint firstItem="WDT-cQ-XIj" firstAttribute="bottom" secondItem="deo-6d-aky" secondAttribute="top" id="AR6-w4-2Ps"/>
+                            <constraint firstItem="WDT-cQ-XIj" firstAttribute="leading" secondItem="53h-Uk-OMY" secondAttribute="leading" id="gba-4H-k3S"/>
+                            <constraint firstAttribute="trailing" secondItem="WDT-cQ-XIj" secondAttribute="trailing" id="h0m-b1-ylR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="questionPicLargeView" destination="Nmy-dN-QRS" id="3DR-wM-8Py"/>
+                        <outlet property="zoomScrollView" destination="WDT-cQ-XIj" id="JCl-Pv-kCJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YO-Aj-a3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2517,22 +2536,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GS5-WB-24N">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wS-Aa-2wM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GS5-WB-24N">
+                                        <rect key="frame" x="0.0" y="0.0" width="598" height="600"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
-                            </imageView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DLZ-c6-scZ" id="NuS-dz-WeL"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="GS5-WB-24N" firstAttribute="leading" secondItem="Kqk-hZ-tR6" secondAttribute="leading" id="MHR-QG-Ibz"/>
-                            <constraint firstAttribute="trailing" secondItem="GS5-WB-24N" secondAttribute="trailing" id="R3U-Oc-zHk"/>
-                            <constraint firstItem="GS5-WB-24N" firstAttribute="bottom" secondItem="o5d-GP-BDQ" secondAttribute="top" id="R61-Ee-0oH"/>
-                            <constraint firstItem="GS5-WB-24N" firstAttribute="top" secondItem="Kqk-hZ-tR6" secondAttribute="top" id="grq-sl-MCd"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="classQuestionLargeView" destination="GS5-WB-24N" id="3V3-Ux-kgZ"/>
+                        <outlet property="zoomScrollView" destination="0wS-Aa-2wM" id="543-hM-S0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJq-Ak-8Lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
