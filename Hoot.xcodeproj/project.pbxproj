@@ -94,6 +94,9 @@
 		E412096A1C44AC30006827E7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209691C44AC30006827E7 /* SignIn.swift */; };
 		E44A2E741C55C03A005080B2 /* ContactForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A2E731C55C03A005080B2 /* ContactForm.swift */; };
 		E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		F1E8AA411C666B4400025724 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8AA401C666B4400025724 /* QuestionAnswer.swift */; };
+		F1E8AA431C666C0100025724 /* ClassQuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8AA421C666C0100025724 /* ClassQuestionAnswer.swift */; };
+		F1E8AA451C666C9100025724 /* AddSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8AA441C666C9100025724 /* AddSchool.swift */; };
 		F1F147331C49983200938235 /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F147321C49983200938235 /* AskQuestion.swift */; };
 		F1F147351C49998800938235 /* ClassAskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F147341C49998800938235 /* ClassAskQuestion.swift */; };
 		F1F147371C49999200938235 /* EventCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F147361C49999200938235 /* EventCreate.swift */; };
@@ -210,6 +213,9 @@
 		E41209661C44AC18006827E7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		E41209691C44AC30006827E7 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		E44A2E731C55C03A005080B2 /* ContactForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactForm.swift; sourceTree = "<group>"; };
+		F1E8AA401C666B4400025724 /* QuestionAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
+		F1E8AA421C666C0100025724 /* ClassQuestionAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswer.swift; sourceTree = "<group>"; };
+		F1E8AA441C666C9100025724 /* AddSchool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSchool.swift; sourceTree = "<group>"; };
 		F1F147321C49983200938235 /* AskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
 		F1F147341C49998800938235 /* ClassAskQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAskQuestion.swift; sourceTree = "<group>"; };
 		F1F147361C49999200938235 /* EventCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreate.swift; sourceTree = "<group>"; };
@@ -469,8 +475,11 @@
 			children = (
 				E41209641C44AC0D006827E7 /* Enums.swift */,
 				F1F147321C49983200938235 /* AskQuestion.swift */,
+				F1E8AA401C666B4400025724 /* QuestionAnswer.swift */,
 				F1F147341C49998800938235 /* ClassAskQuestion.swift */,
+				F1E8AA421C666C0100025724 /* ClassQuestionAnswer.swift */,
 				F1F147361C49999200938235 /* EventCreate.swift */,
+				F1E8AA441C666C9100025724 /* AddSchool.swift */,
 				E41209661C44AC18006827E7 /* SignUp.swift */,
 				E41209691C44AC30006827E7 /* SignIn.swift */,
 				E44A2E731C55C03A005080B2 /* ContactForm.swift */,
@@ -639,6 +648,7 @@
 				96B29BC01C398EF300240AD7 /* ClassesTableViewController.swift in Sources */,
 				9634F9491C3EE2390086D799 /* ClassQuestionPicViewController.swift in Sources */,
 				960EF9331C55B69C00A867B5 /* RulesTableViewController.swift in Sources */,
+				F1E8AA451C666C9100025724 /* AddSchool.swift in Sources */,
 				96D80DDA1C3D5BE000C64794 /* EventDetailViewController.swift in Sources */,
 				964F22B91C46ECFE0042A335 /* MyQuestionsTableViewController.swift in Sources */,
 				96B29BC61C399FD900240AD7 /* EventsTableViewController.swift in Sources */,
@@ -657,6 +667,7 @@
 				960EF9351C55B6C800A867B5 /* RulesTableViewCell.swift in Sources */,
 				96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */,
 				9634F9391C3D8A010086D799 /* QuestionPicViewController.swift in Sources */,
+				F1E8AA411C666B4400025724 /* QuestionAnswer.swift in Sources */,
 				96FAF1481C3862C60092D096 /* QuestionTableViewController.swift in Sources */,
 				960EF92F1C55B1A400A867B5 /* MoreTableViewController.swift in Sources */,
 				9609462A1C3491040000282A /* LogInViewController.swift in Sources */,
@@ -680,6 +691,7 @@
 				961D71BE1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift in Sources */,
 				96ED08CC1C61A1B700729DB5 /* QuestionAnswerViewController.swift in Sources */,
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
+				F1E8AA431C666C0100025724 /* ClassQuestionAnswer.swift in Sources */,
 				9634F93F1C3EBDAC0086D799 /* ClassQuestionTableViewCell.swift in Sources */,
 				96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */,
 				9656F3291C6206C00038D864 /* AddSchoolViewController.swift in Sources */,
