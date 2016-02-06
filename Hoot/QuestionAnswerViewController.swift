@@ -85,6 +85,9 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+
     //Go Back Function
     func answerQuestionCancel() {
         questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
@@ -113,25 +116,36 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         let imageData = UIImageJPEGRepresentation(self.questionAnswerPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
         answer.setObject(imageFile!, forKey: "picture")
-        //MARK: Save Question
-        answer.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                print("Yp")
-                // Success, no creating error
-                currentUser!.incrementKey("points", byAmount: 5)
-                currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                    if error == nil {
-                        print("Points Updated")
-                    } else {
-                        print("Error")
+        
+        var questionAnswer = QuestionAnswer(text: questionAnswerAnswerTV.text!)
+        do {
+            try questionAnswer.questionAnswerAlert()
+        
+            //MARK: Save Question
+            answer.saveInBackgroundWithBlock { (success: Bool, error:   NSError?) -> Void in
+                if error == nil {
+                    print("Yp")
+                    // Success, no creating error
+                    currentUser!.incrementKey("points", byAmount: 5)
+                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            print("Points Updated")
+                        } else {
+                            print("Error")
+                        }
                     }
+                    self.questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
+                    self.navigationController?.popViewControllerAnimated(true)
+                } else {
+                    print("Error")
                 }
-                self.questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
-                self.navigationController?.popViewControllerAnimated(true)
-            } else {
-                print("Error")
             }
-        }
+        // Error Caught Alert Settings
+        }catch let message as ErrorType {
+        let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
     }
-
 }
+}
+
