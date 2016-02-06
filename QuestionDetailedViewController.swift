@@ -41,6 +41,10 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Circle Edges on Pic
+        questionDetailedPicturePreview.layer.cornerRadius = 8.0
+        questionDetailedPicturePreview.clipsToBounds = true
+
         // Unwrap the current object object
         if let object = currentObject {
             
@@ -78,12 +82,6 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
         questionDetailedPicturePreview.userInteractionEnabled = true
         tapRec.addTarget(self, action: "tapView")
         questionDetailedPicturePreview.addGestureRecognizer(tapRec)
-        
-        /*Start TV at Top Left
-        self.questionDetailQuestionTV.delegate = self
-        questionDetailQuestionTV.textInputView.needsUpdateConstraints()
-        questionDetailQuestionTV.textInputView.sizeToFit()
-        questionDetailQuestionTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)*/
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -91,13 +89,6 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        //let textView = object as! UITextView
-        var topCorrect = (questionDetailQuestionTV.bounds.size.height - questionDetailQuestionTV.contentSize.height * questionDetailQuestionTV.zoomScale) / 2
-        topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
-        questionDetailQuestionTV.contentInset.top = topCorrect
-    }*/
     
     //Report Question Function
     func detailedQuestionReport() {
@@ -126,9 +117,6 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
     //Go Back Function
     func detailedQuestionBack(){
         navigationController?.popViewControllerAnimated(true)
-        //Set Back
-        //questionDetailQuestionTV.removeObserver(self, forKeyPath: "contentSize")
-        self.tabBarController?.tabBar.hidden = false
     }
     
     //Prepare For Segue
