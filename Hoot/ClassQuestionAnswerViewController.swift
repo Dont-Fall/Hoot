@@ -105,6 +105,11 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         let imageData = UIImageJPEGRepresentation(self.classQuestionAnswerPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
         answer.setObject(imageFile!, forKey: "picture")
+        
+        var classQuestionAnswer = ClassQuestionAnswer(text: classQuestionAnswerAnswerTV.text!)
+        do {
+            try classQuestionAnswer.classQuestionAnswerAlert()
+        
         //MARK: Save Question
         answer.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
@@ -124,7 +129,13 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
                 print("Error")
             }
         }
+        // Error Caught Alert Settings
+    }catch let message as ErrorType {
+    let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+    presentViewController(alert, animated: true, completion: nil)
     }
-    
-    
 }
+}
+
+

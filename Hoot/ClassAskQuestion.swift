@@ -12,12 +12,14 @@ class ClassAskQuestion: NSObject {
     var userTopic: String?
     var userText: String?
     var image: PFFile?
+    var answerCount: Int?
 //    let alert = UIAlertController()
     
     init(topic: String, text: String, img: PFFile){
         self.userTopic = topic
         self.userText = text
         self.image = img
+        self.answerCount = 0
     }
     
     func hasNoEmptyFields() -> Bool{
