@@ -14,6 +14,8 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBOutlet var createEventNameTF: UITextField!
     @IBOutlet var createEventDateTF: UITextField!
     @IBOutlet var createEventLocationTF: UITextField!
+    @IBOutlet var createEventTV: UITextView!
+    @IBOutlet var eventDescriptionCount: UILabel!
     
     //MARK: Date Pickers Outlets
     @IBOutlet var createEventDatePicker: UIDatePicker!

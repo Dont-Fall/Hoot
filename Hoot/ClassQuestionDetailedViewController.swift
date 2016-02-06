@@ -67,7 +67,7 @@ class ClassQuestionDetailedViewController: UIViewController {
                 }
             }
             
-            classQuestionDetailedUsernameLabel.text = object["user"] as! String
+            classQuestionDetailedUsernameLabel.text = "Asked By: \(object["user"] as! String)"
             classQuestionDetailedQuestionTV.text = object["question"] as! String
             testID = object.objectId!
         }
