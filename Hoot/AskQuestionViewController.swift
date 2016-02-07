@@ -72,7 +72,6 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         //MARK: Nav Bar Customize
         askQuestionCancelBtn = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "askQuestionCancel")
         askQuestionAskBtn = UIBarButtonItem(title: "Ask", style: .Plain, target: self, action: "askQuestionAskQuestion")
-
         self.navigationItem.setRightBarButtonItem(askQuestionAskBtn, animated: true)
         self.navigationItem.setLeftBarButtonItem(askQuestionCancelBtn, animated: true)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -86,28 +85,24 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         //Ask Button Activation
         askQuestionAskBtn.enabled = true
         
-        //Start TV at Top Left
-        askQuestionAskQuestionTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
+        /*tart TV at Top Left
+        askQuestionAskQuestionTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)*/
     }
-    
     //DID RECIEVE MEMORY WARNING
     override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
     }
-    
     //Go Back Function
     func askQuestionCancel() {
-        askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
+        //askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
         navigationController?.popViewControllerAnimated(true)
     }
-    
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    /*override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         var topCorrect = (askQuestionAskQuestionTV.bounds.size.height - askQuestionAskQuestionTV.contentSize.height * askQuestionAskQuestionTV.zoomScale) / 2
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
         askQuestionAskQuestionTV.contentInset.top = topCorrect
-    }
-    
+    }*/
     //Ask Function Question
     func askQuestionAskQuestion() {
         var currentUser = PFUser.currentUser()
@@ -125,13 +120,10 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         let imageData = UIImageJPEGRepresentation(self.askQuestionPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
         question.setObject(imageFile!, forKey: "picture")
-        
         var image: PFFile = imageFile!
         var askQuestion = AskQuestion(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!, img: image)
-        
         do {
             try askQuestion.askQuestionAlert()
-            
             //MARK: Save Question
             question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if error == nil {
@@ -155,7 +147,6 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
             }
            // Error Caught Alert Settings
         } catch let message as ErrorType {
-            
            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             presentViewController(alert, animated: true, completion: nil)
