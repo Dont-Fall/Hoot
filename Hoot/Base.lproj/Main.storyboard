@@ -222,6 +222,7 @@
                             <constraint firstItem="SKY-BE-5XG" firstAttribute="centerX" secondItem="4NN-0D-2Yd" secondAttribute="centerX" id="zNs-t0-de3"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
                         <outlet property="errorLabel" destination="8sH-5p-Ls9" id="y6s-He-reh"/>
                         <outlet property="logInPasswordTF" destination="Q4L-Tq-gTq" id="sH5-EZ-02d"/>
@@ -3361,14 +3362,14 @@
         <image name="TFBarH30.png" width="600" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gWS-jR-3bg"/>
-        <segue reference="R1D-Hy-0Za"/>
-        <segue reference="Uk9-OG-j9Q"/>
-        <segue reference="now-pH-dQ7"/>
+        <segue reference="on5-k1-6ao"/>
         <segue reference="hPf-Vd-Qjy"/>
         <segue reference="gf2-jP-qG1"/>
         <segue reference="PBz-3c-BDV"/>
-        <segue reference="on5-k1-6ao"/>
+        <segue reference="GEX-N6-J3L"/>
+        <segue reference="9la-kl-ppR"/>
+        <segue reference="gWS-jR-3bg"/>
+        <segue reference="now-pH-dQ7"/>
         <segue reference="yi2-L8-eX8"/>
         <segue reference="9EJ-RU-csy"/>
     </inferredMetricsTieBreakers>

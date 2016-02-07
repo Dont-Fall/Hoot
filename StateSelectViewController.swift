@@ -64,8 +64,7 @@ class StateSelectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        UIApplication.sharedApplication().statusBarStyle = .Default
     }
 
     override func didReceiveMemoryWarning() {

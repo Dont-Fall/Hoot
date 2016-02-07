@@ -40,10 +40,11 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
     // Container to store the view table selected object
     var questionID : String?
     var asker : String?
+    var currentObject: PFObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         classQuestionAnswerPicPreview.layer.cornerRadius = 8.0
         classQuestionAnswerPicPreview.clipsToBounds = true
         // Do any additional setup after loading the view.
@@ -119,6 +120,14 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
                 currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
                         print("Points Updated")
+                    } else {
+                        print("Error")
+                    }
+                }
+                self.currentObject?.incrementKey("answerCount")
+                self.currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    if error == nil {
+                        print("Answeres Updated")
                     } else {
                         print("Error")
                     }

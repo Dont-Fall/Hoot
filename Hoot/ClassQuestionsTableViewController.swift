@@ -61,6 +61,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Segment Controller
         customSC = UISegmentedControl(items: scItems)
         customSC.selectedSegmentIndex = 0
@@ -133,10 +134,9 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         if let nameEnglish = object?["question"] as? String {
             cell?.classQuestionQuestionTV?.text = nameEnglish
         }
-        /*if let capital = object?["topic"] as? String {
+        if let capital = object?["topic"] as? String {
             cell?.classQuestionTopicLabel?.text = capital
-        }ADD WHEN ZACK/CHRIS ADDS TOPIC TO CLASS ASK QUESTION */
-        
+        }
         //Time Stamp
         let date = NSDate()
         let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
@@ -162,7 +162,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
             cell?.classQuestionTimestamp.text = String(seconds) + "s"
         }
         //Answer Count
-        //cell?.classQuestionAnswerCount.text = String(object!["answerCount"]) + " Answers"
+        cell?.classQuestionAnswerCount.text = String(object!["answerCount"]) + " Answers"
         //Pic Indicator
         if object!["picture"] != nil{
             cell?.classQuestionPicIndicator.image = UIImage(named: "CameraIconHoot")

@@ -42,7 +42,7 @@ class ClassesTableViewController: PFQueryTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

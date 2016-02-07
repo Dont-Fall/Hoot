@@ -43,8 +43,7 @@ class EventsTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Customize Nav Bar
         let eventsCreateEventBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createEventSegue")
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)

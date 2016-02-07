@@ -33,9 +33,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-        
+        UIApplication.sharedApplication().statusBarStyle = .Default
         //Keyboard up at start
         signUpUsernameTF.becomeFirstResponder()
         

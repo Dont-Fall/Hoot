@@ -41,7 +41,7 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Circle Edges on Pic
         questionDetailedPicturePreview.layer.cornerRadius = 25.0
         questionDetailedPicturePreview.clipsToBounds = true
@@ -130,7 +130,7 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
             var detailScene = segue.destinationViewController as! QuestionAnswerViewController
             detailScene.questionID = testID
             detailScene.asker = questionDetailedUsernameLabel.text
-            //detailScene.currentObject = currentObject
+            detailScene.currentObject = currentObject
         }else if segue.identifier == "questionAnswerTableSegue" {
             var detailScene = segue.destinationViewController as! QuestionDetailAnswerTableViewController
             detailScene.queryID = testID

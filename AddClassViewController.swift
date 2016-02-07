@@ -81,7 +81,7 @@ class AddClassViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Keyboard up at start
         addClassClassNameTF.becomeFirstResponder()
         

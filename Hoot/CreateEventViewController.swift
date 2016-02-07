@@ -51,7 +51,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Keyboard up at start
         createEventNameTF.becomeFirstResponder()
         

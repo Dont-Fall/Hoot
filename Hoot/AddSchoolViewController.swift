@@ -16,7 +16,7 @@ class AddSchoolViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UIApplication.sharedApplication().statusBarStyle = .Default
         // Do any additional setup after loading the view.
     }
 

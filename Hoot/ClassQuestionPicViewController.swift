@@ -16,7 +16,7 @@ class ClassQuestionPicViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var classQuestionLargeView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
         let questionPicBackBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "questionPicBack")
         self.navigationItem.setLeftBarButtonItem(questionPicBackBtn, animated: true)

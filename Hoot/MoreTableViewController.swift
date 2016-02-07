@@ -18,6 +18,7 @@ class MoreTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         var points = String(PFUser.currentUser()!.objectForKey("points")!)
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)

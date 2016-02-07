@@ -21,7 +21,7 @@ class EventDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Hide Tab Bar
         self.tabBarController?.tabBar.hidden = true
         

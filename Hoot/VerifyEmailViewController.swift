@@ -12,6 +12,7 @@ class VerifyEmailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .Default
         self.navigationController?.navigationBarHidden = true
         self.tabBarController?.tabBar.hidden = true
         // Do any additional setup after loading the view.

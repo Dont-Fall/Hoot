@@ -98,6 +98,7 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         print("VIEW DID LOAD")
         let user = PFUser.currentUser()
         /*user!["emailVerified"] = false

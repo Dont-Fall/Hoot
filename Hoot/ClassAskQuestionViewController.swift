@@ -46,7 +46,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Pic
         classAskQuestionPicPreview.layer.cornerRadius = 8.0
         classAskQuestionPicPreview.clipsToBounds = true

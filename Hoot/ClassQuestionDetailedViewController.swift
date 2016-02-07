@@ -39,7 +39,7 @@ class ClassQuestionDetailedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
@@ -117,6 +117,7 @@ class ClassQuestionDetailedViewController: UIViewController {
             var detailScene = segue.destinationViewController as! ClassQuestionAnswerViewController
             detailScene.questionID = testID
             detailScene.asker = classQuestionDetailedUsernameLabel.text
+            detailScene.currentObject = currentObject
         }else if segue.identifier == "classQuestionAnswersSegue" {
             var detailScene = segue.destinationViewController as! ClassQuestionAnswersTableViewController
             detailScene.queryID = testID

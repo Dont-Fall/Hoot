@@ -40,11 +40,11 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
     // Container to store the view table selected object
     var questionID : String?
     var asker : String?
-    //var currentObject: PFObject?
+    var currentObject: PFObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         questionAnswerPicPreview.layer.cornerRadius = 8.0
         questionAnswerPicPreview.clipsToBounds = true
         // Do any additional setup after loading the view.
@@ -120,7 +120,6 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         var questionAnswer = QuestionAnswer(text: questionAnswerAnswerTV.text!)
         do {
             try questionAnswer.questionAnswerAlert()
-        
             //MARK: Save Question
             answer.saveInBackgroundWithBlock { (success: Bool, error:   NSError?) -> Void in
                 if error == nil {
@@ -130,6 +129,14 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
                     currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                         if error == nil {
                             print("Points Updated")
+                        } else {
+                            print("Error")
+                        }
+                    }
+                    self.currentObject?.incrementKey("answerCount")
+                    self.currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            print("Answeres Updated")
                         } else {
                             print("Error")
                         }

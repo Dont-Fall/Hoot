@@ -22,12 +22,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorLabel: UILabel!
     
     var testList = Array<String>()
-    
-    
+
     
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .Default
         // Do any additional setup after loading the view, typically from a nib.
         // Creates the query
         let schoolQuery = PFQuery(className:"School")

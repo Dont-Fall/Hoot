@@ -71,6 +71,7 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         // Unwrap the current object object
         if let object = currentObject {
             

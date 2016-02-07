@@ -575,7 +575,7 @@
 				TargetAttributes = {
 					960945D71C348C660000282A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 8595XRVT5D;
+						DevelopmentTeam = C83L888FQQ;
 					};
 					960945EB1C348C670000282A = {
 						CreatedOnToolsVersion = 7.1;
@@ -861,7 +861,7 @@
 				);
 				INFOPLIST_FILE = Hoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DFDev.Hoot;
+				PRODUCT_BUNDLE_IDENTIFIER = DontFallDev.Hoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";
@@ -882,7 +882,7 @@
 				);
 				INFOPLIST_FILE = Hoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DFDev.Hoot;
+				PRODUCT_BUNDLE_IDENTIFIER = DontFallDev.Hoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";

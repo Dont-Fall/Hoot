@@ -52,7 +52,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Circle Edges on Pic
         askQuestionPicPreview.layer.cornerRadius = 8.0
         askQuestionPicPreview.clipsToBounds = true

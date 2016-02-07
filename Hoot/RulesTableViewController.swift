@@ -18,7 +18,7 @@ class RulesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
         let rulesBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "rulesBack")
         self.navigationItem.setLeftBarButtonItem(rulesBackBtn, animated: true)

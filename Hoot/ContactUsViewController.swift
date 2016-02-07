@@ -15,7 +15,7 @@ class ContactUsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
         let contactUsCancelBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "contactUsCancel")
         let contactUsSubmitBtn:UIBarButtonItem = UIBarButtonItem(title: "Submit", style: .Plain, target: self, action: "contactUsSubmit")

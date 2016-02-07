@@ -44,6 +44,7 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         self.loadObjects()
         self.tableView.reloadData()
         //MARK: Nav Bar Customize
