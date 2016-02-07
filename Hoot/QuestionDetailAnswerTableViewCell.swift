@@ -11,8 +11,11 @@ import UIKit
 class QuestionDetailAnswerTableViewCell: PFTableViewCell {
 
     //MARK: Connections
+    @IBOutlet var questionAnswerPicIndicator: UIImageView!
     @IBOutlet var questionAnswerUserLabel: UILabel!
     @IBOutlet var questionAnswerAnswerTV: UITextView!
+    @IBOutlet var questionAnswerCorrectIndicator: UIImageView!
+    @IBOutlet var questionAnswerTimestamp: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

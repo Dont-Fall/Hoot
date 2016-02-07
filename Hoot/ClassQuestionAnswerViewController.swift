@@ -56,8 +56,8 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         self.classQuestionAnswerAnswerCount.text = "200"
         self.classQuestionAnswerAnswerTV.delegate = self
         
-        classQuestionAnswerAnswerTV.textInputView.needsUpdateConstraints()
-        classQuestionAnswerAnswerTV.textInputView.sizeToFit()
+        //classQuestionAnswerAnswerTV.textInputView.needsUpdateConstraints()
+        //classQuestionAnswerAnswerTV.textInputView.sizeToFit()
         
         //MARK: Nav Bar Customize
         let answerQuestionCancelBtn = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "answerQuestionCancel")
@@ -75,7 +75,7 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         answerQuestionAnswerBtn.enabled = true
         
         //Start TV at Top Left
-        classQuestionAnswerAnswerTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
+        //classQuestionAnswerAnswerTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
         
         // Do any additional setup after loading the view.
     }
@@ -87,7 +87,7 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
     
     //Go Back Function
     func answerQuestionCancel() {
-        classQuestionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
+        //classQuestionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
         navigationController?.popViewControllerAnimated(true)
     }
     

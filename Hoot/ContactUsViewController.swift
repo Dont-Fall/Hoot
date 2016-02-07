@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactUsViewController: UIViewController {
+class ContactUsViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet var contactUsTopicTF: UITextField!
     @IBOutlet var contactUsTextTV: UITextView!
@@ -28,6 +28,7 @@ class ContactUsViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 
         // Do any additional setup after loading the view.
+        self.contactUsTextTV.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +73,14 @@ class ContactUsViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                 presentViewController(alert, animated: true, completion: nil)
             }
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if contactUsTextTV.text == "What's concerning you?"
+        {
+            contactUsTextTV.text = ""
+            contactUsTextTV.textColor = UIColor.blackColor()
+        }
     }
     
 }

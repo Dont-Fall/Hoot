@@ -93,8 +93,34 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
             cell?.questionAnswerAnswerTV.text = answer
         }
         if object?["correct"] as! Bool == true {
-            cell.tintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
-            cell.accessoryType = .Checkmark
+            cell?.questionAnswerPicIndicator.image = UIImage(named: "CheckMarkHoot")
+        }
+        //Time Stamp
+        let date = NSDate()
+        let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
+        let years = Int(seconds/31540000)
+        let months = Int(seconds/26280000)
+        let weeks = Int(seconds/604800)
+        let days = Int(seconds/86400)
+        let hours = Int(seconds/3600)
+        let minutes = Int(seconds/60)
+        if years >= 1{
+            cell?.questionAnswerTimestamp.text = String(years) + "y"
+        }else if months >= 1{
+            cell?.questionAnswerTimestamp.text = String(months) + "m"
+        }else if weeks >= 1{
+            cell?.questionAnswerTimestamp.text = String(weeks) + "w"
+        }else if days >= 1 {
+            cell?.questionAnswerTimestamp.text = String(days) + "d"
+        }else if Int(hours) >= 1 {
+            cell?.questionAnswerTimestamp.text = String(hours) + "h"
+        }else if Int(minutes) >= 1 {
+            cell?.questionAnswerTimestamp.text = String(minutes) + "m"
+        }else{
+            cell?.questionAnswerTimestamp.text = String(seconds) + "s"
+        }
+        if object!["picture"] != nil{
+            cell?.questionAnswerPicIndicator.image = UIImage(named: "CameraIconHoot")
         }
         return cell
     }

@@ -103,6 +103,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 //            presentViewController(alert, animated: true, completion: nil)
             self.performSegueWithIdentifier("signUpSuccess", sender: self)
         }catch let error as Error {
+            //dismissKeyboard()
             errorLabel.text = error.description
         }catch {
             errorLabel.text = "Sorry, something went wrong please try again."

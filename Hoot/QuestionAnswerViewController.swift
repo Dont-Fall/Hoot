@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
+    @IBOutlet var questionAnswerCountLablel: UILabel!
     @IBOutlet var questionAnswerAnswerTV: UITextView!
     @IBOutlet var questionAnswerPicPreview: UIImageView!
     @IBOutlet var questionAnswerAnswerCount: UILabel!
@@ -51,7 +52,6 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         
         //Keyboard up at start
         questionAnswerAnswerTV.becomeFirstResponder()
-        
         //Live Count Delegate
         self.questionAnswerAnswerCount.text = "200"
         self.questionAnswerAnswerTV.delegate = self
@@ -75,7 +75,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         answerQuestionAnswerBtn.enabled = true
         
         //Start TV at Top Left
-        questionAnswerAnswerTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
+        //questionAnswerAnswerTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -94,12 +94,12 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         navigationController?.popViewControllerAnimated(true)
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    /*override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         //let textView = object as! UITextView
         var topCorrect = (questionAnswerAnswerTV.bounds.size.height - questionAnswerAnswerTV.contentSize.height * questionAnswerAnswerTV.zoomScale) / 2
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
         questionAnswerAnswerTV.contentInset.top = topCorrect
-    }
+    }*/
     
     //Answer Question FUnction
     func answerQuestionAnswerQuestion() {
@@ -153,6 +153,17 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             presentViewController(alert, animated: true, completion: nil)
     }
-}
+    }
+    
+    //Live Count Text View
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText string: String) -> Bool {
+        let newLength = (questionAnswerAnswerTV.text?.characters.count)! + string.characters.count - range.length
+        if(newLength <= 200){
+            questionAnswerCountLablel.text = "\(200 - newLength)"
+            return true
+        }else{
+            return false
+        }
+    }
 }
 

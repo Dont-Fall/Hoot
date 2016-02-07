@@ -103,6 +103,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             try signin.signInUser()
             self.performSegueWithIdentifier("logIn", sender: self)
         }catch let error as Error {
+            //dismissKeyboard()
             errorLabel.text = error.description
         } catch {
             errorLabel.text = "Sorry, something went\n wrong please try again."
