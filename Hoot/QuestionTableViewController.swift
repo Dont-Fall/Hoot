@@ -59,29 +59,22 @@ class QuestionTableViewController: PFQueryTableViewController {
                     var currentUser = PFUser.currentUser()
                     let currentSubject = currentUser!["subject"]
                     let currentSchool = currentUser!["school"]
-                    //var questionsQuery = PFQuery(className: "Question")
                     questionsQuery.whereKey("subject", equalTo: (currentSubject)!)
                     questionsQuery.whereKey("school", equalTo: (currentSchool)!)
                     questionsQuery.whereKey("solved", equalTo: false)
                     questionsQuery.orderByDescending("createdAt")
-                    //return questionsQuery
                 }else{
                     var currentUser = PFUser.currentUser()
                     let currentSubject = currentUser!["subject"]
                     let currentSchool = currentUser!["school"]
-                    //var questionsQuery = PFQuery(className: "Question")
                     questionsQuery.whereKey("subject", equalTo: (currentSubject)!)
                     questionsQuery.whereKey("school", equalTo: (currentSchool)!)
                     questionsQuery.whereKey("solved", equalTo: true)
                     questionsQuery.orderByDescending("updatedAt")
-                    //return questionsQuery
                 }
             }else{
                 //Shouldnt Occur
-                //var questionsQuery = PFQuery(className: "Question")
-                //return questionsQuery
             }
-            print(self.objects!.count)
             return questionsQuery
     }
     
@@ -106,7 +99,18 @@ class QuestionTableViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("VIEW DID LOAD")
-        var user = PFUser.currentUser()
+        let user = PFUser.currentUser()
+        /*user!["emailVerified"] = false
+        user!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if error == nil {
+                print("Points Updated")
+            } else {
+                print("Error")
+            }
+        }*/
+        print(user?.username)
+        print(user?["emailVerified"])
+        print(user?.objectForKey("emailVerified"))
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 2.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
@@ -142,9 +146,7 @@ class QuestionTableViewController: PFQueryTableViewController {
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
-        
         noDataView.hidden=true
-        
         var cell = tableView.dequeueReusableCellWithIdentifier("questionCell") as! QuestionTableViewCell!
         if cell == nil {
             cell = QuestionTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "questionCell")
@@ -156,7 +158,6 @@ class QuestionTableViewController: PFQueryTableViewController {
         if let capital = object?["course"] as? String {
             cell?.questionCourseLabel?.text = capital
         }
-        
         //Time Stamp
         let date = NSDate()
         let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
@@ -189,7 +190,6 @@ class QuestionTableViewController: PFQueryTableViewController {
         }
         return cell
     }
-    
     //Prepare To Send Object To Detailed View
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "questionDetailedViewIdentifier" {
@@ -202,7 +202,6 @@ class QuestionTableViewController: PFQueryTableViewController {
             }
         }
     }
-    
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.actInd.startAnimating()

@@ -41,10 +41,11 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //Circle Edges on Pic
-        questionDetailedPicturePreview.layer.cornerRadius = 8.0
+        questionDetailedPicturePreview.layer.cornerRadius = 25.0
         questionDetailedPicturePreview.clipsToBounds = true
-
+        
         // Unwrap the current object object
         if let object = currentObject {
             
@@ -59,8 +60,8 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
                 }
             }
             
-            questionDetailedUsernameLabel.text = "Asked By:\n     \(object["user"] as! String)"
-            questionDetailCourseLabel.text = "For Course:\n     \(object["course"] as! String)"
+            questionDetailedUsernameLabel.text = "Asked By: \(object["user"] as! String)"
+            questionDetailCourseLabel.text = "For Course: \(object["course"] as! String)"
             questionDetailQuestionTV.text = object["question"] as! String
             testID = object.objectId!
         }
@@ -118,7 +119,6 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
     func detailedQuestionBack(){
         navigationController?.popViewControllerAnimated(true)
     }
-    
     //Prepare For Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "questionShowPic" {
@@ -135,7 +135,6 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
             var detailScene = segue.destinationViewController as! QuestionDetailAnswerTableViewController
             detailScene.queryID = testID
         }
-
     }
     
     //Pic View
