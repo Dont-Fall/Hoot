@@ -31,13 +31,22 @@ class PasswordResetViewController: UIViewController {
     }
     
     @IBAction func passwordResetResetBtn(sender: AnyObject) {
-        PFUser.requestPasswordResetForEmailInBackground(passwordResetEmailTF.text!)
-        let alert = UIAlertController(title: "Password Reset", message: "You should recieve an email shortly with directions for changing your password.", preferredStyle: .Alert)
-        var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-            UIAlertAction in
-            self.performSegueWithIdentifier("resetCancelSegue", sender: self)
+        var passwordReset = PasswordReset(email: passwordResetEmailTF?.text)
+        do{
+            try passwordReset.passwordResetAlert()
+            
+            PFUser.requestPasswordResetForEmailInBackground(passwordResetEmailTF.text!)
+            let alert = UIAlertController(title: "Password Reset", message: "You should recieve an email shortly with directions for changing your password.", preferredStyle: .Alert)
+            var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                self.performSegueWithIdentifier("resetCancelSegue", sender: self)
+            }
+            alert.addAction(okAction)
+            presentViewController(alert, animated: true, completion: nil)
+        }catch let message as ErrorType {
+            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
         }
-        alert.addAction(okAction)
-        presentViewController(alert, animated: true, completion: nil)
     }
 }

@@ -114,42 +114,52 @@ class AddClassViewController: UIViewController {
         newClass["code"] = addClassClassCodeTF.text
         newClass["member"] = currentUser!.username
         
-        //Query to See If Unique Code Exists At School
-        var codeQuery = PFQuery(className:"Classes")
-        codeQuery.whereKey("school", equalTo: currentUser!.objectForKey("school")!)
-        codeQuery.whereKey("code", equalTo: addClassClassCodeTF.text!)
-        codeQuery.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                // The find succeeded.
-                // Do something with the found objects
-                if let objects = objects {
-                    if objects.count == 0 {
-                        //No Other Class With Code
-                        //MARK: Save Class
-                        newClass.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                            if error == nil {
-                                print("Yp")
-                                // Success, no creating error.
-                                self.navigationController?.popViewControllerAnimated(true)
-                                //Add to que
-                            } else {
-                                print("Error")
+        var newClassClass = AddClass(name: addClassClassNameTF?.text, course: addClassCourseTF?.text, code: addClassClassCodeTF?.text)
+        
+        do{
+            try newClassClass.addClassAlert()
+            
+            //Query to See If Unique Code Exists At School
+            var codeQuery = PFQuery(className:"Classes")
+            codeQuery.whereKey("school", equalTo: currentUser!.objectForKey("school")!)
+            codeQuery.whereKey("code", equalTo: addClassClassCodeTF.text!)
+            codeQuery.findObjectsInBackgroundWithBlock {
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    // Do something with the found objects
+                    if let objects = objects {
+                        if objects.count == 0 {
+                            //No Other Class With Code
+                            //MARK: Save Class
+                            newClass.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                                if error == nil {
+                                    print("Yp")
+                                    // Success, no creating error.
+                                    self.navigationController?.popViewControllerAnimated(true)
+                                    //Add to que
+                                } else {
+                                    print("Error")
+                                }
                             }
+                        }else{
+                            //Unique Code Exists, Alert User
+                            print("Error, Class Code Already Exists")
+                            //Delete Eventually
+                            let alert = UIAlertController(title: "Not Unique", message:"Sorry, this code is not unique, please try again!", preferredStyle: .Alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                            self.presentViewController(alert, animated: true){}
                         }
-                    }else{
-                        //Unique Code Exists, Alert User
-                        print("Error, Class Code Already Exists")
-                        //Delete Eventually
-                        let alert = UIAlertController(title: "Not Unique", message:"Sorry, this code is not unique, please try again!", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
                     }
-                    }
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
+                } else {
+                    // Log details of the failure
+                    print("Error: \(error!) \(error!.userInfo)")
+                }
             }
+        }catch let message as ErrorType {
+            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
         }
     }
 
