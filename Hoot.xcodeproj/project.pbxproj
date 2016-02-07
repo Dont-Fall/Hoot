@@ -94,6 +94,8 @@
 		E412096A1C44AC30006827E7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209691C44AC30006827E7 /* SignIn.swift */; };
 		E44A2E741C55C03A005080B2 /* ContactForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A2E731C55C03A005080B2 /* ContactForm.swift */; };
 		E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E4E2B5F61C66C35600B2B6E7 /* AddClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B5F51C66C35600B2B6E7 /* AddClass.swift */; };
+		E4E2B5F81C66C36400B2B6E7 /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B5F71C66C36400B2B6E7 /* PasswordReset.swift */; };
 		F1E8AA411C666B4400025724 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8AA401C666B4400025724 /* QuestionAnswer.swift */; };
 		F1E8AA431C666C0100025724 /* ClassQuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8AA421C666C0100025724 /* ClassQuestionAnswer.swift */; };
 		F1E8AA451C666C9100025724 /* AddSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8AA441C666C9100025724 /* AddSchool.swift */; };
@@ -213,6 +215,8 @@
 		E41209661C44AC18006827E7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		E41209691C44AC30006827E7 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		E44A2E731C55C03A005080B2 /* ContactForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactForm.swift; sourceTree = "<group>"; };
+		E4E2B5F51C66C35600B2B6E7 /* AddClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClass.swift; sourceTree = "<group>"; };
+		E4E2B5F71C66C36400B2B6E7 /* PasswordReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
 		F1E8AA401C666B4400025724 /* QuestionAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
 		F1E8AA421C666C0100025724 /* ClassQuestionAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionAnswer.swift; sourceTree = "<group>"; };
 		F1E8AA441C666C9100025724 /* AddSchool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSchool.swift; sourceTree = "<group>"; };
@@ -483,6 +487,8 @@
 				E41209661C44AC18006827E7 /* SignUp.swift */,
 				E41209691C44AC30006827E7 /* SignIn.swift */,
 				E44A2E731C55C03A005080B2 /* ContactForm.swift */,
+				E4E2B5F51C66C35600B2B6E7 /* AddClass.swift */,
+				E4E2B5F71C66C36400B2B6E7 /* PasswordReset.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -566,7 +572,7 @@
 				TargetAttributes = {
 					960945D71C348C660000282A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = C83L888FQQ;
+						DevelopmentTeam = 8595XRVT5D;
 					};
 					960945EB1C348C670000282A = {
 						CreatedOnToolsVersion = 7.1;
@@ -657,6 +663,7 @@
 				96CFB5E31C46AAEE00A7793D /* ClassQuestionAnswerViewController.swift in Sources */,
 				96B29BD21C39B14200240AD7 /* SubjectTableViewCell.swift in Sources */,
 				96E5FEB21C629AF9000DA329 /* VerifyEmailViewController.swift in Sources */,
+				E4E2B5F81C66C36400B2B6E7 /* PasswordReset.swift in Sources */,
 				96B29BC41C3993DE00240AD7 /* AddClassViewController.swift in Sources */,
 				96B29BD01C39B11E00240AD7 /* SubjectTableViewController.swift in Sources */,
 				F1F147371C49999200938235 /* EventCreate.swift in Sources */,
@@ -689,6 +696,7 @@
 				96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */,
 				96D2FFE11C66A0BB00E2D5ED /* StateSelectViewController.swift in Sources */,
 				961D71BE1C4581990079BCB5 /* QuestionDetailAnswerSelectedViewController.swift in Sources */,
+				E4E2B5F61C66C35600B2B6E7 /* AddClass.swift in Sources */,
 				96ED08CC1C61A1B700729DB5 /* QuestionAnswerViewController.swift in Sources */,
 				9634F93B1C3EBD310086D799 /* ClassQuestionsTableViewController.swift in Sources */,
 				F1E8AA431C666C0100025724 /* ClassQuestionAnswer.swift in Sources */,
@@ -849,7 +857,7 @@
 				);
 				INFOPLIST_FILE = Hoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NDev.Hoot;
+				PRODUCT_BUNDLE_IDENTIFIER = DFDev.Hoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";
@@ -870,7 +878,7 @@
 				);
 				INFOPLIST_FILE = Hoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NDev.Hoot;
+				PRODUCT_BUNDLE_IDENTIFIER = DFDev.Hoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";

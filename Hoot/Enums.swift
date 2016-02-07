@@ -26,6 +26,8 @@ enum Error: ErrorType {
     case InsufficientLocationLength
     //Contact Us Cases
     case InsufficientContactLength
+    //Add Class Cases
+    case InsufficientCodeLength
     
 }
 
@@ -47,6 +49,8 @@ extension Error: CustomStringConvertible {
         case .InsufficientLocationLength: return "Please enter a valid location."
         //Contact Us Errors
         case .InsufficientContactLength: return "Please enter a more detailed reason for contacting."
+        //Add Class Errors
+        case .InsufficientCodeLength: return "Please enter a more secure code."
             
         default: return "Sorry, something else went wrong."
         }
