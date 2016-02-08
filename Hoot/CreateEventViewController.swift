@@ -112,6 +112,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         event["location"] = createEventLocationTF.text
         event["reportNumber"] = 0
         event["reported"] = false
+        event["attending"] = []
         
         
         var createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDateTF.text!)

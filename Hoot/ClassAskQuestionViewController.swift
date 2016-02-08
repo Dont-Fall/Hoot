@@ -84,6 +84,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         classQuestion["code"] = currentUser!.objectForKey("currentGroupCode")
         classQuestion["reportNumber"] = 0
         classQuestion["reported"] = false
+        classQuestion["answerCount"] = 0
         //PIC
         let imageData = UIImageJPEGRepresentation(self.classAskQuestionPicPreview.image!,0.5)
         let imageFile = PFFile(name:"image.jpeg", data:imageData!)
