@@ -81,11 +81,17 @@ class EventDetailViewController: UIViewController {
         }
     }
 
-    /*@IBAction func eventDetailAttendBtn(sender: AnyObject) {
+    @IBAction func eventDetailAttendBtn(sender: AnyObject) {
         var user = PFUser.currentUser()
-        if currentObject!["attending"].containsString((user?.username)!){
-            //currentObject!["attending"].append(user?.username)
-            currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        var list = currentObject!["attending"] as! Array<String>
+        if currentObject!["attending"].containsObject((user?.username)!) == true{
+            let alert = UIAlertController(title: "Already Attending", message: "You've already signed up for this event.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }else{
+            list.append((user?.username)!)
+            currentObject!["attending"] = list
+            currentObject!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if error == nil {
                     let alert = UIAlertController(title: "Signed Up", message: "Can't wait to see you there!", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
@@ -94,11 +100,7 @@ class EventDetailViewController: UIViewController {
                     print("Error")
                 }
             }
-        }else{
-            let alert = UIAlertController(title: "Already Attending", message: "You've already signed up for this event.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
         }
-    }ADD WHEN ZACK/CHRIS FIX*/
+    }
 
 }

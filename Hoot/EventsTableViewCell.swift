@@ -15,6 +15,7 @@ class EventsTableViewCell: PFTableViewCell {
     @IBOutlet var eventDateLabel: UILabel!
     @IBOutlet var eventTimeStamp: UILabel!
     @IBOutlet var eventAttendingCount: UILabel!
+    @IBOutlet var eventTimeToGo: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
