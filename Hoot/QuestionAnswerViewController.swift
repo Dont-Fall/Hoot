@@ -90,7 +90,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
 
     //Go Back Function
     func answerQuestionCancel() {
-        questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
+        //questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
         navigationController?.popViewControllerAnimated(true)
     }
     
@@ -141,7 +141,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
                             print("Error")
                         }
                     }
-                    self.questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
+                    //self.questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
                     print("Error")

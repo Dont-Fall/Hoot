@@ -2559,6 +2559,9 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="BAl-yK-ih3"/>
+                                    <constraint firstAttribute="height" constant="75" id="Bxc-KS-2mj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="ct8-Uo-5uz"/>
+                                    <constraint firstAttribute="width" secondItem="FHI-z2-Skv" secondAttribute="height" multiplier="1:1" id="d7Q-uT-Hcl"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fT7-Br-bSY">
