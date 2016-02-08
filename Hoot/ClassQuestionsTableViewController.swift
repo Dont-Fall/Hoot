@@ -58,6 +58,13 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
             return questionsQuery
         }
     }
+    
+    //VIEW DID APPEAR
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.loadObjects()
+        self.tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

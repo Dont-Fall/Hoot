@@ -10,6 +10,7 @@ import UIKit
 
 class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
+    @IBOutlet var classQuestionAnswerCountLablel: UILabel!
     @IBOutlet var classQuestionAnswerAnswerTV: UITextView!
     @IBOutlet var classQuestionAnswerPicPreview: UIImageView!
     @IBOutlet var classQuestionAnswerAnswerCount: UILabel!
@@ -140,11 +141,21 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         }
         // Error Caught Alert Settings
     }catch let message as ErrorType {
-    let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
-    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-    presentViewController(alert, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+        }
     }
-}
+    //Live Count Text View
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText string: String) -> Bool {
+        let newLength = (classQuestionAnswerAnswerTV.text?.characters.count)! + string.characters.count - range.length
+        if(newLength <= 200){
+            classQuestionAnswerCountLablel.text = "\(200 - newLength)"
+            return true
+        }else{
+            return false
+        }
+    }
 }
 
 

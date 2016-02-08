@@ -15,6 +15,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet var eventDetailEventName: UILabel!
     @IBOutlet var eventDetailEventLocation: UILabel!
     @IBOutlet var eventDetailEventDate: UILabel!
+    @IBOutlet var eventDetailAttendingCount: UILabel!
     
     // Container to store the view table selected object
     var currentObject : PFObject?
@@ -44,6 +45,7 @@ class EventDetailViewController: UIViewController {
             eventDetailEventName.text = object["name"] as! String
             eventDetailEventDate.text = object["dateAndTime"] as! String
             eventDetailEventLocation.text = object["location"] as! String
+            //eventDetailAttendingCount.text = "\(object["attending"].count as! String) Attending"
         }
 
         // Do any additional setup after loading the view.
@@ -79,14 +81,24 @@ class EventDetailViewController: UIViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    /*@IBAction func eventDetailAttendBtn(sender: AnyObject) {
+        var user = PFUser.currentUser()
+        if currentObject!["attending"].containsString((user?.username)!){
+            //currentObject!["attending"].append(user?.username)
+            currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    let alert = UIAlertController(title: "Signed Up", message: "Can't wait to see you there!", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                } else {
+                    print("Error")
+                }
+            }
+        }else{
+            let alert = UIAlertController(title: "Already Attending", message: "You've already signed up for this event.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }ADD WHEN ZACK/CHRIS FIX*/
 
 }

@@ -39,6 +39,11 @@ class EventsTableViewController: PFQueryTableViewController {
         questionsQuery.orderByDescending("createdAt")
         return questionsQuery
     }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.loadObjects()
+        self.tableView.reloadData()
+    }
     
     //VIEW DID LOAD
     override func viewDidLoad() {
@@ -124,6 +129,30 @@ class EventsTableViewController: PFQueryTableViewController {
         }
         if let date = object?["dateAndTime"] as? String {
             cell.eventDateLabel?.text = date
+        }
+        //Time Stamp
+        let date = NSDate()
+        let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
+        let years = Int(seconds/31540000)
+        let months = Int(seconds/26280000)
+        let weeks = Int(seconds/604800)
+        let days = Int(seconds/86400)
+        let hours = Int(seconds/3600)
+        let minutes = Int(seconds/60)
+        if years >= 1{
+            cell?.eventTimeStamp.text = String(years) + "y"
+        }else if months >= 1{
+            cell?.eventTimeStamp.text = String(months) + "m"
+        }else if weeks >= 1{
+            cell?.eventTimeStamp.text = String(weeks) + "w"
+        }else if days >= 1 {
+            cell?.eventTimeStamp.text = String(days) + "d"
+        }else if Int(hours) >= 1 {
+            cell?.eventTimeStamp.text = String(hours) + "h"
+        }else if Int(minutes) >= 1 {
+            cell?.eventTimeStamp.text = String(minutes) + "m"
+        }else{
+            cell?.eventTimeStamp.text = String(seconds) + "s"
         }
         return cell
     }

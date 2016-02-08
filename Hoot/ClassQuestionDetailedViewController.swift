@@ -11,6 +11,7 @@ import UIKit
 class ClassQuestionDetailedViewController: UIViewController {
     
     var testID = ""
+    var didReport = false
     
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
@@ -84,17 +85,25 @@ class ClassQuestionDetailedViewController: UIViewController {
     
     //Report Question Function
     func detailedQuestionReport() {
-        currentObject?.incrementKey("reportNumber")
-        if (currentObject?["reportNumber"])! as! Int == 5 {
-            currentObject?["reported"] = true
-        }
-        currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                print("Yp")
-                // Success, no creating error.
-            } else {
-                print("Error")
+        if didReport == false {
+            currentObject?.incrementKey("reportNumber")
+            if (currentObject?["reportNumber"])! as! Int == 5 {
+                currentObject?["reported"] = true
             }
+            currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    let alert = UIAlertController(title: "Question Reported", message:"Thank you for keeping the Hoot community safe.", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}
+                    self.didReport = true
+                } else {
+                    print("Error")
+                }
+            }
+        }else{
+            let alert = UIAlertController(title: "Already Reported", message:"You have already reported this question.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+            self.presentViewController(alert, animated: true){}
         }
     }
     

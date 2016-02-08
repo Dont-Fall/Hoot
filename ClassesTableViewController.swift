@@ -11,6 +11,7 @@ import UIKit
 class ClassesTableViewController: PFQueryTableViewController {
     
     @IBOutlet var noDataView: UIView!
+    var deleteClassIndexPath: NSIndexPath? = nil
     
     // Initialise the PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
@@ -40,16 +41,14 @@ class ClassesTableViewController: PFQueryTableViewController {
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.loadObjects()
+        self.tableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.sharedApplication().statusBarStyle = .LightContent
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        
         //MARK: Customize Nav Bar
         let classesAddClassBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addClassSegue")
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
@@ -87,6 +86,16 @@ class ClassesTableViewController: PFQueryTableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            deleteClassIndexPath = indexPath
+            let classToDelete = objects?[indexPath.row]
+            confirmDelete(classToDelete!)
+            self.loadObjects()
+            self.tableView.reloadData()
+        }
+    }
+    
     //Prepare To Send Object To Detailed View
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "classViewSegue" {
@@ -117,78 +126,37 @@ class ClassesTableViewController: PFQueryTableViewController {
             }
         }
     }
-
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    //override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        //return 0
-    //}
-
-    //override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        //return 0
-    //}
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func confirmDelete(Class : PFObject) {
+        
+        let alert = UIAlertController(title: "Leave Class", message: "Are you sure you want to leave '\(Class["name"])'?", preferredStyle: .ActionSheet)
+        let DeleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: handleDeleteClass)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: cancelDeleteClass)
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func handleDeleteClass(alertAction: UIAlertAction!) -> Void {
+        if let indexPath = deleteClassIndexPath {
+            tableView.beginUpdates()
+            objects?[indexPath.row].deleteInBackground()
+            deleteClassIndexPath = nil
+            self.loadObjects()
+            self.tableView.reloadData()
+            tableView.endUpdates()
+        }
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func cancelDeleteClass(alertAction: UIAlertAction!) {
+        deleteClassIndexPath = nil
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -93,14 +93,14 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
     
     //Report Question Function
     func detailedQuestionReport() {
-        currentObject?.incrementKey("reportNumber")
         if didReport == false {
+            currentObject?.incrementKey("reportNumber")
             if (currentObject?["reportNumber"])! as! Int == 5 {
                 currentObject?["reported"] = true
             }
             currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if error == nil {
-                    let alert = UIAlertController(title: "Question Reported", message:"Thank you for keeping the hoot community safe.", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Question Reported", message:"Thank you for keeping the Hoot community safe.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
                     self.presentViewController(alert, animated: true){}
                     self.didReport = true

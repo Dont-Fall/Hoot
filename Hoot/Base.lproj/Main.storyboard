@@ -2973,6 +2973,7 @@
                     <connections>
                         <outlet property="classQuestionAnswerAnswerCount" destination="ej8-wM-O4q" id="K9F-BN-xv4"/>
                         <outlet property="classQuestionAnswerAnswerTV" destination="MmE-TZ-hdr" id="cRf-02-lBd"/>
+                        <outlet property="classQuestionAnswerCountLablel" destination="ej8-wM-O4q" id="Zmn-aN-xml"/>
                         <outlet property="classQuestionAnswerPicPreview" destination="9jM-Ow-tVC" id="vub-Ng-pLN"/>
                     </connections>
                 </viewController>
@@ -3093,40 +3094,86 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hX-Nh-U8b">
-                                            <rect key="frame" x="8" y="59" width="584" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hX-Nh-U8b">
+                                            <rect key="frame" x="8" y="56" width="584" height="20"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuL-qc-BXl">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuL-qc-BXl">
                                             <rect key="frame" x="8" y="4" width="584" height="30"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="mBO-6d-BUQ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
                                             <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="XKC-ZZ-r9A">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="XKC-ZZ-r9A">
                                             <rect key="frame" x="0.0" y="94" width="600" height="8"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-4p-hBf">
-                                            <rect key="frame" x="8" y="37" width="584" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-4p-hBf">
+                                            <rect key="frame" x="8" y="35" width="584" height="20"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C11-gj-qeC">
+                                            <rect key="frame" x="8" y="76" width="42" height="15"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="5Rx-gO-tQp"/>
+                                                <constraint firstAttribute="height" constant="15" id="gQZ-m7-YhJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="10"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attending" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf1-Ut-Yr7">
+                                            <rect key="frame" x="497" y="76" width="95" height="15"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="9BX-0h-nQN"/>
+                                                <constraint firstAttribute="width" constant="95" id="zep-aH-qzq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="10"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="C11-gj-qeC" firstAttribute="top" secondItem="3hX-Nh-U8b" secondAttribute="bottom" id="2aO-BU-Caa"/>
+                                        <constraint firstItem="XKC-ZZ-r9A" firstAttribute="top" secondItem="C11-gj-qeC" secondAttribute="bottom" constant="3" id="6Yg-gb-KpR"/>
+                                        <constraint firstItem="bp1-4p-hBf" firstAttribute="top" secondItem="BuL-qc-BXl" secondAttribute="bottom" constant="1" id="6qZ-mh-0Ep"/>
+                                        <constraint firstItem="Gf1-Ut-Yr7" firstAttribute="trailing" secondItem="3hX-Nh-U8b" secondAttribute="trailing" id="Hxk-nt-voc"/>
+                                        <constraint firstItem="Gf1-Ut-Yr7" firstAttribute="trailing" secondItem="bp1-4p-hBf" secondAttribute="trailing" id="LfJ-Bb-xsK"/>
+                                        <constraint firstItem="Gf1-Ut-Yr7" firstAttribute="bottom" secondItem="BXS-Xo-KxT" secondAttribute="bottomMargin" id="MVE-Aq-edd"/>
+                                        <constraint firstItem="C11-gj-qeC" firstAttribute="leading" secondItem="3hX-Nh-U8b" secondAttribute="leading" id="Uza-Kn-jmW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XKC-ZZ-r9A" secondAttribute="bottom" constant="-11" id="Vo7-Sn-N1T"/>
+                                        <constraint firstItem="C11-gj-qeC" firstAttribute="leading" secondItem="BXS-Xo-KxT" secondAttribute="leadingMargin" id="Yke-iO-DdK"/>
+                                        <constraint firstItem="Gf1-Ut-Yr7" firstAttribute="trailing" secondItem="BXS-Xo-KxT" secondAttribute="trailingMargin" id="hDD-FW-Xp5"/>
+                                        <constraint firstItem="XKC-ZZ-r9A" firstAttribute="centerX" secondItem="3hX-Nh-U8b" secondAttribute="centerX" id="jQK-Kb-4X8"/>
+                                        <constraint firstItem="XKC-ZZ-r9A" firstAttribute="leading" secondItem="BXS-Xo-KxT" secondAttribute="leading" id="jXz-Wc-5WC"/>
+                                        <constraint firstItem="C11-gj-qeC" firstAttribute="leading" secondItem="bp1-4p-hBf" secondAttribute="leading" id="oGE-8a-kez"/>
+                                        <constraint firstItem="Gf1-Ut-Yr7" firstAttribute="trailing" secondItem="BuL-qc-BXl" secondAttribute="trailing" id="qmF-HD-bkk"/>
+                                        <constraint firstItem="Gf1-Ut-Yr7" firstAttribute="baseline" secondItem="C11-gj-qeC" secondAttribute="baseline" id="tRI-4H-Kzq"/>
+                                        <constraint firstItem="3hX-Nh-U8b" firstAttribute="top" secondItem="bp1-4p-hBf" secondAttribute="bottom" constant="1" id="uC6-Ec-eCL"/>
+                                        <constraint firstItem="C11-gj-qeC" firstAttribute="leading" secondItem="BuL-qc-BXl" secondAttribute="leading" id="yT0-OG-EFa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="eventAttendingCount" destination="Gf1-Ut-Yr7" id="TNd-9o-djb"/>
                                     <outlet property="eventDateLabel" destination="3hX-Nh-U8b" id="psd-hb-lNv"/>
                                     <outlet property="eventLocationLabel" destination="bp1-4p-hBf" id="5iW-LJ-Fte"/>
                                     <outlet property="eventNameLabel" destination="BuL-qc-BXl" id="C8V-0s-JX5"/>
+                                    <outlet property="eventTimeStamp" destination="C11-gj-qeC" id="4Q5-hc-7Dj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -3209,30 +3256,86 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TFBarH30.png" highlightedImage="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="69t-uv-zd6">
                                 <rect key="frame" x="20" y="181" width="560" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Z0v-Ao-INA"/>
+                                </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qeg-O8-hrs">
+                                <rect key="frame" x="20" y="210" width="560" height="285"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bar1.png" translatesAutoresizingMaskIntoConstraints="NO" id="CCq-mD-B90">
+                                <rect key="frame" x="20" y="496" width="560" height="1"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Xwe-Qb-aCR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fg-gf-z8b">
+                                <rect key="frame" x="263" y="512" width="75" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="uoP-ym-Rkp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <state key="normal" title="Attend">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="classQuestionAnswersBtn:" destination="PRn-XP-qOa" eventType="touchUpInside" id="dxU-rA-zVB"/>
+                                    <action selector="eventDetailAttendBtn:" destination="HN5-lG-z7c" eventType="touchUpInside" id="KZ8-Uy-RAi"/>
+                                    <action selector="questionDetailedAnswerBtn:" destination="ibq-Ec-Xl7" eventType="touchUpInside" id="1G4-Tt-VTx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Attending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frg-gf-Tyv">
+                                <rect key="frame" x="225" y="496" width="150" height="18"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="17D-RQ-YYE"/>
+                                    <constraint firstAttribute="width" constant="150" id="iAP-Mf-tQO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8Fg-gf-z8b" firstAttribute="top" secondItem="qeg-O8-hrs" secondAttribute="bottom" constant="17" id="0ZO-D1-bG0"/>
                             <constraint firstItem="xhi-Wj-kbf" firstAttribute="trailing" secondItem="hBM-6i-Zfn" secondAttribute="trailingMargin" id="11Q-Mq-qvq"/>
+                            <constraint firstItem="tqc-V9-lRo" firstAttribute="top" secondItem="8Fg-gf-z8b" secondAttribute="bottom" constant="9" id="1ye-uM-4Ro"/>
+                            <constraint firstItem="69t-uv-zd6" firstAttribute="trailing" secondItem="qeg-O8-hrs" secondAttribute="trailing" id="2TP-Sf-tFS"/>
+                            <constraint firstItem="69t-uv-zd6" firstAttribute="top" secondItem="Msr-aX-FxF" secondAttribute="bottom" constant="19" id="3A2-CG-GVR"/>
+                            <constraint firstItem="qeg-O8-hrs" firstAttribute="leading" secondItem="CCq-mD-B90" secondAttribute="leading" id="6U2-qc-9Nf"/>
                             <constraint firstItem="Msr-aX-FxF" firstAttribute="leading" secondItem="oqN-Ie-ryw" secondAttribute="leading" id="713-92-ylQ"/>
                             <constraint firstItem="Ibn-N9-tFg" firstAttribute="leading" secondItem="Msr-aX-FxF" secondAttribute="leading" id="BSq-PH-Iwd"/>
                             <constraint firstItem="xhi-Wj-kbf" firstAttribute="top" secondItem="dJe-da-dgN" secondAttribute="bottom" constant="20" id="DLJ-DE-FvI"/>
+                            <constraint firstItem="CCq-mD-B90" firstAttribute="centerX" secondItem="Frg-gf-Tyv" secondAttribute="centerX" id="FGZ-RT-XID"/>
                             <constraint firstItem="Ibn-N9-tFg" firstAttribute="top" secondItem="dJe-da-dgN" secondAttribute="bottom" constant="44" id="Hky-ze-I8D"/>
+                            <constraint firstItem="69t-uv-zd6" firstAttribute="leading" secondItem="hBM-6i-Zfn" secondAttribute="leadingMargin" id="JOa-vc-pcT"/>
+                            <constraint firstItem="69t-uv-zd6" firstAttribute="trailing" secondItem="oqN-Ie-ryw" secondAttribute="trailing" id="JlA-Pe-gLV"/>
+                            <constraint firstItem="Frg-gf-Tyv" firstAttribute="top" secondItem="CCq-mD-B90" secondAttribute="top" id="MXw-yv-dND"/>
                             <constraint firstItem="xhi-Wj-kbf" firstAttribute="leading" secondItem="Ibn-N9-tFg" secondAttribute="leading" id="NYn-Nr-uzn"/>
-                            <constraint firstItem="69t-uv-zd6" firstAttribute="top" secondItem="Msr-aX-FxF" secondAttribute="bottom" constant="19" id="OPR-OM-S5K"/>
                             <constraint firstItem="Ibn-N9-tFg" firstAttribute="trailing" secondItem="xhi-Wj-kbf" secondAttribute="trailing" id="RMf-V3-b27"/>
                             <constraint firstItem="oqN-Ie-ryw" firstAttribute="top" secondItem="Ibn-N9-tFg" secondAttribute="bottom" constant="23" id="YTd-Mk-xgf"/>
                             <constraint firstItem="Msr-aX-FxF" firstAttribute="trailing" secondItem="Ibn-N9-tFg" secondAttribute="trailing" id="eJP-r2-0cg"/>
-                            <constraint firstItem="tqc-V9-lRo" firstAttribute="top" secondItem="69t-uv-zd6" secondAttribute="bottom" constant="340" id="h0v-SF-Joy"/>
-                            <constraint firstItem="69t-uv-zd6" firstAttribute="leading" secondItem="hBM-6i-Zfn" secondAttribute="leadingMargin" id="kfE-65-eCj"/>
-                            <constraint firstItem="69t-uv-zd6" firstAttribute="leading" secondItem="oqN-Ie-ryw" secondAttribute="leading" id="o1Q-Ne-haP"/>
-                            <constraint firstItem="69t-uv-zd6" firstAttribute="trailing" secondItem="oqN-Ie-ryw" secondAttribute="trailing" id="rCo-bD-Zez"/>
+                            <constraint firstItem="69t-uv-zd6" firstAttribute="leading" secondItem="oqN-Ie-ryw" secondAttribute="leading" id="hCb-7L-s3L"/>
+                            <constraint firstItem="69t-uv-zd6" firstAttribute="leading" secondItem="qeg-O8-hrs" secondAttribute="leading" id="jhG-kX-Zwk"/>
+                            <constraint firstItem="8Fg-gf-z8b" firstAttribute="top" secondItem="CCq-mD-B90" secondAttribute="bottom" constant="15" id="mWC-9U-9uN"/>
+                            <constraint firstItem="CCq-mD-B90" firstAttribute="trailing" secondItem="qeg-O8-hrs" secondAttribute="trailing" id="ohs-nh-Ffw"/>
+                            <constraint firstItem="qeg-O8-hrs" firstAttribute="top" secondItem="oqN-Ie-ryw" secondAttribute="bottom" constant="28" id="qrU-et-wir"/>
                             <constraint firstItem="Msr-aX-FxF" firstAttribute="top" secondItem="xhi-Wj-kbf" secondAttribute="bottom" constant="28" id="raV-xe-AOM"/>
+                            <constraint firstItem="tqc-V9-lRo" firstAttribute="top" secondItem="Frg-gf-Tyv" secondAttribute="bottom" constant="37" id="wK7-Xh-OvC"/>
+                            <constraint firstItem="8Fg-gf-z8b" firstAttribute="centerX" secondItem="CCq-mD-B90" secondAttribute="centerX" id="wkJ-be-fwn"/>
                             <constraint firstItem="oqN-Ie-ryw" firstAttribute="trailing" secondItem="Msr-aX-FxF" secondAttribute="trailing" id="xp4-Eb-JpG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="eventDetailAttendingCount" destination="Frg-gf-Tyv" id="rtc-Ib-QBI"/>
                         <outlet property="eventDetailCreatedBy" destination="xhi-Wj-kbf" id="wsd-un-DLz"/>
                         <outlet property="eventDetailEventDate" destination="oqN-Ie-ryw" id="c1T-3M-RyT"/>
                         <outlet property="eventDetailEventLocation" destination="Msr-aX-FxF" id="BaK-Kf-0Ye"/>

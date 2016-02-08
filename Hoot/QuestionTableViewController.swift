@@ -81,7 +81,6 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        print("Test VIEW")
         var user = PFUser.currentUser()
         if user == nil{
             self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
@@ -92,6 +91,7 @@ class QuestionTableViewController: PFQueryTableViewController {
             print("nothing")
             //Nothing
         }
+        self.loadObjects()
         self.tableView.reloadData()
     }
 
