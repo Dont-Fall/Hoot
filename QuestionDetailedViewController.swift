@@ -60,6 +60,8 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
                         }
                     }
                 }
+            }else{
+                self.questionDetailedPicturePreview.hidden = true
             }
             
             
