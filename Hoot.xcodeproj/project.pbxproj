@@ -61,6 +61,7 @@
 		9656F3291C6206C00038D864 /* AddSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656F3281C6206C00038D864 /* AddSchoolViewController.swift */; };
 		9656F32B1C627D6B0038D864 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656F32A1C627D6B0038D864 /* PasswordResetViewController.swift */; };
 		96825D941C618E27000DFEA5 /* CheckMarkHoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96825D931C618E27000DFEA5 /* CheckMarkHoot.png */; };
+		96853E2C1C697FE1000DF037 /* AskQuestionWithPic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96853E2B1C697FE1000DF037 /* AskQuestionWithPic.swift */; };
 		96A06BA01C4153DE0077084A /* QuestionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */; };
 		96A06BA21C4154660077084A /* QuestionDetailAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */; };
 		96A06BEE1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */; };
@@ -184,6 +185,7 @@
 		9656F3281C6206C00038D864 /* AddSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSchoolViewController.swift; sourceTree = "<group>"; };
 		9656F32A1C627D6B0038D864 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		96825D931C618E27000DFEA5 /* CheckMarkHoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckMarkHoot.png; path = Hoot/CheckMarkHoot.png; sourceTree = "<group>"; };
+		96853E2B1C697FE1000DF037 /* AskQuestionWithPic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestionWithPic.swift; sourceTree = "<group>"; };
 		96A06B9F1C4153DE0077084A /* QuestionDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailTableViewCell.swift; path = ../QuestionDetailTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BA11C4154660077084A /* QuestionDetailAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		96A06BED1C4446D90077084A /* QuestionDetailAnswerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailAnswerTableViewController.swift; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 			children = (
 				E41209641C44AC0D006827E7 /* Enums.swift */,
 				F1F147321C49983200938235 /* AskQuestion.swift */,
+				96853E2B1C697FE1000DF037 /* AskQuestionWithPic.swift */,
 				F1E8AA401C666B4400025724 /* QuestionAnswer.swift */,
 				F1F147341C49998800938235 /* ClassAskQuestion.swift */,
 				F1E8AA421C666C0100025724 /* ClassQuestionAnswer.swift */,
@@ -694,6 +697,7 @@
 				960945DC1C348C670000282A /* AppDelegate.swift in Sources */,
 				96FAF14F1C3880080092D096 /* QuestionTableViewCell.swift in Sources */,
 				E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */,
+				96853E2C1C697FE1000DF037 /* AskQuestionWithPic.swift in Sources */,
 				E412096A1C44AC30006827E7 /* SignIn.swift in Sources */,
 				96B29BD61C3AE60900240AD7 /* QuestionDetailedViewController.swift in Sources */,
 				960EF9311C55B59300A867B5 /* ContactUsViewController.swift in Sources */,

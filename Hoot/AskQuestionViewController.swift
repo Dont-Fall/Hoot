@@ -116,40 +116,76 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         question["reportNumber"] = 0
         question["reported"] = false
         question["answerCount"] = 0
+        question["hasPic"] = true
         //PIC
-        let imageData = UIImageJPEGRepresentation(self.askQuestionPicPreview.image!,0.5)
-        let imageFile = PFFile(name:"image.jpeg", data:imageData!)
-        question.setObject(imageFile!, forKey: "picture")
-        var image: PFFile = imageFile!
-        var askQuestion = AskQuestion(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!, img: image)
-        do {
-            try askQuestion.askQuestionAlert()
-            //MARK: Save Question
-            question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                if error == nil {
-                    print("Yp")
-                    // Success, no creating error
-                    currentUser!.incrementKey("points", byAmount: 5)
-                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                        if error == nil {
-                            print("Points Updated")
-                        } else {
-                            print("Error")
+        if askQuestionPicPreview.image != nil {
+            question["hasPic"] = true
+            let imageData = UIImageJPEGRepresentation(self.askQuestionPicPreview.image!,0.5)
+            let imageFile = PFFile(name:"image.jpeg", data:imageData!)
+            question.setObject(imageFile!, forKey: "picture")
+            var image: PFFile = imageFile!
+            var askQuestionWithPic = AskQuestionWithPic(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!, img: image)
+            do {
+                try askQuestionWithPic.askQuestionAlert()
+                //MARK: Save Question
+                question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    if error == nil {
+                        print("Yp")
+                        // Success, no creating error
+                        currentUser!.incrementKey("points", byAmount: 5)
+                        currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                            if error == nil {
+                                print("Points Updated")
+                            } else {
+                                print("Error")
+                            }
                         }
+                        //                    self.actInd.startAnimating()
+                        self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
+                        self.askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
+                        //                    self.actInd.startAnimating()
+                    } else {
+                        print("Error")
                     }
-//                    self.actInd.startAnimating()
-                    self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
-                    self.askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
-//                    self.actInd.startAnimating()
-                } else {
-                    print("Error")
                 }
+                // Error Caught Alert Settings
+            } catch let message as ErrorType {
+                let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                presentViewController(alert, animated: true, completion: nil)
             }
-           // Error Caught Alert Settings
-        } catch let message as ErrorType {
-           let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            presentViewController(alert, animated: true, completion: nil)
+        }else{
+            question["hasPic"] = false
+            var askQuestion = AskQuestion(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!)
+            do {
+                try askQuestion.askQuestionAlert()
+                //MARK: Save Question
+                question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    if error == nil {
+                        print("Yp")
+                        // Success, no creating error
+                        currentUser!.incrementKey("points", byAmount: 5)
+                        currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                            if error == nil {
+                                print("Points Updated")
+                            } else {
+                                print("Error")
+                            }
+                        }
+                        //                    self.actInd.startAnimating()
+                        self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
+                        self.askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
+                        //                    self.actInd.startAnimating()
+                    } else {
+                        print("Error")
+                    }
+                }
+                // Error Caught Alert Settings
+            } catch let message as ErrorType {
+                let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                presentViewController(alert, animated: true, completion: nil)
+            }
         }
         
     }

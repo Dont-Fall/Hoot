@@ -8,18 +8,21 @@
 
 import Foundation
 
-class AskQuestion: NSObject {
+class AskQuestionWithPic: NSObject {
     
     var userCourse: String?
     var userText: String?
-    var hasPic: Bool?
+    var image: PFFile?
     var answerCount: Int?
+    var hasPic: Bool?
+//    let alert = UIAlertController()
     
-    init(course: String, text: String){
+    init(course: String, text: String, img: PFFile){
         self.userCourse = course
         self.userText = text
+        self.image = img
         self.answerCount = 0
-        self.hasPic = false
+        self.hasPic = true
     }
     
     func hasNoEmptyFields() -> Bool{

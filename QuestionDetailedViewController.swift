@@ -49,16 +49,19 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
         // Unwrap the current object object
         if let object = currentObject {
             
-            let userImageFile = object["picture"] as! PFFile
-            userImageFile.getDataInBackgroundWithBlock {
-                (imageData: NSData?, error: NSError?) -> Void in
-                if error == nil {
-                    if let imageData = imageData {
-                        let image = UIImage(data:imageData)
-                        self.questionDetailedPicturePreview.image = image
+            if object["hasPic"].boolValue == true {
+                let userImageFile = object["picture"] as! PFFile
+                userImageFile.getDataInBackgroundWithBlock {
+                    (imageData: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        if let imageData = imageData {
+                            let image = UIImage(data:imageData)
+                            self.questionDetailedPicturePreview.image = image
+                        }
                     }
                 }
             }
+            
             
             questionDetailedUsernameLabel.text = "Asked By: \(object["user"] as! String)"
             questionDetailCourseLabel.text = "For Course: \(object["course"] as! String)"
