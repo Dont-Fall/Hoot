@@ -85,42 +85,71 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         classQuestion["reportNumber"] = 0
         classQuestion["reported"] = false
         classQuestion["answerCount"] = 0
-        //PIC
-        let imageData = UIImageJPEGRepresentation(self.classAskQuestionPicPreview.image!,0.5)
-        let imageFile = PFFile(name:"image.jpeg", data:imageData!)
-        classQuestion.setObject(imageFile!, forKey: "picture")
         
-        var image: PFFile = imageFile!
-        var classAskQuestion = ClassAskQuestion(topic: classAskQuestionCourseTF.text!, text: classAskQuestionTV.text!, img: image)
-        do {
+        if classAskQuestionPicPreview.image != nil{
+            let imageData = UIImageJPEGRepresentation(self.classAskQuestionPicPreview.image!,0.5)
+            let imageFile = PFFile(name:"image.jpeg", data:imageData!)
+            classQuestion.setObject(imageFile!, forKey: "picture")
+        
+            var image: PFFile = imageFile!
+            var classAskQuestionWithPic = ClassAskQuestionWithPic(topic: classAskQuestionCourseTF.text!, text: classAskQuestionTV.text!, img: image)
+            do {
+                try classAskQuestionWithPic.classAskQuestionAlert()
+                //MARK: Save Question
+                classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    if error == nil {
+                        print("Yp")
+                        // Success, no creating error.
+                        self.navigationController?.popViewControllerAnimated(true)
+                        currentUser!.incrementKey("points", byAmount: 5)
+                        currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                            if error == nil {
+                                print("Points Updated")
+                            } else {
+                                print("Error")
+                            }
+                        }
+                    } else {
+                    }
+                }
+            //Error Caught Alert Settings
+            }catch let message as ErrorType {
+            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+            }
+        }else{
+            var classAskQuestion = ClassAskQuestion(topic: classAskQuestionCourseTF.text!, text: classAskQuestionTV.text!)
+            
+            do {
             try classAskQuestion.classAskQuestionAlert()
             
-            //MARK: Save Question
-            classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                if error == nil {
-                    print("Yp")
-                    // Success, no creating error.
-                    self.navigationController?.popViewControllerAnimated(true)
-                    currentUser!.incrementKey("points", byAmount: 5)
-                    currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                        if error == nil {
-                            print("Points Updated")
-                        } else {
-                            print("Error")
+                //MARK: Save Question
+                classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    if error == nil {
+                        print("Yp")
+                        // Success, no creating error.
+                        self.navigationController?.popViewControllerAnimated(true)
+                        currentUser!.incrementKey("points", byAmount: 5)
+                        currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                            if error == nil {
+                                print("Points Updated")
+                            } else {
+                                print("Error")
+                            }
                         }
+                    }else {
                     }
-                } else {
                 }
-            }
-        // Error Caught Alert Settings
-        }catch let message as ErrorType {
+            // Error Caught Alert Settings
+            }catch let message as ErrorType {
             
             let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             presentViewController(alert, animated: true, completion: nil)
         }
+        }
     }
-    
     
     //Go Back Function
     func classAskQuestionCancel() {
