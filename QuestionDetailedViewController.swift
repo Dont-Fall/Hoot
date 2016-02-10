@@ -73,12 +73,18 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
         
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
-        let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
-        let detailedQuestionBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "detailedQuestionBack")
+        
+        if String(currentObject!["user"]) == (PFUser.currentUser()?.username)!{
+            let detailedQuestionDeleteBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "detailedQuestionDelete")
+            self.navigationItem.setRightBarButtonItem(detailedQuestionDeleteBtn, animated: true)
+        }else{
+            let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
+            self.navigationItem.setRightBarButtonItem(detailedQuestionReportBtn, animated: true)
+        }
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
-        self.navigationItem.setRightBarButtonItem(detailedQuestionReportBtn, animated: true)
+        let detailedQuestionBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "detailedQuestionBack")
         self.navigationItem.setLeftBarButtonItem(detailedQuestionBackBtn, animated: true)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -124,6 +130,11 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
     func detailedQuestionBack(){
         navigationController?.popViewControllerAnimated(true)
     }
+    func detailedQuestionDelete(){
+        let questionToDelete = currentObject
+        confirmDelete(questionToDelete!)
+    }
+    
     //Prepare For Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "questionShowPic" {
@@ -147,6 +158,26 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
         self.actInd.startAnimating()
         self.performSegueWithIdentifier("questionShowPic", sender: self)
         self.actInd.stopAnimating()
+    }
+    
+    func confirmDelete(Class : PFObject) {
+        
+        let alert = UIAlertController(title: "Delete Question", message: "Are you sure you want to delete this question?", preferredStyle: .ActionSheet)
+        let DeleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: handleDeleteQuestion)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: cancelDeleteQuestion)
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+    func handleDeleteQuestion(alertAction: UIAlertAction!) -> Void {
+            currentObject?.deleteInBackground()
+            navigationController?.popViewControllerAnimated(true)
+            //navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func cancelDeleteQuestion(alertAction: UIAlertAction!) {
     }
 
 }

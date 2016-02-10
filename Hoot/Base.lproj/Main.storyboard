@@ -3519,14 +3519,14 @@
         <image name="TFBarH30.png" width="600" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GEX-N6-J3L"/>
-        <segue reference="dIH-3E-5VZ"/>
         <segue reference="gWS-jR-3bg"/>
-        <segue reference="now-pH-dQ7"/>
-        <segue reference="gf2-jP-qG1"/>
+        <segue reference="GEX-N6-J3L"/>
+        <segue reference="PBz-3c-BDV"/>
         <segue reference="hPf-Vd-Qjy"/>
-        <segue reference="Whu-r7-dBd"/>
+        <segue reference="gf2-jP-qG1"/>
+        <segue reference="on5-k1-6ao"/>
         <segue reference="yi2-L8-eX8"/>
+        <segue reference="now-pH-dQ7"/>
         <segue reference="9EJ-RU-csy"/>
         <segue reference="Uk9-OG-j9Q"/>
     </inferredMetricsTieBreakers>

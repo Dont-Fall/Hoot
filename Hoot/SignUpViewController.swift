@@ -46,8 +46,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         self.signUpSchoolPicker.delegate = self
         self.signUpSchoolPicker.dataSource = self
         signUpSchoolTF.delegate = self
-        //signUpUsernameTF.delegate = self
-        //signUpPasswordTF.delegate = self
 
         schoolList = self.schoolListUnsorted.sort()
     }
@@ -101,6 +99,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             try signup.signUpUser()
 //            let alert = signUpSuccessAlert()
 //            presentViewController(alert, animated: true, completion: nil)
+            var user = PFUser.currentUser()
             self.performSegueWithIdentifier("signUpSuccess", sender: self)
         }catch let error as Error {
             //dismissKeyboard()
