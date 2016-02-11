@@ -100,7 +100,7 @@ class QuestionTableViewController: PFQueryTableViewController {
         super.viewDidLoad()
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         print("VIEW DID LOAD")
-        let user = PFUser.currentUser()
+        var user = PFUser.currentUser()
         /*user!["emailVerified"] = false
         user!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
@@ -110,8 +110,8 @@ class QuestionTableViewController: PFQueryTableViewController {
             }
         }*/
         print(user?.username)
-        print(user?["emailVerified"])
         print(user?.objectForKey("emailVerified"))
+        
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 2.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")

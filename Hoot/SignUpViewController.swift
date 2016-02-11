@@ -99,7 +99,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             try signup.signUpUser()
 //            let alert = signUpSuccessAlert()
 //            presentViewController(alert, animated: true, completion: nil)
-            var user = PFUser.currentUser()
             self.performSegueWithIdentifier("signUpSuccess", sender: self)
         }catch let error as Error {
             //dismissKeyboard()
