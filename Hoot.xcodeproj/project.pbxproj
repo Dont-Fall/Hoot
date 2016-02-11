@@ -96,6 +96,7 @@
 		E412096A1C44AC30006827E7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209691C44AC30006827E7 /* SignIn.swift */; };
 		E44A2E741C55C03A005080B2 /* ContactForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A2E731C55C03A005080B2 /* ContactForm.swift */; };
 		E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E4B6C4361C6AB95E0065BF2E /* ClassAskQuestionWithPic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6C4351C6AB95E0065BF2E /* ClassAskQuestionWithPic.swift */; };
 		E4E2B5F61C66C35600B2B6E7 /* AddClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B5F51C66C35600B2B6E7 /* AddClass.swift */; };
 		E4E2B5F81C66C36400B2B6E7 /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B5F71C66C36400B2B6E7 /* PasswordReset.swift */; };
 		F1E8AA411C666B4400025724 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8AA401C666B4400025724 /* QuestionAnswer.swift */; };
@@ -219,6 +220,7 @@
 		E41209661C44AC18006827E7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		E41209691C44AC30006827E7 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		E44A2E731C55C03A005080B2 /* ContactForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactForm.swift; sourceTree = "<group>"; };
+		E4B6C4351C6AB95E0065BF2E /* ClassAskQuestionWithPic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAskQuestionWithPic.swift; sourceTree = "<group>"; };
 		E4E2B5F51C66C35600B2B6E7 /* AddClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClass.swift; sourceTree = "<group>"; };
 		E4E2B5F71C66C36400B2B6E7 /* PasswordReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
 		F1E8AA401C666B4400025724 /* QuestionAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 				96853E2B1C697FE1000DF037 /* AskQuestionWithPic.swift */,
 				F1E8AA401C666B4400025724 /* QuestionAnswer.swift */,
 				F1F147341C49998800938235 /* ClassAskQuestion.swift */,
+				E4B6C4351C6AB95E0065BF2E /* ClassAskQuestionWithPic.swift */,
 				F1E8AA421C666C0100025724 /* ClassQuestionAnswer.swift */,
 				F1F147361C49999200938235 /* EventCreate.swift */,
 				F1E8AA441C666C9100025724 /* AddSchool.swift */,
@@ -699,6 +702,7 @@
 				E45DFB3A1C46B4C100B83CE3 /* (null) in Sources */,
 				96853E2C1C697FE1000DF037 /* AskQuestionWithPic.swift in Sources */,
 				E412096A1C44AC30006827E7 /* SignIn.swift in Sources */,
+				E4B6C4361C6AB95E0065BF2E /* ClassAskQuestionWithPic.swift in Sources */,
 				96B29BD61C3AE60900240AD7 /* QuestionDetailedViewController.swift in Sources */,
 				960EF9311C55B59300A867B5 /* ContactUsViewController.swift in Sources */,
 				96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */,

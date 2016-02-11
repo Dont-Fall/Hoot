@@ -1,25 +1,28 @@
 //
-//  AskQuestion.swift
+//  ClassAskQuestionWithPic.swift
 //  Hoot
 //
-//  Created by Zack Cuomo on 1/15/16.
+//  Created by Christopher Frost on 2/9/16.
 //  Copyright © 2016 Nitrox Development. All rights reserved.
+//
 
 import Foundation
 
-class ClassAskQuestion: NSObject {
+class ClassAskQuestionWithPic: NSObject {
     
     var userTopic: String?
     var userText: String?
+    var image: PFFile?
     var answerCount: Int?
     var hasPic: Bool?
-//    let alert = UIAlertController()
+    //    let alert = UIAlertController()
     
-    init(topic: String, text: String){
+    init(topic: String, text: String, img: PFFile){
         self.userTopic = topic
         self.userText = text
+        self.image = img
         self.answerCount = 0
-        self.hasPic = false
+        self.hasPic = true
     }
     
     func hasNoEmptyFields() -> Bool{
@@ -45,7 +48,7 @@ class ClassAskQuestion: NSObject {
             return true
         }
     }
-
+    
     
     func classAskQuestionAlert() throws {
         guard hasNoEmptyFields() else{
