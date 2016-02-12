@@ -8,7 +8,7 @@
 
 import Foundation
 
-class QuestionAnswer: NSObject {
+class QuestionAnswerWithPic: NSObject {
     
     var userAnswer: String?
     

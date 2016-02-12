@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
+class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UITextViewDelegate {
     
     //MARK: Text Fields
     @IBOutlet var createEventNameTF: UITextField!
@@ -71,6 +71,8 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         //Delegate Text Fields/Pickers
         createEventDateTF.delegate = self
         createEventDatePicker.hidden = true
+        createEventTV.delegate = self
+        eventDescriptionCount.text = "200"
         //self.signUpSchoolPicker.delegate = self
         //self.signUpSchoolPicker.dataSource = self
         
@@ -160,15 +162,24 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         //Causes view/text field to resign to first responder.
         view.endEditing(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //Live Count Text View
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText string: String) -> Bool {
+        let newLength = (createEventTV.text?.characters.count)! + string.characters.count - range.length
+        if(newLength <= 200){
+            eventDescriptionCount.text = "\(200 - newLength)"
+            return true
+        }else{
+            return false
+        }
     }
-    */
+    func textViewDidBeginEditing(textView: UITextView) {
+        if createEventTV.text == "Tell us what's happening at the event."
+        {
+            createEventTV.text = ""
+            createEventTV.textColor = UIColor.blackColor()
+        }
+    }
+
 
 }

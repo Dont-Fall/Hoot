@@ -101,6 +101,7 @@ class EventDetailViewController: UIViewController {
                 if error == nil {
                     let alert = UIAlertController(title: "Signed Up", message: "Can't wait to see you there!", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    alert.view.tintColor = UIColor(red: 255.0 / 255.0, green: 102.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
                     if let attending = self.currentObject!["attending"] as? Array<String>{
                         self.eventDetailAttendingCount.text = "\(String(attending.count)) Attending"
                     }
@@ -135,5 +136,6 @@ class EventDetailViewController: UIViewController {
     
     func cancelDeleteEvent(alertAction: UIAlertAction!) {
     }
+    
 
 }

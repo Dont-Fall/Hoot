@@ -97,10 +97,10 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(PFUser.currentUser()!["emailVerified"])
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
-        navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 2.0)
+        //navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
         let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -173,7 +173,10 @@ class QuestionTableViewController: PFQueryTableViewController {
         cell?.questionAnswerCount.text = String(object!["answerCount"]) + " Answers"
         //Pic Indicator
         if object!["picture"] != nil{
+            cell?.questionPicIndicator.hidden = false
             cell?.questionPicIndicator.image = UIImage(named: "CameraIconHoot")
+        }else{
+            cell?.questionPicIndicator.hidden = true
         }
         return cell
     }

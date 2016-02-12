@@ -85,8 +85,10 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         classQuestion["reportNumber"] = 0
         classQuestion["reported"] = false
         classQuestion["answerCount"] = 0
+        classQuestion["hasPic"] = true
         
         if classAskQuestionPicPreview.image != nil{
+            classQuestion["hasPic"] = true
             let imageData = UIImageJPEGRepresentation(self.classAskQuestionPicPreview.image!,0.5)
             let imageFile = PFFile(name:"image.jpeg", data:imageData!)
             classQuestion.setObject(imageFile!, forKey: "picture")
@@ -114,22 +116,21 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                 }
             //Error Caught Alert Settings
             }catch let message as ErrorType {
-            let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            presentViewController(alert, animated: true, completion: nil)
+                let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                presentViewController(alert, animated: true, completion: nil)
             }
         }else{
+            classQuestion["hasPic"] = false
             var classAskQuestion = ClassAskQuestion(topic: classAskQuestionCourseTF.text!, text: classAskQuestionTV.text!)
             
             do {
-            try classAskQuestion.classAskQuestionAlert()
-            
+                try classAskQuestion.classAskQuestionAlert()
                 //MARK: Save Question
                 classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
                         print("Yp")
                         // Success, no creating error.
-                        self.navigationController?.popViewControllerAnimated(true)
                         currentUser!.incrementKey("points", byAmount: 5)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
@@ -138,6 +139,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                                 print("Error")
                             }
                         }
+                        self.navigationController?.popViewControllerAnimated(true)
                     }else {
                     }
                 }

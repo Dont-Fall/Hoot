@@ -63,23 +63,26 @@ class ClassQuestionDetailedViewController: UIViewController {
         
         // Unwrap the current object object
         if let object = currentObject {
-            
-            let userImageFile = object["picture"] as! PFFile
-            userImageFile.getDataInBackgroundWithBlock {
-                (imageData: NSData?, error: NSError?) -> Void in
-                if error == nil {
-                    if let imageData = imageData {
+            if object["hasPic"].boolValue == true{
+                let userImageFile = object["picture"] as! PFFile
+                userImageFile.getDataInBackgroundWithBlock {
+                    (imageData: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        if let imageData = imageData {
                         let image = UIImage(data:imageData)
                         self.classQuestionDetailedPicturePreview.image = image
+                        }
                     }
                 }
+            }else{
+            self.classQuestionDetailedPicturePreview.hidden = true
             }
-            
+    
             classQuestionDetailedUsernameLabel.text = "Asked By: \(object["user"] as! String)"
             classQuestionDetailedQuestionTV.text = object["question"] as! String
             testID = object.objectId!
-        }
-        
+    }
+    
         //MARK: Tap Image
         classQuestionDetailedPicturePreview.userInteractionEnabled = true
         tapRec.addTarget(self, action: "tapView")
