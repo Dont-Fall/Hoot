@@ -85,7 +85,6 @@ class QuestionTableViewController: PFQueryTableViewController {
         if user == nil{
             self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
         }else if user?["emailVerified"] as? Bool  == false {
-            print("false")
             self.performSegueWithIdentifier("emailVerifySegue", sender: self)
         }else{
             print("nothing")
@@ -98,20 +97,8 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
-        print("VIEW DID LOAD")
-        var user = PFUser.currentUser()
-        /*user!["emailVerified"] = false
-        user!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                print("Points Updated")
-            } else {
-                print("Error")
-            }
-        }*/
-        print(user?.username)
-        print(user?.objectForKey("emailVerified"))
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 2.0)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
@@ -123,7 +110,6 @@ class QuestionTableViewController: PFQueryTableViewController {
         self.navigationItem.setLeftBarButtonItem(questionSubjectBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
-    
     //DID RECIEVE MEMORY WARNING
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

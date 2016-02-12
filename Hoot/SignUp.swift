@@ -17,7 +17,7 @@ class SignUp: NSObject {
     var userSubject: String?
     var userPoints: Int?
     var userCurrentGroupCode: String?
-    //var emailVerified: Bool?
+
     
     init(uName: String, email: String, pass: String, confirmPass: String, school: String, subject: String, points: Int, groupCode: String){
         self.userName = uName
@@ -28,7 +28,6 @@ class SignUp: NSObject {
         self.userSubject = "Math"
         self.userPoints = 0
         self.userCurrentGroupCode = ""
-        //self.emailVerified = false
     }
     
     func signUpUser() throws -> Bool {
@@ -102,7 +101,6 @@ class SignUp: NSObject {
         user["points"] = userPoints!
         user["subject"] = userSubject!
         user["currentGroupCode"] = userCurrentGroupCode!
-        //user["emailVerified"] = emailVerified!
         
         
         do {

@@ -51,6 +51,8 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        var currentDate = NSDate()
+        createEventDatePicker.minimumDate = currentDate
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Keyboard up at start
         createEventNameTF.becomeFirstResponder()

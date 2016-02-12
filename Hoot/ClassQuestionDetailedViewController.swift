@@ -45,12 +45,17 @@ class ClassQuestionDetailedViewController: UIViewController {
         classQuestionDetailedPicturePreview.clipsToBounds = true
         //MARK: Nav Bar Customize
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
-        let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
+        if String(currentObject!["user"]) == (PFUser.currentUser()?.username)!{
+            let detailedQuestionDeleteBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "detailedClassQuestionDelete")
+            self.navigationItem.setRightBarButtonItem(detailedQuestionDeleteBtn, animated: true)
+        }else{
+            let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
+            self.navigationItem.setRightBarButtonItem(detailedQuestionReportBtn, animated: true)
+        }
         let detailedQuestionBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "detailedQuestionBack")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
-        self.navigationItem.setRightBarButtonItem(detailedQuestionReportBtn, animated: true)
         self.navigationItem.setLeftBarButtonItem(detailedQuestionBackBtn, animated: true)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -141,4 +146,30 @@ class ClassQuestionDetailedViewController: UIViewController {
         self.performSegueWithIdentifier("classQuestionShowPic", sender: self)
         self.actInd.stopAnimating()
     }
+    
+    func detailedClassQuestionDelete(){
+        let classQuestionToDelete = currentObject
+        confirmDelete(classQuestionToDelete!)
+    }
+    
+    func confirmDelete(Class : PFObject) {
+        
+        let alert = UIAlertController(title: "Delete Question", message: "Are you sure you want to delete this question?", preferredStyle: .ActionSheet)
+        let DeleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: handleDeleteClassQuestion)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: cancelDeleteClassQuestion)
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+    func handleDeleteClassQuestion(alertAction: UIAlertAction!) -> Void {
+        currentObject?.deleteInBackground()
+        navigationController?.popViewControllerAnimated(true)
+        //navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func cancelDeleteClassQuestion(alertAction: UIAlertAction!) {
+    }
+    
 }

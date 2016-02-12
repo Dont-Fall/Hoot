@@ -138,8 +138,8 @@ class EventsTableViewController: PFQueryTableViewController {
             cell?.eventTimeStamp.text = String(seconds) + "s"
         }
         //Time Until Event
-        let secondsToGo = NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: (object?["dateAndTime"])! as! NSDate, options: []).second
-        print(secondsToGo)
+        //let secondsToGo = NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: (object?["dateAndTime"])! as! NSDate, options: []).second
+        //print(secondsToGo)
         return cell
     }
 
