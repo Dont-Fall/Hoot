@@ -49,7 +49,9 @@ class EventDetailViewController: UIViewController {
             eventDetailEventName.text = object["name"] as! String
             eventDetailEventDate.text = object["dateAndTime"] as! String
             eventDetailEventLocation.text = object["location"] as! String
-            //eventDetailAttendingCount.text = "\(object["attending"].count as! String) Attending"
+            if let attending = object["attending"] as? Array<String>{
+            eventDetailAttendingCount.text = "\(String(attending.count)) Attending"
+            }
         }
 
         // Do any additional setup after loading the view.
