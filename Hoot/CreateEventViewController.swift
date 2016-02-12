@@ -105,11 +105,14 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
     //Create Event Function
     func createEventCreate() {
         var currentUser = PFUser.currentUser()
-        
+        var dateFormatter = NSDateFormatter()
+        var calander = NSCalendar.currentCalendar()
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         var event = PFObject(className: "Event")
         event["name"] = createEventNameTF.text
         event["creator"] = currentUser!.username
-        event["dateAndTime"] = createEventDateTF.text
+        event["dateAndTime"] = createEventDatePicker.date
+        event["dateAndTimeString"] = createEventDateTF.text
         event["school"] = currentUser!.objectForKey("school")
         event["location"] = createEventLocationTF.text
         event["reportNumber"] = 0
@@ -117,7 +120,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         event["attending"] = []
         
         
-        var createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDateTF.text!)
+        var createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDatePicker.date)
         
         do {
             try createEvent.eventAlert()

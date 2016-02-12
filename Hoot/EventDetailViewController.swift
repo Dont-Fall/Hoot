@@ -47,7 +47,7 @@ class EventDetailViewController: UIViewController {
         if let object = currentObject {
             eventDetailCreatedBy.text = "Created By: \(object["creator"] as! String)"
             eventDetailEventName.text = object["name"] as! String
-            eventDetailEventDate.text = object["dateAndTime"] as! String
+            eventDetailEventDate.text = object["dateAndTimeString"] as! String
             eventDetailEventLocation.text = object["location"] as! String
             if let attending = object["attending"] as? Array<String>{
             eventDetailAttendingCount.text = "\(String(attending.count)) Attending"
@@ -101,6 +101,9 @@ class EventDetailViewController: UIViewController {
                 if error == nil {
                     let alert = UIAlertController(title: "Signed Up", message: "Can't wait to see you there!", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    if let attending = self.currentObject!["attending"] as? Array<String>{
+                        self.eventDetailAttendingCount.text = "\(String(attending.count)) Attending"
+                    }
                     self.presentViewController(alert, animated: true, completion: nil)
                 } else {
                     print("Error")

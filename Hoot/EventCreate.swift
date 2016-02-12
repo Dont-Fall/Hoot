@@ -11,10 +11,10 @@ class EventCreate: NSObject {
     
     var userEvent: String?
     var userLocation: String?
-    var eventDate: String?
+    var eventDate: NSDate?
 //    let alert = UIAlertController()
     
-    init(event: String, location: String, date: String){
+    init(event: String, location: String, date: NSDate){
         self.userEvent = event
         self.userLocation = location
         self.eventDate = date
@@ -22,7 +22,7 @@ class EventCreate: NSObject {
     }
     
     func hasNoEmptyFields() -> Bool{
-        if !userEvent!.isEmpty && !userLocation!.isEmpty && !eventDate!.isEmpty{
+        if !userEvent!.isEmpty && !userLocation!.isEmpty{
             return true
         }else{
             return false

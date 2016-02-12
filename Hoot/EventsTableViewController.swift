@@ -36,7 +36,7 @@ class EventsTableViewController: PFQueryTableViewController {
         let currentSchool = currentUser!["school"]
         var questionsQuery = PFQuery(className: "Event")
         questionsQuery.whereKey("school", equalTo: (currentSchool)!)
-        questionsQuery.orderByDescending("createdAt")
+        questionsQuery.orderByAscending("dateAndTime")
         return questionsQuery
     }
     override func viewDidAppear(animated: Bool) {
@@ -107,7 +107,7 @@ class EventsTableViewController: PFQueryTableViewController {
         if let capital = object?["location"] as? String {
             cell?.eventLocationLabel?.text = capital
         }
-        if let dateAndTime = object?["dateAndTime"] as? String {
+        if let dateAndTime = object?["dateAndTimeString"] as? String {
             cell?.eventDateLabel?.text = dateAndTime
         }
         if let attending = object?["attending"] as? Array<String> {
@@ -138,8 +138,36 @@ class EventsTableViewController: PFQueryTableViewController {
             cell?.eventTimeStamp.text = String(seconds) + "s"
         }
         //Time Until Event
-        //let secondsToGo = NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: (object?["dateAndTime"])! as! NSDate, options: []).second
-        //print(secondsToGo)
+        let secondsToGo = NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: (object?["dateAndTime"])! as! NSDate, options: []).second
+        if secondsToGo > 0{
+            let yearsToGo = Int(secondsToGo/31540000)
+            let monthsToGo = Int(secondsToGo/26280000)
+            let weeksToGo = Int(secondsToGo/604800)
+            let daysToGo = Int(secondsToGo/86400)
+            let hoursToGo = Int(secondsToGo/3600)
+            let minutesToGo = Int(secondsToGo/60)
+            if yearsToGo >= 1{
+                cell?.eventTimeToGo.text = String(yearsToGo) + "y To Go"
+            }else if monthsToGo >= 1{
+                cell?.eventTimeToGo.text = String(monthsToGo) + "m To Go"
+            }else if weeksToGo >= 1{
+                cell?.eventTimeToGo.text = String(weeksToGo) + "w To Go"
+            }else if daysToGo >= 1 {
+                cell?.eventTimeToGo.text = String(daysToGo) + "d To Go"
+            }else if hoursToGo >= 1 {
+                cell?.eventTimeToGo.text = String(hoursToGo) + "h To Go"
+            }else if minutesToGo >= 1 {
+                cell?.eventTimeToGo.text = String(minutesToGo) + "m To Go"
+            }else{
+                cell?.eventTimeToGo.text = String(secondsToGo) + "s To Go"
+            }
+            
+        }else{
+            cell?.eventTimeToGo.text = "Happening Now!"
+        }
+        if secondsToGo < -10800{
+            object?.deleteInBackground()
+        }
         return cell
     }
 
