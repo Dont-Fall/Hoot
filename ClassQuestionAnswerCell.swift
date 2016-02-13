@@ -13,6 +13,9 @@ class ClassQuestionAnswerCell: PFTableViewCell {
     //MARK: Connections
     @IBOutlet var classQuestionAnswerUserLabel: UILabel!
     @IBOutlet var classQuestionAnswerAnswerTV: UITextView!
+    @IBOutlet var classQuestionAnswerTimestamp: UILabel!
+    @IBOutlet var classQuestionAnswerCorrectIndicator: UIImageView!
+    @IBOutlet var classQuestionAnswerPicIndicator: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

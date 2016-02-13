@@ -75,17 +75,20 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
         // Unwrap the current object object
         if let object = currentObject {
             
-            let userImageFile = object["picture"] as! PFFile
-            userImageFile.getDataInBackgroundWithBlock {
-                (imageData: NSData?, error: NSError?) -> Void in
-                if error == nil {
-                    if let imageData = imageData {
-                        let image = UIImage(data:imageData)
-                        self.classQuestionAnswerSelectedPicPreview.image = image
+            if object["hasPic"].boolValue == true{
+                let userImageFile = object["picture"] as! PFFile
+                userImageFile.getDataInBackgroundWithBlock {
+                    (imageData: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        if let imageData = imageData {
+                            let image = UIImage(data:imageData)
+                            self.classQuestionAnswerSelectedPicPreview.image = image
+                        }
                     }
                 }
+            }else{
+                self.classQuestionAnswerSelectedPicPreview.hidden = true
             }
-            
             classQuestionAnswerSelectedUserLabel.text = "Answered By: \(object["user"] as! String)"
             classQuestionAnswerSelectedAnswerTV.text = object["answer"] as! String
             askedBy = object["askedBy"] as! String

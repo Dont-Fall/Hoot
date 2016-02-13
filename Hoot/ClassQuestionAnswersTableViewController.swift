@@ -94,26 +94,41 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
         if let answer = object?["answer"] as? String {
             cell?.classQuestionAnswerAnswerTV.text = answer
         }
+        //Time Stamp
+        let date = NSDate()
+        let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))
+        let years = Int(seconds/31540000)
+        let months = Int(seconds/26280000)
+        let weeks = Int(seconds/604800)
+        let days = Int(seconds/86400)
+        let hours = Int(seconds/3600)
+        let minutes = Int(seconds/60)
+        if years >= 1{
+            cell?.classQuestionAnswerTimestamp.text = String(years) + "y"
+        }else if months >= 1{
+            cell?.classQuestionAnswerTimestamp.text = String(months) + "m"
+        }else if weeks >= 1{
+            cell?.classQuestionAnswerTimestamp.text = String(weeks) + "w"
+        }else if days >= 1 {
+            cell?.classQuestionAnswerTimestamp.text = String(days) + "d"
+        }else if Int(hours) >= 1 {
+            cell?.classQuestionAnswerTimestamp.text = String(hours) + "h"
+        }else if Int(minutes) >= 1 {
+            cell?.classQuestionAnswerTimestamp.text = String(minutes) + "m"
+        }else{
+            cell?.classQuestionAnswerTimestamp.text = String(seconds) + "s"
+        }
+        if object!["picture"] != nil{
+            cell?.classQuestionAnswerPicIndicator.hidden = false
+            cell?.classQuestionAnswerPicIndicator.image = UIImage(named: "CameraIconHoot")
+        }else{
+            cell?.classQuestionAnswerPicIndicator.hidden = true
+        }
         if object?["correct"] as! Bool == true {
-            cell.tintColor = UIColor(red: 102.0 / 255.0, green: 204.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
-            cell.accessoryType = .Checkmark
+            cell?.classQuestionAnswerCorrectIndicator.image = UIImage(named: "CheckMarkHoot")
         }
         return cell
     }
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
-    // Get the new view controller using [segue destinationViewController].
-    var detailScene = segue.destinationViewController as! QuestionDetailedViewController
-    
-    // Pass the selected object to the destination view controller.
-    if let indexPath = self.tableView.indexPathForSelectedRow {
-    let row = Int(indexPath.row)
-    detailScene.currentObject = objects![row] as? PFObject
-    }
-    }
-    */
     
     //Prepare To Send Object To Detailed View
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

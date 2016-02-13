@@ -133,6 +133,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                         print("Yp")
                         // Success, no creating error
                         currentUser!.incrementKey("points", byAmount: 5)
+                        currentUser!.incrementKey("tokens", byAmount: 1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
                                 print("Points Updated")
@@ -140,10 +141,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                                 print("Error")
                             }
                         }
-                        //                    self.actInd.startAnimating()
                         self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
-                        self.askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
-                        //                    self.actInd.startAnimating()
                     } else {
                         print("Error")
                     }
@@ -165,6 +163,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                         print("Yp")
                         // Success, no creating error
                         currentUser!.incrementKey("points", byAmount: 5)
+                        currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
                                 print("Points Updated")
@@ -174,8 +173,6 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                         }
                         //                    self.actInd.startAnimating()
                         self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
-                        self.askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
-                        //                    self.actInd.startAnimating()
                     } else {
                         print("Error")
                     }

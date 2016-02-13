@@ -103,17 +103,22 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         answer["askedBy"] = asker
         answer["reportNumber"] = 0
         answer["reported"] = false
+        answer["hasPic"] = true
         //PIC
-        let imageData = UIImageJPEGRepresentation(self.classQuestionAnswerPicPreview.image!,0.5)
-        let imageFile = PFFile(name:"image.jpeg", data:imageData!)
-        answer.setObject(imageFile!, forKey: "picture")
-        
         var classQuestionAnswer = ClassQuestionAnswer(text: classQuestionAnswerAnswerTV.text!)
+        if classQuestionAnswerPicPreview.image != nil{
+            answer["hasPic"] = true
+            let imageData = UIImageJPEGRepresentation(self.classQuestionAnswerPicPreview.image!,0.5)
+            let imageFile = PFFile(name:"image.jpeg", data:imageData!)
+            answer.setObject(imageFile!, forKey: "picture")
+        }else{
+            answer["hasPic"] = false
+        }
         do {
             try classQuestionAnswer.classQuestionAnswerAlert()
-        
-        //MARK: Save Question
-        answer.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+    
+            //MARK: Save Question
+            answer.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
                 print("Yp")
                 // Success, no creating error
@@ -133,7 +138,6 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
                         print("Error")
                     }
                 }
-                self.classQuestionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
                 self.navigationController?.popViewControllerAnimated(true)
             } else {
                 print("Error")

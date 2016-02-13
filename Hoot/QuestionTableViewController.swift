@@ -98,14 +98,14 @@ class QuestionTableViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.sharedApplication().statusBarStyle = .LightContent
-        //MARK: Nav Bar Customize
-        //navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
+        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
         let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
+        let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
-        self.navigationItem.setRightBarButtonItem(questionAskBtn, animated: true)
+        self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
         self.navigationItem.setLeftBarButtonItem(questionSubjectBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
@@ -117,9 +117,13 @@ class QuestionTableViewController: PFQueryTableViewController {
     
     //Funtion for Compose
     func questionCompose() {
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("composeSegue", sender: self)
-        self.actInd.stopAnimating()
+        if Int((PFUser.currentUser()?.objectForKey("tokens"))! as! NSNumber) > 0 {
+            self.performSegueWithIdentifier("composeSegue", sender: self)
+        }else{
+            let alert = UIAlertController(title: "No Tokens", message: "You are out of tokens, go get some from the 'more' tab.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        }
         
     }
     

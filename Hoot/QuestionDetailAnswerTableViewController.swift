@@ -93,9 +93,6 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
         if let answer = object?["answer"] as? String {
             cell?.questionAnswerAnswerTV.text = answer
         }
-        if object?["correct"] as! Bool == true {
-            cell?.questionAnswerPicIndicator.image = UIImage(named: "CheckMarkHoot")
-        }
         //Time Stamp
         let date = NSDate()
         let seconds = Int((date.timeIntervalSinceDate((object?.createdAt)!)))

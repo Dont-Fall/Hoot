@@ -27,7 +27,7 @@ class VerifyEmailViewController: UIViewController {
     @IBAction func verifiedBtn(sender: AnyObject) {
         var currentUser = PFUser.currentUser()
         do {
-            try currentUser?.fetch()
+            try currentUser?.fetchInBackgroundWithBlock(nil)
         }catch{
             //nothing
         }
