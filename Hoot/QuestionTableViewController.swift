@@ -92,15 +92,13 @@ class QuestionTableViewController: PFQueryTableViewController {
         }else if user?["emailVerified"] as? Bool  == false {
             self.performSegueWithIdentifier("emailVerifySegue", sender: self)
         }else{
-            print("nothing")
-            //Nothing
+            var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+            let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
+            let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
+            self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
+            self.loadObjects()
+            self.tableView.reloadData()
         }
-        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
-        let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
-        let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
-        self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
-        self.loadObjects()
-        self.tableView.reloadData()
     }
 
     //VIEW DID LOAD
@@ -113,14 +111,16 @@ class QuestionTableViewController: PFQueryTableViewController {
             //nothing
         }
         UIApplication.sharedApplication().statusBarStyle = .LightContent
-        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+        if PFUser.currentUser() != nil{
+            let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
+            var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+            let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
+            self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
+        }
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
-        let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
-        let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
-        self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
         self.navigationItem.setLeftBarButtonItem(questionSubjectBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
