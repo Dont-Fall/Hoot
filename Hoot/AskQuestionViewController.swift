@@ -117,6 +117,8 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         question["reported"] = false
         question["answerCount"] = 0
         question["hasPic"] = true
+        var randomCode = randomNumber()
+        question["pushCode"] = randomCode
         //PIC
         if askQuestionPicPreview.image != nil {
             question["hasPic"] = true
@@ -141,6 +143,9 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                                 print("Error")
                             }
                         }
+                        let currentInstallation = PFInstallation.currentInstallation()
+                        currentInstallation.addUniqueObject(randomCode, forKey: "channels")
+                        currentInstallation.saveInBackground()
                         self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
                     } else {
                         print("Error")
@@ -217,6 +222,21 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
             askQuestionAskQuestionTV.text = ""
             askQuestionAskQuestionTV.textColor = UIColor.blackColor()
         }
+    }
+    
+    func randomNumber() -> String{
+        let alphabet =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" as NSString
+        var i = 10
+        var randomString = "C"
+        while (i > 0){
+            var num = arc4random_uniform(10)
+            var alphanum = Int(arc4random_uniform(52))
+            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            randomString = randomString + letter
+            randomString = randomString + String(num)
+            i = i - 1
+        }
+        return randomString
     }
 
 }

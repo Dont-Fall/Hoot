@@ -146,6 +146,10 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
                             print("Error")
                         }
                     }
+                    let push = PFPush()
+                    push.setChannel(String(self.currentObject!["pushCode"]))
+                    push.setMessage("Someone has answered your question!")
+                    push.sendPushInBackground()
                     //self.questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
