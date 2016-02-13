@@ -133,7 +133,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                         print("Yp")
                         // Success, no creating error
                         currentUser!.incrementKey("points", byAmount: 5)
-                        currentUser!.incrementKey("tokens", byAmount: 1)
+                        currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
                                 print("Points Updated")

@@ -62,6 +62,16 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     //VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        var user = PFUser.currentUser()
+        do {
+            try user?.fetchInBackgroundWithBlock(nil)
+        }catch{
+            //nothing
+        }
+        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+        let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
+        let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "classQuestionCompose")
+        self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
         self.loadObjects()
         self.tableView.reloadData()
     }
@@ -77,15 +87,17 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.ValueChanged)
         customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.TouchUpInside)
         //MARK: Nav Bar Customize
+        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+        let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
-        let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "classQuestionBack")
+        let questionBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "classQuestionBack")
         let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "classQuestionCompose")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
         self.navigationItem.titleView = customSC
-        self.navigationItem.setRightBarButtonItem(questionAskBtn, animated: true)
-        self.navigationItem.setLeftBarButtonItem(questionSubjectBtn, animated: true)
+        self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
+        self.navigationItem.setLeftBarButtonItem(questionBackBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         tableView.estimatedRowHeight = 200
@@ -100,10 +112,13 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     
     //Funtion for Compose
     func classQuestionCompose() {
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("classComposeSegue", sender: self)
-        self.actInd.stopAnimating()
-        
+        if Int((PFUser.currentUser()?.objectForKey("tokens"))! as! NSNumber) > 0 {
+            self.performSegueWithIdentifier("classComposeSegue", sender: self)
+        }else{
+            let alert = UIAlertController(title: "No Tokens", message: "You are out of tokens, go get some from the 'more' tab.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     //Segment Controller Function

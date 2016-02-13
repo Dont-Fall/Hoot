@@ -82,6 +82,11 @@ class QuestionTableViewController: PFQueryTableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         var user = PFUser.currentUser()
+        do {
+            try user?.fetchInBackgroundWithBlock(nil)
+        }catch{
+            //nothing
+        }
         if user == nil{
             self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
         }else if user?["emailVerified"] as? Bool  == false {
@@ -90,6 +95,10 @@ class QuestionTableViewController: PFQueryTableViewController {
             print("nothing")
             //Nothing
         }
+        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+        let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
+        let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
+        self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
         self.loadObjects()
         self.tableView.reloadData()
     }
@@ -97,6 +106,12 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        var currentUser = PFUser.currentUser()
+        do {
+            try currentUser?.fetchInBackgroundWithBlock(nil)
+        }catch{
+            //nothing
+        }
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
         let questionSubjectBtn:UIBarButtonItem = UIBarButtonItem(title: "Subject", style: .Plain, target: self, action: "questionSubject")
