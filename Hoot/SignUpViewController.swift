@@ -97,9 +97,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "")
         do {
             try signup.signUpUser()
-//            let alert = signUpSuccessAlert()
-//            presentViewController(alert, animated: true, completion: nil)
-            self.performSegueWithIdentifier("signUpSuccess", sender: self)
+            let signin = SignIn(user: signUpUsernameTF.text!, pass: signUpPasswordTF.text!)
+            do {
+                try signin.signInUser()
+                self.performSegueWithIdentifier("signUpSuccess", sender: self)
+            }catch let error as Error {
+                //dismissKeyboard()
+                errorLabel.text = error.description
+            } catch {
+                errorLabel.text = "Sorry, something went\n wrong please try again."
+            }
         }catch let error as Error {
             //dismissKeyboard()
             errorLabel.text = error.description
@@ -117,7 +124,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     //OPTIONAL
     func signUpSuccessAlert() -> UIAlertController {
         let alertview = UIAlertController(title: "Sign up Successful", message: "Now you can log in for complete access.", preferredStyle: .Alert)
-        alertview.addAction(UIAlertAction(title: "L ogin", style: .Default, handler: { (alertAction) ->Void in self.dismissViewControllerAnimated(true, completion: nil) }))
+        alertview.addAction(UIAlertAction(title: "Login", style: .Default, handler: { (alertAction) ->Void in self.dismissViewControllerAnimated(true, completion: nil) }))
         alertview.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
         return alertview

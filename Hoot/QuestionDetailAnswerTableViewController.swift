@@ -53,6 +53,7 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
         self.navigationItem.setLeftBarButtonItem(questionAnswerBackBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        tableView.rowHeight = 150
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -120,7 +121,13 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
             cell?.questionAnswerTimestamp.text = String(seconds) + "s"
         }
         if object!["picture"] != nil{
+            cell?.questionAnswerPicIndicator.hidden = false
             cell?.questionAnswerPicIndicator.image = UIImage(named: "CameraIconHoot")
+        }else{
+            cell?.questionAnswerPicIndicator.hidden = true
+        }
+        if object!["correct"].boolValue == true{
+            cell?.questionAnswerCorrectIndicator.image = UIImage(named: "CheckMarkHoot")
         }
         return cell
     }

@@ -26,12 +26,28 @@ class VerifyEmailViewController: UIViewController {
     //Mark: Actions Outlet
     @IBAction func verifiedBtn(sender: AnyObject) {
         var currentUser = PFUser.currentUser()
-        if currentUser?["emailVerified"] as? Bool  == false {
-            let alert = UIAlertController(title: "Uh-Oh!", message: "You haven't verified your email yet!", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            presentViewController(alert, animated: true, completion: nil)
-        }else{
-            self.performSegueWithIdentifier("verifyToMainSegue", sender: self)
+        do {
+            try currentUser?.fetch()
+        }catch{
+            //nothing
+        }
+        var verifiedCheck = currentUser!["emailVerified"] as? Bool
+        currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if error == nil {
+                print(verifiedCheck)
+                if verifiedCheck  == false {
+                    let alert = UIAlertController(title: "Uh-Oh!", message: "You haven't verified your email yet!", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }else{
+                    UIApplication.sharedApplication().statusBarStyle = .LightContent
+                    self.navigationController?.navigationBarHidden = false
+                    self.tabBarController?.tabBar.hidden = false
+                    self.navigationController?.popViewControllerAnimated(true)
+                }
+            }else{
+            print("Error")
+            }
         }
     }
     @IBAction func resendBtn(sender: AnyObject) {

@@ -97,7 +97,6 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(PFUser.currentUser()!["emailVerified"])
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
         //navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)

@@ -18,7 +18,7 @@ class QuestionAnswer: NSObject {
     }
     
     func hasNoEmptyFields() -> Bool{
-        if userAnswer!.isEmpty{
+        if !userAnswer!.isEmpty{
             return true
         }else{
             return false

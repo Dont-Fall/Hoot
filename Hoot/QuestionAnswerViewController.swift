@@ -112,12 +112,17 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         answer["askedBy"] = asker
         answer["reportNumber"] = 0
         answer["reported"] = false
+        answer["hasPic"] = true
         //PIC
-        let imageData = UIImageJPEGRepresentation(self.questionAnswerPicPreview.image!,0.5)
-        let imageFile = PFFile(name:"image.jpeg", data:imageData!)
-        answer.setObject(imageFile!, forKey: "picture")
-        
         var questionAnswer = QuestionAnswer(text: questionAnswerAnswerTV.text!)
+        if questionAnswerPicPreview.image != nil{
+            answer["hasPic"] = true
+            let imageData = UIImageJPEGRepresentation(self.questionAnswerPicPreview.image!,0.5)
+            let imageFile = PFFile(name:"image.jpeg", data:imageData!)
+            answer.setObject(imageFile!, forKey: "picture")
+        }else{
+            answer["hasPic"] = false
+        }
         do {
             try questionAnswer.questionAnswerAlert()
             //MARK: Save Question
