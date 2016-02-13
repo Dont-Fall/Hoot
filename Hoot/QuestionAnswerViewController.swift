@@ -148,9 +148,8 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
                     }
                     let push = PFPush()
                     push.setChannel(String(self.currentObject!["pushCode"]))
-                    push.setMessage("Someone has answered your question for course \(self.currentObject!["course"])")
+                    push.setMessage("Someone has answered your question for course '\(self.currentObject!["course"])'!")
                     push.sendPushInBackground()
-                    //self.questionAnswerAnswerTV.removeObserver(self, forKeyPath: "contentSize")
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
                     print("Error")
