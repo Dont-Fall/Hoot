@@ -176,7 +176,9 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                                 print("Error")
                             }
                         }
-                        //                    self.actInd.startAnimating()
+                        let currentInstallation = PFInstallation.currentInstallation()
+                        currentInstallation.addUniqueObject(randomCode, forKey: "channels")
+                        currentInstallation.saveInBackground()
                         self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
                     } else {
                         print("Error")

@@ -20,7 +20,9 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
     //Labels
     @IBOutlet var classAskQuestionCourseCount: UILabel!
     @IBOutlet var askQuestionQuestionCount: UILabel!
-
+    
+    var className: String?
+    
     //Picture Preview
     @IBOutlet var classAskQuestionPicPreview: UIImageView!
     //Add Picture Button
@@ -82,10 +84,13 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         classQuestion["topic"] = classAskQuestionCourseTF.text
         classQuestion["school"] = currentUser!.objectForKey("school")
         classQuestion["code"] = currentUser!.objectForKey("currentGroupCode")
+        classQuestion["classNameTag"] = className
         classQuestion["reportNumber"] = 0
         classQuestion["reported"] = false
         classQuestion["answerCount"] = 0
         classQuestion["hasPic"] = true
+        var randomCode = randomNumber()
+        classQuestion["pushCode"] = randomCode
         
         if classAskQuestionPicPreview.image != nil{
             classQuestion["hasPic"] = true
@@ -102,7 +107,6 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                     if error == nil {
                         print("Yp")
                         // Success, no creating error.
-                        self.navigationController?.popViewControllerAnimated(true)
                         currentUser!.incrementKey("points", byAmount: 5)
                         currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
@@ -112,7 +116,11 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                                 print("Error")
                             }
                         }
-                    } else {
+                        let currentInstallation = PFInstallation.currentInstallation()
+                        currentInstallation.addUniqueObject(randomCode, forKey: "channels")
+                        currentInstallation.saveInBackground()
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }else {
                     }
                 }
             //Error Caught Alert Settings
@@ -141,6 +149,9 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                                 print("Error")
                             }
                         }
+                        let currentInstallation = PFInstallation.currentInstallation()
+                        currentInstallation.addUniqueObject(randomCode, forKey: "channels")
+                        currentInstallation.saveInBackground()
                         self.navigationController?.popViewControllerAnimated(true)
                     }else {
                     }
@@ -184,11 +195,24 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         }
     }
 
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func randomNumber() -> String{
+        let alphabet =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" as NSString
+        var i = 10
+        var randomString = "C"
+        while (i > 0){
+            var num = arc4random_uniform(10)
+            var alphanum = Int(arc4random_uniform(52))
+            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            randomString = randomString + letter
+            randomString = randomString + String(num)
+            i = i - 1
+        }
+        return randomString
     }
     
 }

@@ -138,6 +138,9 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
                         print("Error")
                     }
                 }
+                let push = PFPush()
+                push.setChannel(String(self.currentObject!["pushCode"]))
+                push.setMessage("Someone has answered your question in class '\(self.currentObject!["classNameTag"])'!")
                 self.navigationController?.popViewControllerAnimated(true)
             } else {
                 print("Error")

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hoot/AskQuestionViewController.swift"
-            timestampString = "477092108.870579"
+            timestampString = "477104537.4947"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "randomNumber()"
             landmarkType = "5">
          </BreakpointContent>

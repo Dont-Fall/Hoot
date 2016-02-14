@@ -105,6 +105,7 @@ class ClassesTableViewController: PFQueryTableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
                 detailScene.currentObject = (objects![row] as? PFObject)
+                detailScene.className = String(objects![row]["name"])
             }
         }
     }

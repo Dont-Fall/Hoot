@@ -22,6 +22,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     //Segment Controller
     let scItems = ["Asked", "Solved"]
     var customSC = UISegmentedControl()
+    var className: String?
 
     
     // Initialise the PFQueryTable tableview
@@ -206,6 +207,10 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
                 let row = Int(indexPath.row)
                 detailScene.currentObject = (objects![row] as? PFObject)
             }
+        }
+        if segue.identifier == "classComposeSegue" {
+            var detailScene = segue.destinationViewController as! ClassAskQuestionViewController
+            detailScene.className = className
         }
     }
     
