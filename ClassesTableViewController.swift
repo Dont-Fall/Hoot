@@ -159,7 +159,6 @@ class ClassesTableViewController: PFQueryTableViewController {
             self.tableView.reloadData()
             tableView.endUpdates()
         }
-        
     }
     
     func cancelDeleteClass(alertAction: UIAlertAction!) {

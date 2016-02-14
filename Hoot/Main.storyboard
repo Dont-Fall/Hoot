@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="We've all been there.  Just enter your email below to start the password reset process." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-tL-g6N">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="We've all been there.  Just enter your email below to start the password reset process." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-tL-g6N">
                                 <rect key="frame" x="20" y="50" width="560" height="130"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-iQ-y3i">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-iQ-y3i">
                                 <rect key="frame" x="200" y="278" width="90" height="40"/>
                                 <animations/>
                                 <constraints>
@@ -45,7 +45,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="2kl-jz-thw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tH4-G3-RlH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tH4-G3-RlH">
                                 <rect key="frame" x="310" y="278" width="90" height="40"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
@@ -58,7 +58,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="CvJ-99-eve"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-lJ-GSa">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-lJ-GSa">
                                 <rect key="frame" x="20" y="214" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -108,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Select the state your school resides in below." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kng-zH-JEM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Select the state your school resides in below." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kng-zH-JEM">
                                 <rect key="frame" x="180" y="70" width="240" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,11 +119,11 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dE-IH-Enq">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dE-IH-Enq">
                                 <rect key="frame" x="20" y="312" width="560" height="268"/>
                                 <animations/>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Alabama" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="nWZ-MO-p6o">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Alabama" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="nWZ-MO-p6o">
                                 <rect key="frame" x="180" y="214" width="240" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -132,7 +132,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OF-Fs-Eg9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OF-Fs-Eg9">
                                 <rect key="frame" x="310" y="259" width="110" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -145,7 +145,7 @@
                                     <action selector="stateSelectNextBtn:" destination="JnT-aT-YR9" eventType="touchUpInside" id="iBd-S9-hTb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sm-GZ-tl9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sm-GZ-tl9">
                                 <rect key="frame" x="180" y="259" width="110" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -204,7 +204,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-Tq-gTq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-Tq-gTq">
                                 <rect key="frame" x="200" y="250" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -214,7 +214,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-tJ-Pme">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-tJ-Pme">
                                 <rect key="frame" x="200" y="210" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -247,7 +247,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HootLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SKY-BE-5XG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HootLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SKY-BE-5XG">
                                 <rect key="frame" x="213" y="20" width="175" height="175"/>
                                 <animations/>
                                 <constraints>
@@ -255,7 +255,7 @@
                                     <constraint firstAttribute="width" constant="175" id="Ify-ex-ITJ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrO-8a-SVb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrO-8a-SVb">
                                 <rect key="frame" x="200" y="284" width="90" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,7 +272,7 @@
                                     <action selector="logInSignUpBtn:" destination="Ooo-eL-nsz" eventType="touchUpInside" id="uwz-mu-2Pp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-xk-aXm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-xk-aXm">
                                 <rect key="frame" x="310" y="284" width="90" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQR-df-O5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="-368"/>
+            <point key="canvasLocation" x="379" y="-296"/>
         </scene>
         <!--Add School View Controller-->
         <scene sceneID="F54-CA-Wwk">
@@ -336,7 +336,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-Gv-KG2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-Gv-KG2">
                                 <rect key="frame" x="20" y="223" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -345,7 +345,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmp-o2-qdC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmp-o2-qdC">
                                 <rect key="frame" x="200" y="274" width="90" height="40"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
@@ -357,7 +357,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="BTZ-aj-CRe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ3-ol-MV4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ3-ol-MV4">
                                 <rect key="frame" x="310" y="274" width="90" height="40"/>
                                 <animations/>
                                 <constraints>
@@ -373,14 +373,14 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="nL1-xJ-7al"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Please provide the name and state of your college below and it will be added to the list as soon as we verify its authenticity." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-fv-QPZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Please provide the name and state of your college below and it will be added to the list as soon as we verify its authenticity." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-fv-QPZ">
                                 <rect key="frame" x="20" y="50" width="560" height="130"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-Pw-nnN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-Pw-nnN">
                                 <rect key="frame" x="20" y="185" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -416,6 +416,7 @@
                         <outlet property="addSchoolSchoolTF" destination="GIx-Gv-KG2" id="wRI-4h-ePX"/>
                         <outlet property="addSchoolStateTF" destination="x2Y-Pw-nnN" id="wVL-yi-2UH"/>
                         <segue destination="Twi-Vs-zzb" kind="show" identifier="addSchoolToSignUpSegue" id="Uk9-OG-j9Q"/>
+                        <segue destination="Ooo-eL-nsz" kind="show" identifier="addScholToLogInSegue" id="I3p-ea-aPt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFM-le-0Vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -571,7 +572,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-xo-2Ic">
+                            <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="qm7-xo-2Ic">
                                 <rect key="frame" x="200" y="41" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -591,7 +592,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-3T-r6e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-3T-r6e">
                                 <rect key="frame" x="200" y="93" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -614,7 +615,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="VeL-aI-R3Q"/>
-                                    <segue destination="Ooo-eL-nsz" kind="show" id="85I-zB-BNX"/>
+                                    <segue destination="Ooo-eL-nsz" kind="show" identifier="addScholToLogInSegue" id="85I-zB-BNX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-rm-M0h">
@@ -624,7 +625,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-lJ-XKj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-lJ-XKj">
                                 <rect key="frame" x="200" y="141" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -643,7 +644,7 @@
                                     <constraint firstAttribute="width" constant="560" id="qem-Kf-NcS"/>
                                 </constraints>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="H9C-P6-uU6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="H9C-P6-uU6">
                                 <rect key="frame" x="200" y="186" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -723,7 +724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fax-zV-aue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349" y="-368"/>
+            <point key="canvasLocation" x="1349" y="-344"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="HdS-k6-vB1">
@@ -2648,9 +2649,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Topic" textAlignment="natural" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="zKh-0e-Rxk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Topic" textAlignment="natural" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="zKh-0e-Rxk">
                                 <rect key="frame" x="24" y="72" width="553" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FCS-yj-CMy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
@@ -2676,7 +2680,7 @@
                                     <constraint firstAttribute="width" secondItem="lry-Nk-mHh" secondAttribute="height" multiplier="67:63" id="ZCy-nR-A5Y"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="??" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bw-ig-pMX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bw-ig-pMX">
                                 <rect key="frame" x="555" y="76" width="17" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
@@ -2693,7 +2697,7 @@
                                 <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What are you having trouble with?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oRs-Kr-Yfp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What are you having trouble with?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oRs-Kr-Yfp">
                                 <rect key="frame" x="24" y="104" width="553" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2705,20 +2709,24 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="leading" secondItem="Vrt-94-rPi" secondAttribute="leading" id="7Yi-ut-sdN"/>
                             <constraint firstItem="lry-Nk-mHh" firstAttribute="leading" secondItem="Uos-xe-vXZ" secondAttribute="leadingMargin" constant="11" id="D7e-zN-gb6"/>
-                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="centerX" secondItem="Uos-xe-vXZ" secondAttribute="centerX" id="I4j-Qj-TUH"/>
-                            <constraint firstItem="2Bw-ig-pMX" firstAttribute="baseline" secondItem="zKh-0e-Rxk" secondAttribute="baseline" id="MbN-la-hJi"/>
+                            <constraint firstItem="lry-Nk-mHh" firstAttribute="top" secondItem="oRs-Kr-Yfp" secondAttribute="bottom" constant="3" id="DOo-Lr-ilB"/>
+                            <constraint firstItem="oRs-Kr-Yfp" firstAttribute="top" secondItem="zKh-0e-Rxk" secondAttribute="bottom" constant="2" id="Fbb-Yu-3bg"/>
+                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="centerX" secondItem="Uos-xe-vXZ" secondAttribute="centerX" id="Lsl-f5-aiH"/>
+                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="top" secondItem="Lul-bk-YtK" secondAttribute="bottom" constant="8" symbolic="YES" id="Nri-s0-iAR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Bw-ig-pMX" secondAttribute="trailing" constant="8" id="RKB-hI-ulD"/>
+                            <constraint firstItem="oRs-Kr-Yfp" firstAttribute="leading" secondItem="zKh-0e-Rxk" secondAttribute="leading" id="SZe-Gg-hzb"/>
+                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="centerY" secondItem="2Bw-ig-pMX" secondAttribute="centerY" id="Ttk-B3-5iI"/>
+                            <constraint firstItem="oRs-Kr-Yfp" firstAttribute="leading" secondItem="Vrt-94-rPi" secondAttribute="leading" id="X3z-Zp-e9h"/>
                             <constraint firstItem="2Bw-ig-pMX" firstAttribute="top" secondItem="Lul-bk-YtK" secondAttribute="bottom" constant="12" id="Y5p-2h-sEf"/>
+                            <constraint firstItem="oRs-Kr-Yfp" firstAttribute="trailing" secondItem="cLt-4y-wY6" secondAttribute="trailing" id="YUF-uX-aJY"/>
+                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="leading" secondItem="Uos-xe-vXZ" secondAttribute="leadingMargin" constant="4" id="c3Z-nM-8kQ"/>
                             <constraint firstItem="cLt-4y-wY6" firstAttribute="bottom" secondItem="Vrt-94-rPi" secondAttribute="bottom" id="fur-3I-6kc"/>
                             <constraint firstItem="UuF-05-WdE" firstAttribute="top" secondItem="lry-Nk-mHh" secondAttribute="bottom" constant="253" id="i7w-Ah-wfP"/>
-                            <constraint firstItem="2Bw-ig-pMX" firstAttribute="centerY" secondItem="zKh-0e-Rxk" secondAttribute="centerY" id="kHF-5x-86d"/>
-                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="trailing" secondItem="cLt-4y-wY6" secondAttribute="trailing" id="mES-MY-sYA"/>
                             <constraint firstItem="UuF-05-WdE" firstAttribute="top" secondItem="cLt-4y-wY6" secondAttribute="bottom" constant="224" id="qoW-Kj-GpU"/>
-                            <constraint firstItem="zKh-0e-Rxk" firstAttribute="leading" secondItem="Uos-xe-vXZ" secondAttribute="leadingMargin" constant="4" id="t4T-jX-5oh"/>
                             <constraint firstItem="lry-Nk-mHh" firstAttribute="centerX" secondItem="Vrt-94-rPi" secondAttribute="centerX" id="xSo-ci-8bT"/>
                             <constraint firstItem="cLt-4y-wY6" firstAttribute="top" secondItem="Vrt-94-rPi" secondAttribute="top" id="ydB-jN-HKF"/>
+                            <constraint firstItem="oRs-Kr-Yfp" firstAttribute="trailing" secondItem="zKh-0e-Rxk" secondAttribute="trailing" id="zVG-yI-1k2"/>
                         </constraints>
                     </view>
                     <connections>
@@ -3721,17 +3729,17 @@
         <image name="TFBarH30.png" width="600" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LpV-FB-yTG"/>
-        <segue reference="k6p-AY-O9o"/>
-        <segue reference="gWS-jR-3bg"/>
-        <segue reference="GEX-N6-J3L"/>
-        <segue reference="p1r-FN-531"/>
-        <segue reference="Rzp-QO-B34"/>
-        <segue reference="6bh-sc-lru"/>
-        <segue reference="86e-Aa-5ZQ"/>
         <segue reference="9la-kl-ppR"/>
+        <segue reference="I3p-ea-aPt"/>
+        <segue reference="GEX-N6-J3L"/>
+        <segue reference="86e-Aa-5ZQ"/>
+        <segue reference="6bh-sc-lru"/>
+        <segue reference="gWS-jR-3bg"/>
         <segue reference="kG6-ei-V4G"/>
-        <segue reference="9EJ-RU-csy"/>
+        <segue reference="Rzp-QO-B34"/>
         <segue reference="oP8-Ch-mkz"/>
+        <segue reference="k6p-AY-O9o"/>
+        <segue reference="LpV-FB-yTG"/>
+        <segue reference="9EJ-RU-csy"/>
     </inferredMetricsTieBreakers>
 </document>

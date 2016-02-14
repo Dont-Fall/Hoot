@@ -48,6 +48,7 @@
 		9634F9451C3EC4B40086D799 /* ClassAskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9441C3EC4B40086D799 /* ClassAskQuestionViewController.swift */; };
 		9634F9471C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9461C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift */; };
 		9634F9491C3EE2390086D799 /* ClassQuestionPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634F9481C3EE2390086D799 /* ClassQuestionPicViewController.swift */; };
+		964C27C51C7148D000481B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964C27C41C7148D000481B61 /* Main.storyboard */; };
 		964F22B51C46DAA80042A335 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964F22B31C46DAA80042A335 /* Bolts.framework */; };
 		964F22B61C46DAA80042A335 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964F22B41C46DAA80042A335 /* Parse.framework */; };
 		964F22B91C46ECFE0042A335 /* MyQuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F22B81C46ECFE0042A335 /* MyQuestionsTableViewController.swift */; };
@@ -91,7 +92,6 @@
 		96FAF0FB1C36F1140092D096 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */; };
 		96FAF1481C3862C60092D096 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF1471C3862C60092D096 /* QuestionTableViewController.swift */; };
 		96FAF14A1C386EA40092D096 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */; };
-		96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FAF14B1C387AAA0092D096 /* Main.storyboard */; };
 		96FAF14F1C3880080092D096 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF14E1C3880080092D096 /* QuestionTableViewCell.swift */; };
 		E41209651C44AC0D006827E7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209641C44AC0D006827E7 /* Enums.swift */; };
 		E41209671C44AC18006827E7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41209661C44AC18006827E7 /* SignUp.swift */; };
@@ -175,6 +175,7 @@
 		9634F9461C3EDDDF0086D799 /* ClassQuestionDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionDetailedViewController.swift; sourceTree = "<group>"; };
 		9634F9481C3EE2390086D799 /* ClassQuestionPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassQuestionPicViewController.swift; sourceTree = "<group>"; };
 		9648306B1C45751500CE29F3 /* Hoot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoot-Bridging-Header.h"; sourceTree = "<group>"; };
+		964C27C41C7148D000481B61 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		964F22B31C46DAA80042A335 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		964F22B41C46DAA80042A335 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		964F22B81C46ECFE0042A335 /* MyQuestionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuestionsTableViewController.swift; sourceTree = "<group>"; };
@@ -218,7 +219,6 @@
 		96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		96FAF1471C3862C60092D096 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		96FAF1491C386EA40092D096 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
-		96FAF14C1C387AAA0092D096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96FAF14E1C3880080092D096 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		E41209641C44AC0D006827E7 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E41209661C44AC18006827E7 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -304,8 +304,8 @@
 		960945DA1C348C660000282A /* Hoot */ = {
 			isa = PBXGroup;
 			children = (
+				964C27C41C7148D000481B61 /* Main.storyboard */,
 				960945DB1C348C670000282A /* AppDelegate.swift */,
-				96FAF14B1C387AAA0092D096 /* Main.storyboard */,
 				E41209631C44ABED006827E7 /* Models */,
 				E41209621C44AB92006827E7 /* Controllers */,
 				E4F708C61C449D1D0008B4F8 /* Supporting Files */,
@@ -627,12 +627,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				96BADAA21C66BF700079538D /* Bar1.png in Resources */,
-				96FAF14D1C387AAA0092D096 /* Main.storyboard in Resources */,
 				96A5A82B1C6554C1004866AE /* BannerHoot.png in Resources */,
 				1A568BA21C4C22A50047526E /* Calendar.png in Resources */,
 				96A5A8291C65492F004866AE /* ArrowHoot.png in Resources */,
 				1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */,
 				1A568B881C4C0D000047526E /* ConferenceCall40.png in Resources */,
+				964C27C51C7148D000481B61 /* Main.storyboard in Resources */,
 				9656F3251C61FEA30038D864 /* HootLogoWhite.png in Resources */,
 				9656F3231C61F5290038D864 /* TFBarH30.png in Resources */,
 				964FD53C1C613391000D6820 /* CameraIconHoot.png in Resources */,
@@ -770,14 +770,6 @@
 				960945E51C348C670000282A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		96FAF14B1C387AAA0092D096 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96FAF14C1C387AAA0092D096 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -38,10 +38,17 @@ class AddSchoolViewController: UIViewController {
         school.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
-                // The object has been saved.
+                let alert = UIAlertController(title: "Sent", message: "We will add the school some time today.  Please check back later.", preferredStyle: .Alert)
+                let okAction = UIAlertAction(title: "Ok", style: .Default, handler: self.okSchool)
+                alert.addAction(okAction)
+                self.presentViewController(alert, animated: true, completion: nil)
             } else {
                 // There was a problem, check error.description
             }
         }
+    }
+    
+    func okSchool(alertAction: UIAlertAction!) {
+        self.performSegueWithIdentifier("addScholToLogInSegue", sender: self)
     }
 }

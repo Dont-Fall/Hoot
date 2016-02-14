@@ -20,12 +20,12 @@ class ClassQuestionPicViewController: UIViewController, UIScrollViewDelegate {
         //MARK: Nav Bar Customize
         let questionPicBackBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "questionPicBack")
         self.navigationItem.setLeftBarButtonItem(questionPicBackBtn, animated: true)
-        //UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.hidesBarsOnTap = true
         self.tabBarController?.tabBar.hidden = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 0.0)
         classQuestionLargeView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -34,7 +34,6 @@ class ClassQuestionPicViewController: UIViewController, UIScrollViewDelegate {
             
             classQuestionLargeView.image = newPic
         }
-
         //Zoom
         self.zoomScrollView.minimumZoomScale = 1.0
         self.zoomScrollView.maximumZoomScale = 6.0

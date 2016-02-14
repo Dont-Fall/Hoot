@@ -163,5 +163,53 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AddClassViewController.swift"
+            timestampString = "477185079.137133"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "addClassAdd()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoot.AddClassViewController.(addClassAdd (Hoot.AddClassViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "Hoot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fc11jake/Documents/GitHub/Hoot/AddClassViewController.swift"
+                  timestampString = "477185080.044484"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "936">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoot.AddClassViewController.(addClassAdd (Hoot.AddClassViewController) -&gt; () -&gt; ()).(closure #1).(closure #2)"
+                  moduleName = "Hoot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fc11jake/Documents/GitHub/Hoot/AddClassViewController.swift"
+                  timestampString = "477185080.068038"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

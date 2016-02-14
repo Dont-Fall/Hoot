@@ -147,9 +147,9 @@ class AddClassViewController: UIViewController {
                             //Unique Code Exists, Alert User
                             print("Error, Class Code Already Exists")
                             //Delete Eventually
-                            let alert = UIAlertController(title: "Not Unique", message:"Sorry, this code is not unique, please try again!", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-                            self.presentViewController(alert, animated: true){}
+                            let alert = UIAlertController(title: "Signed Up", message: "Can't wait to see you there!", preferredStyle: .Alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
                         }
                     }
                 } else {
@@ -168,16 +168,5 @@ class AddClassViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
