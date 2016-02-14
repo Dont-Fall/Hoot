@@ -137,6 +137,10 @@ class EventsTableViewController: PFQueryTableViewController {
         }else{
             cell?.eventTimeStamp.text = String(seconds) + "s"
         }
+        let push = PFPush()
+        let channels = [String(object!["pushCodeOwner"]), String(object!["pushCodeOwner"])]
+        push.setChannels(channels)
+        push.setMessage("The event you signed up for '\(object!["name"])' is less than an hour away!")
         //Time Until Event
         let secondsToGo = NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: (object?["dateAndTime"])! as! NSDate, options: []).second
         if secondsToGo > 0{
@@ -157,6 +161,11 @@ class EventsTableViewController: PFQueryTableViewController {
             }else if hoursToGo >= 1 {
                 cell?.eventTimeToGo.text = String(hoursToGo) + "h To Go"
             }else if minutesToGo >= 1 {
+                if object!["warningSent"].boolValue == false{
+                    push.sendPushInBackground()
+                    object!["warningSent"] = true
+                    object!.saveInBackground()
+                }
                 cell?.eventTimeToGo.text = String(minutesToGo) + "m To Go"
             }else{
                 cell?.eventTimeToGo.text = String(secondsToGo) + "s To Go"

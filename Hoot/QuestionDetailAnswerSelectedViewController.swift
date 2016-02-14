@@ -29,7 +29,10 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
         currentObject!["correct"] = true
         currentObject!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
-                print("Answer Updated")
+                let push = PFPush()
+                push.setChannel(String(self.currentObject!["pushCode"]))
+                push.setMessage("Someone has marked your answer correct for course '\(self.currentObject!["courseTag"])'!")
+                push.sendPushInBackground()
             } else {
                 print("Error")
             }

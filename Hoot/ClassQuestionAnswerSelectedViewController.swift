@@ -27,11 +27,16 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
         currentObject!["correct"] = true
         currentObject!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
-                print("Answer Updated")
+                let push = PFPush()
+                push.setChannel(String(self.currentObject!["pushCode"]))
+                push.setMessage("Someone has marked your answer correct in class '\(self.currentObject!["classNameTag"])'!")
+                push.sendPushInBackground()
             } else {
                 print("Error")
             }
         }
+        
+        //Fix to segue object later***********
         var query = PFQuery(className:"ClassQuestion")
         query.whereKey("objectId", equalTo: currentObject!["idNumber"])
         query.findObjectsInBackgroundWithBlock {
@@ -176,14 +181,5 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
         self.actInd.stopAnimating()
     }
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

@@ -94,7 +94,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func signUpCreateBtn(sender: AnyObject) {
         errorLabel.text = ""
         
-        let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "", tokens: 10)
+        let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "", tokens: 10, dailyTokenAvail: true, dailyCD: NSDate())
         do {
             try signup.signUpUser()
             let signin = SignIn(user: signUpUsernameTF.text!, pass: signUpPasswordTF.text!)

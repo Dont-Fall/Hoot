@@ -107,6 +107,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
     //Create Event Function
     func createEventCreate() {
         var currentUser = PFUser.currentUser()
+        var username = currentUser!.username!
         var dateFormatter = NSDateFormatter()
         var calander = NSCalendar.currentCalendar()
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
@@ -119,7 +120,12 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         event["location"] = createEventLocationTF.text
         event["reportNumber"] = 0
         event["reported"] = false
-        event["attending"] = []
+        event["attending"] = [String(username)]
+        var randomCode = randomNumber()
+        event["pushCode"] = randomCode
+        var randomCodeOwner = randomNumber()
+        event["pushCodeOwner"] = randomCodeOwner
+        event["warningSent"] = false
         
         
         var createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDatePicker.date)
@@ -132,7 +138,6 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
                 if error == nil {
                     print("Yp")
                     // Success, no creating error.
-                    self.navigationController?.popViewControllerAnimated(true)
                     currentUser!.incrementKey("points", byAmount: 5)
                     print(currentUser!.objectForKey("points"))
                     self.tabBarController?.tabBar.hidden = false
@@ -143,6 +148,10 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
                             print("Error")
                         }
                     }
+                    let currentInstallation = PFInstallation.currentInstallation()
+                    currentInstallation.addUniqueObject(randomCodeOwner, forKey: "channels")
+                    currentInstallation.saveInBackground()
+                    self.navigationController?.popViewControllerAnimated(true)
                 } else {
                     print("Error")
                 }
@@ -179,6 +188,21 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
             createEventTV.text = ""
             createEventTV.textColor = UIColor.blackColor()
         }
+    }
+    
+    func randomNumber() -> String{
+        let alphabet =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" as NSString
+        var i = 10
+        var randomString = "C"
+        while (i > 0){
+            var num = arc4random_uniform(10)
+            var alphanum = Int(arc4random_uniform(52))
+            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            randomString = randomString + letter
+            randomString = randomString + String(num)
+            i = i - 1
+        }
+        return randomString
     }
 
 

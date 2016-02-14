@@ -8,8 +8,24 @@
 
 import UIKit
 
-class StateSelectViewController: UIViewController {
+class StateSelectViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate {
     
+    @IBOutlet var stateSelectTV: UITextView!
+    @IBOutlet var stateSelectTF: UITextField!
+    @IBOutlet var stateSelectPicker: UIPickerView!
+    @IBAction func stateSelectNextBtn(sender: AnyObject) {
+        if stateSelectTF.text?.isEmpty == true{
+            let alert = UIAlertController(title: "Select a State", message: "You must select a state before moving on.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        }else{
+            self.performSegueWithIdentifier("stateToTermSegue", sender: self)
+        }
+    }
+    
+    @IBAction func stateSelectBackBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("stateBackSegue", sender: self)
+    }
     var stateList = [
     "Alabama",
     "Alaska",
@@ -65,6 +81,10 @@ class StateSelectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Delegate Text Fields/Pickers
+        self.stateSelectPicker.delegate = self
+        self.stateSelectPicker.dataSource = self
+        stateSelectTF.delegate = self
         UIApplication.sharedApplication().statusBarStyle = .Default
     }
 
@@ -73,15 +93,30 @@ class StateSelectViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
+        return 1
     }
-    */
+    
+    //Returns the # of rows in each component..
+    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int{
+        return stateList.count
+    }
+    
+    //Determins Picker View Row
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+        return stateList[row]
+    }
+    
+    //Assigns Picker View to Text Field
+    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int){
+        stateSelectTF.text = stateList[row]
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "stateToTermSegue" {
+            var detailScene = segue.destinationViewController as! TermsViewController
+            detailScene.state = stateSelectTF.text
+        }
+    }
 
 }

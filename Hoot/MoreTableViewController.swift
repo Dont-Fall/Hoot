@@ -11,11 +11,12 @@ import Social
 
 class MoreTableViewController: UITableViewController {
     
-    var sectionZero = ["10 Tokens For 100 Points", "20 Tokens For 250 Points", "50 Tokens For 400 Points"]
+    var sectionZero = ["Daily Token","10 Tokens For 100 Points", "20 Tokens For 250 Points", "50 Tokens For 400 Points"]
     var sectionOne = ["Twitter", "Facebook", "App Store"]
     var sectionTwo = ["Rules", "Contact Us"]
     var sectionThree = ["My Questions", "My Class Questions", "Log Out"]
     var points = String()
+    var cdTime: String!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
@@ -49,12 +50,16 @@ class MoreTableViewController: UITableViewController {
         self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.title = "More"
+        //Daily Token
+        let date = NSDate()
+        let hoursPassed = NSCalendar.currentCalendar().components(.Hour, fromDate: date, toDate: (currentUser!["dailyCD"])! as! NSDate, options: []).hour
+        if abs(hoursPassed) >= 24{
+            currentUser?["dailyTokenAvail"] = true
+            currentUser?.saveInBackground()
+        }else{
+            cdTime = String(24+hoursPassed)
+        }
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,7 +74,7 @@ class MoreTableViewController: UITableViewController {
         // Return the number of rows in the section.
         
         if section == 0 {
-            return 3
+            return 4
         }else if section == 1 {
             return 3
         }else if section == 2 {
@@ -116,6 +121,25 @@ class MoreTableViewController: UITableViewController {
         if indexPath.section == 0{
             var currentUser = PFUser.currentUser()
             if row == 0{
+                if currentUser?.objectForKey("dailyTokenAvail")!.boolValue == true{
+                    currentUser?.incrementKey("tokens", byAmount: 1)
+                    currentUser?["dailyTokenAvail"] = false
+                    currentUser?.saveInBackground()
+                    do {
+                        try currentUser?.fetchInBackgroundWithBlock(nil)
+                    }catch{
+                        //nothing
+                    }
+                    let alert = UIAlertController(title: "Token Obtained", message: "You now have 1 more question token.", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    presentViewController(alert, animated: true, completion: nil)
+                }else{
+                    let alert = UIAlertController(title: "Cool Down", message: "Your daily token isn't available yet, come back in \(cdTime) hours.", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    presentViewController(alert, animated: true, completion: nil)
+                }
+                
+            }else if row == 1{
                 if Int((currentUser?.objectForKey("tokens"))! as! NSNumber) >= 50{
                     let alert = UIAlertController(title: "Max Tokens", message: "You already have over 50 tokens, save your points for some other cool stuff.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
@@ -140,7 +164,7 @@ class MoreTableViewController: UITableViewController {
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
                 }
-            }else if row == 1{
+            }else if row == 2{
                 if Int((currentUser?.objectForKey("tokens"))! as! NSNumber) >= 50{
                     let alert = UIAlertController(title: "Max Tokens", message: "You already have over 50 tokens, save your points for some other cool stuff.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))

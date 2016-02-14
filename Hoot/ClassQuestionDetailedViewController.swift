@@ -135,7 +135,7 @@ class ClassQuestionDetailedViewController: UIViewController {
         }else if segue.identifier == "classQuestionHelpSegue"{
             var detailScene = segue.destinationViewController as! ClassQuestionAnswerViewController
             detailScene.questionID = testID
-            detailScene.asker = classQuestionDetailedUsernameLabel.text
+            detailScene.asker = String(currentObject!["user"])
             detailScene.currentObject = currentObject
         }else if segue.identifier == "classQuestionAnswersSegue" {
             var detailScene = segue.destinationViewController as! ClassQuestionAnswersTableViewController

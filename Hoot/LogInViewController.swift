@@ -20,40 +20,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Label
     @IBOutlet weak var errorLabel: UILabel!
-    
-    var testList = Array<String>()
 
     
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.sharedApplication().statusBarStyle = .Default
-        // Do any additional setup after loading the view, typically from a nib.
-        // Creates the query
-        let schoolQuery = PFQuery(className:"School")
-        schoolQuery.whereKey("approved", equalTo: true)
-        
-        // Starts the download
-        schoolQuery.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                // The find succeeded.
-                print("Successfully retrieved \(objects!.count) tasks.")
-                
-                // Do something with the found objects
-                if let objects = objects{
-                    for object in objects {
-                        var school = object["name"]! as! String
-                        self.testList.append(school)
-                        print("Array: \(self.testList)")
-                    }
-                }
-                
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
-            }
-        }
         
         //TF Delegates
         logInUserTF.delegate = self
@@ -83,20 +55,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     //MARK: Log In
     @IBAction func logInLogInBtn(sender: AnyObject) {
         errorLabel.text = ""
- /*       var user = PFUser()
-        user.username = logInUserTF.text
-        user.password = logInPasswordTF.text
-        PFUser.logInWithUsernameInBackground(logInUserTF.text!, password: logInPasswordTF.text!, block: {
-            (User : PFUser?, Error : NSError?) -> Void in
-            if Error == nil{
-                self.actInd.startAnimating()
-                self.performSegueWithIdentifier("logIn", sender: self)
-                self.actInd.stopAnimating()
-            }else{
-                print("Error")
-            }
-        })
-*/
+        
         let signin = SignIn(user: logInUserTF.text!, pass: logInPasswordTF.text!)
         
         do {
@@ -110,22 +69,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "signUp" {
-            // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! SignUpViewController
-            // Pass the selected object to the destination view controller.
-            detailScene.schoolListUnsorted = testList
-        }
-    }
-    
     @IBAction func logInPasswordResetBtn(sender: AnyObject) {
         self.performSegueWithIdentifier("forgotPasswordSegue", sender: self)
     }
     //Mark: Move to Sign Up
     @IBAction func logInSignUpBtn(sender: AnyObject) {
-//        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("signUp", sender: self)
-//        self.actInd.stopAnimating()
+        self.performSegueWithIdentifier("logInToStateSegue", sender: self)
     }
 }

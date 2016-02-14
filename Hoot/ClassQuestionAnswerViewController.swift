@@ -104,6 +104,9 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         answer["reportNumber"] = 0
         answer["reported"] = false
         answer["hasPic"] = true
+        answer["classNameTag"] = currentObject?["classNameTag"]
+        var randomCode = randomNumber()
+        answer["pushCode"] = randomCode
         //PIC
         var classQuestionAnswer = ClassQuestionAnswer(text: classQuestionAnswerAnswerTV.text!)
         if classQuestionAnswerPicPreview.image != nil{
@@ -116,7 +119,6 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         }
         do {
             try classQuestionAnswer.classQuestionAnswerAlert()
-    
             //MARK: Save Question
             answer.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
@@ -138,9 +140,13 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
                         print("Error")
                     }
                 }
+                let currentInstallation = PFInstallation.currentInstallation()
+                currentInstallation.addUniqueObject(randomCode, forKey: "channels")
+                currentInstallation.saveInBackground()
                 let push = PFPush()
                 push.setChannel(String(self.currentObject!["pushCode"]))
                 push.setMessage("Someone has answered your question in class '\(self.currentObject!["classNameTag"])'!")
+                push.sendPushInBackground()
                 self.navigationController?.popViewControllerAnimated(true)
             } else {
                 print("Error")
@@ -162,6 +168,21 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         }else{
             return false
         }
+    }
+    
+    func randomNumber() -> String{
+        let alphabet =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" as NSString
+        var i = 10
+        var randomString = "C"
+        while (i > 0){
+            var num = arc4random_uniform(10)
+            var alphanum = Int(arc4random_uniform(52))
+            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            randomString = randomString + letter
+            randomString = randomString + String(num)
+            i = i - 1
+        }
+        return randomString
     }
 }
 
