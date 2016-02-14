@@ -46,13 +46,16 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         var index: Int = customSC.selectedSegmentIndex
         var currentUser = PFUser.currentUser()
         let currentUserCode = currentUser!["currentGroupCode"]
+        var currentUserSchool = currentUser!["school"]
         var questionsQuery = PFQuery(className: "ClassQuestion")
         if index == 0 {
+            questionsQuery.whereKey("school", equalTo: (currentUserSchool)!)
             questionsQuery.whereKey("code", equalTo: (currentUserCode)!)
             questionsQuery.whereKey("solved", equalTo: false)
             questionsQuery.orderByDescending("createdAt")
             return questionsQuery
         }else{
+            questionsQuery.whereKey("school", equalTo: (currentUserSchool)!)
             questionsQuery.whereKey("code", equalTo: (currentUserCode)!)
             questionsQuery.whereKey("solved", equalTo: true)
             questionsQuery.orderByDescending("createdAt")

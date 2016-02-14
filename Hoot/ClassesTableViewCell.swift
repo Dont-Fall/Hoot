@@ -12,6 +12,7 @@ class ClassesTableViewCell: PFTableViewCell {
 
     @IBOutlet var classNameLabel: UILabel!
     @IBOutlet var classCourseLabel: UILabel!
+    @IBOutlet var classMembersCount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

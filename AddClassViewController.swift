@@ -34,7 +34,8 @@ class AddClassViewController: UIViewController {
                 //Check To See If Already Member
                 if let objects = objects {
                     for object in objects {
-                        if object["member"] as! String == (currentUser?.username)!{
+                        var memberList = object["members"] as! Array<String>
+                        if memberList.contains((currentUser?.username)!){
                             self.alreadyMember = true
                         }else{
                             //not already member
@@ -44,21 +45,20 @@ class AddClassViewController: UIViewController {
                 //Class Exists, Not Member
                 if objects!.count != 0 && self.alreadyMember == false {
                     var currentUser = PFUser.currentUser()
-                    let newClass = PFObject(className: "Classes")
-                    newClass["course"] = objects![0]["course"] as! String
-                    newClass["name"] = objects![0]["name"] as! String
-                    newClass["school"] = currentUser!.objectForKey("school")
-                    newClass["code"] = self.addClassJoinClassCodeTF.text
-                    newClass["member"] = currentUser!.username
-                    newClass["creator"] = objects![0]["creator"] as! String
-                    //MARK: Save Class
-                    newClass.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                        if error == nil {
-                            // Success, no creating error.
-                            self.navigationController?.popViewControllerAnimated(true)
-                        }else {
-                            //Code Not Valid
-                            print("Error")
+                    if let objects = objects{
+                        for object in objects {
+                            var list = object["members"] as! Array<String>
+                            list.append((currentUser?.username)!)
+                            object["members"] = list
+                            object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                                if error == nil {
+                                    // Success, no creating error.
+                                    self.navigationController?.popViewControllerAnimated(true)
+                                }else {
+                                    //Code Not Valid
+                                    print("Error")
+                                }
+                            }
                         }
                     }
                 //Class Exist, Member
@@ -113,6 +113,7 @@ class AddClassViewController: UIViewController {
         newClass["school"] = currentUser!.objectForKey("school")
         newClass["code"] = addClassClassCodeTF.text
         newClass["member"] = currentUser!.username
+        newClass["members"] = [String(currentUser!.username!)]
         
         var newClassClass = AddClass(name: addClassClassNameTF?.text, course: addClassCourseTF?.text, code: addClassClassCodeTF?.text)
         

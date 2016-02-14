@@ -33,7 +33,10 @@ class ClassesTableViewController: PFQueryTableViewController {
     override func queryForTable() -> PFQuery {
         let currentUser = PFUser.currentUser()!.username!
         var classesQuery = PFQuery(className: "Classes")
-        classesQuery.whereKey("member", equalTo: (currentUser))
+        var list = [currentUser]
+        classesQuery.whereKey("members", containedIn: list)
+        //classesQuery.whereKey("members", containsString: currentUser)
+        //classesQuery.whereKey("member", equalTo: (currentUser))
         classesQuery.orderByDescending("createdAt")
         return classesQuery
     }
@@ -82,6 +85,9 @@ class ClassesTableViewController: PFQueryTableViewController {
         if let capital = object?["course"] as? String {
             cell?.classCourseLabel?.text = capital
             cell?.detailTextLabel?.numberOfLines = 1
+        }
+        if let list = object?["members"] as? Array<String>{
+            cell?.classMembersCount?.text = String(list.count)
         }
         return cell
     }
