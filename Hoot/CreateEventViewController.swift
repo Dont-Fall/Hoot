@@ -138,7 +138,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
             event.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if error == nil {
                     // Success, no creating error.
-                    currentUser!.incrementKey("points", byAmount: 5)
+                    currentUser!.incrementKey("points", byAmount: 10)
                     self.tabBarController?.tabBar.hidden = false
                     PFUser.currentUser()!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                         if error == nil {

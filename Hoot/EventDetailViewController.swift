@@ -111,6 +111,8 @@ class EventDetailViewController: UIViewController {
                     if let attending = self.currentObject!["attending"] as? Array<String>{
                         self.eventDetailAttendingCount.text = "\(String(attending.count)) Attending"
                     }
+                    user!.incrementKey("points", byAmount: 1)
+                    user?.saveInBackground()
                     self.presentViewController(alert, animated: true, completion: nil)
                 } else {
                     //"Error"

@@ -86,6 +86,9 @@ class QuestionTableViewController: PFQueryTableViewController {
         }else if user?["emailVerified"] as? Bool  == false {
             self.performSegueWithIdentifier("emailVerifySegue", sender: self)
         }else{
+            UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+            UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
             let tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
             let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
             let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")

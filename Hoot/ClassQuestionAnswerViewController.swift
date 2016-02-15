@@ -16,7 +16,7 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
     @IBOutlet var classQuestionAnswerAnswerCount: UILabel!
     
     @IBAction func questionAnswerAddPicBtn(sender: AnyObject) {
-        var imagePicker = UIImagePickerController()
+        let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             
@@ -94,8 +94,8 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
     
     //Answer Question FUnction
     func answerQuestionAnswerQuestion() {
-        var currentUser = PFUser.currentUser()
-        var answer = PFObject(className: "ClassAnswer")
+        let currentUser = PFUser.currentUser()
+        let answer = PFObject(className: "ClassAnswer")
         answer["answer"] = classQuestionAnswerAnswerTV.text
         answer["user"] = currentUser!.username
         answer["correct"] = false
@@ -105,10 +105,10 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         answer["reported"] = false
         answer["hasPic"] = true
         answer["classNameTag"] = currentObject?["classNameTag"]
-        var randomCode = randomNumber()
+        let randomCode = randomNumber()
         answer["pushCode"] = randomCode
         //PIC
-        var classQuestionAnswer = ClassQuestionAnswer(text: classQuestionAnswerAnswerTV.text!)
+        let classQuestionAnswer = ClassQuestionAnswer(text: classQuestionAnswerAnswerTV.text!)
         if classQuestionAnswerPicPreview.image != nil{
             answer["hasPic"] = true
             let imageData = UIImageJPEGRepresentation(self.classQuestionAnswerPicPreview.image!,0.5)
@@ -123,7 +123,7 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
             answer.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
                 // Success, no creating error
-                currentUser!.incrementKey("points", byAmount: 5)
+                currentUser!.incrementKey("points", byAmount: 20)
                 currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
                         //"Points Updated"

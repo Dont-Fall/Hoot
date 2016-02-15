@@ -13,6 +13,7 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
     // Container to store the view table selected object
     var queryID : String?
     @IBOutlet var noDataView: UIView!
+    var questionObject: PFObject!
 
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
@@ -126,15 +127,14 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
                 detailScene.currentObject = (objects![row])
+                detailScene.questionObject = questionObject
             }
         }
     }
     
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.actInd.startAnimating()
         self.performSegueWithIdentifier("questionAnswerSelectedSegue", sender: self)
-        self.actInd.stopAnimating()
     }
     
 }

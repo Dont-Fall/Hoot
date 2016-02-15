@@ -24,6 +24,8 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
     @IBOutlet var questionAnswerSelectedPicPreview: UIImageView!
     let tapRec = UITapGestureRecognizer()
     
+    var questionObject: PFObject!
+    
     //MARK: Button
     @IBAction func questionDetailSelectedCorrectBtn(sender: AnyObject) {
         currentObject!["correct"] = true
@@ -37,31 +39,8 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
                 print("Error")
             }
         }
-        let query = PFQuery(className:"Question")
-        query.whereKey("objectId", equalTo: currentObject!["idNumber"])
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                // The find succeeded.
-                // Do something with the found objects
-                if let objects = objects {
-                    for object in objects {
-                        object["solved"] = true
-                        object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                            if error == nil {
-                                //Question Updated
-                            } else {
-                                //Error
-                            }
-                        }
-                        
-                    }
-                }
-            } else {
-                // Log details of the failure
-                //print("Error: \(error!) \(error!.userInfo)")
-            }
-        }
+        questionObject["solved"] = true
+        questionObject.saveInBackground()
     }
     @IBOutlet var questionDetailSelectedCorrectBtn: UIButton!
     

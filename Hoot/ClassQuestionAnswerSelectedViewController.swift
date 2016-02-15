@@ -13,6 +13,7 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     var didReport = false
+    var questionObject: PFObject!
     
     //MARK: Label
     @IBOutlet var classQuestionAnswerSelectedUserLabel: UILabel!
@@ -35,33 +36,9 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
                 //"Error"
             }
         }
+        questionObject["solved"] = true
+        questionObject.saveInBackground()
         
-        //Fix to segue object later***********
-        let query = PFQuery(className:"ClassQuestion")
-        query.whereKey("objectId", equalTo: currentObject!["idNumber"])
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                // The find succeeded.
-                // Do something with the found objects
-                if let objects = objects {
-                    for object in objects {
-                        object["solved"] = true
-                        object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                            if error == nil {
-                                //"Question Updated"
-                            } else {
-                                //"Error"
-                            }
-                        }
-                        
-                    }
-                }
-            } else {
-                // Log details of the failure
-                //print("Error: \(error!) \(error!.userInfo)")
-            }
-        }
     }
     @IBOutlet var questionDetailSelectedCorrectBtn: UIButton!
     

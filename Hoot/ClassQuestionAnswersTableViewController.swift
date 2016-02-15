@@ -13,6 +13,7 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
     @IBOutlet var noDataView: UIView!
     // Container to store the view table selected object
     var queryID : String?
+    var questionObject: PFObject!
     
     //MARK: Extras
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
@@ -35,7 +36,7 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
     
     //MAY NOT BE NEEDED Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
-        var answersQuery = PFQuery(className: "ClassAnswer")
+        let answersQuery = PFQuery(className: "ClassAnswer")
         answersQuery.whereKey("idNumber", equalTo: queryID!)
         answersQuery.orderByDescending("createdAt")
         return answersQuery
@@ -138,7 +139,8 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
             // Pass the selected object to the destination view controller.
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
-                detailScene.currentObject = (objects![row] as? PFObject)
+                detailScene.currentObject = (objects![row])
+                detailScene.questionObject = questionObject
             }
         }
     }

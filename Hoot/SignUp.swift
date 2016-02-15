@@ -20,9 +20,11 @@ class SignUp: NSObject {
     var userTokens: Int?
     var userDailyTokenAvail: Bool?
     var userDailyCD: NSDate?
+    var userTweetSent: Bool?
+    var userFacebookSent: Bool?
 
     
-    init(uName: String, email: String, pass: String, confirmPass: String, school: String, subject: String, points: Int, groupCode: String, tokens: Int, dailyTokenAvail: Bool, dailyCD: NSDate){
+    init(uName: String, email: String, pass: String, confirmPass: String, school: String, subject: String, points: Int, groupCode: String, tokens: Int, dailyTokenAvail: Bool, dailyCD: NSDate, tweet: Bool, facebook: Bool){
         self.userName = uName
         self.userEmail = email
         self.password = pass
@@ -34,6 +36,8 @@ class SignUp: NSObject {
         self.userTokens = 10
         self.userDailyTokenAvail = true
         self.userDailyCD = NSDate()
+        self.userFacebookSent = false
+        self.userTweetSent = false
     }
     
     func signUpUser() throws -> Bool {
@@ -110,6 +114,8 @@ class SignUp: NSObject {
         user["tokens"] = userTokens!
         user["dailyTokenAvail"] = userDailyTokenAvail
         user["dailyCD"] = userDailyCD
+        user["tweetSent"] = userTweetSent
+        user["faceBookSent"] = userFacebookSent
         
         do {
             try user.signUp()

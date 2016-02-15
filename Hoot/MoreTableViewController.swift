@@ -11,8 +11,8 @@ import Social
 
 class MoreTableViewController: UITableViewController {
     
-    var sectionZero = ["Daily Token","10 Tokens For 100 Points", "20 Tokens For 250 Points", "50 Tokens For 400 Points"]
-    var sectionOne = ["Twitter", "Facebook", "App Store"]
+    var sectionZero = ["Daily Token","1 Token For 10 Points", "5 Tokens For 100 Points", "10 Tokens For 175 Points"]
+    var sectionOne = ["Twitter", "Facebook", "Rate Hoot"]
     var sectionTwo = ["Rules", "Contact Us"]
     var sectionThree = ["My Questions", "My Class Questions", "Log Out"]
     var points = String()
@@ -133,8 +133,8 @@ class MoreTableViewController: UITableViewController {
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
                 }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 100{
-                    currentUser?.incrementKey("tokens", byAmount: 10)
-                    currentUser?.incrementKey("points", byAmount: -100)
+                    currentUser?.incrementKey("tokens", byAmount: 1)
+                    currentUser?.incrementKey("points", byAmount: -25)
                     currentUser?.saveInBackground()
                     currentUser?.fetchInBackgroundWithBlock(nil)
                     points = String(currentUser!.objectForKey("points")!)
@@ -154,8 +154,8 @@ class MoreTableViewController: UITableViewController {
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
                 }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 250{
-                    currentUser?.incrementKey("tokens", byAmount: 20)
-                    currentUser?.incrementKey("points", byAmount: -250)
+                    currentUser?.incrementKey("tokens", byAmount: 5)
+                    currentUser?.incrementKey("points", byAmount: -100)
                     currentUser?.saveInBackground()
                     currentUser?.fetchInBackgroundWithBlock(nil)
                     points = String(currentUser!.objectForKey("points")!)
@@ -175,8 +175,8 @@ class MoreTableViewController: UITableViewController {
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
                 }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 400{
-                    currentUser?.incrementKey("tokens", byAmount: 50)
-                    currentUser?.incrementKey("points", byAmount: -400)
+                    currentUser?.incrementKey("tokens", byAmount: 10)
+                    currentUser?.incrementKey("points", byAmount: -175)
                     currentUser?.saveInBackground()
                     currentUser?.fetchInBackgroundWithBlock(nil)
                     points = String(currentUser!.objectForKey("points")!)
@@ -195,13 +195,27 @@ class MoreTableViewController: UITableViewController {
             if row == 0{
                 let twitterPost = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
                 twitterPost.setInitialText("Everyone go to the app store and download Hoot!")
+                let currentUser = PFUser.currentUser()
+                if currentUser!["tweetSent"].boolValue == false{
+                currentUser!.incrementKey("points", byAmount: 10)
+                currentUser!["tweetSent"] = true
+                currentUser?.saveInBackground()
+                }
                 self.presentViewController(twitterPost, animated: true, completion: nil)
             }else if row == 1{
                 let facebookPost = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
                 facebookPost.setInitialText("Everyone go to the app store and download Hoot!")
+                let currentUser = PFUser.currentUser()
+                if currentUser!["faceBookSent"].boolValue == false{
+                currentUser!.incrementKey("points", byAmount: 10)
+                currentUser!["faceBookSent"] = true
+                currentUser?.saveInBackground()
+                }
                 self.presentViewController(facebookPost, animated: true, completion: nil)
             }else{
-                //App Store
+                let alert = UIAlertController(title: "Coming Soon", message: "You'll be able to give us an awesome review as soon as we link to the App Store.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                presentViewController(alert, animated: true, completion: nil)
             }
         }else if indexPath.section == 2 {
             if row == 0{

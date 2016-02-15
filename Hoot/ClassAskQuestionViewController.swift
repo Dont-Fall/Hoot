@@ -106,7 +106,7 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                 classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
                         // Success, no creating error.
-                        currentUser!.incrementKey("points", byAmount: 5)
+                        currentUser!.incrementKey("points", byAmount: 1)
                         currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {

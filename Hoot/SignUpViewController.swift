@@ -94,7 +94,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func signUpCreateBtn(sender: AnyObject) {
         errorLabel.text = ""
         
-        let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "", tokens: 10, dailyTokenAvail: true, dailyCD: NSDate())
+        let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "", tokens: 10, dailyTokenAvail: true, dailyCD: NSDate(), tweet: false, facebook: false)
         do {
             try signup.signUpUser()
             let signin = SignIn(user: signUpUsernameTF.text!, pass: signUpPasswordTF.text!)
@@ -129,30 +129,5 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         
         return alertview
     }
-    
-    /*Live Count Function
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
-        return (textField.text?.utf16.count ?? 0) + string.utf16.count - range.length <= 15
-        
-        switch UITextField() {
-        case self.signUpUsernameTF:
-            let newLength = (signUpUsernameTF.text?.characters.count)! + string.characters.count - range.length
-            if(newLength <= 200){
-                return true
-            }else{
-                return false
-            }
-        case self.signUpUsernameTF:
-            let newLength = (signUpUsernameTF.text?.characters.count)! + string.characters.count - range.length
-            if(newLength <= 20){
-                return true
-            }else{
-                return false
-            }
-        default:
-            return false
-        }
-    }*/
     
 }

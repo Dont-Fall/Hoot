@@ -28,7 +28,7 @@ class TermsOfServiceViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var detailScene = segue.destinationViewController as! TermsViewController
+        let detailScene = segue.destinationViewController as! TermsViewController
         // Pass the selected object to the destination view controller.
         detailScene.state = state
     }

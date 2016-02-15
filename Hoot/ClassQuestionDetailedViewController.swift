@@ -140,6 +140,7 @@ class ClassQuestionDetailedViewController: UIViewController {
         }else if segue.identifier == "classQuestionAnswersSegue" {
             let detailScene = segue.destinationViewController as! ClassQuestionAnswersTableViewController
             detailScene.queryID = testID
+            detailScene.questionObject = currentObject
     }
     }
 
