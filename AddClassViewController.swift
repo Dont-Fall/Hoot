@@ -24,8 +24,8 @@ class AddClassViewController: UIViewController {
     
     //Join CLass Button
     @IBAction func addClassJoinClassBtn(sender: AnyObject) {
-        var currentUser = PFUser.currentUser()
-        var addClassQuery = PFQuery(className:"Classes")
+        let currentUser = PFUser.currentUser()
+        let addClassQuery = PFQuery(className:"Classes")
         addClassQuery.whereKey("school", equalTo: currentUser!.objectForKey("school")!)
         addClassQuery.whereKey("code", equalTo: addClassJoinClassCodeTF.text!)
         addClassQuery.findObjectsInBackgroundWithBlock {
@@ -34,7 +34,7 @@ class AddClassViewController: UIViewController {
                 //Check To See If Already Member
                 if let objects = objects {
                     for object in objects {
-                        var memberList = object["members"] as! Array<String>
+                        let memberList = object["members"] as! Array<String>
                         if memberList.contains((currentUser?.username)!){
                             self.alreadyMember = true
                         }else{
@@ -44,7 +44,7 @@ class AddClassViewController: UIViewController {
                 }
                 //Class Exists, Not Member
                 if objects!.count != 0 && self.alreadyMember == false {
-                    var currentUser = PFUser.currentUser()
+                    let currentUser = PFUser.currentUser()
                     if let objects = objects{
                         for object in objects {
                             var list = object["members"] as! Array<String>
@@ -105,7 +105,7 @@ class AddClassViewController: UIViewController {
     
     func addClassAdd(){
         //Assign New Class
-        var currentUser = PFUser.currentUser()
+        let currentUser = PFUser.currentUser()
         let newClass = PFObject(className: "Classes")
         newClass["course"] = addClassCourseTF.text
         newClass["name"] = addClassClassNameTF.text
@@ -115,13 +115,13 @@ class AddClassViewController: UIViewController {
         newClass["member"] = currentUser!.username
         newClass["members"] = [String(currentUser!.username!)]
         
-        var newClassClass = AddClass(name: addClassClassNameTF?.text, course: addClassCourseTF?.text, code: addClassClassCodeTF?.text)
+        let newClassClass = AddClass(name: addClassClassNameTF?.text, course: addClassCourseTF?.text, code: addClassClassCodeTF?.text)
         
         do{
             try newClassClass.addClassAlert()
             
             //Query to See If Unique Code Exists At School
-            var codeQuery = PFQuery(className:"Classes")
+            let codeQuery = PFQuery(className:"Classes")
             codeQuery.whereKey("school", equalTo: currentUser!.objectForKey("school")!)
             codeQuery.whereKey("code", equalTo: addClassClassCodeTF.text!)
             codeQuery.findObjectsInBackgroundWithBlock {

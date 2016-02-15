@@ -53,8 +53,6 @@ class EventDetailViewController: UIViewController {
             eventDetailAttendingCount.text = "\(String(attending.count)) Attending"
             }
         }
-
-        // Do any additional setup after loading the view.
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -88,7 +86,7 @@ class EventDetailViewController: UIViewController {
     }
 
     @IBAction func eventDetailAttendBtn(sender: AnyObject) {
-        var user = PFUser.currentUser()
+        let user = PFUser.currentUser()
         var list = currentObject!["attending"] as! Array<String>
         if currentObject!["attending"].containsObject((user?.username)!) == true{
             let alert = UIAlertController(title: "Already Attending", message: "You've already signed up for this event.", preferredStyle: .Alert)

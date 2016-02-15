@@ -32,9 +32,9 @@ class EventsTableViewController: PFQueryTableViewController {
     
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
-        var currentUser = PFUser.currentUser()
+        let currentUser = PFUser.currentUser()
         let currentSchool = currentUser!["school"]
-        var questionsQuery = PFQuery(className: "Event")
+        let questionsQuery = PFQuery(className: "Event")
         questionsQuery.whereKey("school", equalTo: (currentSchool)!)
         questionsQuery.orderByAscending("dateAndTime")
         return questionsQuery
@@ -77,11 +77,11 @@ class EventsTableViewController: PFQueryTableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "eventDetailViewIdentifier" {
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! EventDetailViewController
+            let detailScene = segue.destinationViewController as! EventDetailViewController
             // Pass the selected object to the destination view controller.
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
-                detailScene.currentObject = (objects![row] as? PFObject)
+                detailScene.currentObject = (objects![row])
             }
         }
     }

@@ -52,11 +52,11 @@ class QuestionTableViewController: PFQueryTableViewController {
     
     //Define the query that will provide the data for the table view
         override func queryForTable() -> PFQuery {
-            var questionsQuery = PFQuery(className: "Question")
+            let questionsQuery = PFQuery(className: "Question")
             if PFUser.currentUser() != nil {
-                var index: Int = questionSegmentController.selectedSegmentIndex
+                let index: Int = questionSegmentController.selectedSegmentIndex
                 if index == 0 {
-                    var currentUser = PFUser.currentUser()
+                    let currentUser = PFUser.currentUser()
                     let currentSubject = currentUser!["subject"]
                     let currentSchool = currentUser!["school"]
                     questionsQuery.whereKey("subject", equalTo: (currentSubject)!)
@@ -64,7 +64,7 @@ class QuestionTableViewController: PFQueryTableViewController {
                     questionsQuery.whereKey("solved", equalTo: false)
                     questionsQuery.orderByDescending("createdAt")
                 }else{
-                    var currentUser = PFUser.currentUser()
+                    let currentUser = PFUser.currentUser()
                     let currentSubject = currentUser!["subject"]
                     let currentSchool = currentUser!["school"]
                     questionsQuery.whereKey("subject", equalTo: (currentSubject)!)
@@ -81,18 +81,14 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        var user = PFUser.currentUser()
-        do {
-            try user?.fetchInBackgroundWithBlock(nil)
-        }catch{
-            //nothing
-        }
+        let user = PFUser.currentUser()
+        user?.fetchInBackgroundWithBlock(nil)
         if user == nil{
             self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
         }else if user?["emailVerified"] as? Bool  == false {
             self.performSegueWithIdentifier("emailVerifySegue", sender: self)
         }else{
-            var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+            let tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
             let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
             let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
             self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
@@ -104,16 +100,13 @@ class QuestionTableViewController: PFQueryTableViewController {
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        var currentUser = PFUser.currentUser()
-        do {
-            try currentUser?.fetchInBackgroundWithBlock(nil)
-        }catch{
-            //nothing
-        }
+        let currentUser = PFUser.currentUser()
+        currentUser?.fetchInBackgroundWithBlock(nil)
+
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         if PFUser.currentUser() != nil{
             let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "questionCompose")
-            var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+            let tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
             let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
             self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
         }
@@ -202,11 +195,11 @@ class QuestionTableViewController: PFQueryTableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "questionDetailedViewIdentifier" {
         // Get the new view controller using [segue destinationViewController].
-        var detailScene = segue.destinationViewController as! QuestionDetailedViewController
+        let detailScene = segue.destinationViewController as! QuestionDetailedViewController
         // Pass the selected object to the destination view controller.
         if let indexPath = self.tableView.indexPathForSelectedRow {
             let row = Int(indexPath.row)
-            detailScene.currentObject = (objects![row] as? PFObject)
+            detailScene.currentObject = (objects![row])
             }
         }
     }

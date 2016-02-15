@@ -37,7 +37,7 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
                 print("Error")
             }
         }
-        var query = PFQuery(className:"Question")
+        let query = PFQuery(className:"Question")
         query.whereKey("objectId", equalTo: currentObject!["idNumber"])
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -168,7 +168,7 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "anwerShowPic" {
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! QuestionPicViewController
+            let detailScene = segue.destinationViewController as! QuestionPicViewController
             // Pass the selected object to the destination view controller.
             detailScene.largePic = questionAnswerSelectedPicPreview.image
         }

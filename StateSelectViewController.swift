@@ -108,7 +108,7 @@ class StateSelectViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "stateToTermSegue" {
-            var detailScene = segue.destinationViewController as! TermsViewController
+            let detailScene = segue.destinationViewController as! TermsViewController
             detailScene.state = stateSelectTF.text
         }
     }

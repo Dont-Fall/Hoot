@@ -24,10 +24,10 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
     //MARKL: Date Picker Actions
     @IBAction func createEventDatePickerActn(sender: AnyObject) {
         createEventDatePicker.hidden = false
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        var strDate = dateFormatter.stringFromDate(createEventDatePicker.date)
+        let strDate = dateFormatter.stringFromDate(createEventDatePicker.date)
         self.createEventDateTF.text = strDate
     }
     
@@ -51,7 +51,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        var currentDate = NSDate()
+        let currentDate = NSDate()
         createEventDatePicker.minimumDate = currentDate
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         //Keyboard up at start
@@ -106,12 +106,12 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
 
     //Create Event Function
     func createEventCreate() {
-        var currentUser = PFUser.currentUser()
-        var username = currentUser!.username!
-        var dateFormatter = NSDateFormatter()
-        var calander = NSCalendar.currentCalendar()
+        let currentUser = PFUser.currentUser()
+        let username = currentUser!.username!
+        let dateFormatter = NSDateFormatter()
+        //let calander = NSCalendar.currentCalendar()
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        var event = PFObject(className: "Event")
+        let event = PFObject(className: "Event")
         event["name"] = createEventNameTF.text
         event["creator"] = currentUser!.username
         event["dateAndTime"] = createEventDatePicker.date
@@ -121,14 +121,14 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         event["reportNumber"] = 0
         event["reported"] = false
         event["attending"] = [String(username)]
-        var randomCode = randomNumber()
+        let randomCode = randomNumber()
         event["pushCode"] = randomCode
-        var randomCodeOwner = randomNumber()
+        let randomCodeOwner = randomNumber()
         event["pushCodeOwner"] = randomCodeOwner
         event["warningSent"] = false
         
         
-        var createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDatePicker.date)
+        let createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDatePicker.date)
         
         do {
             try createEvent.eventAlert()
@@ -195,9 +195,9 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         var i = 10
         var randomString = "C"
         while (i > 0){
-            var num = arc4random_uniform(10)
-            var alphanum = Int(arc4random_uniform(52))
-            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            let num = arc4random_uniform(10)
+            let alphanum = Int(arc4random_uniform(52))
+            let letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
             randomString = randomString + letter
             randomString = randomString + String(num)
             i = i - 1

@@ -43,11 +43,11 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
-        var index: Int = customSC.selectedSegmentIndex
-        var currentUser = PFUser.currentUser()
+        let index: Int = customSC.selectedSegmentIndex
+        let currentUser = PFUser.currentUser()
         let currentUserCode = currentUser!["currentGroupCode"]
-        var currentUserSchool = currentUser!["school"]
-        var questionsQuery = PFQuery(className: "ClassQuestion")
+        let currentUserSchool = currentUser!["school"]
+        let questionsQuery = PFQuery(className: "ClassQuestion")
         if index == 0 {
             questionsQuery.whereKey("school", equalTo: (currentUserSchool)!)
             questionsQuery.whereKey("code", equalTo: (currentUserCode)!)
@@ -66,13 +66,9 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     //VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        var user = PFUser.currentUser()
-        do {
-            try user?.fetchInBackgroundWithBlock(nil)
-        }catch{
-            //nothing
-        }
-        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+        let user = PFUser.currentUser()
+        user?.fetchInBackgroundWithBlock(nil)
+        let tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
         let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
         let questionAskBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "classQuestionCompose")
         self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
@@ -91,7 +87,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.ValueChanged)
         customSC.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.TouchUpInside)
         //MARK: Nav Bar Customize
-        var tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
+        let tokens = String(PFUser.currentUser()!.objectForKey("tokens")!)
         let myTokens:UIBarButtonItem = UIBarButtonItem(title: tokens, style: .Plain, target: self, action: nil)
         navigationController!.navigationBar.barTintColor = UIColor(red: 255.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
         let questionBackBtn:UIBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "classQuestionBack")
@@ -204,15 +200,15 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "classQuestionDetailedViewIdentifier" {
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! ClassQuestionDetailedViewController
+            let detailScene = segue.destinationViewController as! ClassQuestionDetailedViewController
             // Pass the selected object to the destination view controller.
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
-                detailScene.currentObject = (objects![row] as? PFObject)
+                detailScene.currentObject = (objects![row])
             }
         }
         if segue.identifier == "classComposeSegue" {
-            var detailScene = segue.destinationViewController as! ClassAskQuestionViewController
+            let detailScene = segue.destinationViewController as! ClassAskQuestionViewController
             detailScene.className = className
         }
     }

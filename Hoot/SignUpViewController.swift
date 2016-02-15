@@ -57,22 +57,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     }
     
     //Returns the number of 'columns' to display.
-    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1
     }
     
     //Returns the # of rows in each component..
-    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int{
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return schoolList.count
     }
     
     //Determins Picker View Row
-    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return schoolList[row]
     }
     
     //Assigns Picker View to Text Field
-    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int){
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         signUpSchoolTF.text = schoolList[row]
         signUpSchoolPicker.hidden = true;
     }
@@ -130,7 +130,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         return alertview
     }
     
-    //Live Count Function
+    /*Live Count Function
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         return (textField.text?.utf16.count ?? 0) + string.utf16.count - range.length <= 15
@@ -153,6 +153,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         default:
             return false
         }
-    }
+    }*/
     
 }

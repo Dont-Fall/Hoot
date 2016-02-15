@@ -32,8 +32,8 @@ class ClassesTableViewController: PFQueryTableViewController {
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
         let currentUser = PFUser.currentUser()!.username!
-        var classesQuery = PFQuery(className: "Classes")
-        var list = [currentUser]
+        let classesQuery = PFQuery(className: "Classes")
+        let list = [currentUser]
         classesQuery.whereKey("members", containedIn: list)
         //classesQuery.whereKey("members", containsString: currentUser)
         //classesQuery.whereKey("member", equalTo: (currentUser))
@@ -106,11 +106,11 @@ class ClassesTableViewController: PFQueryTableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "classViewSegue" {
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! ClassQuestionsTableViewController
+            let detailScene = segue.destinationViewController as! ClassQuestionsTableViewController
             // Pass the selected object to the destination view controller.
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
-                detailScene.currentObject = (objects![row] as? PFObject)
+                detailScene.currentObject = (objects![row])
                 detailScene.className = String(objects![row]["name"])
             }
         }
@@ -119,7 +119,7 @@ class ClassesTableViewController: PFQueryTableViewController {
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
-        var currentUser = PFUser.currentUser()
+        let currentUser = PFUser.currentUser()
         currentUser!["currentGroupCode"] = objects?[row]["code"]
         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {

@@ -30,7 +30,7 @@ class TermsViewController: UIViewController {
                 // Do something with the found objects
                 if let objects = objects{
                     for object in objects {
-                        var school = object["name"]! as! String
+                        let school = object["name"]! as! String
                         self.testList.append(school)
                         print("Array: \(self.testList)")
                     }
@@ -65,11 +65,11 @@ class TermsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "termsToSignUpSegue"{
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! SignUpViewController
+            let detailScene = segue.destinationViewController as! SignUpViewController
             // Pass the selected object to the destination view controller.
             detailScene.schoolListUnsorted = testList
         }else if segue.identifier == "showTermsSegue"{
-            var detailScene = segue.destinationViewController as! TermsOfServiceViewController
+            let detailScene = segue.destinationViewController as! TermsOfServiceViewController
             // Pass the selected object to the destination view controller.
             detailScene.state = state
         }

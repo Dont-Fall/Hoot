@@ -16,7 +16,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
     @IBOutlet var questionAnswerAnswerCount: UILabel!
 
     @IBAction func questionAnswerAddPicBtn(sender: AnyObject) {
-        var imagePicker = UIImagePickerController()
+        let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             
@@ -103,8 +103,8 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
     
     //Answer Question FUnction
     func answerQuestionAnswerQuestion() {
-        var currentUser = PFUser.currentUser()
-        var answer = PFObject(className: "Answer")
+        let currentUser = PFUser.currentUser()
+        let answer = PFObject(className: "Answer")
         answer["answer"] = questionAnswerAnswerTV.text
         answer["user"] = currentUser!.username
         answer["correct"] = false
@@ -113,12 +113,12 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         answer["reportNumber"] = 0
         answer["reported"] = false
         answer["hasPic"] = true
-        var randomCode = randomNumber()
+        let randomCode = randomNumber()
         answer["pushCode"] = randomCode
         answer["courseTag"] = currentObject?["course"]
         
         //PIC
-        var questionAnswer = QuestionAnswer(text: questionAnswerAnswerTV.text!)
+        let questionAnswer = QuestionAnswer(text: questionAnswerAnswerTV.text!)
         if questionAnswerPicPreview.image != nil{
             answer["hasPic"] = true
             let imageData = UIImageJPEGRepresentation(self.questionAnswerPicPreview.image!,0.5)
@@ -186,9 +186,9 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         var i = 10
         var randomString = "C"
         while (i > 0){
-            var num = arc4random_uniform(10)
-            var alphanum = Int(arc4random_uniform(52))
-            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            let num = arc4random_uniform(10)
+            let alphanum = Int(arc4random_uniform(52))
+            let letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
             randomString = randomString + letter
             randomString = randomString + String(num)
             i = i - 1

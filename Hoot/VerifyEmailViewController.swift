@@ -25,13 +25,9 @@ class VerifyEmailViewController: UIViewController {
     
     //Mark: Actions Outlet
     @IBAction func verifiedBtn(sender: AnyObject) {
-        var currentUser = PFUser.currentUser()
-        do {
-            try currentUser?.fetchInBackgroundWithBlock(nil)
-        }catch{
-            //nothing
-        }
-        var verifiedCheck = currentUser!["emailVerified"] as? Bool
+        let currentUser = PFUser.currentUser()
+        currentUser?.fetchInBackgroundWithBlock(nil)
+        let verifiedCheck = currentUser!["emailVerified"] as? Bool
         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
                 print(verifiedCheck)
@@ -51,8 +47,8 @@ class VerifyEmailViewController: UIViewController {
         }
     }
     @IBAction func resendBtn(sender: AnyObject) {
-        var currentUser = PFUser.currentUser()
-        var savedEmail = currentUser?.email
+        let currentUser = PFUser.currentUser()
+        let savedEmail = currentUser?.email
         currentUser?.email = "temp@temp.temp"
         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {

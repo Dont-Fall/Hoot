@@ -20,12 +20,8 @@ class MoreTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        var currentUser = PFUser.currentUser()
-        do {
-            try currentUser?.fetchInBackgroundWithBlock(nil)
-        }catch{
-            //nothing
-        }
+        let currentUser = PFUser.currentUser()
+        currentUser?.fetchInBackgroundWithBlock(nil)
         points = String(currentUser!.objectForKey("points")!)
         let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
         self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
@@ -33,12 +29,8 @@ class MoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var currentUser = PFUser.currentUser()
-        do {
-            try currentUser?.fetchInBackgroundWithBlock(nil)
-        }catch{
-            //nothing
-        }
+        let currentUser = PFUser.currentUser()
+        currentUser?.fetchInBackgroundWithBlock(nil)
         points = String(currentUser!.objectForKey("points")!)
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         //MARK: Nav Bar Customize
@@ -119,17 +111,13 @@ class MoreTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
         if indexPath.section == 0{
-            var currentUser = PFUser.currentUser()
+            let currentUser = PFUser.currentUser()
             if row == 0{
                 if currentUser?.objectForKey("dailyTokenAvail")!.boolValue == true{
                     currentUser?.incrementKey("tokens", byAmount: 1)
                     currentUser?["dailyTokenAvail"] = false
                     currentUser?.saveInBackground()
-                    do {
-                        try currentUser?.fetchInBackgroundWithBlock(nil)
-                    }catch{
-                        //nothing
-                    }
+                    currentUser?.fetchInBackgroundWithBlock(nil)
                     let alert = UIAlertController(title: "Token Obtained", message: "You now have 1 more question token.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
@@ -148,11 +136,7 @@ class MoreTableViewController: UITableViewController {
                     currentUser?.incrementKey("tokens", byAmount: 10)
                     currentUser?.incrementKey("points", byAmount: -100)
                     currentUser?.saveInBackground()
-                    do {
-                        try currentUser?.fetchInBackgroundWithBlock(nil)
-                    }catch{
-                        //nothing
-                    }
+                    currentUser?.fetchInBackgroundWithBlock(nil)
                     points = String(currentUser!.objectForKey("points")!)
                     let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
                     self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
@@ -173,11 +157,7 @@ class MoreTableViewController: UITableViewController {
                     currentUser?.incrementKey("tokens", byAmount: 20)
                     currentUser?.incrementKey("points", byAmount: -250)
                     currentUser?.saveInBackground()
-                    do {
-                        try currentUser?.fetchInBackgroundWithBlock(nil)
-                    }catch{
-                        //nothing
-                    }
+                    currentUser?.fetchInBackgroundWithBlock(nil)
                     points = String(currentUser!.objectForKey("points")!)
                     let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
                     self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
@@ -198,11 +178,7 @@ class MoreTableViewController: UITableViewController {
                     currentUser?.incrementKey("tokens", byAmount: 50)
                     currentUser?.incrementKey("points", byAmount: -400)
                     currentUser?.saveInBackground()
-                    do {
-                        try currentUser?.fetchInBackgroundWithBlock(nil)
-                    }catch{
-                        //nothing
-                    }
+                    currentUser?.fetchInBackgroundWithBlock(nil)
                     points = String(currentUser!.objectForKey("points")!)
                     let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
                     self.navigationItem.setRightBarButtonItem(myPoints, animated: true)

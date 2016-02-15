@@ -31,7 +31,7 @@ class AddSchoolViewController: UIViewController {
     }
     
     @IBAction func addSchoolAddBtn(sender: AnyObject) {
-        var school = PFObject(className:"School")
+        let school = PFObject(className:"School")
         school["name"] = addSchoolSchoolTF.text
         school["state"] = addSchoolStateTF.text
         school["approved"] = false

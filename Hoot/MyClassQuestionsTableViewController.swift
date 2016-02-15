@@ -50,8 +50,8 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
     
     //MAY NOT BE NEEDED Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
-        var currentUser = PFUser.currentUser()!.username
-        var questionsQuery = PFQuery(className: "ClassQuestion")
+        let currentUser = PFUser.currentUser()!.username
+        let questionsQuery = PFQuery(className: "ClassQuestion")
         questionsQuery.whereKey("user", equalTo: currentUser!)
         questionsQuery.orderByDescending("createdAt")
         return questionsQuery
@@ -161,30 +161,16 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         cell?.myClassQuestionAnswerCount.text = String(object!["answerCount"]) + " Answers"
         return cell
     }
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
-    // Get the new view controller using [segue destinationViewController].
-    var detailScene = segue.destinationViewController as! QuestionDetailedViewController
-    
-    // Pass the selected object to the destination view controller.
-    if let indexPath = self.tableView.indexPathForSelectedRow {
-    let row = Int(indexPath.row)
-    detailScene.currentObject = objects![row] as? PFObject
-    }
-    }
-    */
     
     //Prepare To Send Object To Detailed View
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "myClassQuestionDetailSegue" {
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! ClassQuestionDetailedViewController
+            let detailScene = segue.destinationViewController as! ClassQuestionDetailedViewController
             // Pass the selected object to the destination view controller.
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
-                detailScene.currentObject = (objects![row] as? PFObject)
+                detailScene.currentObject = (objects![row])
             }
         }
     }
@@ -195,51 +181,6 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         self.performSegueWithIdentifier("myClassQuestionDetailSegue", sender: self)
         self.actInd.stopAnimating()
     }
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the specified item to be editable.
-    return true
-    }
-    */
-    
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-    }
-    */
-    
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
-    
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
     
 }

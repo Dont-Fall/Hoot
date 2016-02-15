@@ -43,8 +43,8 @@ class ContactUsViewController: UIViewController, UITextViewDelegate {
     
     //Submit Function
     func contactUsSubmit() {
-        var currentUser = PFUser.currentUser()
-        var contactForm = PFObject(className:"Contact")
+        let currentUser = PFUser.currentUser()
+        let contactForm = PFObject(className:"Contact")
         contactForm["topic"] = contactUsTopicTF.text
         contactForm["text"] = contactUsTextTV.text
         contactForm["UserSchool"] = currentUser?.objectForKey("school")
@@ -52,7 +52,7 @@ class ContactUsViewController: UIViewController, UITextViewDelegate {
         contactForm["email"] = currentUser?.email
         contactForm["resolved"] = false
         
-        var form = ContactForm(topic: contactUsTopicTF.text!, text: contactUsTextTV.text!)
+        let form = ContactForm(topic: contactUsTopicTF.text!, text: contactUsTextTV.text!)
         
         do {
             try form.contactFormAlert()

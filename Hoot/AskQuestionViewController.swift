@@ -18,7 +18,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     //MARK: Add Picture
     @IBAction func askQuestionAddPicBtn(sender: AnyObject) {
-        var imagePicker = UIImagePickerController()
+        let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             
@@ -101,8 +101,8 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     //Ask Function Question
     func askQuestionAskQuestion() {
-        var currentUser = PFUser.currentUser()
-        var question = PFObject(className: "Question")
+        let currentUser = PFUser.currentUser()
+        let question = PFObject(className: "Question")
         question["course"] = askQuestionCourseTF.text
         question["question"] = askQuestionAskQuestionTV.text
         question["user"] = currentUser!.username
@@ -113,7 +113,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         question["reported"] = false
         question["answerCount"] = 0
         question["hasPic"] = true
-        var randomCode = randomNumber()
+        let randomCode = randomNumber()
         question["pushCode"] = randomCode
         //PIC
         if askQuestionPicPreview.image != nil {
@@ -121,8 +121,8 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
             let imageData = UIImageJPEGRepresentation(self.askQuestionPicPreview.image!,0.5)
             let imageFile = PFFile(name:"image.jpeg", data:imageData!)
             question.setObject(imageFile!, forKey: "picture")
-            var image: PFFile = imageFile!
-            var askQuestionWithPic = AskQuestionWithPic(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!, img: image)
+            let image: PFFile = imageFile!
+            let askQuestionWithPic = AskQuestionWithPic(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!, img: image)
             do {
                 try askQuestionWithPic.askQuestionAlert()
                 //MARK: Save Question
@@ -155,7 +155,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
             }
         }else{
             question["hasPic"] = false
-            var askQuestion = AskQuestion(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!)
+            let askQuestion = AskQuestion(course: askQuestionCourseTF.text!, text: askQuestionAskQuestionTV.text!)
             do {
                 try askQuestion.askQuestionAlert()
                 //MARK: Save Question
@@ -227,9 +227,9 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         var i = 10
         var randomString = "C"
         while (i > 0){
-            var num = arc4random_uniform(10)
-            var alphanum = Int(arc4random_uniform(52))
-            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            let num = arc4random_uniform(10)
+            let alphanum = Int(arc4random_uniform(52))
+            let letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
             randomString = randomString + letter
             randomString = randomString + String(num)
             i = i - 1

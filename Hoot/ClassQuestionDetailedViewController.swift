@@ -129,16 +129,16 @@ class ClassQuestionDetailedViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "classQuestionShowPic" {
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! ClassQuestionPicViewController
+            let detailScene = segue.destinationViewController as! ClassQuestionPicViewController
             // Pass the selected object to the destination view controller.
             detailScene.largePic = classQuestionDetailedPicturePreview.image
         }else if segue.identifier == "classQuestionHelpSegue"{
-            var detailScene = segue.destinationViewController as! ClassQuestionAnswerViewController
+            let detailScene = segue.destinationViewController as! ClassQuestionAnswerViewController
             detailScene.questionID = testID
             detailScene.asker = String(currentObject!["user"])
             detailScene.currentObject = currentObject
         }else if segue.identifier == "classQuestionAnswersSegue" {
-            var detailScene = segue.destinationViewController as! ClassQuestionAnswersTableViewController
+            let detailScene = segue.destinationViewController as! ClassQuestionAnswersTableViewController
             detailScene.queryID = testID
     }
     }

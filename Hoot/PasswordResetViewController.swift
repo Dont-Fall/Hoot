@@ -31,13 +31,13 @@ class PasswordResetViewController: UIViewController {
     }
     
     @IBAction func passwordResetResetBtn(sender: AnyObject) {
-        var passwordReset = PasswordReset(email: passwordResetEmailTF?.text)
+        let passwordReset = PasswordReset(email: passwordResetEmailTF?.text)
         do{
             try passwordReset.passwordResetAlert()
             
             PFUser.requestPasswordResetForEmailInBackground(passwordResetEmailTF.text!)
             let alert = UIAlertController(title: "Password Reset", message: "You should recieve an email shortly with directions for changing your password.", preferredStyle: .Alert)
-            var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
                 UIAlertAction in
                 self.performSegueWithIdentifier("resetCancelSegue", sender: self)
             }
