@@ -105,15 +105,14 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                 //MARK: Save Question
                 classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
-                        print("Yp")
                         // Success, no creating error.
                         currentUser!.incrementKey("points", byAmount: 5)
                         currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
-                                print("Points Updated")
+                                //Points Updated
                             } else {
-                                print("Error")
+                                //Error
                             }
                         }
                         let currentInstallation = PFInstallation.currentInstallation()
@@ -138,15 +137,14 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
                 //MARK: Save Question
                 classQuestion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
-                        print("Yp")
                         // Success, no creating error.
                         currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.incrementKey("points", byAmount: 5)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
-                                print("Points Updated")
+                                //Points Updated
                             } else {
-                                print("Error")
+                                //Error
                             }
                         }
                         let currentInstallation = PFInstallation.currentInstallation()

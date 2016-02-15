@@ -128,15 +128,14 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                 //MARK: Save Question
                 question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
-                        print("Yp")
                         // Success, no creating error
                         currentUser!.incrementKey("points", byAmount: 5)
                         currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
-                                print("Points Updated")
+                                //Points Updated
                             } else {
-                                print("Error")
+                                //Not Saved
                             }
                         }
                         let currentInstallation = PFInstallation.currentInstallation()
@@ -144,7 +143,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                         currentInstallation.saveInBackground()
                         self.performSegueWithIdentifier("askQuestionAskedSegue", sender: self)
                     } else {
-                        print("Error")
+                        //Not Saved
                     }
                 }
                 // Error Caught Alert Settings
@@ -161,15 +160,14 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
                 //MARK: Save Question
                 question.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
-                        print("Yp")
                         // Success, no creating error
                         currentUser!.incrementKey("points", byAmount: 5)
                         currentUser!.incrementKey("tokens", byAmount: -1)
                         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
-                                print("Points Updated")
+                                //Prints Updated
                             } else {
-                                print("Error")
+                                //Not Saved
                             }
                         }
                         let currentInstallation = PFInstallation.currentInstallation()

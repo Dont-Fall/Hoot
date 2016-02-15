@@ -86,12 +86,10 @@ class SubjectTableViewController: UITableViewController {
         currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
                 // Success, no creating error.
-                self.actInd.startAnimating()
                 self.performSegueWithIdentifier("subjectSelectedSegue", sender: self)
-                self.actInd.startAnimating()
                 //Add to que
             } else {
-                print("Error")
+                //Nothing
             }
         }
     }

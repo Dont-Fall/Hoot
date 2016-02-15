@@ -122,22 +122,21 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
             //MARK: Save Question
             answer.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
-                print("Yp")
                 // Success, no creating error
                 currentUser!.incrementKey("points", byAmount: 5)
                 currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
-                        print("Points Updated")
+                        //"Points Updated"
                     } else {
-                        print("Error")
+                        //"Error"
                     }
                 }
                 self.currentObject?.incrementKey("answerCount")
                 self.currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
-                        print("Answeres Updated")
+                        //"Answeres Updated"
                     } else {
-                        print("Error")
+                        //"Error"
                     }
                 }
                 let currentInstallation = PFInstallation.currentInstallation()
@@ -149,7 +148,7 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
                 push.sendPushInBackground()
                 self.navigationController?.popViewControllerAnimated(true)
             } else {
-                print("Error")
+                //"Error"
             }
         }
         // Error Caught Alert Settings
@@ -175,9 +174,9 @@ class ClassQuestionAnswerViewController: UIViewController, UITextFieldDelegate, 
         var i = 10
         var randomString = "C"
         while (i > 0){
-            var num = arc4random_uniform(10)
-            var alphanum = Int(arc4random_uniform(52))
-            var letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
+            let num = arc4random_uniform(10)
+            let alphanum = Int(arc4random_uniform(52))
+            let letter = alphabet.substringWithRange(NSRange(location: alphanum, length: 1))
             randomString = randomString + letter
             randomString = randomString + String(num)
             i = i - 1

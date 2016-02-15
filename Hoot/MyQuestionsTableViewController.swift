@@ -29,7 +29,7 @@ class MyQuestionsTableViewController: PFQueryTableViewController {
         self.objectsPerPage = 100
     }
     
-    //MARK: Segment Controller
+    /*MARK: Segment Controller
     @IBOutlet var questionSegmentController: UISegmentedControl!
     
     @IBAction func segmentControllerActn(sender: UISegmentedControl) {
@@ -37,15 +37,13 @@ class MyQuestionsTableViewController: PFQueryTableViewController {
         case 0:
             self.loadObjects()
             self.tableView.reloadData()
-            print("first segement clicked")
         case 1:
             self.loadObjects()
             self.tableView.reloadData()
-            print("second segment clicked")
         default:
             break;
         }
-    }
+    }*/
     
     
     //MAY NOT BE NEEDED Define the query that will provide the data for the table view

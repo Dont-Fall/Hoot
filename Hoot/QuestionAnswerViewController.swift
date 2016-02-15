@@ -132,22 +132,21 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
             //MARK: Save Question
             answer.saveInBackgroundWithBlock { (success: Bool, error:   NSError?) -> Void in
                 if error == nil {
-                    print("Yp")
                     // Success, no creating error
                     currentUser!.incrementKey("points", byAmount: 5)
                     currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                         if error == nil {
-                            print("Points Updated")
+                            //Points Saved
                         } else {
-                            print("Error")
+                            //Not Saved
                         }
                     }
                     self.currentObject?.incrementKey("answerCount")
                     self.currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                         if error == nil {
-                            print("Answeres Updated")
+                            //Answer Saved
                         } else {
-                            print("Error")
+                            //Not Saved
                         }
                     }
                     let currentInstallation = PFInstallation.currentInstallation()
@@ -159,7 +158,7 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
                     push.sendPushInBackground()
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
-                    print("Error")
+                    //Not Saved
                 }
             }
         // Error Caught Alert Settings

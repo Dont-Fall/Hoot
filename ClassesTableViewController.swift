@@ -129,7 +129,7 @@ class ClassesTableViewController: PFQueryTableViewController {
                 self.actInd.stopAnimating()
                 //Add to que
             } else {
-                print("Error")
+                //"Error"
             }
         }
     }

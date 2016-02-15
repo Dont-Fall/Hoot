@@ -43,16 +43,15 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
                 // Do something with the found objects
                 if let objects = objects {
                     for object in objects {
                         object["solved"] = true
                         object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
-                                print("Question Updated")
+                                //Question Updated
                             } else {
-                                print("Error")
+                                //Error
                             }
                         }
                         
@@ -60,7 +59,7 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
                 }
             } else {
                 // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
+                //print("Error: \(error!) \(error!.userInfo)")
             }
         }
     }
@@ -177,9 +176,6 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
     
     //Pic View
     func tapView() {
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("anwerShowPic", sender: self)
-        self.actInd.stopAnimating()
     }
     
 }

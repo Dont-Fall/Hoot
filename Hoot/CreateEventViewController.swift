@@ -126,9 +126,10 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         let randomCodeOwner = randomNumber()
         event["pushCodeOwner"] = randomCodeOwner
         event["warningSent"] = false
+        event["description"] = createEventTV.text
         
         
-        let createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDatePicker.date)
+        let createEvent = EventCreate(event: createEventNameTF.text!, location: createEventLocationTF.text!, date: createEventDatePicker.date, description: createEventTV.text)
         
         do {
             try createEvent.eventAlert()
@@ -136,16 +137,14 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
             //MARK: Save Event
             event.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if error == nil {
-                    print("Yp")
                     // Success, no creating error.
                     currentUser!.incrementKey("points", byAmount: 5)
-                    print(currentUser!.objectForKey("points"))
                     self.tabBarController?.tabBar.hidden = false
                     PFUser.currentUser()!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                         if error == nil {
-                            print("Points Updated")
+                            //"Points Updated"
                         } else {
-                            print("Error")
+                            //"Error"
                         }
                     }
                     let currentInstallation = PFInstallation.currentInstallation()
@@ -153,18 +152,17 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
                     currentInstallation.saveInBackground()
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
-                    print("Error")
+                    //"Error"
                 }
             } // Error Caught Alert Settings
         } catch let message as ErrorType {
-            
             let alert = UIAlertController(title: "Uh-Oh!", message: "\(message)", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             presentViewController(alert, animated: true, completion: nil)
         }
 
         
-        }
+    }
     
     //MARK: Tap Function
     func dismissKeyboard() {
@@ -204,6 +202,4 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UIPicker
         }
         return randomString
     }
-
-
 }

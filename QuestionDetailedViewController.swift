@@ -116,7 +116,7 @@ class QuestionDetailedViewController: UIViewController, UITextViewDelegate {
                     self.presentViewController(alert, animated: true){}
                     self.didReport = true
                 } else {
-                    print("Error")
+                    //Nothing
                 }
             }
         }else{

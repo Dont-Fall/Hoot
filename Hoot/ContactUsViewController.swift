@@ -60,10 +60,9 @@ class ContactUsViewController: UIViewController, UITextViewDelegate {
             //MARK: Save Question
             contactForm.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if error == nil {
-                    print("Yp")
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
-                    print("Error")
+                    //Error
                 }
             }
                 // Error Caught Alert Settings

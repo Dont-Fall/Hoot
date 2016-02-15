@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A568B881C4C0D000047526E /* ConferenceCall40.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B871C4C0D000047526E /* ConferenceCall40.png */; };
 		1A568B8C1C4C1B370047526E /* CellSep.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B891C4C1B370047526E /* CellSep.png */; };
-		1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B8B1C4C1B370047526E /* TextFieldBar.png */; };
-		1A568B911C4C1C1E0047526E /* FAQ-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B8F1C4C1C1E0047526E /* FAQ-30.png */; };
-		1A568B921C4C1C1E0047526E /* QA.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568B901C4C1C1E0047526E /* QA.png */; };
-		1A568BA21C4C22A50047526E /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A568BA11C4C22A50047526E /* Calendar.png */; };
 		960945DC1C348C670000282A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960945DB1C348C670000282A /* AppDelegate.swift */; };
 		960945DE1C348C670000282A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960945DD1C348C670000282A /* ViewController.swift */; };
 		960945E31C348C670000282A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960945E21C348C670000282A /* Assets.xcassets */; };
@@ -69,7 +64,6 @@
 		96A115531C70C55D00AD5220 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A115521C70C55D00AD5220 /* TermsViewController.swift */; };
 		96A115551C70CFA800AD5220 /* TermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A115541C70CFA800AD5220 /* TermsOfServiceViewController.swift */; };
 		96A5A8291C65492F004866AE /* ArrowHoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5A8281C65492F004866AE /* ArrowHoot.png */; };
-		96A5A82B1C6554C1004866AE /* BannerHoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A5A82A1C6554C0004866AE /* BannerHoot.png */; };
 		96B29BC01C398EF300240AD7 /* ClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BBF1C398EF300240AD7 /* ClassesTableViewController.swift */; };
 		96B29BC21C398F2A00240AD7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BC11C398F2A00240AD7 /* ClassesTableViewCell.swift */; };
 		96B29BC41C3993DE00240AD7 /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29BC31C3993DE00240AD7 /* AddClassViewController.swift */; };
@@ -85,6 +79,15 @@
 		96CFB5E71C46B01B00A7793D /* ClassQuestionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */; };
 		96D2FFE11C66A0BB00E2D5ED /* StateSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D2FFE01C66A0BB00E2D5ED /* StateSelectViewController.swift */; };
 		96D80DDA1C3D5BE000C64794 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */; };
+		96DF3FAB1C717CAB007F84ED /* FAQ.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FA81C717CAB007F84ED /* FAQ.png */; };
+		96DF3FAC1C717CAB007F84ED /* FAQ@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FA91C717CAB007F84ED /* FAQ@2x.png */; };
+		96DF3FAD1C717CAB007F84ED /* FAQ@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FAA1C717CAB007F84ED /* FAQ@3x.png */; };
+		96DF3FB71C717E05007F84ED /* ConferenceCall.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FB11C717E05007F84ED /* ConferenceCall.png */; };
+		96DF3FB81C717E05007F84ED /* ConferenceCall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FB21C717E05007F84ED /* ConferenceCall@2x.png */; };
+		96DF3FB91C717E05007F84ED /* ConferenceCall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FB31C717E05007F84ED /* ConferenceCall@3x.png */; };
+		96DF3FBD1C71E8B0007F84ED /* Today.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FBA1C71E8B0007F84ED /* Today.png */; };
+		96DF3FBE1C71E8B0007F84ED /* Today@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FBB1C71E8B0007F84ED /* Today@2x.png */; };
+		96DF3FBF1C71E8B0007F84ED /* Today@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FBC1C71E8B0007F84ED /* Today@3x.png */; };
 		96E5FEB21C629AF9000DA329 /* VerifyEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5FEB11C629AF9000DA329 /* VerifyEmailViewController.swift */; };
 		96ED08CC1C61A1B700729DB5 /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ED08CB1C61A1B700729DB5 /* QuestionAnswerViewController.swift */; };
 		96FAF0F61C36EA830092D096 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F51C36EA830092D096 /* Accounts.framework */; };
@@ -127,12 +130,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A568B871C4C0D000047526E /* ConferenceCall40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ConferenceCall40.png; sourceTree = "<group>"; };
 		1A568B891C4C1B370047526E /* CellSep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellSep.png; sourceTree = "<group>"; };
-		1A568B8B1C4C1B370047526E /* TextFieldBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextFieldBar.png; sourceTree = "<group>"; };
-		1A568B8F1C4C1C1E0047526E /* FAQ-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FAQ-30.png"; sourceTree = "<group>"; };
-		1A568B901C4C1C1E0047526E /* QA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QA.png; sourceTree = "<group>"; };
-		1A568BA11C4C22A50047526E /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
 		960945D81C348C660000282A /* Hoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960945DB1C348C670000282A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		960945DD1C348C670000282A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 		96A115521C70C55D00AD5220 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		96A115541C70CFA800AD5220 /* TermsOfServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceViewController.swift; sourceTree = "<group>"; };
 		96A5A8281C65492F004866AE /* ArrowHoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArrowHoot.png; sourceTree = "<group>"; };
-		96A5A82A1C6554C0004866AE /* BannerHoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BannerHoot.png; sourceTree = "<group>"; };
 		96B29BBF1C398EF300240AD7 /* ClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassesTableViewController.swift; path = ../ClassesTableViewController.swift; sourceTree = "<group>"; };
 		96B29BC11C398F2A00240AD7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		96B29BC31C3993DE00240AD7 /* AddClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddClassViewController.swift; path = ../AddClassViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +209,15 @@
 		96CFB5E61C46B01B00A7793D /* ClassQuestionAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassQuestionAnswerCell.swift; path = ../ClassQuestionAnswerCell.swift; sourceTree = "<group>"; };
 		96D2FFE01C66A0BB00E2D5ED /* StateSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateSelectViewController.swift; path = ../StateSelectViewController.swift; sourceTree = "<group>"; };
 		96D80DD91C3D5BE000C64794 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		96DF3FA81C717CAB007F84ED /* FAQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FAQ.png; sourceTree = "<group>"; };
+		96DF3FA91C717CAB007F84ED /* FAQ@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FAQ@2x.png"; sourceTree = "<group>"; };
+		96DF3FAA1C717CAB007F84ED /* FAQ@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FAQ@3x.png"; sourceTree = "<group>"; };
+		96DF3FB11C717E05007F84ED /* ConferenceCall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ConferenceCall.png; sourceTree = "<group>"; };
+		96DF3FB21C717E05007F84ED /* ConferenceCall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ConferenceCall@2x.png"; sourceTree = "<group>"; };
+		96DF3FB31C717E05007F84ED /* ConferenceCall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ConferenceCall@3x.png"; sourceTree = "<group>"; };
+		96DF3FBA1C71E8B0007F84ED /* Today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Today.png; sourceTree = "<group>"; };
+		96DF3FBB1C71E8B0007F84ED /* Today@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Today@2x.png"; sourceTree = "<group>"; };
+		96DF3FBC1C71E8B0007F84ED /* Today@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Today@3x.png"; sourceTree = "<group>"; };
 		96E5FEB11C629AF9000DA329 /* VerifyEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewController.swift; sourceTree = "<group>"; };
 		96ED08CB1C61A1B700729DB5 /* QuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		96FAF0F51C36EA830092D096 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -426,6 +432,44 @@
 			name = Answers;
 			sourceTree = "<group>";
 		};
+		96DF3F9F1C7177D5007F84ED /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				96DF3FBA1C71E8B0007F84ED /* Today.png */,
+				96DF3FBB1C71E8B0007F84ED /* Today@2x.png */,
+				96DF3FBC1C71E8B0007F84ED /* Today@3x.png */,
+				96DF3FB11C717E05007F84ED /* ConferenceCall.png */,
+				96DF3FB21C717E05007F84ED /* ConferenceCall@2x.png */,
+				96DF3FB31C717E05007F84ED /* ConferenceCall@3x.png */,
+				96DF3FA81C717CAB007F84ED /* FAQ.png */,
+				96DF3FA91C717CAB007F84ED /* FAQ@2x.png */,
+				96DF3FAA1C717CAB007F84ED /* FAQ@3x.png */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		96DF3FA01C7177EF007F84ED /* Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				96825D931C618E27000DFEA5 /* CheckMarkHoot.png */,
+				964FD53B1C613391000D6820 /* CameraIconHoot.png */,
+				96A5A8281C65492F004866AE /* ArrowHoot.png */,
+			);
+			name = Indicators;
+			sourceTree = "<group>";
+		};
+		96DF3FA11C71780C007F84ED /* Look */ = {
+			isa = PBXGroup;
+			children = (
+				9656F3261C61FF6A0038D864 /* HootLogo.png */,
+				96BADAA11C66BF700079538D /* Bar1.png */,
+				9656F3241C61FEA30038D864 /* HootLogoWhite.png */,
+				9656F3221C61F5290038D864 /* TFBarH30.png */,
+				1A568B891C4C1B370047526E /* CellSep.png */,
+			);
+			name = Look;
+			sourceTree = "<group>";
+		};
 		96FAF0F91C36EA930092D096 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,20 +499,9 @@
 		96FAF1021C37151E0092D096 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				96BADAA11C66BF700079538D /* Bar1.png */,
-				96A5A82A1C6554C0004866AE /* BannerHoot.png */,
-				96A5A8281C65492F004866AE /* ArrowHoot.png */,
-				9656F3261C61FF6A0038D864 /* HootLogo.png */,
-				9656F3241C61FEA30038D864 /* HootLogoWhite.png */,
-				9656F3221C61F5290038D864 /* TFBarH30.png */,
-				1A568BA11C4C22A50047526E /* Calendar.png */,
-				1A568B8F1C4C1C1E0047526E /* FAQ-30.png */,
-				964FD53B1C613391000D6820 /* CameraIconHoot.png */,
-				1A568B901C4C1C1E0047526E /* QA.png */,
-				1A568B891C4C1B370047526E /* CellSep.png */,
-				1A568B8B1C4C1B370047526E /* TextFieldBar.png */,
-				1A568B871C4C0D000047526E /* ConferenceCall40.png */,
-				96825D931C618E27000DFEA5 /* CheckMarkHoot.png */,
+				96DF3FA11C71780C007F84ED /* Look */,
+				96DF3FA01C7177EF007F84ED /* Indicators */,
+				96DF3F9F1C7177D5007F84ED /* TabBar */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -626,22 +659,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96DF3FAD1C717CAB007F84ED /* FAQ@3x.png in Resources */,
 				96BADAA21C66BF700079538D /* Bar1.png in Resources */,
-				96A5A82B1C6554C1004866AE /* BannerHoot.png in Resources */,
-				1A568BA21C4C22A50047526E /* Calendar.png in Resources */,
 				96A5A8291C65492F004866AE /* ArrowHoot.png in Resources */,
-				1A568B8E1C4C1B370047526E /* TextFieldBar.png in Resources */,
-				1A568B881C4C0D000047526E /* ConferenceCall40.png in Resources */,
 				964C27C51C7148D000481B61 /* Main.storyboard in Resources */,
 				9656F3251C61FEA30038D864 /* HootLogoWhite.png in Resources */,
 				9656F3231C61F5290038D864 /* TFBarH30.png in Resources */,
+				96DF3FB81C717E05007F84ED /* ConferenceCall@2x.png in Resources */,
 				964FD53C1C613391000D6820 /* CameraIconHoot.png in Resources */,
+				96DF3FAC1C717CAB007F84ED /* FAQ@2x.png in Resources */,
+				96DF3FB91C717E05007F84ED /* ConferenceCall@3x.png in Resources */,
 				960945E61C348C670000282A /* LaunchScreen.storyboard in Resources */,
+				96DF3FAB1C717CAB007F84ED /* FAQ.png in Resources */,
 				9656F3271C61FF6A0038D864 /* HootLogo.png in Resources */,
-				1A568B911C4C1C1E0047526E /* FAQ-30.png in Resources */,
 				960945E31C348C670000282A /* Assets.xcassets in Resources */,
+				96DF3FB71C717E05007F84ED /* ConferenceCall.png in Resources */,
+				96DF3FBF1C71E8B0007F84ED /* Today@3x.png in Resources */,
+				96DF3FBD1C71E8B0007F84ED /* Today.png in Resources */,
 				1A568B8C1C4C1B370047526E /* CellSep.png in Resources */,
-				1A568B921C4C1C1E0047526E /* QA.png in Resources */,
+				96DF3FBE1C71E8B0007F84ED /* Today@2x.png in Resources */,
 				96825D941C618E27000DFEA5 /* CheckMarkHoot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

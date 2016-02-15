@@ -25,23 +25,18 @@ class TermsViewController: UIViewController {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) tasks.")
-                
-                // Do something with the found objects
+                // Do something with the found objects.
                 if let objects = objects{
                     for object in objects {
                         let school = object["name"]! as! String
                         self.testList.append(school)
-                        print("Array: \(self.testList)")
                     }
                 }
-                
             } else {
                 // Log details of the failure
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
-
         // Do any additional setup after loading the view.
     }
 

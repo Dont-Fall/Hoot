@@ -29,7 +29,7 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         self.objectsPerPage = 100
     }
     
-    //MARK: Segment Controller
+    /*MARK: Segment Controller
     @IBOutlet var questionSegmentController: UISegmentedControl!
     
     @IBAction func segmentControllerActn(sender: UISegmentedControl) {
@@ -45,7 +45,7 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         default:
             break;
         }
-    }
+    }*/
     
     
     //MAY NOT BE NEEDED Define the query that will provide the data for the table view

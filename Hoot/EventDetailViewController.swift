@@ -16,6 +16,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet var eventDetailEventLocation: UILabel!
     @IBOutlet var eventDetailEventDate: UILabel!
     @IBOutlet var eventDetailAttendingCount: UILabel!
+    @IBOutlet var eventDetailDescriptionTV: UITextView!
     
     // Container to store the view table selected object
     var currentObject : PFObject?
@@ -46,12 +47,14 @@ class EventDetailViewController: UIViewController {
         // Unwrap the current object object
         if let object = currentObject {
             eventDetailCreatedBy.text = "Created By: \(object["creator"] as! String)"
-            eventDetailEventName.text = object["name"] as! String
-            eventDetailEventDate.text = object["dateAndTimeString"] as! String
-            eventDetailEventLocation.text = object["location"] as! String
-            if let attending = object["attending"] as? Array<String>{
+            eventDetailEventName.text = String(object["name"]) // as! String
+            eventDetailEventDate.text = String(object["dateAndTimeString"]) // as! String
+            eventDetailEventLocation.text = String(object["location"]) //as! String
+            if let attending = object["attending"] as? Array<String> {
             eventDetailAttendingCount.text = "\(String(attending.count)) Attending"
             }
+            eventDetailDescriptionTV.text = String(object["description"])
+            
         }
     }
     
@@ -69,10 +72,9 @@ class EventDetailViewController: UIViewController {
         }
         currentObject?.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
-                print("Yp")
                 // Success, no creating error.
             } else {
-                print("Error")
+                //"Error"
             }
         }
     }
@@ -111,7 +113,7 @@ class EventDetailViewController: UIViewController {
                     }
                     self.presentViewController(alert, animated: true, completion: nil)
                 } else {
-                    print("Error")
+                    //"Error"
                 }
             }
         }
@@ -139,6 +141,7 @@ class EventDetailViewController: UIViewController {
     }
     
     func cancelDeleteEvent(alertAction: UIAlertAction!) {
+        //Nothing
     }
     
 

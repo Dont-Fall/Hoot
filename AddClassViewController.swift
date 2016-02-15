@@ -56,7 +56,7 @@ class AddClassViewController: UIViewController {
                                     self.navigationController?.popViewControllerAnimated(true)
                                 }else {
                                     //Code Not Valid
-                                    print("Error")
+                                    //"Error"
                                 }
                             }
                         }
@@ -74,7 +74,7 @@ class AddClassViewController: UIViewController {
             }
         }else{
             // Log details of the failure
-            print("Error: \(error!) \(error!.userInfo)")
+            //print("Error: \(error!) \(error!.userInfo)")
             }
         }
     }
@@ -135,12 +135,11 @@ class AddClassViewController: UIViewController {
                             //MARK: Save Class
                             newClass.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                                 if error == nil {
-                                    print("Yp")
                                     // Success, no creating error.
                                     self.navigationController?.popViewControllerAnimated(true)
                                     //Add to que
                                 } else {
-                                    print("Error")
+                                    //Error not saved
                                 }
                             }
                         }else{

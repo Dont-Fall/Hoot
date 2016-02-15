@@ -42,7 +42,7 @@ class VerifyEmailViewController: UIViewController {
                     self.navigationController?.popViewControllerAnimated(true)
                 }
             }else{
-            print("Error")
+                //Stay on Page
             }
         }
     }
@@ -55,13 +55,13 @@ class VerifyEmailViewController: UIViewController {
                 currentUser?.email = savedEmail
                 currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if error == nil {
-                        print("No Error")
-                    } else {
-                        print("Error")
+                        //Email Resent
+                    }else {
+                        //Stay on Page
                     }
                 }
             } else {
-                print("Error")
+                //Stay on Page
             }
         }
         let alert = UIAlertController(title: "Email Sent", message: "You should recieve another verificaiton email shortly.", preferredStyle: .Alert)

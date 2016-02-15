@@ -105,7 +105,7 @@ class ClassQuestionDetailedViewController: UIViewController {
                     self.presentViewController(alert, animated: true){}
                     self.didReport = true
                 } else {
-                    print("Error")
+                    //"Error"
                 }
             }
         }else{

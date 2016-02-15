@@ -32,27 +32,26 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
                 push.setMessage("Someone has marked your answer correct in class '\(self.currentObject!["classNameTag"])'!")
                 push.sendPushInBackground()
             } else {
-                print("Error")
+                //"Error"
             }
         }
         
         //Fix to segue object later***********
-        var query = PFQuery(className:"ClassQuestion")
+        let query = PFQuery(className:"ClassQuestion")
         query.whereKey("objectId", equalTo: currentObject!["idNumber"])
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
                 // Do something with the found objects
                 if let objects = objects {
                     for object in objects {
                         object["solved"] = true
                         object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if error == nil {
-                                print("Question Updated")
+                                //"Question Updated"
                             } else {
-                                print("Error")
+                                //"Error"
                             }
                         }
                         
@@ -60,7 +59,7 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
                 }
             } else {
                 // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
+                //print("Error: \(error!) \(error!.userInfo)")
             }
         }
     }
@@ -146,7 +145,7 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
                     self.presentViewController(alert, animated: true){}
                     self.didReport = true
                 } else {
-                    print("Error")
+                    //"Error"
                 }
             }
         }else{
@@ -167,7 +166,7 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "classAnwerShowPic" {
             // Get the new view controller using [segue destinationViewController].
-            var detailScene = segue.destinationViewController as! ClassQuestionPicViewController
+            let detailScene = segue.destinationViewController as! ClassQuestionPicViewController
             // Pass the selected object to the destination view controller.
             detailScene.largePic = classQuestionAnswerSelectedPicPreview.image
         }
@@ -176,9 +175,7 @@ class ClassQuestionAnswerSelectedViewController: UIViewController {
     
     //Pic View
     func tapView() {
-        self.actInd.startAnimating()
         self.performSegueWithIdentifier("classAnwerShowPic", sender: self)
-        self.actInd.stopAnimating()
     }
     
     

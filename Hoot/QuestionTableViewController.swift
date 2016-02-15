@@ -39,11 +39,9 @@ class QuestionTableViewController: PFQueryTableViewController {
             case 0:
                 self.loadObjects()
                 self.tableView.reloadData()
-                print("first segement clicked")
             case 1:
                 self.loadObjects()
                 self.tableView.reloadData()
-                print("second segment clicked")
             default:
                 break;
             }
