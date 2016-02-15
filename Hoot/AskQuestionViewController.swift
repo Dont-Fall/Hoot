@@ -98,11 +98,7 @@ class AskQuestionViewController: UIViewController, UITextFieldDelegate, UIImageP
         //askQuestionAskQuestionTV.removeObserver(self, forKeyPath: "contentSize")
         navigationController?.popViewControllerAnimated(true)
     }
-    /*override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        var topCorrect = (askQuestionAskQuestionTV.bounds.size.height - askQuestionAskQuestionTV.contentSize.height * askQuestionAskQuestionTV.zoomScale) / 2
-        topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
-        askQuestionAskQuestionTV.contentInset.top = topCorrect
-    }*/
+    
     //Ask Function Question
     func askQuestionAskQuestion() {
         var currentUser = PFUser.currentUser()

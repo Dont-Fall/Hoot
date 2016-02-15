@@ -10,11 +10,11 @@ import UIKit
 
 class RulesTableViewController: UITableViewController {
     
-    let ruleOne = "No cheating.  The purpose of Hoot is to help others understand their issues, not ot copy word for word.  Under no circumstance should you be using this application during a test, punishment is up to the discretion of the school."
-    let ruleTwo = "No spamming.  Please refrain from posting the same question repeatedly.  If it is not answered within 24 hours you may feel free to repost it.  Those who continue to post the same question over and over are subject to an account suspension."
-    let ruleThree = "No harassing.  Everyone is here because they are struggling with some academic issue and this platform is ment for helping, not putting others down.  Please keep this community a positive area."
-    let ruleFour = "No personal information.  Please refrain from posting both yours, and others, personal information.  No phone numbers, home adresses, social media, or other information of that nature."
-    let ruleFive = "Placeholder"
+    let ruleOne = "No cheating.  The purpose of Hoot is to help others understand their issues, not to copy word for word.  Under no circumstance should you be using this application during a test, punishment is up to the discretion of the school."
+    let ruleTwo = "No spamming.  Please refrain from posting the same question repeatedly.  If it is not answered within 24 hours you may feel free to repost it.  In the mean time feel free to help others out."
+    let ruleThree = "No harassing.  Everyone is here because they are struggling with some academic issue of varying magnitude and this platform is meant for helping, not putting others down.  Please keep this community a positive area."
+    let ruleFour = "No personal information.  Please refrain from posting both yours, and others, personal information.  No phone numbers, home addresses, social media, or other information of that nature."
+    //let ruleFive = "Placeholder"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class RulesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 4
     }
 
     
@@ -72,10 +72,10 @@ class RulesTableViewController: UITableViewController {
         }else if row == 3{
             cell.rulesTV.text = ruleFour
             cell.numLabel.text = "4)"
-        }else if row == 4{
+        }/*else if row == 4{
             cell.rulesTV.text = ruleFive
             cell.numLabel.text = "5)"
-        }
+        }*/
         // Configure the cell...
         
 

@@ -95,7 +95,7 @@ class QuestionDetailAnswerSelectedViewController: UIViewController {
                 self.questionAnswerSelectedPicPreview.hidden = true
             }
                         
-            questionAnswerSelectedUserLabel.text = "Answered By: \(object["user"] as! String)"
+            questionAnswerSelectedUserLabel.text = "Solved By: \(object["user"] as! String)"
             questionAnswerSelectedAnswerTV.text = object["answer"] as! String
             askedBy = object["askedBy"] as! String
         }

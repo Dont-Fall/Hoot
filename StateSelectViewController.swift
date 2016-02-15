@@ -14,13 +14,7 @@ class StateSelectViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBOutlet var stateSelectTF: UITextField!
     @IBOutlet var stateSelectPicker: UIPickerView!
     @IBAction func stateSelectNextBtn(sender: AnyObject) {
-        if stateSelectTF.text?.isEmpty == true{
-            let alert = UIAlertController(title: "Select a State", message: "You must select a state before moving on.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            presentViewController(alert, animated: true, completion: nil)
-        }else{
-            self.performSegueWithIdentifier("stateToTermSegue", sender: self)
-        }
+        self.performSegueWithIdentifier("stateToTermSegue", sender: self)
     }
     
     @IBAction func stateSelectBackBtn(sender: AnyObject) {
