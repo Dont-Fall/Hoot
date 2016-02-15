@@ -201,6 +201,14 @@ class ClassAskQuestionViewController: UIViewController, UITextFieldDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
     
+    func textViewDidBeginEditing(textView: UITextView) {
+        if classAskQuestionTV.text == "What are you having trouble with?"
+        {
+            classAskQuestionTV.text = ""
+            classAskQuestionTV.textColor = UIColor.blackColor()
+        }
+    }
+    
     func randomNumber() -> String{
         let alphabet =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" as NSString
         var i = 10

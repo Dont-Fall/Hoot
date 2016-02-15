@@ -1391,6 +1391,7 @@
                             <constraint firstAttribute="trailing" secondItem="WDT-cQ-XIj" secondAttribute="trailing" id="h0m-b1-ylR"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="questionPicLargeView" destination="Nmy-dN-QRS" id="3DR-wM-8Py"/>
                         <outlet property="zoomScrollView" destination="WDT-cQ-XIj" id="JCl-Pv-kCJ"/>
@@ -3729,17 +3730,17 @@
         <image name="TFBarH30.png" width="600" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9la-kl-ppR"/>
-        <segue reference="I3p-ea-aPt"/>
         <segue reference="GEX-N6-J3L"/>
+        <segue reference="I3p-ea-aPt"/>
+        <segue reference="9la-kl-ppR"/>
         <segue reference="86e-Aa-5ZQ"/>
         <segue reference="6bh-sc-lru"/>
-        <segue reference="gWS-jR-3bg"/>
-        <segue reference="kG6-ei-V4G"/>
         <segue reference="Rzp-QO-B34"/>
-        <segue reference="oP8-Ch-mkz"/>
+        <segue reference="vY0-tw-E0p"/>
+        <segue reference="9EJ-RU-csy"/>
+        <segue reference="kG6-ei-V4G"/>
         <segue reference="k6p-AY-O9o"/>
         <segue reference="LpV-FB-yTG"/>
-        <segue reference="9EJ-RU-csy"/>
+        <segue reference="oP8-Ch-mkz"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,6 +29,8 @@ class QuestionPicViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.hidesBarsOnTap = true
         self.tabBarController?.tabBar.hidden = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 0.0)
+        navigationController!.navigationBar.backgroundColor = UIColor(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 0.0)
         questionPicLargeView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
