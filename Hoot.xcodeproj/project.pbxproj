@@ -89,6 +89,7 @@
 		96DF3FBF1C71E8B0007F84ED /* Today@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DF3FBC1C71E8B0007F84ED /* Today@3x.png */; };
 		96E5FEB21C629AF9000DA329 /* VerifyEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5FEB11C629AF9000DA329 /* VerifyEmailViewController.swift */; };
 		96ED08CC1C61A1B700729DB5 /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ED08CB1C61A1B700729DB5 /* QuestionAnswerViewController.swift */; };
+		96F3A4EF1C72A2360067FEB5 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A4EE1C72A2360067FEB5 /* TestTableViewController.swift */; };
 		96FAF0F61C36EA830092D096 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F51C36EA830092D096 /* Accounts.framework */; };
 		96FAF0F81C36EA890092D096 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FAF0F71C36EA890092D096 /* Social.framework */; };
 		96FAF0FB1C36F1140092D096 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */; };
@@ -218,6 +219,7 @@
 		96DF3FBC1C71E8B0007F84ED /* Today@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Today@3x.png"; sourceTree = "<group>"; };
 		96E5FEB11C629AF9000DA329 /* VerifyEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewController.swift; sourceTree = "<group>"; };
 		96ED08CB1C61A1B700729DB5 /* QuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewController.swift; sourceTree = "<group>"; };
+		96F3A4EE1C72A2360067FEB5 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		96FAF0F51C36EA830092D096 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		96FAF0F71C36EA890092D096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		96FAF0FA1C36F1140092D096 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		960945CF1C348C660000282A = {
 			isa = PBXGroup;
 			children = (
+				96F3A4EE1C72A2360067FEB5 /* TestTableViewController.swift */,
 				96FAF1021C37151E0092D096 /* Pictures */,
 				96FAF0F91C36EA930092D096 /* Framework */,
 				960945DA1C348C660000282A /* Hoot */,
@@ -715,6 +718,7 @@
 				96E5FEB21C629AF9000DA329 /* VerifyEmailViewController.swift in Sources */,
 				E4E2B5F81C66C36400B2B6E7 /* PasswordReset.swift in Sources */,
 				96B29BC41C3993DE00240AD7 /* AddClassViewController.swift in Sources */,
+				96F3A4EF1C72A2360067FEB5 /* TestTableViewController.swift in Sources */,
 				96B29BD01C39B11E00240AD7 /* SubjectTableViewController.swift in Sources */,
 				F1F147371C49999200938235 /* EventCreate.swift in Sources */,
 				96FAF14A1C386EA40092D096 /* AskQuestionViewController.swift in Sources */,
@@ -906,6 +910,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -926,6 +931,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoot/Hoot-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -73,6 +73,7 @@ class QuestionTableViewController: PFQueryTableViewController {
             }else{
                 //Shouldnt Occur
             }
+            //print("Successfully retrieved \(objects!.count) scores.")
             return questionsQuery
     }
     
@@ -143,12 +144,28 @@ class QuestionTableViewController: PFQueryTableViewController {
         self.actInd.stopAnimating()
     }
     
+    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 25
+    }*/
+    
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         noDataView.hidden=true
+        print(self.objects!.count)
         var cell = tableView.dequeueReusableCellWithIdentifier("questionCell") as! QuestionTableViewCell!
         if cell == nil {
             cell = QuestionTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "questionCell")
+        }
+        if (indexPath.row) == self.objects!.count{
+            //self.loadNextPage()
+            cell?.questionCourseLabel.text = "Load More"
+            return cell
         }
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["question"] as? String {
@@ -206,9 +223,11 @@ class QuestionTableViewController: PFQueryTableViewController {
     }
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("questionDetailedViewIdentifier", sender: self)
-        self.actInd.stopAnimating()
+        if (indexPath.row) == self.objects!.count{
+            self.loadNextPage()
+        }else{
+            self.performSegueWithIdentifier("questionDetailedViewIdentifier", sender: self)
+        }
     }
 
 }
