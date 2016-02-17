@@ -31,7 +31,7 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
         self.textKey = "idNumber"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
-        self.objectsPerPage = 100
+        self.objectsPerPage = 25
     }
     
     //MAY NOT BE NEEDED Define the query that will provide the data for the table view
@@ -68,12 +68,24 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
+    override func tableView(tableView: UITableView, cellForNextPageAtIndexPath indexPath: NSIndexPath) -> PFTableViewCell? {
+        var cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell") as! LoadMoreTableViewCell!
+        if cell == nil{
+            cell = LoadMoreTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "loadMoreCell")
+        }
+        cell.loadMoreLabel.text = "Load More"
+        return cell
+    }
+    
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         noDataView.hidden = true
         var cell = tableView.dequeueReusableCellWithIdentifier("answerCell") as! QuestionDetailAnswerTableViewCell!
         if cell == nil {
             cell = QuestionDetailAnswerTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "answerCell")
+        }
+        if (indexPath.row) == self.objects!.count{
+            return cell
         }
         // Extract values from the PFObject to display in the table cell
         if let user = object?["user"] as? String {
@@ -134,7 +146,11 @@ class QuestionDetailAnswerTableViewController: PFQueryTableViewController {
     
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("questionAnswerSelectedSegue", sender: self)
+        if (indexPath.row) == self.objects!.count{
+            self.loadNextPage()
+        }else{
+            self.performSegueWithIdentifier("questionAnswerSelectedSegue", sender: self)
+        }
     }
     
 }

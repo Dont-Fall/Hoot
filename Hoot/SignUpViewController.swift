@@ -100,6 +100,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             let signin = SignIn(user: signUpUsernameTF.text!, pass: signUpPasswordTF.text!)
             do {
                 try signin.signInUser()
+                let currentInstallation = PFInstallation.currentInstallation()
                 self.performSegueWithIdentifier("signUpSuccess", sender: self)
             }catch let error as Error {
                 //dismissKeyboard()

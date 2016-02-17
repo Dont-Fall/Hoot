@@ -26,7 +26,7 @@ class ClassesTableViewController: PFQueryTableViewController {
         self.textKey = "member"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
-        self.objectsPerPage = 100
+        self.objectsPerPage = 10
     }
     
     // Define the query that will provide the data for the table view
@@ -65,9 +65,16 @@ class ClassesTableViewController: PFQueryTableViewController {
     }
     
     func addClassSegue() {
-        self.actInd.startAnimating()
         self.performSegueWithIdentifier("addClassSegue", sender: self)
-        self.actInd.stopAnimating()
+    }
+    
+    override func tableView(tableView: UITableView, cellForNextPageAtIndexPath indexPath: NSIndexPath) -> PFTableViewCell? {
+        var cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell") as! LoadMoreTableViewCell!
+        if cell == nil{
+            cell = LoadMoreTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "loadMoreCell")
+        }
+        cell.loadMoreLabel.text = "Load More"
+        return cell
     }
     
     //PFQuery For Table
@@ -77,6 +84,9 @@ class ClassesTableViewController: PFQueryTableViewController {
         var cell = tableView.dequeueReusableCellWithIdentifier("classCell") as! ClassesTableViewCell!
         if cell == nil {
             cell = ClassesTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "classCell")
+        }
+        if (indexPath.row) == self.objects!.count{
+            return cell
         }
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["name"] as? String {
@@ -118,22 +128,22 @@ class ClassesTableViewController: PFQueryTableViewController {
     
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let row = indexPath.row
-        let currentUser = PFUser.currentUser()
-        currentUser!["currentGroupCode"] = objects?[row]["code"]
-        currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                // Success, no creating error.
-                self.actInd.startAnimating()
+        if (indexPath.row) == self.objects!.count{
+            self.loadNextPage()
+        }else{
+            let row = indexPath.row
+            let currentUser = PFUser.currentUser()
+            currentUser!["currentGroupCode"] = objects?[row]["code"]
+            currentUser!.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
                 self.performSegueWithIdentifier("classViewSegue", sender: self)
-                self.actInd.stopAnimating()
-                //Add to que
-            } else {
-                //"Error"
+                } else {
+                    //"Error"
+                }
             }
         }
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -32,7 +32,7 @@ class VerifyEmailViewController: UIViewController {
             if error == nil {
                 print(verifiedCheck)
                 if verifiedCheck  == false {
-                    let alert = UIAlertController(title: "Uh-Oh!", message: "You haven't verified your email yet!", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Uh-Oh!", message: "You haven't verified your email yet!  You may have to click again, this messes up sometimes.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                 }else{

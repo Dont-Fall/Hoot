@@ -11,9 +11,9 @@ import Social
 
 class MoreTableViewController: UITableViewController {
     
-    var sectionZero = ["Daily Token","1 Token For 10 Points", "5 Tokens For 100 Points", "10 Tokens For 175 Points"]
+    var sectionZero = ["Daily Token","1 Token For 25 Points", "5 Tokens For 100 Points", "10 Tokens For 175 Points"]
     var sectionOne = ["Twitter", "Facebook", "Rate Hoot"]
-    var sectionTwo = ["Rules", "Contact Us"]
+    var sectionTwo = ["Rules", "Contact Us", "Privacy Policy", "Terms of Service"]
     var sectionThree = ["My Questions", "My Class Questions", "Log Out"]
     var points = String()
     var cdTime: String!
@@ -70,7 +70,7 @@ class MoreTableViewController: UITableViewController {
         }else if section == 1 {
             return 3
         }else if section == 2 {
-            return 2
+            return 4
         }else {
             return 3
         }
@@ -132,7 +132,7 @@ class MoreTableViewController: UITableViewController {
                     let alert = UIAlertController(title: "Max Tokens", message: "You already have over 50 tokens, save your points for some other cool stuff.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
-                }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 100{
+                }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 25{
                     currentUser?.incrementKey("tokens", byAmount: 1)
                     currentUser?.incrementKey("points", byAmount: -25)
                     currentUser?.saveInBackground()
@@ -140,7 +140,7 @@ class MoreTableViewController: UITableViewController {
                     points = String(currentUser!.objectForKey("points")!)
                     let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
                     self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
-                    let alert = UIAlertController(title: "Tokens Obtained", message: "You now have 10 more question tokens.", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Tokens Obtained", message: "You now have 1 more question token.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
                 }else{
@@ -153,7 +153,7 @@ class MoreTableViewController: UITableViewController {
                     let alert = UIAlertController(title: "Max Tokens", message: "You already have over 50 tokens, save your points for some other cool stuff.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
-                }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 250{
+                }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 100{
                     currentUser?.incrementKey("tokens", byAmount: 5)
                     currentUser?.incrementKey("points", byAmount: -100)
                     currentUser?.saveInBackground()
@@ -161,7 +161,7 @@ class MoreTableViewController: UITableViewController {
                     points = String(currentUser!.objectForKey("points")!)
                     let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
                     self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
-                    let alert = UIAlertController(title: "Tokens Obtained", message: "You now have 20 more question tokens.", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Tokens Obtained", message: "You now have 5 more question tokens.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
                 }else{
@@ -174,7 +174,7 @@ class MoreTableViewController: UITableViewController {
                     let alert = UIAlertController(title: "Max Tokens", message: "You already have over 50 tokens, save your points for some other cool stuff.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
-                }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 400{
+                }else if Int((currentUser?.objectForKey("points"))! as! NSNumber) >= 175{
                     currentUser?.incrementKey("tokens", byAmount: 10)
                     currentUser?.incrementKey("points", byAmount: -175)
                     currentUser?.saveInBackground()
@@ -182,7 +182,7 @@ class MoreTableViewController: UITableViewController {
                     points = String(currentUser!.objectForKey("points")!)
                     let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
                     self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
-                    let alert = UIAlertController(title: "Tokens Obtained", message: "You now have 50 more question tokens.", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Tokens Obtained", message: "You now have 10 more question tokens.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     presentViewController(alert, animated: true, completion: nil)
                 }else{
@@ -220,8 +220,12 @@ class MoreTableViewController: UITableViewController {
         }else if indexPath.section == 2 {
             if row == 0{
                 self.performSegueWithIdentifier("rulesSegue", sender: self)
-            }else{
+            }else if row == 1{
                 self.performSegueWithIdentifier("contactUsSegue", sender: self)
+            }else if row == 2{
+                self.performSegueWithIdentifier("moreToPrivacySegue", sender: self)
+            }else{
+                self.performSegueWithIdentifier("moreToTermsSegue", sender: self)
             }
         }else {
             if row == 0{

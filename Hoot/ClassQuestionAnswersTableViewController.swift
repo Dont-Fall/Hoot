@@ -31,7 +31,7 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
         self.textKey = "idNumber"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
-        self.objectsPerPage = 100
+        self.objectsPerPage = 25
     }
     
     //MAY NOT BE NEEDED Define the query that will provide the data for the table view
@@ -69,17 +69,14 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    //NOT NEEDED FOR QUERY
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-    return 10
+    override func tableView(tableView: UITableView, cellForNextPageAtIndexPath indexPath: NSIndexPath) -> PFTableViewCell? {
+        var cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell") as! LoadMoreTableViewCell!
+        if cell == nil{
+            cell = LoadMoreTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "loadMoreCell")
+        }
+        cell.loadMoreLabel.text = "Load More"
+        return cell
     }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return 10
-    }
-    */
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
@@ -87,6 +84,9 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
         var cell = tableView.dequeueReusableCellWithIdentifier("classAnswerCell") as! ClassQuestionAnswerCell!
         if cell == nil {
             cell = ClassQuestionAnswerCell(style: UITableViewCellStyle.Default, reuseIdentifier: "classAnswerCell")
+        }
+        if (indexPath.row) == self.objects!.count{
+            return cell
         }
         // Extract values from the PFObject to display in the table cell
         if let user = object?["user"] as? String {
@@ -147,7 +147,11 @@ class ClassQuestionAnswersTableViewController: PFQueryTableViewController {
     
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("classQuestionAnswerSelectedSegue", sender: self)
+        if (indexPath.row) == self.objects!.count{
+            self.loadNextPage()
+        }else {
+            self.performSegueWithIdentifier("classQuestionAnswerSelectedSegue", sender: self)
+        }
     }
     
 }

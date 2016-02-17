@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="We've all been there.  Just enter your email below to start the password reset process." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-tL-g6N">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="We've all been there.  Just enter your email below to start the password reset process." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-tL-g6N">
                                 <rect key="frame" x="20" y="50" width="560" height="130"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-iQ-y3i">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-iQ-y3i">
                                 <rect key="frame" x="200" y="278" width="90" height="40"/>
                                 <animations/>
                                 <constraints>
@@ -45,7 +45,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="2kl-jz-thw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tH4-G3-RlH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tH4-G3-RlH">
                                 <rect key="frame" x="310" y="278" width="90" height="40"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
@@ -58,7 +58,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="CvJ-99-eve"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-lJ-GSa">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-lJ-GSa">
                                 <rect key="frame" x="20" y="214" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -204,7 +204,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-Tq-gTq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-Tq-gTq">
                                 <rect key="frame" x="200" y="250" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -213,7 +213,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-tJ-Pme">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-tJ-Pme">
                                 <rect key="frame" x="200" y="210" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -222,7 +222,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-iO-j3U">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-iO-j3U">
                                 <rect key="frame" x="200" y="381" width="200" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -237,7 +237,7 @@
                                     <action selector="logInPasswordResetBtn:" destination="Ooo-eL-nsz" eventType="touchUpInside" id="pET-j3-2Qx"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HootLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SKY-BE-5XG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HootLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SKY-BE-5XG">
                                 <rect key="frame" x="213" y="20" width="175" height="175"/>
                                 <animations/>
                                 <constraints>
@@ -245,7 +245,7 @@
                                     <constraint firstAttribute="width" secondItem="SKY-BE-5XG" secondAttribute="height" multiplier="1:1" id="zqg-dR-JFa"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrO-8a-SVb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrO-8a-SVb">
                                 <rect key="frame" x="200" y="284" width="90" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -261,7 +261,7 @@
                                     <action selector="logInSignUpBtn:" destination="Ooo-eL-nsz" eventType="touchUpInside" id="uwz-mu-2Pp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-xk-aXm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-xk-aXm">
                                 <rect key="frame" x="310" y="284" width="90" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,7 +276,7 @@
                                     <action selector="logInLogInBtn:" destination="Ooo-eL-nsz" eventType="touchUpInside" id="rJO-xy-EML"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sH-5p-Ls9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sH-5p-Ls9">
                                 <rect key="frame" x="20" y="323" width="560" height="33"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -342,7 +342,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-Gv-KG2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-Gv-KG2">
                                 <rect key="frame" x="20" y="223" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -351,7 +351,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmp-o2-qdC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmp-o2-qdC">
                                 <rect key="frame" x="200" y="274" width="90" height="40"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
@@ -363,7 +363,7 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="BTZ-aj-CRe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ3-ol-MV4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ3-ol-MV4">
                                 <rect key="frame" x="310" y="274" width="90" height="40"/>
                                 <animations/>
                                 <constraints>
@@ -379,14 +379,14 @@
                                     <action selector="signUpCreateBtn:" destination="Twi-Vs-zzb" eventType="touchUpInside" id="nL1-xJ-7al"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Please provide the name and state of your college below and it will be added to the list as soon as we verify its authenticity." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-fv-QPZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Please provide the name and state of your college below and it will be added to the list as soon as we verify its authenticity." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-fv-QPZ">
                                 <rect key="frame" x="20" y="50" width="560" height="130"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-Pw-nnN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="center" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-Pw-nnN">
                                 <rect key="frame" x="20" y="185" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -441,7 +441,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Before you can continue you must agree to our terms of service." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GGx-L3-meQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="By continuing you agree to our Terms of Service." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GGx-L3-meQ">
                                 <rect key="frame" x="180" y="70" width="240" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -525,11 +525,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Okd-Gj-oBK">
-                                <rect key="frame" x="20" y="20" width="560" height="495"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Okd-Gj-oBK">
+                                <rect key="frame" x="20" y="20" width="560" height="2372"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Terms of Service ("Terms")
+
+Last updated: February 17, 2016
+
+Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Hoot mobile application (the "Service") operated by Hoot ("us", "we", or "our").
+
+Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.
+
+By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.
+
+Communications
+
+By creating an Account on our service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.
+
+Content
+
+Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material ("Content"). You are responsible for the Content that you post on or through the Service, including its legality, reliability, and appropriateness.
+
+By posting Content on or through the Service, You represent and warrant that: (i) the Content is yours (you own it) and/or you have the right to use it and the right to grant us the rights and license as provided in these Terms, and (ii) that the posting of your Content on or through the Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person or entity. We reserve the right to terminate the account of anyone found to be infringing on a copyright.
+
+You retain any and all of your rights to any Content you submit, post or display on or through the Service and you are responsible for protecting those rights. We take no responsibility and assume no liability for Content you or any third party posts on or through the Service. However, by posting Content using the Service you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through the Service. You agree that this license includes the right for us to make your Content available to other users of the Service, who may also use your Content subject to these Terms.
+
+Hoot has the right but not the obligation to monitor and edit all Content provided by users.
+
+In addition, Content found on or through this Service are the property of Hoot or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
+
+Accounts
+
+When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Service.
+
+You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.
+
+You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than you, without appropriate authorization. You may not use as a username any name that is offensive, vulgar or obscene.
+
+Intellectual Property The Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of Hoot and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Hoot.
+
+Links To Other Web Sites
+
+Our Service may contain links to third party web sites or services that are not owned or controlled by Hoot.
+
+Hoot has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.
+
+You acknowledge and agree that Hoot shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third party web sites or services.
+
+We strongly advise you to read the terms and conditions and privacy policies of any third party web sites or services that you visit.
+
+Termination
+
+We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.
+
+If you wish to terminate your account, you may simply discontinue using the Service.
+
+All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.
+
+Indemnification
+
+You agree to defend, indemnify and hold harmless Hoot and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password; b) a breach of these Terms, or c) Content posted on the Service.
+
+Limitation Of Liability
+
+In no event shall Hoot, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.
+
+Disclaimer
+
+Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.
+
+Hoot its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.
+
+Exclusions
+
+Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you.
+
+Governing Law
+
+These Terms shall be governed and construed in accordance with the laws of New Jersey, United States, without regard to its conflict of law provisions.
+
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.
+
+Changes
+
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+
+By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.
+
+Contact Us
+
+If you have any questions about these Terms, please contact us.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -624,7 +710,7 @@
                                     <segue destination="Ooo-eL-nsz" kind="show" identifier="addScholToLogInSegue" id="85I-zB-BNX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-rm-M0h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-rm-M0h">
                                 <rect key="frame" x="0.0" y="327" width="600" height="47"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -641,7 +727,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" secureTextEntry="YES"/>
                             </textField>
-                            <pickerView opaque="NO" contentMode="scaleToFill" misplaced="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWC-EW-cj9">
+                            <pickerView opaque="NO" contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWC-EW-cj9">
                                 <rect key="frame" x="20" y="383" width="560" height="179"/>
                                 <animations/>
                                 <color key="tintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -660,7 +746,7 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bND-xx-qX4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bND-xx-qX4">
                                 <rect key="frame" x="200" y="562" width="200" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
@@ -805,7 +891,7 @@
             <objects>
                 <tableViewController id="IX9-9a-9L1" customClass="MoreTableViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="UqP-BO-VxD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -834,6 +920,8 @@
                         <segue destination="ja1-Sr-6xs" kind="show" identifier="myClassQuestionsSegue" id="qZ3-2d-rcs"/>
                         <segue destination="F99-qU-XUD" kind="show" identifier="contactUsSegue" id="fDH-Rr-a8g"/>
                         <segue destination="jYP-qi-P5k" kind="show" identifier="rulesSegue" id="EKY-k3-8XL"/>
+                        <segue destination="pQr-u1-U4P" kind="show" identifier="moreToTermsSegue" id="YVs-wm-7Ad"/>
+                        <segue destination="Fkg-Jw-WC1" kind="show" identifier="moreToPrivacySegue" id="dIu-tn-jtb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udP-zM-n5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -845,7 +933,7 @@
             <objects>
                 <tableViewController id="jYP-qi-P5k" customClass="RulesTableViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" id="hKV-jl-K23">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -908,13 +996,13 @@
             <objects>
                 <tableViewController id="Wtk-11-lnm" customClass="MyQuestionsTableViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="c6i-jg-raz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="uqb-5w-viO">
-                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="228" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woah! Looks like you haven't asked any questions yet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejj-8A-VJf">
@@ -959,11 +1047,11 @@
                                             <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-Nd-HQw">
+                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-Nd-HQw">
                                             <rect key="frame" x="4" y="35" width="562" height="101"/>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGu-Mi-QNu">
@@ -1041,6 +1129,49 @@
                                     <outlet property="myQuestionTimeStamp" destination="VPM-pw-sFT" id="i9G-Nm-WiP"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="8eB-g3-5OD" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="178" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="8eB-g3-5OD" id="ues-N9-HLF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-8H-LUZ">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="Utu-ji-ZQe"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-gd-SJJ">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="Q7k-4j-ipY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="cAe-gd-SJJ" firstAttribute="centerY" secondItem="ues-N9-HLF" secondAttribute="centerY" id="MOT-hy-XnN"/>
+                                        <constraint firstItem="cAe-gd-SJJ" firstAttribute="top" secondItem="ues-N9-HLF" secondAttribute="topMargin" constant="6" id="TSf-IO-xMy"/>
+                                        <constraint firstItem="cAe-gd-SJJ" firstAttribute="centerX" secondItem="ues-N9-HLF" secondAttribute="centerX" id="txL-zL-FbJ"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="Xgp-8H-LUZ"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="cAe-gd-SJJ" id="lnB-o9-Gso"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Wtk-11-lnm" id="PPK-hG-g4s"/>
@@ -1061,13 +1192,13 @@
             <objects>
                 <tableViewController id="ja1-Sr-6xs" customClass="MyClassQuestionsTableViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Efx-Bn-bAV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="9bs-yw-m9r">
-                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="228" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woah! Looks like you haven't asked any questions in a class yet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KR-8Y-tvT">
@@ -1097,7 +1228,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVd-cU-7BV">
+                                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QVd-cU-7BV">
                                             <rect key="frame" x="4" y="35" width="562" height="101"/>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1199,6 +1330,49 @@
                                     <outlet property="myClassQuestionTimeStamp" destination="zHs-g2-XlD" id="rg3-Jo-QQw"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="GIC-fC-sCg" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="178" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="GIC-fC-sCg" id="ptV-WH-lq7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="1ll-8C-p8S">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="OTE-lq-DF4"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emo-V7-QvR">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="Om7-t4-hJ5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="emo-V7-QvR" firstAttribute="top" secondItem="ptV-WH-lq7" secondAttribute="topMargin" constant="6" id="k54-JR-1Av"/>
+                                        <constraint firstItem="emo-V7-QvR" firstAttribute="centerX" secondItem="ptV-WH-lq7" secondAttribute="centerX" id="nHN-b6-RTB"/>
+                                        <constraint firstItem="emo-V7-QvR" firstAttribute="centerY" secondItem="ptV-WH-lq7" secondAttribute="centerY" id="xO7-p6-Csl"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="1ll-8C-p8S"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="emo-V7-QvR" id="aMV-bO-3uI"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="ja1-Sr-6xs" id="7yx-W7-EMe"/>
@@ -1213,6 +1387,236 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4e-Pc-ozQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3776" y="232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="edB-nc-M3J">
+            <objects>
+                <viewController id="Fkg-Jw-WC1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7tu-Cq-1aD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ijT-Mr-Vjh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pep-4t-uOD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CdT-3c-MFG">
+                                <rect key="frame" x="20" y="20" width="560" height="564"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Privacy Policy
+
+Last updated: February 17, 2016
+
+Hoot ("us", "we", or "our") operates the Hoot mobile application (the "Service").
+
+This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.
+
+We will not use or share your information with anyone except as described in this Privacy Policy.
+
+We use your Personal Information for providing and improving the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.
+
+Information Collection And Use
+
+While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your email address, other information ("Personal Information"). We collect this information for the purpose of providing the Service, identifying and communicating with you, responding to your requests/inquiries, servicing your purchase orders, and improving our services.
+
+Log Data
+
+When you access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use and other statistics ("Log Data").
+
+In addition, we may use third-party services, such as Parse, that collect, monitor and analyze this type of information in order to increase our Service's functionality.
+
+These third-parties may use cookies to help us analyze how our users are using the Service and they have their own Privacy Policies addressing how they use such information.
+
+Cookies
+
+Cookies are files with a small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and transferred to your device. We use cookies to collect information in order to improve our services for you.
+
+You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. The Help feature on most browsers provide information on how to accept cookies, disable cookies or to notify you when receiving a new cookie.
+
+If you do not accept cookies, you may not be able to use some features of our Service and we recommend that you leave them turned on.
+
+Service Providers
+
+We may employ third-party companies and individuals to facilitate our Service, to provide the Service on our behalf, to perform Service-related services and/or to assist us in analyzing how our Service is used.
+
+These third parties have access to your Personal Information only to perform specific tasks on our behalf and are obligated not to disclose or use your information for any other purpose.
+
+Communications
+
+We may use your Personal Information to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send or by contacting us.
+
+Compliance With Laws
+
+We will disclose your Personal Information where required to do so by law or subpoena or if we believe that such action is necessary to comply with the law and the reasonable requests of law enforcement or to protect the security or integrity of our Service.
+
+Security
+
+The security of your Personal Information is important to us, and we strive to implement and maintain reasonable, commercially acceptable security procedures and practices appropriate to the nature of the information we store, in order to protect it from unauthorized access, destruction, use, modification, or disclosure.
+
+However, please be aware that no method of transmission over the internet, or method of electronic storage is 100% secure and we are unable to guarantee the absolute security of the Personal Information we have collected from you.
+
+Links To Other Sites
+
+Our Service may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third-party's site. We strongly advise you to review the Privacy Policy of every site you visit.
+
+We have no control over, and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.
+
+Children's Privacy
+
+Only persons age 18 or older have permission to access our Service. Our Service does not address anyone under the age of 13 ("Children").
+
+We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you learn that your Children have provided us with Personal Information, please contact us. If we become aware that we have collected Personal Information from a children under age 13 without verification of parental consent, we take steps to remove that information from our servers.
+
+Changes To This Privacy Policy
+
+This Privacy Policy is effective as of February 17, 2016 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
+
+We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.
+
+If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.
+
+Contact Us
+
+If you have any questions about this Privacy Policy, please contact us.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CdT-3c-MFG" firstAttribute="trailing" secondItem="pep-4t-uOD" secondAttribute="trailingMargin" id="QEy-TL-QJF"/>
+                            <constraint firstItem="ijT-Mr-Vjh" firstAttribute="top" secondItem="CdT-3c-MFG" secondAttribute="bottom" constant="16" id="bWh-Ku-1Kf"/>
+                            <constraint firstItem="CdT-3c-MFG" firstAttribute="top" secondItem="7tu-Cq-1aD" secondAttribute="bottom" id="gIr-Yp-nQ8"/>
+                            <constraint firstItem="CdT-3c-MFG" firstAttribute="leading" secondItem="pep-4t-uOD" secondAttribute="leadingMargin" id="wVH-Dc-mf6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHD-hO-pab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4554" y="-440"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JTC-5S-ED4">
+            <objects>
+                <viewController id="pQr-u1-U4P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nqb-aR-U6U"/>
+                        <viewControllerLayoutGuide type="bottom" id="srt-N3-0da"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SEh-zH-f3a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v67-Sf-HUg">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Terms of Service ("Terms")
+
+Last updated: February 17, 2016
+
+Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Hoot mobile application (the "Service") operated by Hoot ("us", "we", or "our").
+
+Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.
+
+By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.
+
+Communications
+
+By creating an Account on our service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.
+
+Content
+
+Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material ("Content"). You are responsible for the Content that you post on or through the Service, including its legality, reliability, and appropriateness.
+
+By posting Content on or through the Service, You represent and warrant that: (i) the Content is yours (you own it) and/or you have the right to use it and the right to grant us the rights and license as provided in these Terms, and (ii) that the posting of your Content on or through the Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person or entity. We reserve the right to terminate the account of anyone found to be infringing on a copyright.
+
+You retain any and all of your rights to any Content you submit, post or display on or through the Service and you are responsible for protecting those rights. We take no responsibility and assume no liability for Content you or any third party posts on or through the Service. However, by posting Content using the Service you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through the Service. You agree that this license includes the right for us to make your Content available to other users of the Service, who may also use your Content subject to these Terms.
+
+Hoot has the right but not the obligation to monitor and edit all Content provided by users.
+
+In addition, Content found on or through this Service are the property of Hoot or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
+
+Accounts
+
+When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Service.
+
+You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.
+
+You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than you, without appropriate authorization. You may not use as a username any name that is offensive, vulgar or obscene.
+
+Intellectual Property The Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of Hoot and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Hoot.
+
+Links To Other Web Sites
+
+Our Service may contain links to third party web sites or services that are not owned or controlled by Hoot.
+
+Hoot has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.
+
+You acknowledge and agree that Hoot shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third party web sites or services.
+
+We strongly advise you to read the terms and conditions and privacy policies of any third party web sites or services that you visit.
+
+Termination
+
+We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.
+
+If you wish to terminate your account, you may simply discontinue using the Service.
+
+All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.
+
+Indemnification
+
+You agree to defend, indemnify and hold harmless Hoot and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password; b) a breach of these Terms, or c) Content posted on the Service.
+
+Limitation Of Liability
+
+In no event shall Hoot, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.
+
+Disclaimer
+
+Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.
+
+Hoot its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.
+
+Exclusions
+
+Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you.
+
+Governing Law
+
+These Terms shall be governed and construed in accordance with the laws of New Jersey, United States, without regard to its conflict of law provisions.
+
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.
+
+Changes
+
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+
+By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.
+
+Contact Us
+
+If you have any questions about these Terms, please contact us.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v67-Sf-HUg" firstAttribute="trailing" secondItem="SEh-zH-f3a" secondAttribute="trailingMargin" id="P3C-lp-8yI"/>
+                            <constraint firstItem="srt-N3-0da" firstAttribute="top" secondItem="v67-Sf-HUg" secondAttribute="bottom" constant="8" symbolic="YES" id="gfL-vQ-PZm"/>
+                            <constraint firstItem="v67-Sf-HUg" firstAttribute="top" secondItem="nqb-aR-U6U" secondAttribute="bottom" constant="8" symbolic="YES" id="tyI-RY-wy7"/>
+                            <constraint firstItem="v67-Sf-HUg" firstAttribute="leading" secondItem="SEh-zH-f3a" secondAttribute="leadingMargin" id="yUD-vU-ASA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Gj-vT-bh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4554" y="232"/>
         </scene>
         <!--Ask Question View Controller-->
         <scene sceneID="FwW-Mz-11P">
@@ -1229,14 +1633,11 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Course" textAlignment="natural" minimumFontSize="17" background="TFBarH30.png" disabledBackground="TFBarH30.png" translatesAutoresizingMaskIntoConstraints="NO" id="6my-y3-bP6">
                                 <rect key="frame" x="24" y="8" width="553" height="30"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jZC-e3-SRU"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-tM-IgT">
-                                <rect key="frame" x="24" y="261" width="80" height="30"/>
+                                <rect key="frame" x="24" y="273" width="80" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <state key="normal" title="Add Picture">
@@ -1249,61 +1650,62 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsA-Jo-rju">
                                 <rect key="frame" x="555" y="12" width="17" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="h9T-u5-7fo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-Qm-I7r">
-                                <rect key="frame" x="515" y="264" width="57" height="23"/>
+                                <rect key="frame" x="515" y="276" width="57" height="23"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="gyY-hS-2am"/>
+                                    <constraint firstAttribute="height" constant="23" id="7ya-Dt-sfp"/>
+                                    <constraint firstAttribute="width" constant="57" id="KHA-go-wV4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What are you having trouble with?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-zp-SCz">
-                                <rect key="frame" x="20" y="41" width="553" height="153"/>
+                                <rect key="frame" x="20" y="41" width="553" height="160"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="153" id="4ak-FM-Tcw"/>
-                                </constraints>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bv6-Iz-kO2">
-                                <rect key="frame" x="24" y="197" width="80" height="63"/>
+                                <rect key="frame" x="24" y="209" width="80" height="63"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="8MG-Bg-d2W"/>
+                                    <constraint firstAttribute="width" constant="80" id="nPu-IE-E7r"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6my-y3-bP6" firstAttribute="centerX" secondItem="bpS-It-gCc" secondAttribute="centerX" id="3Nr-GO-unR"/>
-                            <constraint firstItem="EaP-tM-IgT" firstAttribute="top" secondItem="bv6-Iz-kO2" secondAttribute="bottom" constant="1" id="40Z-kK-eqy"/>
-                            <constraint firstItem="6my-y3-bP6" firstAttribute="centerY" secondItem="lsA-Jo-rju" secondAttribute="centerY" id="5yc-RY-ebk"/>
-                            <constraint firstItem="pOB-i9-AAz" firstAttribute="top" secondItem="Zsg-Qm-I7r" secondAttribute="bottom" constant="249" id="HUc-tK-VP7"/>
-                            <constraint firstItem="Zsg-Qm-I7r" firstAttribute="top" secondItem="c5c-zp-SCz" secondAttribute="bottom" constant="70" id="HZM-yd-VfY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lsA-Jo-rju" secondAttribute="trailing" constant="8" id="JYa-F3-rBw"/>
-                            <constraint firstItem="bv6-Iz-kO2" firstAttribute="leading" secondItem="6my-y3-bP6" secondAttribute="leading" id="Kab-xN-xy7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c5c-zp-SCz" secondAttribute="trailing" constant="7" id="MGY-15-xn7"/>
-                            <constraint firstItem="bv6-Iz-kO2" firstAttribute="trailing" secondItem="EaP-tM-IgT" secondAttribute="trailing" id="N4f-9G-mku"/>
-                            <constraint firstItem="pOB-i9-AAz" firstAttribute="top" secondItem="EaP-tM-IgT" secondAttribute="bottom" constant="245" id="Nqv-Zg-RfC"/>
-                            <constraint firstItem="6my-y3-bP6" firstAttribute="leading" secondItem="bpS-It-gCc" secondAttribute="leadingMargin" constant="4" id="RBJ-yg-qQ1"/>
-                            <constraint firstItem="c5c-zp-SCz" firstAttribute="top" secondItem="lsA-Jo-rju" secondAttribute="bottom" constant="8" symbolic="YES" id="UEK-xB-ExQ"/>
-                            <constraint firstItem="bv6-Iz-kO2" firstAttribute="leading" secondItem="EaP-tM-IgT" secondAttribute="leading" id="WNN-b6-drB"/>
-                            <constraint firstItem="Zsg-Qm-I7r" firstAttribute="centerY" secondItem="EaP-tM-IgT" secondAttribute="centerY" id="ZBE-fb-gzv"/>
-                            <constraint firstItem="bv6-Iz-kO2" firstAttribute="top" secondItem="c5c-zp-SCz" secondAttribute="bottom" constant="3" id="cUO-Ju-Wwx"/>
-                            <constraint firstItem="6my-y3-bP6" firstAttribute="top" secondItem="eHb-LM-0ie" secondAttribute="bottom" constant="8" symbolic="YES" id="eRJ-kz-Wvw"/>
-                            <constraint firstItem="Zsg-Qm-I7r" firstAttribute="trailing" secondItem="lsA-Jo-rju" secondAttribute="trailing" id="hxK-j3-5He"/>
-                            <constraint firstItem="c5c-zp-SCz" firstAttribute="leading" secondItem="bpS-It-gCc" secondAttribute="leadingMargin" id="xD2-rF-1dB"/>
-                            <constraint firstItem="c5c-zp-SCz" firstAttribute="top" secondItem="6my-y3-bP6" secondAttribute="bottom" constant="3" id="zwS-XZ-B4F"/>
+                            <constraint firstItem="c5c-zp-SCz" firstAttribute="top" secondItem="6my-y3-bP6" secondAttribute="bottom" constant="3" id="8bd-9o-ajv"/>
+                            <constraint firstItem="c5c-zp-SCz" firstAttribute="top" secondItem="lsA-Jo-rju" secondAttribute="bottom" constant="8" symbolic="YES" id="ED9-gI-qEk"/>
+                            <constraint firstItem="bv6-Iz-kO2" firstAttribute="leading" secondItem="6my-y3-bP6" secondAttribute="leading" id="GHz-WJ-q2v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lsA-Jo-rju" secondAttribute="trailing" constant="8" id="GOQ-Ys-Zb3"/>
+                            <constraint firstItem="pOB-i9-AAz" firstAttribute="top" secondItem="Zsg-Qm-I7r" secondAttribute="bottom" constant="237" id="L0v-tl-8as"/>
+                            <constraint firstItem="6my-y3-bP6" firstAttribute="centerX" secondItem="bpS-It-gCc" secondAttribute="centerX" id="M5F-hu-Ast"/>
+                            <constraint firstItem="6my-y3-bP6" firstAttribute="centerY" secondItem="lsA-Jo-rju" secondAttribute="centerY" id="QwL-IA-m3f"/>
+                            <constraint firstItem="c5c-zp-SCz" firstAttribute="leading" secondItem="bpS-It-gCc" secondAttribute="leadingMargin" id="eBR-wg-UhO"/>
+                            <constraint firstItem="bv6-Iz-kO2" firstAttribute="leading" secondItem="EaP-tM-IgT" secondAttribute="leading" id="eR9-qk-iNO"/>
+                            <constraint firstItem="lsA-Jo-rju" firstAttribute="trailing" secondItem="Zsg-Qm-I7r" secondAttribute="trailing" id="fs5-ew-6jh"/>
+                            <constraint firstItem="pOB-i9-AAz" firstAttribute="top" secondItem="EaP-tM-IgT" secondAttribute="bottom" constant="233" id="hkJ-U5-a4O"/>
+                            <constraint firstItem="EaP-tM-IgT" firstAttribute="trailing" secondItem="bv6-Iz-kO2" secondAttribute="trailing" id="iUL-9U-XSf"/>
+                            <constraint firstItem="6my-y3-bP6" firstAttribute="leading" secondItem="bpS-It-gCc" secondAttribute="leadingMargin" constant="4" id="jhL-7c-z3r"/>
+                            <constraint firstItem="Zsg-Qm-I7r" firstAttribute="centerY" secondItem="EaP-tM-IgT" secondAttribute="centerY" id="qtp-3S-IDb"/>
+                            <constraint firstItem="bv6-Iz-kO2" firstAttribute="top" secondItem="c5c-zp-SCz" secondAttribute="bottom" constant="8" id="rju-Wx-5j2"/>
+                            <constraint firstItem="EaP-tM-IgT" firstAttribute="top" secondItem="bv6-Iz-kO2" secondAttribute="bottom" constant="1" id="swF-cj-NaF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c5c-zp-SCz" secondAttribute="trailing" constant="7" id="vZa-Yz-Fqq"/>
+                            <constraint firstItem="6my-y3-bP6" firstAttribute="top" secondItem="eHb-LM-0ie" secondAttribute="bottom" constant="8" symbolic="YES" id="weG-Cj-Etz"/>
+                            <constraint firstItem="Zsg-Qm-I7r" firstAttribute="top" secondItem="c5c-zp-SCz" secondAttribute="bottom" constant="75" id="yLs-lF-Kes"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -1326,7 +1728,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="questionSubject" id="Pja-JQ-orj" customClass="SubjectTableViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Yil-yk-m77">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1649,7 +2051,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Y6u-vc-G4K">
-                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="228" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ryc-NN-IzS">
@@ -1805,6 +2207,49 @@
                                     <outlet property="questionAnswerUserLabel" destination="GqL-7r-ukU" id="e0o-2b-3Oc"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="b82-X0-VXK" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="178" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="b82-X0-VXK" id="bIP-uQ-tNK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="CdM-ki-HIL">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="WJZ-rg-A6J"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2x-DF-ePA">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="OuK-VC-31f"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="I2x-DF-ePA" firstAttribute="centerY" secondItem="bIP-uQ-tNK" secondAttribute="centerY" id="q1n-S8-buZ"/>
+                                        <constraint firstItem="I2x-DF-ePA" firstAttribute="top" secondItem="bIP-uQ-tNK" secondAttribute="topMargin" constant="6" id="tOU-2l-n8x"/>
+                                        <constraint firstItem="I2x-DF-ePA" firstAttribute="centerX" secondItem="bIP-uQ-tNK" secondAttribute="centerX" id="tlm-BV-7tt"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="CdM-ki-HIL"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="I2x-DF-ePA" id="UgP-HW-5Px"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="E0o-4h-CWF" id="UOf-xo-Gh2"/>
@@ -1934,14 +2379,14 @@
             <objects>
                 <tableViewController storyboardIdentifier="questionsMain" id="Vgg-oD-lIa" customClass="QuestionTableViewController" customModule="Hoot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qjl-3F-4Pb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="4kO-eK-YaX">
-                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="228" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMW-PL-53a">
@@ -2104,6 +2549,49 @@
                                     <outlet property="questionTimeStamp" destination="fx6-Da-uB9" id="wzu-u7-kXR"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="zZl-RB-0Tx" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="178" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="zZl-RB-0Tx" id="emB-0z-W6m">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-dy-ctY">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="I4S-Wa-4Kd"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5n-Mk-5lN">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="ake-JQ-Cvh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="C5n-Mk-5lN" firstAttribute="top" secondItem="emB-0z-W6m" secondAttribute="topMargin" constant="6" id="K8I-eY-DO2"/>
+                                        <constraint firstItem="C5n-Mk-5lN" firstAttribute="centerY" secondItem="emB-0z-W6m" secondAttribute="centerY" id="YHO-R4-v54"/>
+                                        <constraint firstItem="C5n-Mk-5lN" firstAttribute="centerX" secondItem="emB-0z-W6m" secondAttribute="centerX" id="wqO-gB-1K7"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="ZsH-dy-ctY"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="C5n-Mk-5lN" id="h8g-ac-fCB"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Vgg-oD-lIa" id="QBa-gR-eR6"/>
@@ -2151,10 +2639,10 @@
                         <viewControllerLayoutGuide type="bottom" id="die-kf-WKG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qGB-K3-NxF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-JD-Nca">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-JD-Nca">
                                 <rect key="frame" x="225" y="215" width="150" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -2169,7 +2657,7 @@
                                     <action selector="verifiedBtn:" destination="aQf-rP-uZ7" eventType="touchUpInside" id="Ep6-xU-BSQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rm-ZW-zn4">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rm-ZW-zn4">
                                 <rect key="frame" x="225" y="384" width="150" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -2183,14 +2671,14 @@
                                     <action selector="backBtn:" destination="aQf-rP-uZ7" eventType="touchUpInside" id="mIi-NC-9hD"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Looks like you have yet to verify your email adress.  Please select one of the following options" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-0k-NDq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Looks like you have yet to verify your email adress.  Please select one of the following options" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-0k-NDq">
                                 <rect key="frame" x="20" y="62" width="560" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTv-oO-Afi">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTv-oO-Afi">
                                 <rect key="frame" x="225" y="293" width="150" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -2286,7 +2774,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="SiG-3E-uZ4">
-                            <rect key="frame" x="0.0" y="192" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="242" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="AnM-x1-f8v">
@@ -2396,6 +2884,49 @@
                                     <outlet property="classCourseLabel" destination="XKe-xo-CVo" id="A0g-Ho-ocb"/>
                                     <outlet property="classMembersCount" destination="lUG-Av-wR4" id="MoF-rO-8ud"/>
                                     <outlet property="classNameLabel" destination="tZF-9d-g61" id="2bl-B3-BiN"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="ZF2-xc-K8D" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="192" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="ZF2-xc-K8D" id="FEa-Qi-5Ty">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="ROR-G6-KEm">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="mvX-gn-3ln"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-Wv-Wx2">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="3ZQ-ID-GH0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="CYQ-Wv-Wx2" firstAttribute="top" secondItem="FEa-Qi-5Ty" secondAttribute="topMargin" constant="6" id="drE-QE-k98"/>
+                                        <constraint firstItem="CYQ-Wv-Wx2" firstAttribute="centerY" secondItem="FEa-Qi-5Ty" secondAttribute="centerY" id="es4-4I-Sk3"/>
+                                        <constraint firstItem="CYQ-Wv-Wx2" firstAttribute="centerX" secondItem="FEa-Qi-5Ty" secondAttribute="centerX" id="nYt-5x-iDY"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="ROR-G6-KEm"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="CYQ-Wv-Wx2" id="jkH-L1-kcO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2534,7 +3065,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="xsx-y4-0qh">
-                            <rect key="frame" x="0.0" y="242" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="292" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVm-WR-CvW">
@@ -2674,6 +3205,49 @@
                                     <outlet property="classQuestionQuestionTV" destination="89c-R5-Tgg" id="kLD-MQ-KJ0"/>
                                     <outlet property="classQuestionTimestamp" destination="jld-0q-xs3" id="CNI-1j-u1K"/>
                                     <outlet property="classQuestionTopicLabel" destination="Hc1-pO-BiK" id="IZS-8p-UuE"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="Imf-tj-EGL" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="242" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="Imf-tj-EGL" id="fRT-yp-LGq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-eV-lzV">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="Rik-O7-3bA"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHs-5F-nql">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="c12-L5-nJq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="CHs-5F-nql" firstAttribute="top" secondItem="fRT-yp-LGq" secondAttribute="topMargin" constant="6" id="9Zp-rz-OzF"/>
+                                        <constraint firstItem="CHs-5F-nql" firstAttribute="centerY" secondItem="fRT-yp-LGq" secondAttribute="centerY" id="FXF-qw-UgD"/>
+                                        <constraint firstItem="CHs-5F-nql" firstAttribute="centerX" secondItem="fRT-yp-LGq" secondAttribute="centerX" id="uhi-pl-its"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="sr2-eV-lzV"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="CHs-5F-nql" id="2pC-Ix-xW9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2949,7 +3523,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="vkd-Bg-SK1">
-                            <rect key="frame" x="0.0" y="178" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="292" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vdc-R6-Osc">
@@ -2988,13 +3562,13 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classAnswerCell" rowHeight="150" id="wB3-dr-tY5" customClass="ClassQuestionAnswerCell" customModule="Hoot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wB3-dr-tY5" id="tQj-aX-b7U">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjp-nD-oaB">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjp-nD-oaB">
                                             <rect key="frame" x="8" y="6" width="558" height="30"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
@@ -3013,7 +3587,7 @@
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHl-Ys-hzZ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHl-Ys-hzZ">
                                             <rect key="frame" x="8" y="131" width="42" height="10"/>
                                             <animations/>
                                             <constraints>
@@ -3046,6 +3620,7 @@
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="F2i-Gp-ynA" secondAttribute="trailing" constant="26" id="1XX-bz-PvD"/>
+                                        <constraint firstItem="DHl-Ys-hzZ" firstAttribute="top" secondItem="cjp-nD-oaB" secondAttribute="bottom" constant="95" id="4SC-W6-5Jw"/>
                                         <constraint firstItem="7fl-8V-BRD" firstAttribute="width" secondItem="7fl-8V-BRD" secondAttribute="height" multiplier="1:1" id="CGG-dI-wBP"/>
                                         <constraint firstItem="F2i-Gp-ynA" firstAttribute="top" secondItem="tQj-aX-b7U" secondAttribute="topMargin" constant="27" id="Cjo-9k-OMh"/>
                                         <constraint firstItem="F2i-Gp-ynA" firstAttribute="leading" secondItem="tQj-aX-b7U" secondAttribute="leadingMargin" constant="-5" id="Fyo-tb-zrH"/>
@@ -3054,14 +3629,17 @@
                                         <constraint firstItem="wlA-Gj-jw8" firstAttribute="top" secondItem="F2i-Gp-ynA" secondAttribute="bottom" constant="8" symbolic="YES" id="LLf-d7-Bkr"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="iTd-pg-w7r" secondAttribute="trailing" constant="2" id="O3J-B4-ySP"/>
                                         <constraint firstItem="iTd-pg-w7r" firstAttribute="leading" secondItem="7fl-8V-BRD" secondAttribute="leading" id="OwV-Dd-h3i"/>
+                                        <constraint firstItem="cjp-nD-oaB" firstAttribute="leading" secondItem="tQj-aX-b7U" secondAttribute="leadingMargin" id="Qr4-dl-qtP"/>
                                         <constraint firstItem="7fl-8V-BRD" firstAttribute="width" secondItem="7fl-8V-BRD" secondAttribute="height" multiplier="1:1" id="XRl-fz-l6V"/>
                                         <constraint firstItem="iTd-pg-w7r" firstAttribute="top" secondItem="tQj-aX-b7U" secondAttribute="top" constant="73" id="bU8-3r-r8r"/>
+                                        <constraint firstItem="cjp-nD-oaB" firstAttribute="leading" secondItem="DHl-Ys-hzZ" secondAttribute="leading" id="cLQ-De-uzw"/>
                                         <constraint firstItem="wlA-Gj-jw8" firstAttribute="top" secondItem="DHl-Ys-hzZ" secondAttribute="bottom" constant="3" id="cXL-gu-aSc"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="wlA-Gj-jw8" secondAttribute="bottom" constant="-11" id="dEa-N4-uKJ"/>
                                         <constraint firstItem="wlA-Gj-jw8" firstAttribute="leading" secondItem="tQj-aX-b7U" secondAttribute="leading" id="fhX-E6-NCf"/>
                                         <constraint firstAttribute="trailing" secondItem="wlA-Gj-jw8" secondAttribute="trailing" id="s3p-7q-ibQ"/>
                                         <constraint firstItem="iTd-pg-w7r" firstAttribute="top" secondItem="7fl-8V-BRD" secondAttribute="bottom" constant="40" id="wA7-nx-81B"/>
                                         <constraint firstItem="iTd-pg-w7r" firstAttribute="centerY" secondItem="F2i-Gp-ynA" secondAttribute="centerY" id="xUE-4i-xBT"/>
+                                        <constraint firstItem="cjp-nD-oaB" firstAttribute="centerY" secondItem="7fl-8V-BRD" secondAttribute="centerY" id="yqr-ml-wU2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -3071,6 +3649,49 @@
                                     <outlet property="classQuestionAnswerPicIndicator" destination="7fl-8V-BRD" id="VHO-VV-pfH"/>
                                     <outlet property="classQuestionAnswerTimestamp" destination="DHl-Ys-hzZ" id="Am0-vK-z5O"/>
                                     <outlet property="classQuestionAnswerUserLabel" destination="cjp-nD-oaB" id="AQc-kT-Ubj"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="5ba-ST-Zvs" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="242" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="5ba-ST-Zvs" id="mXu-7K-Dth">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="TyO-6f-wjK">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="Omr-wy-LUK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P62-2H-0bZ">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="c5P-z2-J37"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="P62-2H-0bZ" firstAttribute="centerX" secondItem="mXu-7K-Dth" secondAttribute="centerX" id="No3-dP-zdt"/>
+                                        <constraint firstItem="P62-2H-0bZ" firstAttribute="centerY" secondItem="mXu-7K-Dth" secondAttribute="centerY" id="Ntq-Qk-o01"/>
+                                        <constraint firstItem="P62-2H-0bZ" firstAttribute="top" secondItem="mXu-7K-Dth" secondAttribute="topMargin" constant="6" id="u6j-4g-6Ba"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="TyO-6f-wjK"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="P62-2H-0bZ" id="wWI-i9-CBO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -3351,7 +3972,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="btj-Yi-n0h">
-                            <rect key="frame" x="0.0" y="192" width="600" height="171"/>
+                            <rect key="frame" x="0.0" y="242" width="600" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ArrowHoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-ek-dRI">
@@ -3486,6 +4107,49 @@
                                     <outlet property="eventNameLabel" destination="BuL-qc-BXl" id="C8V-0s-JX5"/>
                                     <outlet property="eventTimeStamp" destination="C11-gj-qeC" id="4Q5-hc-7Dj"/>
                                     <outlet property="eventTimeToGo" destination="jpL-tc-Ml5" id="4eL-6H-6uQ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadMoreCell" rowHeight="50" id="WfE-0D-AXH" customClass="LoadMoreTableViewCell" customModule="Hoot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="192" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="WfE-0D-AXH" id="Zbg-uq-3Xi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellSep.png" translatesAutoresizingMaskIntoConstraints="NO" id="LSc-A0-KL5">
+                                            <rect key="frame" x="0.0" y="46" width="600" height="8"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="J6N-Xb-tCK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2Y-3n-DAn">
+                                            <rect key="frame" x="242" y="14" width="117" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="117" id="n5p-Zf-NMT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="P2Y-3n-DAn" firstAttribute="centerX" secondItem="Zbg-uq-3Xi" secondAttribute="centerX" id="hWO-Lk-Dg0"/>
+                                        <constraint firstItem="P2Y-3n-DAn" firstAttribute="centerY" secondItem="Zbg-uq-3Xi" secondAttribute="centerY" id="neP-vF-3eU"/>
+                                        <constraint firstItem="P2Y-3n-DAn" firstAttribute="top" secondItem="Zbg-uq-3Xi" secondAttribute="topMargin" constant="6" id="tSV-5q-BgQ"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="LSc-A0-KL5"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="loadMoreLabel" destination="P2Y-3n-DAn" id="mcN-pF-4fB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -3821,16 +4485,16 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GEX-N6-J3L"/>
-        <segue reference="2xt-xg-mm9"/>
-        <segue reference="9la-kl-ppR"/>
-        <segue reference="86e-Aa-5ZQ"/>
-        <segue reference="6bh-sc-lru"/>
+        <segue reference="bgO-zX-Rb6"/>
         <segue reference="9EJ-RU-csy"/>
         <segue reference="vY0-tw-E0p"/>
-        <segue reference="kG6-ei-V4G"/>
-        <segue reference="iJK-sj-Yo1"/>
-        <segue reference="Whu-r7-dBd"/>
+        <segue reference="now-pH-dQ7"/>
+        <segue reference="jiz-BS-bLZ"/>
         <segue reference="LpV-FB-yTG"/>
         <segue reference="oP8-Ch-mkz"/>
+        <segue reference="DhL-Cw-SoZ"/>
+        <segue reference="swG-An-ryw"/>
+        <segue reference="hPf-Vd-Qjy"/>
+        <segue reference="gf2-jP-qG1"/>
     </inferredMetricsTieBreakers>
 </document>

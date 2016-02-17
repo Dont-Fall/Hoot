@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hoot/VerifyEmailViewController.swift"
-            timestampString = "477195291.015614"
+            timestampString = "477320475.778317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hoot/AskQuestionViewController.swift"
-            timestampString = "477190198.167683"
+            timestampString = "477361859.6016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hoot/EventsTableViewController.swift"
-            timestampString = "477157998.771183"
+            timestampString = "477285749.208511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "tableView(_:cellForRowAtIndexPath:object:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hoot/EventsTableViewController.swift"
-            timestampString = "477158288.685073"
+            timestampString = "477285749.208511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "tableView(_:cellForRowAtIndexPath:object:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,13 +266,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hoot/QuestionTableViewController.swift"
-            timestampString = "477275912.907742"
+            timestampString = "477362113.646513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "tableView(_:cellForRowAtIndexPath:object:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoot/LoadMoreTableViewCell.swift"
+            timestampString = "477284932.08554"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "LoadMoreTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoot.LoadMoreTableViewCell.__deallocating_deinit"
+                  moduleName = "Hoot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fc11jake/Documents/GitHub/Hoot/Hoot/LoadMoreTableViewCell.swift"
+                  timestampString = "477284933.096185"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoot.LoadMoreTableViewCell.init (Hoot.LoadMoreTableViewCell.Type)(style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Hoot.LoadMoreTableViewCell"
+                  moduleName = "Hoot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fc11jake/Documents/GitHub/Hoot/Hoot/LoadMoreTableViewCell.swift"
+                  timestampString = "477284933.096891"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoot.LoadMoreTableViewCell.init (Hoot.LoadMoreTableViewCell.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Hoot.LoadMoreTableViewCell&gt;"
+                  moduleName = "Hoot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fc11jake/Documents/GitHub/Hoot/Hoot/LoadMoreTableViewCell.swift"
+                  timestampString = "477284933.09727"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

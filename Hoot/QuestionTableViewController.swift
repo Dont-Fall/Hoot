@@ -118,6 +118,15 @@ class QuestionTableViewController: PFQueryTableViewController {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
         self.navigationItem.setLeftBarButtonItem(questionSubjectBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        //One Time Things
+        if PFUser.currentUser() != nil{
+            let college = String((PFUser.currentUser()?.objectForKey("school"))!)
+            let trimmedString = college.stringByReplacingOccurrencesOfString(" ", withString: "")
+            let collegeChannelName = "C1" + trimmedString + "16"
+            let currentInstallation = PFInstallation.currentInstallation()
+            currentInstallation.addUniqueObject(collegeChannelName, forKey: "channels")
+            currentInstallation.saveInBackground()
+        }
     }
     //DID RECIEVE MEMORY WARNING
     override func didReceiveMemoryWarning() {
@@ -139,32 +148,26 @@ class QuestionTableViewController: PFQueryTableViewController {
     
     //Function for Subject
     func questionSubject() {
-        self.actInd.startAnimating()
         self.performSegueWithIdentifier("subjectSegue", sender: self)
-        self.actInd.stopAnimating()
     }
     
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+    override func tableView(tableView: UITableView, cellForNextPageAtIndexPath indexPath: NSIndexPath) -> PFTableViewCell? {
+        var cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell") as! LoadMoreTableViewCell!
+        if cell == nil{
+            cell = LoadMoreTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "loadMoreCell")
+        }
+        cell.loadMoreLabel.text = "Load More"
+        return cell
     }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 25
-    }*/
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         noDataView.hidden=true
-        print(self.objects!.count)
         var cell = tableView.dequeueReusableCellWithIdentifier("questionCell") as! QuestionTableViewCell!
         if cell == nil {
             cell = QuestionTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "questionCell")
         }
         if (indexPath.row) == self.objects!.count{
-            //self.loadNextPage()
-            cell?.questionCourseLabel.text = "Load More"
             return cell
         }
         // Extract values from the PFObject to display in the table cell

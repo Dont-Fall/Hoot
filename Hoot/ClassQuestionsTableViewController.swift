@@ -38,7 +38,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         self.textKey = "code"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
-        self.objectsPerPage = 100
+        self.objectsPerPage = 25
     }
     
     // Define the query that will provide the data for the table view
@@ -101,13 +101,6 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         tableView.estimatedRowHeight = 200
-        
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     //Funtion for Compose
@@ -145,13 +138,24 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(tableView: UITableView, cellForNextPageAtIndexPath indexPath: NSIndexPath) -> PFTableViewCell? {
+        var cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell") as! LoadMoreTableViewCell!
+        if cell == nil{
+            cell = LoadMoreTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "loadMoreCell")
+        }
+        cell.loadMoreLabel.text = "Load More"
+        return cell
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         noDataView.hidden = true
         var cell = tableView.dequeueReusableCellWithIdentifier("classQuestionCell") as! ClassQuestionTableViewCell!
         if cell == nil {
             cell = ClassQuestionTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "classQuestionCell")
         }
-        
+        if (indexPath.row) == self.objects!.count{
+            return cell
+        }
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["question"] as? String {
             cell?.classQuestionQuestionTV?.text = nameEnglish
@@ -215,9 +219,11 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
     
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("classQuestionDetailedViewIdentifier", sender: self)
-        self.actInd.stopAnimating()
+        if (indexPath.row) == self.objects!.count{
+            self.loadNextPage()
+        }else {
+            self.performSegueWithIdentifier("classQuestionDetailedViewIdentifier", sender: self)
+        }
     }
 
 }

@@ -26,27 +26,8 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         self.textKey = "user"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
-        self.objectsPerPage = 100
+        self.objectsPerPage = 25
     }
-    
-    /*MARK: Segment Controller
-    @IBOutlet var questionSegmentController: UISegmentedControl!
-    
-    @IBAction func segmentControllerActn(sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            self.loadObjects()
-            self.tableView.reloadData()
-            print("first segement clicked")
-        case 1:
-            self.loadObjects()
-            self.tableView.reloadData()
-            print("second segment clicked")
-        default:
-            break;
-        }
-    }*/
-    
     
     //MAY NOT BE NEEDED Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
@@ -104,17 +85,14 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    //NOT NEEDED FOR QUERY
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-    return 10
+    override func tableView(tableView: UITableView, cellForNextPageAtIndexPath indexPath: NSIndexPath) -> PFTableViewCell? {
+        var cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell") as! LoadMoreTableViewCell!
+        if cell == nil{
+            cell = LoadMoreTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "loadMoreCell")
+        }
+        cell.loadMoreLabel.text = "Load More"
+        return cell
     }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return 10
-    }
-    */
     
     //PFQuery For Table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
@@ -122,6 +100,9 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
         var cell = tableView.dequeueReusableCellWithIdentifier("myClassQuestionCell") as! MyClassQuestionsTableViewCell!
         if cell == nil {
             cell = MyClassQuestionsTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myQuestionCell")
+        }
+        if (indexPath.row) == self.objects!.count{
+            return cell
         }
         // Extract values from the PFObject to display in the table cell
         if let question = object?["question"] as? String {
@@ -177,9 +158,11 @@ class MyClassQuestionsTableViewController: PFQueryTableViewController {
     
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("myClassQuestionDetailSegue", sender: self)
-        self.actInd.stopAnimating()
+        if (indexPath.row) == self.objects!.count{
+            self.loadNextPage()
+        }else {
+            self.performSegueWithIdentifier("myClassQuestionDetailSegue", sender: self)
+        }
     }
     
     

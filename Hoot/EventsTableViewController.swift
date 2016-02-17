@@ -27,7 +27,7 @@ class EventsTableViewController: PFQueryTableViewController {
         self.textKey = "name"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
-        self.objectsPerPage = 100
+        self.objectsPerPage = 25
     }
     
     // Define the query that will provide the data for the table view
@@ -62,9 +62,7 @@ class EventsTableViewController: PFQueryTableViewController {
     
     //Move to Create Function
     func createEventSegue() {
-        self.actInd.startAnimating()
         self.performSegueWithIdentifier("createEventSegue", sender: self)
-        self.actInd.stopAnimating()
     }
     
     //DID RECIEVE MEMORY WARNING
@@ -88,9 +86,20 @@ class EventsTableViewController: PFQueryTableViewController {
     
     //When Select Row Move to Detail View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.actInd.startAnimating()
-        self.performSegueWithIdentifier("eventDetailViewIdentifier", sender: self)
-        self.actInd.stopAnimating()
+        if (indexPath.row) == self.objects!.count{
+            self.loadNextPage()
+        }else{
+            self.performSegueWithIdentifier("eventDetailViewIdentifier", sender: self)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, cellForNextPageAtIndexPath indexPath: NSIndexPath) -> PFTableViewCell? {
+        var cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell") as! LoadMoreTableViewCell!
+        if cell == nil{
+            cell = LoadMoreTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "loadMoreCell")
+        }
+        cell.loadMoreLabel.text = "Load More"
+        return cell
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
@@ -99,7 +108,9 @@ class EventsTableViewController: PFQueryTableViewController {
         if cell == nil {
             cell = EventsTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "eventsCell")
         }
-        
+        if (indexPath.row) == self.objects!.count{
+            return cell
+        }
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["name"] as? String {
             cell?.eventNameLabel?.text = nameEnglish
