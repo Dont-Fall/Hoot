@@ -84,9 +84,9 @@ class QuestionTableViewController: PFQueryTableViewController {
         user?.fetchInBackgroundWithBlock(nil)
         if user == nil{
             self.performSegueWithIdentifier("goSignInFromQuestions", sender: self)
-        }else if user?["emailVerified"] as? Bool  == false {
+        }/*else if user?["emailVerified"] as? Bool  == false {
             self.performSegueWithIdentifier("emailVerifySegue", sender: self)
-        }else{
+        }*/else{
             UINavigationBar.appearance().tintColor = UIColor.whiteColor()
             UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -96,6 +96,7 @@ class QuestionTableViewController: PFQueryTableViewController {
             self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
             self.loadObjects()
             self.tableView.reloadData()
+            UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         }
     }
 
@@ -118,7 +119,7 @@ class QuestionTableViewController: PFQueryTableViewController {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
         self.navigationItem.setLeftBarButtonItem(questionSubjectBtn, animated: true)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        //One Time Things
+        //One Time Things b/c adds unique object
         if PFUser.currentUser() != nil{
             let college = String((PFUser.currentUser()?.objectForKey("school"))!)
             let trimmedString = college.stringByReplacingOccurrencesOfString(" ", withString: "")

@@ -25,6 +25,7 @@ class MoreTableViewController: UITableViewController {
         points = String(currentUser!.objectForKey("points")!)
         let myPoints:UIBarButtonItem = UIBarButtonItem(title: self.points, style: .Plain, target: self, action: nil)
         self.navigationItem.setRightBarButtonItem(myPoints, animated: true)
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
     }
     
     override func viewDidLoad() {

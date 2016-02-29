@@ -27,10 +27,10 @@ class EventDetailViewController: UIViewController {
         //MARK: Hide Tab Bar
         self.tabBarController?.tabBar.hidden = true
         if String(currentObject!["creator"]) == (PFUser.currentUser()?.username)!{
-            let detailedQuestionDeleteBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "detailedQuestionDelete")
+            let detailedQuestionDeleteBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "detailedEventDelete")
             self.navigationItem.setRightBarButtonItem(detailedQuestionDeleteBtn, animated: true)
         }else{
-            let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailedQuestionReport")
+            let detailedQuestionReportBtn:UIBarButtonItem = UIBarButtonItem(title: "Report", style: .Plain, target: self, action: "detailEventReport")
             self.navigationItem.setRightBarButtonItem(detailedQuestionReportBtn, animated: true)
         }
         //MARK: Nav Bar Customize
@@ -121,7 +121,7 @@ class EventDetailViewController: UIViewController {
         }
     }
     
-    func detailedQuestionDelete(){
+    func detailedEventDelete(){
         let eventToDelete = currentObject
         confirmDelete(eventToDelete!)
     }

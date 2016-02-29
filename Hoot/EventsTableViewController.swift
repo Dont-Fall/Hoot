@@ -43,6 +43,7 @@ class EventsTableViewController: PFQueryTableViewController {
         super.viewDidAppear(true)
         self.loadObjects()
         self.tableView.reloadData()
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
     }
     
     //VIEW DID LOAD

@@ -14,7 +14,7 @@ class SubjectTableViewController: UITableViewController {
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150))
     
     //MARK: Subject List
-    var subjectList = ["Math", "English", "Science", "Business", "Computer Science", "Finance", "Art", "Economics", "History", "Other"]
+    var subjectList = ["Math", "English", "Science", "Business", "Computer Science", "Art", "History", "Foriegn Language", "Social", "Other"]
 
     //VIEW DID LOAD
     override func viewDidLoad() {

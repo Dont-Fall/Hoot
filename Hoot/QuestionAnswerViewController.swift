@@ -21,9 +21,9 @@ class QuestionAnswerViewController: UIViewController, UITextFieldDelegate, UIIma
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             
             imagePicker.sourceType = .Camera
-            if (UIImagePickerController.isCameraDeviceAvailable(.Front)) { imagePicker.cameraDevice = .Front
+            if (UIImagePickerController.isCameraDeviceAvailable(.Rear)) { imagePicker.cameraDevice = .Rear
             }else{
-                imagePicker.cameraDevice = .Rear
+                imagePicker.cameraDevice = .Front
             }
             
         }else{

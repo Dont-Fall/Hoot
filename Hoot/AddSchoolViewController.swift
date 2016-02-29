@@ -38,7 +38,11 @@ class AddSchoolViewController: UIViewController {
         school.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
-                let alert = UIAlertController(title: "Sent", message: "We will add the school some time today.  Please check back later.", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "Sent", message: "We will add the school shortly.  Please check back within the hour.", preferredStyle: .Alert)
+                let push = PFPush()
+                push.setChannel("C1ADMIN")
+                push.setMessage("New school added.")
+                push.sendPushInBackground()
                 let okAction = UIAlertAction(title: "Ok", style: .Default, handler: self.okSchool)
                 alert.addAction(okAction)
                 self.presentViewController(alert, animated: true, completion: nil)

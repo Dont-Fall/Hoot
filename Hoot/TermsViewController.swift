@@ -67,6 +67,8 @@ class TermsViewController: UIViewController {
             let detailScene = segue.destinationViewController as! TermsOfServiceViewController
             // Pass the selected object to the destination view controller.
             detailScene.state = state
+        }else{
+            //nothing
         }
     }
 }

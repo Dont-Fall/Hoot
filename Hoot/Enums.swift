@@ -40,7 +40,7 @@ extension Error: CustomStringConvertible {
         case .InvalidEmail: return "Please enter a valid email address."
         case .UserNameTaken: return "This username is taken.\nPlease choose another username."
         case .IncorrectSignIn: return "The username or password entered is incorrect."
-        case .InvalidPassword: return "Passwords must be 8 or more characters,\n and include a numeric and capital letter."
+        case .InvalidPassword: return "Passwords must be 8 or more characters,\nand include a numeric and capital letter."
         //Question Errors
         case .InsufficientCourseLength: return "Please enter a valid course."
         case .InsufficientTopicLength: return "Please enter a valid topic."

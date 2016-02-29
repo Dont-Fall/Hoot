@@ -13,6 +13,7 @@ class StateSelectViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBOutlet var stateSelectTV: UITextView!
     @IBOutlet var stateSelectTF: UITextField!
     @IBOutlet var stateSelectPicker: UIPickerView!
+    
     @IBAction func stateSelectNextBtn(sender: AnyObject) {
         self.performSegueWithIdentifier("stateToTermSegue", sender: self)
     }
@@ -20,6 +21,7 @@ class StateSelectViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBAction func stateSelectBackBtn(sender: AnyObject) {
         self.performSegueWithIdentifier("stateBackSegue", sender: self)
     }
+    
     var stateList = [
     "Alabama",
     "Alaska",

@@ -624,6 +624,11 @@
 					960945D71C348C660000282A = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = VNE53TX9AS;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					960945EB1C348C670000282A = {
 						CreatedOnToolsVersion = 7.1;

@@ -93,14 +93,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     //MARK: Create Account
     @IBAction func signUpCreateBtn(sender: AnyObject) {
         errorLabel.text = ""
-        
+        view.endEditing(true)
         let signup = SignUp(uName: signUpUsernameTF.text!, email: signUpEmailTF.text!, pass: signUpPasswordTF.text!, confirmPass: signUpConfirmPasswordTF.text!, school: signUpSchoolTF.text!, subject: "Math", points: 0, groupCode: "", tokens: 10, dailyTokenAvail: true, dailyCD: NSDate(), tweet: false, facebook: false)
         do {
             try signup.signUpUser()
             let signin = SignIn(user: signUpUsernameTF.text!, pass: signUpPasswordTF.text!)
             do {
                 try signin.signInUser()
-                let currentInstallation = PFInstallation.currentInstallation()
+                //let currentInstallation = PFInstallation.currentInstallation()
                 self.performSegueWithIdentifier("signUpSuccess", sender: self)
             }catch let error as Error {
                 //dismissKeyboard()

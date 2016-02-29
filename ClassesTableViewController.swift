@@ -109,6 +109,7 @@ class ClassesTableViewController: PFQueryTableViewController {
             confirmDelete(classToDelete!)
             self.loadObjects()
             self.tableView.reloadData()
+            UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         }
     }
     

@@ -74,6 +74,7 @@ class ClassQuestionsTableViewController: PFQueryTableViewController {
         self.navigationItem.setRightBarButtonItems([questionAskBtn, myTokens], animated: true)
         self.loadObjects()
         self.tableView.reloadData()
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
     }
 
     override func viewDidLoad() {
